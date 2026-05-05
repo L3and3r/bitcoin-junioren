@@ -1,653 +1,449 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
+// ═══════════════════════════════════════════════════════════
+// BITCOIN VOOR JUNIOREN — v2.0
+// Interactieve leer-app voor kinderen (8-12 jaar)
+// Gebaseerd op het My First Bitcoin curriculum (CC BY-SA 4.0)
+// ═══════════════════════════════════════════════════════════
+
+// ── PERSISTENCE ──
+const STORAGE_KEY = "btc-junioren-v2";
+const loadProgress = () => {
+  try {
+    const d = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    return d || { completed: [], badges: [], name: "" };
+  } catch { return { completed: [], badges: [], name: "" }; }
+};
+const saveProgress = (data) => {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch {}
+};
+
+// ── CONTENT DATA ──
 const MODULES = [
   {
-    id: 1,
-    title: "Uitwisseling, Waarde & Prijs",
-    icon: "⚖️",
-    color: "#E8A838",
-    description: "Ontdek hoe ruilen werkt en wat dingen waard zijn!",
-    emoji: "🏝️",
+    id: 1, title: "Uitwisseling, Waarde & Prijs", icon: "⚓",
+    color: "#D97706", bg: "#FEF3C7",
+    summary: "Waarde hangt af van wat je nodig hebt. Prijs is hoeveel iets kost. Geld lost het ruilprobleem op.",
+    description: "Ontdek waarom we geld gebruiken en wat dingen écht waard zijn!",
+    badge: "🏝️ Eilandhandelaar",
     activities: [
       {
-        type: "quiz",
-        title: "Wat is meer waard?",
-        intro: "Stel je voor: je bent gestrand op een onbewoond eiland. Wat heb je het hardst nodig?",
+        type: "quiz", title: "Eiland Overleven", intro: "Je bent schipbreukeling op een onbewoond eiland!",
         questions: [
-          {
-            q: "Je hebt dorst en honger. Wat is op het eiland meer waard?",
-            options: ["💎 Een diamant", "🥥 Een kokosnoot", "📱 Een telefoon (geen bereik)", "👟 Nieuwe sneakers"],
-            correct: 1,
-            explanation: "Op een eiland zonder winkels is een kokosnoot veel meer waard dan een diamant! Waarde hangt af van wat je nodig hebt."
-          },
-          {
-            q: "Waarom gebruiken mensen geld in plaats van ruilen?",
-            options: ["Omdat het mooier is", "Omdat je niet altijd vindt wat je zoekt bij de ander", "Omdat de koning het zegt", "Omdat het sneller slijt"],
-            correct: 1,
-            explanation: "Bij ruilen moet je iemand vinden die precies wil wat jij hebt. Dat is het 'samenvallen van behoeften' probleem!"
-          },
-          {
-            q: "Schelpen werden vroeger als geld gebruikt. Waarom?",
-            options: ["Ze waren mooi", "Iedereen vond ze waardevol, ze waren schaars en makkelijk mee te nemen", "De regering zei het", "Ze smaakten lekker"],
-            correct: 1,
-            explanation: "Goed geld moet schaars zijn, makkelijk mee te nemen, en door iedereen geaccepteerd worden."
-          },
-          {
-            q: "Een ijsje kost €2 en een fiets kost €200. Wat vertelt de prijs ons?",
-            options: ["De fiets is lekkerder", "Hoeveel geld je ervoor moet betalen", "Dat ijsjes slecht zijn", "Niets nuttigs"],
-            correct: 1,
-            explanation: "Prijs vertelt hoeveel geld iets kost. Maar let op: prijs en waarde zijn niet hetzelfde!"
-          }
+          { q: "Je spoelt aan op een verlaten eiland. Wat is het meest waard?", options: ["💎 Diamant", "🔪 Een kapmes", "📱 Smartphone", "💰 100 euro"], correct: 1, explanation: "Op een eiland kun je met een kapmes hout hakken, eten snijden en een schuilplaats bouwen. Geld en diamanten zijn daar nutteloos!" },
+          { q: "Je hebt 5 hengels maar geen tent. Je buurman heeft 3 tenten maar geen hengel. Wat doen jullie?", options: ["Allebei wachten", "Ruilen: een hengel voor een tent!", "Niks, pech gehad", "Samen huilen"], correct: 1, explanation: "Ruilen is de oudste manier om handel te drijven! Je geeft wat je over hebt voor wat je nodig hebt." },
+          { q: "Waarom is ruilen soms heel lastig?", options: ["Omdat het saai is", "Omdat je iemand moet vinden die precies wil wat jij hebt", "Omdat het verboden is", "Omdat spullen te zwaar zijn"], correct: 1, explanation: "Dit heet het 'samenvallen van behoeften'. Geld lost dit probleem op — iedereen accepteert geld!" },
+          { q: "Schelpen werden vroeger als geld gebruikt. Wat maakt iets goed geld?", options: ["Het moet mooi zijn", "Het moet schaars, draagbaar en door iedereen geaccepteerd zijn", "Het moet eetbaar zijn", "Het moet van de overheid komen"], correct: 1, explanation: "Goed geld is schaars (niet eindeloos te vinden), makkelijk mee te nemen, en iedereen moet het als betaling accepteren." },
+          { q: "Een flesje water kost €1 in de supermarkt. In de woestijn biedt iemand je €100 voor hetzelfde flesje. Waarom?", options: ["De winkel was duurder", "Omdat water in de woestijn veel schaarser en belangrijker is", "Het is ander water", "De woestijn is ver weg"], correct: 1, explanation: "Schaarste verandert waarde! Hoe minder er van iets is en hoe harder je het nodig hebt, hoe meer het waard wordt." },
+          { q: "Wat is het verschil tussen prijs en waarde?", options: ["Er is geen verschil", "Prijs is hoeveel iets kost, waarde is hoe belangrijk iets voor jou is", "Prijs is altijd hoger dan waarde", "Waarde gaat alleen over geld"], correct: 1, explanation: "Een tekening van je kind heeft misschien geen prijs maar enorme waarde. Prijs en waarde zijn niet hetzelfde!" },
         ]
       },
       {
-        type: "sort",
-        title: "Prijslijn!",
-        intro: "Sleep de voorwerpen naar de juiste plek op de prijslijn: van goedkoop naar duur!",
+        type: "sort", title: "Prijslijn", intro: "Zet de voorwerpen in de juiste volgorde van goedkoop naar duur!",
         items: [
-          { name: "🍎 Appel", value: 1 },
-          { name: "📚 Boek", value: 2 },
-          { name: "👟 Sneakers", value: 3 },
-          { name: "📱 Telefoon", value: 4 },
-          { name: "🚗 Auto", value: 5 },
-          { name: "🏠 Huis", value: 6 },
+          { name: "🍎 Appel", value: 1 }, { name: "📖 Boek", value: 2 },
+          { name: "⚽ Voetbal", value: 3 }, { name: "📱 Telefoon", value: 4 },
+          { name: "🛵 Scooter", value: 5 }, { name: "🏠 Huis", value: 6 },
         ]
-      }
+      },
     ]
   },
   {
-    id: 2,
-    title: "Tijd, Energie & Beloning",
-    icon: "⏰",
-    color: "#4ECDC4",
-    description: "Leer hoe je tijd en energie slim gebruikt!",
-    emoji: "⚡",
+    id: 2, title: "Tijd, Energie & Beloning", icon: "⚡",
+    color: "#0D9488", bg: "#CCFBF1",
+    summary: "Energie is beperkt. Balans tussen werk, rust en spel is belangrijk. Geduld leidt tot betere resultaten.",
+    description: "Hoe gebruik jij je tijd en energie? En waarom is wachten soms slimmer?",
+    badge: "⏳ Tijdmeester",
     activities: [
       {
-        type: "quiz",
-        title: "Werk, Rust of Spel?",
-        intro: "Kun jij bepalen of iets werk, rust of spel is?",
-        questions: [
-          {
-            q: "Huiswerk maken is een voorbeeld van...",
-            options: ["🎮 Spel", "💼 Werk", "😴 Rust", "🎵 Muziek"],
-            correct: 1,
-            explanation: "Huiswerk is werk — het kost energie, maar helpt je leren!"
-          },
-          {
-            q: "Wat betekent 'tijdvoorkeur'?",
-            options: ["Altijd haast hebben", "Kiezen tussen iets nu of iets beters later", "Nooit spelen", "De klok vooruit zetten"],
-            correct: 1,
-            explanation: "Tijdvoorkeur gaat over de keuze: wil je iets makkelijks nu, of wacht je op iets beters later?"
-          },
-          {
-            q: "In het verhaal van De drie biggetjes, welk huis was het sterkst?",
-            options: ["🌾 Stro", "🪵 Hout", "🧱 Baksteen", "🏕️ Een tent"],
-            correct: 2,
-            explanation: "Het bakstenen huis kostte de meeste tijd en moeite, maar het was het sterkst. Lage tijdvoorkeur = betere resultaten!"
-          },
-          {
-            q: "Wat gebeurt er als je al je energie 's ochtends opmaakt?",
-            options: ["Je wordt sterker", "Je hebt geen energie meer voor de rest van de dag", "Niets", "Je krijgt superkrachten"],
-            correct: 1,
-            explanation: "Energie is beperkt! Slim verdelen over de dag is belangrijk."
-          }
+        type: "categorize", title: "Werk, Rust of Spel?", intro: "Sleep elke activiteit naar de juiste categorie!",
+        categories: ["💼 Werk", "😴 Rust", "🎮 Spel"],
+        items: [
+          { name: "Huiswerk maken", cat: 0 }, { name: "Slapen", cat: 1 },
+          { name: "Voetballen", cat: 2 }, { name: "Kamer opruimen", cat: 0 },
+          { name: "Een boek lezen", cat: 1 }, { name: "Tekenen", cat: 2 },
+          { name: "Tafel dekken", cat: 0 }, { name: "Dutje doen", cat: 1 },
+          { name: "Gamen", cat: 2 }, { name: "Boodschappen doen", cat: 0 },
+          { name: "Muziek luisteren", cat: 1 }, { name: "Naar het park", cat: 2 },
         ]
       },
       {
-        type: "energy",
-        title: "Energie-Tracker",
-        intro: "Hoe verandert jouw energie door de dag? Klik op de activiteiten!",
-      }
+        type: "quiz", title: "Tijdvoorkeur", intro: "Kies jij voor NU of voor LATER?",
+        questions: [
+          { q: "In het verhaal van De drie biggetjes: welk huis bleef staan?", options: ["🌾 Stro (snel gebouwd)", "🪵 Hout (gemiddeld)", "🧱 Baksteen (kostte het meeste tijd)"], correct: 2, explanation: "Het bakstenen huis kostte de meeste tijd en moeite, maar was het enige dat bleef staan. Geduld loont!" },
+          { q: "Wat betekent 'lage tijdvoorkeur'?", options: ["Je wilt alles NU", "Je bent bereid te wachten op iets beters", "Je hebt geen horloge", "Je slaapt veel"], correct: 1, explanation: "Lage tijdvoorkeur = bereid om te wachten voor een beter resultaat. Zoals de big die een stenen huis bouwde!" },
+          { q: "Je krijgt 1 snoepje nu, of 3 snoepjes als je 10 minuten wacht. Wat is de slimste keuze?", options: ["1 snoepje NU!", "Wachten: 3 snoepjes > 1 snoepje", "Snoep is ongezond", "Wegrennen"], correct: 1, explanation: "Dit is de beroemde marshmallow-test! Kinderen die konden wachten hadden later vaak betere resultaten op school." },
+          { q: "Je hebt een belangrijke toets morgen. Wat is lage tijdvoorkeur?", options: ["Nu gamen en morgen leren", "Vandaag studeren zodat je morgen goed scoort", "De toets overslaan", "Hopen op geluk"], correct: 1, explanation: "Nu iets moeilijks doen (studeren) zodat je later iets goeds krijgt (een goed cijfer) — dat is lage tijdvoorkeur." },
+          { q: "Wat gebeurt er als je al je energie 's ochtends opmaakt?", options: ["Je wordt sterker", "Je hebt niks meer over voor de rest van de dag", "Je krijgt superkrachten", "Niks bijzonders"], correct: 1, explanation: "Energie is beperkt! Slim verdelen is belangrijk — net als geld." },
+        ]
+      },
     ]
   },
   {
-    id: 3,
-    title: "Analoog versus Digitaal",
-    icon: "💻",
-    color: "#A855F7",
-    description: "Van typemachine tot tablet — technologie verandert!",
-    emoji: "🔄",
+    id: 3, title: "Analoog versus Digitaal", icon: "🔄",
+    color: "#7C3AED", bg: "#EDE9FE",
+    summary: "Technologie verandert steeds. Elke uitvinding lost een probleem op. Niet alles nieuw is automatisch beter.",
+    description: "Van postduif tot internet — hoe technologie de wereld verandert!",
+    badge: "🚀 Techpionier",
     activities: [
       {
-        type: "match",
-        title: "Koppel Oud aan Nieuw!",
-        intro: "Welke oude technologie hoort bij welke nieuwe?",
+        type: "match", title: "Oud ↔ Nieuw", intro: "Koppel elke oude technologie aan de moderne versie!",
         pairs: [
-          { old: "📝 Brief", new: "📧 E-mail" },
+          { old: "✉️ Brief", new: "📧 E-mail" },
           { old: "📞 Draaitelefoon", new: "📱 Smartphone" },
-          { old: "📺 Buizen-TV", new: "🖥️ Smart TV" },
-          { old: "📷 Filmcamera", new: "📸 Digitale camera" },
-          { old: "🗺️ Papieren kaart", new: "📍 GPS Navigatie" },
-          { old: "💰 Munten", new: "₿ Bitcoin" },
-        ]
-      }
-    ]
-  },
-  {
-    id: 4,
-    title: "Veiligheid & Privacy",
-    icon: "🔒",
-    color: "#EF4444",
-    description: "Leer over geheime codes en privacy!",
-    emoji: "🛡️",
-    activities: [
-      {
-        type: "quiz",
-        title: "Openbaar of Privé?",
-        intro: "Bepaal of informatie openbaar of privé is!",
-        questions: [
-          {
-            q: "Je wachtwoord is...",
-            options: ["🌍 Openbaar", "🔐 Privé"],
-            correct: 1,
-            explanation: "Een wachtwoord is altijd privé! Deel het nooit met anderen."
-          },
-          {
-            q: "De kleur van je ogen is...",
-            options: ["🌍 Openbaar", "🔐 Privé"],
-            correct: 0,
-            explanation: "Iedereen kan je oogkleur zien — het is openbare informatie."
-          },
-          {
-            q: "Je pincode van de bank is...",
-            options: ["🌍 Openbaar", "🔐 Privé"],
-            correct: 1,
-            explanation: "Je pincode is geheim! Dat beschermt je geld."
-          },
-          {
-            q: "Je naam is...",
-            options: ["🌍 Openbaar", "🔐 Privé", "🤔 Dat hangt ervan af"],
-            correct: 2,
-            explanation: "Je naam kan openbaar zijn, maar soms kies je ervoor om anoniem te blijven. Jij bepaalt wat je deelt!"
-          }
+          { old: "🗺️ Papieren kaart", new: "📍 GPS" },
+          { old: "📷 Filmrolletje", new: "📸 Digitale camera" },
+          { old: "📰 Krant", new: "🌐 Nieuwswebsite" },
+          { old: "💰 Muntgeld", new: "₿ Bitcoin" },
         ]
       },
       {
-        type: "cipher",
-        title: "Geheime Code!",
-        intro: "Gebruik het cijferwiel om geheime berichten te ontcijferen!",
-      }
-    ]
-  },
-  {
-    id: 5,
-    title: "Geldzaken",
-    icon: "💰",
-    color: "#F59E0B",
-    description: "Leer over verdienen, sparen en uitgeven!",
-    emoji: "🏦",
-    activities: [
-      {
-        type: "quiz",
-        title: "Slimme Geldzaken",
-        intro: "Wat weet jij over geld?",
+        type: "quiz", title: "Bedenk de Toekomst", intro: "Hoe zou technologie er over 20 jaar uitzien?",
         questions: [
-          {
-            q: "Wat is sparen?",
-            options: ["Geld uitgeven aan snoep", "Geld opzij leggen voor later", "Geld weggooien", "Geld uitlenen aan vrienden"],
-            correct: 1,
-            explanation: "Sparen betekent geld bewaren voor later. Zo kun je grotere dingen kopen!"
-          },
-          {
-            q: "Wat is investeren?",
-            options: ["Geld verstoppen onder je bed", "Je geld ergens insteken zodat het kan groeien", "Alles vandaag uitgeven", "Geld verbranden"],
-            correct: 1,
-            explanation: "Investeren is je geld of tijd ergens in steken zodat het later meer waard wordt."
-          },
-          {
-            q: "Je hebt 10 gouden munten. Een boek kost 3 en een schild kost 8. Kun je allebei kopen?",
-            options: ["Ja, makkelijk!", "Nee, je hebt maar 10 munten", "Alleen als je leent", "Munten zijn oneindig"],
-            correct: 1,
-            explanation: "3 + 8 = 11, maar je hebt maar 10 munten. Je moet kiezen! Dat is budgetteren."
-          },
-          {
-            q: "Waarom zijn regels bij geld belangrijk?",
-            options: ["Ze zijn niet belangrijk", "Zodat iedereen eerlijk behandeld wordt", "Alleen voor volwassenen", "Om het moeilijker te maken"],
-            correct: 1,
-            explanation: "Eerlijke regels zorgen ervoor dat iedereen dezelfde kans heeft."
-          }
+          { q: "Waarom veranderen technologieën door de tijd heen?", options: ["Omdat oude dingen stuk gaan", "Omdat mensen problemen oplossen met nieuwe uitvindingen", "Omdat de overheid het wil", "Zonder reden"], correct: 1, explanation: "Elke uitvinding lost een probleem op. De auto loste het probleem op dat paarden langzaam en moe worden!" },
+          { q: "Is nieuwe technologie ALTIJD beter dan oude?", options: ["Ja, altijd", "Nee, soms is het oude beter of betrouwbaarder", "Nieuwe tech bestaat niet", "Alleen als het duurder is"], correct: 1, explanation: "Een papieren boek heeft geen batterij nodig! Soms zijn oude oplossingen nog steeds slim." },
+          { q: "Bitcoin is digitaal geld. Wat heeft het gemeen met oude schelpen?", options: ["Allebei komen uit de zee", "Allebei zijn schaars en worden gebruikt als ruilmiddel", "Niks", "Allebei zijn ze gratis"], correct: 1, explanation: "Zowel schelpen als Bitcoin zijn schaars (er is een beperkte hoeveelheid) en worden als ruilmiddel gebruikt." },
+          { q: "Wat is innovatie?", options: ["Iets nieuws kopen", "Een slimme verbetering of uitvinding die een probleem oplost", "Een moeilijk woord voor niks", "Alleen voor wetenschappers"], correct: 1, explanation: "Innovatie = een nieuwe of betere oplossing voor een bestaand probleem. Iedereen kan innoveren!" },
         ]
-      }
+      },
     ]
   },
   {
-    id: 6,
-    title: "Basisprincipes van Bitcoin",
-    icon: "₿",
-    color: "#F7931A",
-    description: "Ontdek hoe Bitcoin werkt!",
-    emoji: "⛏️",
+    id: 4, title: "Veiligheid & Privacy", icon: "🛡️",
+    color: "#DC2626", bg: "#FEE2E2",
+    summary: "Jij bepaalt welke informatie je deelt. Codes beschermen berichten. Vertrouwen is niet altijd nodig als je encryptie hebt.",
+    description: "Geheime codes, privacy en hoe je jezelf online beschermt!",
+    badge: "🔐 Cypherpunk",
     activities: [
       {
-        type: "quiz",
-        title: "Bitcoin Ontdekker",
-        intro: "Test je kennis over Bitcoin!",
-        questions: [
-          {
-            q: "Wie heeft Bitcoin bedacht?",
-            options: ["Elon Musk", "Satoshi Nakamoto", "De bank", "Een computer"],
-            correct: 1,
-            explanation: "Satoshi Nakamoto schreef een white paper en startte Bitcoin. Niemand weet wie Satoshi echt is!"
-          },
-          {
-            q: "Wat is de Genesis Block?",
-            options: ["Een computerspel", "Het allereerste blok van Bitcoin", "Een soort steen", "Een geheim wachtwoord"],
-            correct: 1,
-            explanation: "De Genesis Block is het eerste blok dat ooit is gemaakt in Bitcoin. Alles begon daar!"
-          },
-          {
-            q: "Wat betekent 'minen' bij Bitcoin?",
-            options: ["Graven in de grond", "Puzzels oplossen om transacties te bevestigen", "Bitcoin kopen in de winkel", "Bitcoins tekenen"],
-            correct: 1,
-            explanation: "Miners lossen puzzels op met computers. Als ze de oplossing vinden, mogen ze transacties bevestigen en worden beloond."
-          },
-          {
-            q: "Waarom is Bitcoin bijzonder?",
-            options: [
-              "Het is gratis",
-              "Niemand kan er meer van maken dan de regels toestaan",
-              "Je kunt het aanraken",
-              "Alleen rijke mensen mogen het gebruiken"
-            ],
-            correct: 1,
-            explanation: "Er zullen nooit meer dan 21 miljoen bitcoins bestaan. Die schaarste maakt het bijzonder!"
-          },
-          {
-            q: "Wat is Proof of Work?",
-            options: [
-              "Een rapport van school",
-              "Bewijs dat je moeite hebt gedaan om iets te verdienen",
-              "Een wachtwoord",
-              "Een soort betaalkaart"
-            ],
-            correct: 1,
-            explanation: "Proof of Work betekent dat je echt moeite hebt gedaan. Net als het dobbelsteenspel: iedereen heeft dezelfde kans!"
-          }
+        type: "truefalse", title: "Openbaar of Privé?", intro: "Is deze informatie openbaar of privé? Beslis snel!",
+        statements: [
+          { text: "Je wachtwoord", answer: false, label: "Privé!", explanation: "Een wachtwoord is altijd privé. Deel het nooit!" },
+          { text: "Je naam op school", answer: true, label: "Openbaar", explanation: "Op school weet iedereen hoe je heet — dat is openbare informatie." },
+          { text: "Je pincode", answer: false, label: "Privé!", explanation: "Je pincode is geheim — het beschermt je bankrekening." },
+          { text: "Een park in de stad", answer: true, label: "Openbaar", explanation: "Een park is een openbare plek — iedereen mag er komen." },
+          { text: "Je dagboek", answer: false, label: "Privé!", explanation: "Je dagboek is privé — alleen jij bepaalt wie het mag lezen." },
+          { text: "De kleur van je fiets", answer: true, label: "Openbaar", explanation: "Iedereen kan zien welke kleur je fiets heeft." },
+          { text: "Je thuisadres", answer: false, label: "Privé!", explanation: "Je adres deel je niet met vreemden — dat is privé-informatie." },
+          { text: "Het weer vandaag", answer: true, label: "Openbaar", explanation: "Het weer is voor iedereen hetzelfde — volledig openbaar!" },
+          { text: "Je Bitcoin-sleutel", answer: false, label: "Privé!", explanation: "Je privésleutel is het allerbelangrijkste geheim. Wie die heeft, heeft je bitcoin!" },
         ]
       },
       {
-        type: "mining",
-        title: "Bitcoin Minen!",
-        intro: "Vind gelijke paren om blokken te minen!",
-      }
+        type: "cipher", title: "Geheime Code", intro: "Kraak de geheime Bitcoin-woorden met het cijferwiel!",
+      },
     ]
-  }
+  },
+  {
+    id: 5, title: "Geldzaken", icon: "🏦",
+    color: "#B45309", bg: "#FEF3C7",
+    summary: "Geld kun je verdienen, sparen, investeren en uitgeven. Budgetteren is kiezen. Eerlijke regels zijn belangrijk.",
+    description: "Verdienen, sparen, investeren — word een geldexpert!",
+    badge: "💎 Geldwijze",
+    activities: [
+      {
+        type: "quiz", title: "Slim met Geld", intro: "Test hoe slim jij bent met geldzaken!",
+        questions: [
+          { q: "Wat is sparen?", options: ["Geld direct uitgeven", "Geld opzij leggen voor later", "Geld weggooien", "Geld lenen van een vriend"], correct: 1, explanation: "Sparen = geld bewaren zodat je later iets groters of belangrijkers kunt kopen." },
+          { q: "Wat is investeren?", options: ["Geld verstoppen", "Je geld of tijd ergens insteken zodat het later meer waard wordt", "Alles vandaag uitgeven", "Geld verbrandenderen"], correct: 1, explanation: "Investeren is je geld of tijd ergens in steken met de hoop dat het later meer waard wordt." },
+          { q: "Je hebt 12 schelpen. Een tent kost 8 en een hengel kost 6. Kun je allebei kopen?", options: ["Ja!", "Nee, 8 + 6 = 14, en je hebt maar 12", "Alleen met korting", "Schelpen zijn geen geld"], correct: 1, explanation: "8 + 6 = 14, maar je hebt maar 12 schelpen. Je moet kiezen! Dat is budgetteren." },
+          { q: "Bij een veiling gaat de prijs van een zeldzaam item steeds omhoog. Waarom?", options: ["De verkoper is gemeen", "Meerdere mensen willen het, maar er is er maar één (schaarste + vraag)", "Het item wordt steeds groter", "Omdat iemand vals speelt"], correct: 1, explanation: "Als veel mensen iets willen maar er weinig van is, stijgt de prijs. Dat is hoe vraag en aanbod werkt!" },
+          { q: "Waarom zijn eerlijke regels bij geld belangrijk?", options: ["Dat zijn ze niet", "Zodat iedereen dezelfde kans krijgt", "Alleen voor kinderen", "Zodat het moeilijker wordt"], correct: 1, explanation: "Eerlijke regels zorgen dat niemand kan valsspelen en iedereen dezelfde kans heeft." },
+          { q: "Wat is lenen?", options: ["Geld stelen", "Geld van iemand anders krijgen dat je later moet terugbetalen", "Geld sparen", "Geld verliezen"], correct: 1, explanation: "Lenen betekent dat je geld van iemand anders krijgt, maar het later moet terugbetalen — vaak met extra (rente)." },
+        ]
+      },
+    ]
+  },
+  {
+    id: 6, title: "Basisprincipes van Bitcoin", icon: "₿",
+    color: "#EA580C", bg: "#FFF7ED",
+    summary: "Bitcoin is schaars digitaal geld zonder tussenpersoon. Mining bevestigt transacties. Satoshi is anoniem gebleven.",
+    description: "Het grote Bitcoin-avontuur: van Satoshi tot mining!",
+    badge: "⛏️ Bitcoinminer",
+    activities: [
+      {
+        type: "quiz", title: "Wie is Satoshi?", intro: "Ontdek het verhaal achter Bitcoin!",
+        questions: [
+          { q: "Wie heeft Bitcoin bedacht?", options: ["Elon Musk", "Satoshi Nakamoto", "De bank", "Google"], correct: 1, explanation: "Satoshi Nakamoto publiceerde in 2008 een 'white paper' met het idee voor Bitcoin. Niemand weet wie Satoshi echt is!" },
+          { q: "Wat is een 'white paper'?", options: ["Een leeg blaadje", "Een document waarin je een nieuw idee uitlegt", "Een geheime brief", "Een schoolopdracht"], correct: 1, explanation: "Een white paper is een document waarin je een nieuw idee of oplossing presenteert aan de wereld." },
+          { q: "Wat is de Genesis Block?", options: ["Een computerspel", "Het allereerste blok van Bitcoin", "Een soort steen", "Een geheim wachtwoord"], correct: 1, explanation: "Op 3 januari 2009 werd de Genesis Block gemaakt — het allereerste blok in de Bitcoin-blockchain." },
+          { q: "Hoeveel bitcoins zullen er ooit bestaan?", options: ["Oneindig veel", "Maximaal 21 miljoen", "Precies 1 miljard", "Dat weet niemand"], correct: 1, explanation: "Er zullen nooit meer dan 21 miljoen bitcoins bestaan. Die schaarste is ingebouwd in de regels!" },
+          { q: "Wat is 'minen' bij Bitcoin?", options: ["Graven in de grond", "Met computers puzzels oplossen om transacties te bevestigen", "Bitcoins printen", "Bitcoins tekenen"], correct: 1, explanation: "Miners gebruiken computers om wiskundige puzzels op te lossen. Als bewijs dat ze werk hebben gedaan, mogen ze transacties bevestigen." },
+          { q: "Wat is Proof of Work?", options: ["Een rapport van school", "Bewijs dat iemand echt moeite heeft gedaan om iets te verdienen", "Een wachtwoord", "Een soort diploma"], correct: 1, explanation: "Proof of Work = bewijs van werk. Net als het dobbelsteenspel: iedereen volgt dezelfde regels en heeft dezelfde kans." },
+          { q: "Waarom is Satoshi verdwenen?", options: ["Hij ging op vakantie", "Waarschijnlijk om Bitcoin echt van iedereen te laten zijn, zonder leider", "Hij werd boos", "Hij bestaat niet"], correct: 1, explanation: "Door te verdwijnen zorgde Satoshi ervoor dat Bitcoin niet van één persoon is. Het netwerk draait op regels, niet op een leider." },
+        ]
+      },
+      {
+        type: "mining", title: "Bitcoin Minen!", intro: "Vind gelijke paren om blokken te minen — net als echte miners!",
+      },
+      {
+        type: "scramble", title: "Bitcoin Woordkraker", intro: "Ontwar de door-elkaar-gehusselde Bitcoin-woorden!",
+        words: [
+          { scrambled: "COINBIT", answer: "BITCOIN", hint: "Digitaal geld" },
+          { scrambled: "SHATISO", answer: "SATOSHI", hint: "De mysterieuze uitvinder" },
+          { scrambled: "KLOB", answer: "BLOK", hint: "Transacties zitten hierin" },
+          { scrambled: "CHRAASS", answer: "SCHAARS", hint: "Er is niet veel van" },
+          { scrambled: "NIJEM", answer: "MINEN", hint: "Puzzels oplossen met computers" },
+          { scrambled: "TEWALL", answer: "WALLET", hint: "Hierin bewaar je bitcoin" },
+        ]
+      },
+    ]
+  },
 ];
 
-// ===== COMPONENTS =====
+// ═══════════════════════════════════════
+// SHARED COMPONENTS
+// ═══════════════════════════════════════
+
+const S = {
+  heading: { fontFamily: "'Baloo 2', cursive", margin: 0, lineHeight: 1.2 },
+  body: { fontFamily: "'Quicksand', sans-serif", margin: 0, lineHeight: 1.5 },
+  card: (bg = "rgba(255,255,255,0.92)") => ({
+    background: bg, borderRadius: 20, padding: "20px 18px",
+    boxShadow: "0 2px 16px rgba(0,0,0,0.06)",
+  }),
+  btn: (bg, size = 16) => ({
+    padding: `${size * 0.7}px ${size * 1.8}px`, borderRadius: 14,
+    border: "none", background: bg, color: "#fff",
+    fontSize: size, fontWeight: 700, cursor: "pointer",
+    fontFamily: "'Baloo 2', cursive",
+    boxShadow: `0 4px 14px ${bg}55`,
+    transition: "transform 0.15s, box-shadow 0.15s",
+  }),
+};
 
 function Confetti({ active }) {
   if (!active) return null;
-  const particles = Array.from({ length: 30 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    delay: Math.random() * 0.5,
-    color: ["#F7931A", "#4ECDC4", "#E8A838", "#A855F7", "#EF4444", "#F59E0B"][i % 6],
-    size: 6 + Math.random() * 8,
-  }));
   return (
-    <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 999 }}>
-      {particles.map(p => (
-        <div key={p.id} style={{
-          position: "absolute",
-          left: `${p.x}%`,
-          top: -20,
-          width: p.size,
-          height: p.size,
+    <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 9999 }}>
+      {Array.from({ length: 40 }, (_, i) => (
+        <div key={i} style={{
+          position: "absolute", left: `${Math.random() * 100}%`, top: -10,
+          width: 6 + Math.random() * 10, height: 6 + Math.random() * 10,
           borderRadius: Math.random() > 0.5 ? "50%" : "2px",
-          backgroundColor: p.color,
-          animation: `confettiFall 1.5s ${p.delay}s ease-out forwards`,
+          backgroundColor: ["#F7931A","#0D9488","#7C3AED","#DC2626","#FBBF24","#2DD4BF"][i % 6],
+          animation: `confFall ${1.2 + Math.random() * 1}s ${Math.random() * 0.5}s ease-out forwards`,
         }} />
       ))}
-      <style>{`
-        @keyframes confettiFall {
-          0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-          100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
-      `}</style>
     </div>
   );
 }
 
-function ProgressBar({ current, total }) {
-  const pct = Math.round((current / total) * 100);
+function ProgressDots({ total, current, color }) {
+  return (
+    <div style={{ display: "flex", gap: 6, justifyContent: "center", margin: "8px 0" }}>
+      {Array.from({ length: total }, (_, i) => (
+        <div key={i} style={{
+          width: i === current ? 24 : 10, height: 10, borderRadius: 5,
+          background: i < current ? color : i === current ? color : "rgba(0,0,0,0.12)",
+          opacity: i < current ? 0.5 : 1, transition: "all 0.3s",
+        }} />
+      ))}
+    </div>
+  );
+}
+
+function BadgeUnlock({ badge, onClose }) {
   return (
     <div style={{
-      width: "100%", height: 18, borderRadius: 12,
-      background: "rgba(0,0,0,0.15)", overflow: "hidden", position: "relative",
-    }}>
+      position: "fixed", inset: 0, background: "rgba(0,0,0,0.6)",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      zIndex: 9998, backdropFilter: "blur(6px)",
+    }} onClick={onClose}>
       <div style={{
-        height: "100%", width: `${pct}%`, borderRadius: 12,
-        background: "linear-gradient(90deg, #F7931A, #FFCF44)",
-        transition: "width 0.5s ease",
-      }} />
-      <span style={{
-        position: "absolute", inset: 0, display: "flex", alignItems: "center",
-        justifyContent: "center", fontSize: 11, fontWeight: 700, color: "#fff",
-        textShadow: "0 1px 2px rgba(0,0,0,0.4)",
-      }}>{pct}%</span>
+        background: "#fff", borderRadius: 28, padding: "40px 32px",
+        textAlign: "center", maxWidth: 320,
+        animation: "popIn 0.4s cubic-bezier(0.34,1.56,0.64,1)",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+      }} onClick={e => e.stopPropagation()}>
+        <div style={{ fontSize: 64, marginBottom: 8 }}>🎖️</div>
+        <h2 style={{ ...S.heading, fontSize: 24, color: "#1a1a2e", marginBottom: 4 }}>Badge Verdiend!</h2>
+        <p style={{ ...S.body, fontSize: 22, fontWeight: 700, color: "#F7931A", marginBottom: 16 }}>{badge}</p>
+        <p style={{ ...S.body, fontSize: 15, color: "#666", marginBottom: 20 }}>
+          Je hebt alle activiteiten in deze module afgerond!
+        </p>
+        <button onClick={onClose} style={S.btn("#F7931A", 17)}>Geweldig!</button>
+      </div>
     </div>
   );
 }
 
-// ----- Quiz Activity -----
-function QuizActivity({ activity, onComplete }) {
-  const [qIdx, setQIdx] = useState(0);
-  const [selected, setSelected] = useState(null);
+// ═══════════════════════════════════════
+// ACTIVITY COMPONENTS
+// ═══════════════════════════════════════
+
+// ── QUIZ ──
+function QuizActivity({ activity, color, onComplete }) {
+  const [qi, setQi] = useState(0);
+  const [sel, setSel] = useState(null);
   const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [confetti, setConfetti] = useState(false);
+  const [done, setDone] = useState(false);
+  const [conf, setConf] = useState(false);
+  const q = activity.questions[qi];
 
-  const question = activity.questions[qIdx];
-  const isLast = qIdx === activity.questions.length - 1;
-
-  const handleSelect = (idx) => {
-    if (selected !== null) return;
-    setSelected(idx);
-    if (idx === question.correct) {
-      setScore(s => s + 1);
-      setConfetti(true);
-      setTimeout(() => setConfetti(false), 1600);
-    }
+  const pick = (i) => {
+    if (sel !== null) return;
+    setSel(i);
+    if (i === q.correct) { setScore(s => s + 1); setConf(true); setTimeout(() => setConf(false), 1500); }
+  };
+  const next = () => {
+    if (qi === activity.questions.length - 1) setDone(true);
+    else { setQi(i => i + 1); setSel(null); }
   };
 
-  const handleNext = () => {
-    if (isLast) {
-      setShowResult(true);
-    } else {
-      setQIdx(i => i + 1);
-      setSelected(null);
-    }
-  };
-
-  if (showResult) {
-    const perfect = score === activity.questions.length;
+  if (done) {
+    const pct = Math.round((score / activity.questions.length) * 100);
     return (
-      <div style={{ textAlign: "center", padding: 20 }}>
-        <Confetti active={perfect} />
-        <div style={{ fontSize: 64, marginBottom: 16 }}>{perfect ? "🏆" : score >= activity.questions.length / 2 ? "⭐" : "💪"}</div>
-        <h3 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 28, margin: "0 0 8px" }}>
-          {perfect ? "Perfect!" : score >= activity.questions.length / 2 ? "Goed gedaan!" : "Blijf oefenen!"}
+      <div style={{ textAlign: "center", padding: 12 }}>
+        <Confetti active={pct === 100} />
+        <div style={{ fontSize: 56, marginBottom: 8 }}>{pct === 100 ? "🏆" : pct >= 60 ? "⭐" : "💪"}</div>
+        <h3 style={{ ...S.heading, fontSize: 26, color: "#1a1a2e" }}>
+          {pct === 100 ? "Alles goed!" : pct >= 60 ? "Goed bezig!" : "Blijf oefenen!"}
         </h3>
-        <p style={{ fontSize: 20, fontFamily: "'Nunito', sans-serif", margin: "0 0 24px" }}>
-          {score} van {activity.questions.length} goed
+        <p style={{ ...S.body, fontSize: 20, fontWeight: 700, color, margin: "4px 0 20px" }}>
+          {score} / {activity.questions.length} correct
         </p>
-        <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
-          {Array.from({ length: activity.questions.length }, (_, i) => (
-            <div key={i} style={{
-              width: 32, height: 32, borderRadius: "50%", display: "flex",
-              alignItems: "center", justifyContent: "center", fontSize: 16,
-              background: i < score ? "#4ECDC4" : "#EF4444",
-              color: "#fff", fontWeight: 700,
-            }}>{i < score ? "✓" : "✗"}</div>
-          ))}
-        </div>
-        <button onClick={onComplete} style={{
-          marginTop: 24, padding: "12px 32px", borderRadius: 16,
-          border: "none", background: "#F7931A", color: "#fff",
-          fontSize: 18, fontWeight: 700, cursor: "pointer",
-          fontFamily: "'Fredoka', sans-serif",
-          boxShadow: "0 4px 12px rgba(247,147,26,0.4)",
-        }}>Terug naar de kaart</button>
+        <button onClick={onComplete} style={S.btn("#F7931A")}>Verder →</button>
       </div>
     );
   }
 
   return (
     <div>
-      <Confetti active={confetti} />
-      <ProgressBar current={qIdx + 1} total={activity.questions.length} />
-      <p style={{
-        fontFamily: "'Nunito', sans-serif", fontSize: 13, textAlign: "center",
-        margin: "8px 0 0", color: "rgba(0,0,0,0.5)",
-      }}>Vraag {qIdx + 1} van {activity.questions.length}</p>
-      <div style={{
-        background: "rgba(255,255,255,0.7)", borderRadius: 20, padding: 24,
-        margin: "16px 0", backdropFilter: "blur(8px)",
-        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-      }}>
-        <p style={{
-          fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 600,
-          margin: 0, lineHeight: 1.4, color: "#1a1a2e",
-        }}>{question.q}</p>
+      <Confetti active={conf} />
+      <ProgressDots total={activity.questions.length} current={qi} color={color} />
+      <div style={{ ...S.card(), margin: "12px 0" }}>
+        <p style={{ ...S.heading, fontSize: 19, color: "#1a1a2e" }}>{q.q}</p>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {question.options.map((opt, i) => {
-          let bg = "rgba(255,255,255,0.85)";
-          let border = "2px solid rgba(0,0,0,0.08)";
-          let scale = "scale(1)";
-          if (selected !== null) {
-            if (i === question.correct) {
-              bg = "#d4edda"; border = "2px solid #28a745";
-              scale = "scale(1.02)";
-            } else if (i === selected) {
-              bg = "#f8d7da"; border = "2px solid #dc3545";
-            }
+      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        {q.options.map((o, i) => {
+          let bg = "rgba(255,255,255,0.92)", brd = "2px solid rgba(0,0,0,0.06)";
+          if (sel !== null) {
+            if (i === q.correct) { bg = "#DCFCE7"; brd = "2px solid #22C55E"; }
+            else if (i === sel) { bg = "#FEE2E2"; brd = "2px solid #EF4444"; }
           }
           return (
-            <button key={i} onClick={() => handleSelect(i)} style={{
-              padding: "14px 18px", borderRadius: 14, border,
-              background: bg, cursor: selected !== null ? "default" : "pointer",
-              fontSize: 17, fontFamily: "'Nunito', sans-serif", fontWeight: 600,
-              textAlign: "left", transition: "all 0.2s", transform: scale,
-              color: "#1a1a2e",
-            }}>{opt}</button>
+            <button key={i} onClick={() => pick(i)} style={{
+              padding: "14px 16px", borderRadius: 14, border: brd, background: bg,
+              cursor: sel !== null ? "default" : "pointer",
+              fontSize: 16, ...S.body, fontWeight: 600, textAlign: "left",
+              transition: "all 0.2s", color: "#1a1a2e",
+            }}>{o}</button>
           );
         })}
       </div>
-      {selected !== null && (
+      {sel !== null && (
         <div style={{
-          marginTop: 16, padding: 16, borderRadius: 14,
-          background: selected === question.correct
-            ? "linear-gradient(135deg, #d4edda, #c3e6cb)"
-            : "linear-gradient(135deg, #f8d7da, #f1c0c0)",
-          animation: "slideUp 0.3s ease",
+          marginTop: 14, padding: 16, borderRadius: 16,
+          background: sel === q.correct ? "#F0FDF4" : "#FEF2F2",
+          animation: "slideUp 0.25s ease",
         }}>
-          <p style={{
-            margin: 0, fontFamily: "'Nunito', sans-serif", fontSize: 15,
-            lineHeight: 1.5, color: "#1a1a2e",
-          }}>
-            {selected === question.correct ? "✅ " : "❌ "}
-            {question.explanation}
+          <p style={{ ...S.body, fontSize: 14, color: "#1a1a2e" }}>
+            {sel === q.correct ? "✅ " : "❌ "}{q.explanation}
           </p>
-          <button onClick={handleNext} style={{
-            marginTop: 12, padding: "10px 28px", borderRadius: 12,
-            border: "none", background: "#F7931A", color: "#fff",
-            fontSize: 16, fontWeight: 700, cursor: "pointer",
-            fontFamily: "'Fredoka', sans-serif",
-          }}>{isLast ? "Bekijk resultaat" : "Volgende →"}</button>
+          <button onClick={next} style={{ ...S.btn(color, 15), marginTop: 10 }}>
+            {qi === activity.questions.length - 1 ? "Resultaat" : "Volgende →"}
+          </button>
         </div>
       )}
-      <style>{`@keyframes slideUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }`}</style>
     </div>
   );
 }
 
-// ----- Sort Activity (Price Line) -----
-function SortActivity({ activity, onComplete }) {
-  const [items, setItems] = useState(() =>
-    [...activity.items].sort(() => Math.random() - 0.5)
-  );
-  const [dragIdx, setDragIdx] = useState(null);
+// ── SORT ──
+function SortActivity({ activity, color, onComplete }) {
+  const [items, setItems] = useState(() => [...activity.items].sort(() => Math.random() - 0.5));
   const [checked, setChecked] = useState(false);
-  const [correct, setCorrect] = useState(false);
+  const correct = items.every((it, i) => it.value === i + 1);
 
-  const handleDragStart = (idx) => setDragIdx(idx);
-  const handleDrop = (targetIdx) => {
-    if (dragIdx === null || dragIdx === targetIdx) return;
-    const newItems = [...items];
-    const [moved] = newItems.splice(dragIdx, 1);
-    newItems.splice(targetIdx, 0, moved);
-    setItems(newItems);
-    setDragIdx(null);
-    setChecked(false);
-  };
-
-  const moveItem = (idx, dir) => {
-    const newIdx = idx + dir;
-    if (newIdx < 0 || newIdx >= items.length) return;
-    const newItems = [...items];
-    [newItems[idx], newItems[newIdx]] = [newItems[newIdx], newItems[idx]];
-    setItems(newItems);
-    setChecked(false);
-  };
-
-  const checkOrder = () => {
-    const isCorrect = items.every((item, i) => item.value === i + 1);
-    setCorrect(isCorrect);
-    setChecked(true);
+  const move = (i, dir) => {
+    const j = i + dir;
+    if (j < 0 || j >= items.length) return;
+    const n = [...items]; [n[i], n[j]] = [n[j], n[i]]; setItems(n); setChecked(false);
   };
 
   return (
     <div>
-      <p style={{
-        fontFamily: "'Fredoka', sans-serif", fontSize: 18, textAlign: "center",
-        margin: "0 0 8px", color: "#1a1a2e",
-      }}>Zet in volgorde: goedkoop → duur</p>
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12, fontSize: 13, fontFamily: "'Nunito', sans-serif", color: "rgba(0,0,0,0.5)" }}>
-        <span>💰 Goedkoop</span>
-        <span>💎 Duur</span>
+      <div style={{ display: "flex", justifyContent: "space-between", ...S.body, fontSize: 13, color: "#888", marginBottom: 10 }}>
+        <span>💰 Goedkoop</span><span>💎 Duur</span>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-        {items.map((item, i) => (
-          <div key={item.name}
-            draggable
-            onDragStart={() => handleDragStart(i)}
-            onDragOver={(e) => e.preventDefault()}
-            onDrop={() => handleDrop(i)}
-            style={{
-              display: "flex", alignItems: "center", gap: 10,
-              padding: "12px 16px", borderRadius: 14,
-              background: checked
-                ? (item.value === i + 1 ? "#d4edda" : "#f8d7da")
-                : dragIdx === i ? "rgba(247,147,26,0.15)" : "rgba(255,255,255,0.85)",
-              border: checked
-                ? (item.value === i + 1 ? "2px solid #28a745" : "2px solid #dc3545")
-                : "2px solid rgba(0,0,0,0.08)",
-              cursor: "grab", transition: "all 0.2s",
-              fontFamily: "'Nunito', sans-serif", fontSize: 18, fontWeight: 600,
-            }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-              <button onClick={() => moveItem(i, -1)} style={{
-                border: "none", background: "none", cursor: "pointer", fontSize: 14, padding: 0, lineHeight: 1,
-              }}>▲</button>
-              <button onClick={() => moveItem(i, 1)} style={{
-                border: "none", background: "none", cursor: "pointer", fontSize: 14, padding: 0, lineHeight: 1,
-              }}>▼</button>
+      <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+        {items.map((it, i) => (
+          <div key={it.name} style={{
+            display: "flex", alignItems: "center", gap: 8,
+            padding: "12px 14px", borderRadius: 14,
+            background: checked ? (it.value === i + 1 ? "#DCFCE7" : "#FEE2E2") : "rgba(255,255,255,0.9)",
+            border: checked ? (it.value === i + 1 ? "2px solid #22C55E" : "2px solid #EF4444") : "2px solid rgba(0,0,0,0.06)",
+            ...S.body, fontSize: 17, fontWeight: 600, transition: "all 0.25s",
+          }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
+              <button onClick={() => move(i, -1)} style={{ border: "none", background: "none", cursor: "pointer", fontSize: 12, padding: 0 }}>▲</button>
+              <button onClick={() => move(i, 1)} style={{ border: "none", background: "none", cursor: "pointer", fontSize: 12, padding: 0 }}>▼</button>
             </div>
-            <span>{item.name}</span>
+            <span>{it.name}</span>
           </div>
         ))}
       </div>
-      <div style={{ display: "flex", gap: 10, marginTop: 16, justifyContent: "center" }}>
-        <button onClick={checkOrder} style={{
-          padding: "12px 28px", borderRadius: 14, border: "none",
-          background: "#4ECDC4", color: "#fff", fontSize: 16,
-          fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-        }}>Controleer!</button>
-        {checked && (
-          <button onClick={onComplete} style={{
-            padding: "12px 28px", borderRadius: 14, border: "none",
-            background: "#F7931A", color: "#fff", fontSize: 16,
-            fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-          }}>Terug naar de kaart</button>
-        )}
+      <div style={{ display: "flex", gap: 8, marginTop: 14, justifyContent: "center" }}>
+        <button onClick={() => setChecked(true)} style={S.btn(color)}>Controleer</button>
+        {checked && <button onClick={onComplete} style={S.btn("#F7931A")}>Verder →</button>}
       </div>
-      {checked && (
-        <p style={{
-          textAlign: "center", marginTop: 12, fontSize: 18,
-          fontFamily: "'Fredoka', sans-serif", fontWeight: 600,
-          color: correct ? "#28a745" : "#dc3545",
-        }}>
-          {correct ? "🎉 Perfect! Je hebt alles goed geplaatst!" : "Bijna! Probeer de volgorde aan te passen."}
-        </p>
-      )}
+      {checked && <p style={{ ...S.heading, textAlign: "center", marginTop: 10, fontSize: 18, color: correct ? "#22C55E" : "#EF4444" }}>
+        {correct ? "🎉 Perfect!" : "Bijna! Pas de volgorde aan."}
+      </p>}
     </div>
   );
 }
 
-// ----- Match Activity -----
-function MatchActivity({ activity, onComplete }) {
-  const [selected, setSelected] = useState(null);
+// ── MATCH ──
+function MatchActivity({ activity, color, onComplete }) {
+  const [sel, setSel] = useState(null);
   const [matched, setMatched] = useState([]);
   const [wrong, setWrong] = useState(null);
-  const [confetti, setConfetti] = useState(false);
-
-  const shuffledNew = useRef(
-    [...activity.pairs].sort(() => Math.random() - 0.5)
-  ).current;
-
-  const handleOldClick = (idx) => {
-    if (matched.includes(idx)) return;
-    setSelected(idx);
-    setWrong(null);
-  };
-
-  const handleNewClick = (newIdx) => {
-    if (selected === null) return;
-    const oldPair = activity.pairs[selected];
-    const newPair = shuffledNew[newIdx];
-    if (oldPair.new === newPair.new) {
-      setMatched(m => [...m, selected]);
-      setSelected(null);
-      if (matched.length + 1 === activity.pairs.length) {
-        setConfetti(true);
-        setTimeout(() => setConfetti(false), 2000);
-      }
-    } else {
-      setWrong(newIdx);
-      setTimeout(() => setWrong(null), 600);
-    }
-  };
-
+  const shuffled = useRef([...activity.pairs].sort(() => Math.random() - 0.5)).current;
   const allDone = matched.length === activity.pairs.length;
+
+  const clickOld = (i) => { if (!matched.includes(i)) { setSel(i); setWrong(null); } };
+  const clickNew = (ni) => {
+    if (sel === null) return;
+    if (activity.pairs[sel].new === shuffled[ni].new) {
+      setMatched(m => [...m, sel]); setSel(null);
+    } else { setWrong(ni); setTimeout(() => setWrong(null), 500); }
+  };
 
   return (
     <div>
-      <Confetti active={confetti} />
-      <p style={{
-        fontFamily: "'Fredoka', sans-serif", fontSize: 18, textAlign: "center",
-        margin: "0 0 16px", color: "#1a1a2e",
-      }}>Klik eerst op OUD, dan op NIEUW</p>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+      <p style={{ ...S.heading, fontSize: 16, textAlign: "center", color: "#888", marginBottom: 10 }}>
+        Klik eerst OUD, dan NIEUW ({matched.length}/{activity.pairs.length})
+      </p>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
         <div>
-          <p style={{
-            textAlign: "center", fontFamily: "'Fredoka', sans-serif",
-            fontSize: 15, fontWeight: 700, color: "#8B4513", margin: "0 0 8px",
-          }}>🏛️ OUD</p>
-          {activity.pairs.map((p, i) => (
-            <button key={i} onClick={() => handleOldClick(i)} style={{
-              width: "100%", padding: "12px 10px", marginBottom: 8,
-              borderRadius: 12, border: matched.includes(i) ? "2px solid #28a745"
-                : selected === i ? "2px solid #F7931A" : "2px solid rgba(0,0,0,0.1)",
-              background: matched.includes(i) ? "#d4edda"
-                : selected === i ? "rgba(247,147,26,0.15)" : "rgba(255,255,255,0.8)",
-              fontSize: 16, fontFamily: "'Nunito', sans-serif", fontWeight: 600,
-              cursor: matched.includes(i) ? "default" : "pointer",
-              opacity: matched.includes(i) ? 0.6 : 1, transition: "all 0.2s",
-            }}>{p.old}</button>
-          ))}
+          <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#92400E", marginBottom: 6 }}>🏛️ Oud</p>
+          {activity.pairs.map((p, i) => {
+            const done = matched.includes(i);
+            return (
+              <button key={i} onClick={() => clickOld(i)} style={{
+                width: "100%", padding: "11px 8px", marginBottom: 6, borderRadius: 12,
+                border: done ? "2px solid #22C55E" : sel === i ? `2px solid ${color}` : "2px solid rgba(0,0,0,0.06)",
+                background: done ? "#DCFCE7" : sel === i ? `${color}15` : "rgba(255,255,255,0.85)",
+                ...S.body, fontSize: 15, fontWeight: 600, cursor: done ? "default" : "pointer",
+                opacity: done ? 0.5 : 1, transition: "all 0.2s",
+              }}>{p.old}</button>
+            );
+          })}
         </div>
         <div>
-          <p style={{
-            textAlign: "center", fontFamily: "'Fredoka', sans-serif",
-            fontSize: 15, fontWeight: 700, color: "#1e40af", margin: "0 0 8px",
-          }}>🚀 NIEUW</p>
-          {shuffledNew.map((p, i) => {
-            const isMatched = matched.some(mIdx => activity.pairs[mIdx].new === p.new);
+          <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#1E40AF", marginBottom: 6 }}>🚀 Nieuw</p>
+          {shuffled.map((p, i) => {
+            const done = matched.some(mi => activity.pairs[mi].new === p.new);
             return (
-              <button key={i} onClick={() => handleNewClick(i)} style={{
-                width: "100%", padding: "12px 10px", marginBottom: 8,
-                borderRadius: 12,
-                border: isMatched ? "2px solid #28a745"
-                  : wrong === i ? "2px solid #dc3545" : "2px solid rgba(0,0,0,0.1)",
-                background: isMatched ? "#d4edda"
-                  : wrong === i ? "#f8d7da" : "rgba(255,255,255,0.8)",
-                fontSize: 16, fontFamily: "'Nunito', sans-serif", fontWeight: 600,
-                cursor: isMatched ? "default" : "pointer",
-                opacity: isMatched ? 0.6 : 1, transition: "all 0.2s",
-                animation: wrong === i ? "shake 0.4s ease" : "none",
+              <button key={i} onClick={() => clickNew(i)} style={{
+                width: "100%", padding: "11px 8px", marginBottom: 6, borderRadius: 12,
+                border: done ? "2px solid #22C55E" : wrong === i ? "2px solid #EF4444" : "2px solid rgba(0,0,0,0.06)",
+                background: done ? "#DCFCE7" : wrong === i ? "#FEE2E2" : "rgba(255,255,255,0.85)",
+                ...S.body, fontSize: 15, fontWeight: 600, cursor: done ? "default" : "pointer",
+                opacity: done ? 0.5 : 1, transition: "all 0.2s",
+                animation: wrong === i ? "shake 0.35s ease" : "none",
               }}>{p.new}</button>
             );
           })}
@@ -655,442 +451,449 @@ function MatchActivity({ activity, onComplete }) {
       </div>
       {allDone && (
         <div style={{ textAlign: "center", marginTop: 16 }}>
-          <p style={{ fontSize: 22, fontFamily: "'Fredoka', sans-serif", fontWeight: 700 }}>
-            🎉 Alles gekoppeld!
-          </p>
-          <button onClick={onComplete} style={{
-            padding: "12px 28px", borderRadius: 14, border: "none",
-            background: "#F7931A", color: "#fff", fontSize: 16,
-            fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-          }}>Terug naar de kaart</button>
+          <Confetti active={true} />
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>🎉 Alles gekoppeld!</p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 8 }}>Verder →</button>
         </div>
       )}
-      <style>{`@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }`}</style>
     </div>
   );
 }
 
-// ----- Cipher Activity -----
-function CipherActivity({ activity, onComplete }) {
-  const [shift, setShift] = useState(3);
-  const [input, setInput] = useState("");
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// ── TRUE/FALSE ──
+function TrueFalseActivity({ activity, color, onComplete }) {
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [feedback, setFeedback] = useState(null);
+  const [done, setDone] = useState(false);
+  const st = activity.statements[idx];
 
-  const encode = (text) => {
-    return text.toUpperCase().split("").map(c => {
-      const idx = alphabet.indexOf(c);
-      if (idx === -1) return c;
-      return alphabet[(idx + shift) % 26];
-    }).join("");
+  const answer = (val) => {
+    if (feedback) return;
+    const correct = val === st.answer;
+    if (correct) setScore(s => s + 1);
+    setFeedback({ correct, explanation: st.explanation });
+  };
+  const next = () => {
+    if (idx === activity.statements.length - 1) setDone(true);
+    else { setIdx(i => i + 1); setFeedback(null); }
   };
 
-  const decode = (text) => {
-    return text.toUpperCase().split("").map(c => {
-      const idx = alphabet.indexOf(c);
-      if (idx === -1) return c;
-      return alphabet[(idx - shift + 26) % 26];
-    }).join("");
-  };
-
-  const challenges = [
-    { encoded: encode("BITCOIN"), hint: "Een digitale munt" },
-    { encoded: encode("SATOSHI"), hint: "De mysterieuze bedenker" },
-    { encoded: encode("SCHAARS"), hint: "Er is niet veel van" },
-    { encoded: encode("SLEUTEL"), hint: "Opent een slot" },
-  ];
-
-  const [challengeIdx, setChallengeIdx] = useState(0);
-  const [guess, setGuess] = useState("");
-  const [solved, setSolved] = useState([]);
-
-  const currentChallenge = challenges[challengeIdx];
-  const checkAnswer = () => {
-    const decoded = decode(currentChallenge.encoded);
-    if (guess.toUpperCase().trim() === decoded) {
-      setSolved(s => [...s, challengeIdx]);
-      if (challengeIdx < challenges.length - 1) {
-        setChallengeIdx(i => i + 1);
-        setGuess("");
-      }
-    }
-  };
-
-  const allSolved = solved.length === challenges.length;
+  if (done) {
+    return (
+      <div style={{ textAlign: "center", padding: 16 }}>
+        <Confetti active={score === activity.statements.length} />
+        <div style={{ fontSize: 56, marginBottom: 8 }}>{score === activity.statements.length ? "🏆" : "⭐"}</div>
+        <h3 style={{ ...S.heading, fontSize: 24, color: "#1a1a2e" }}>{score} / {activity.statements.length} goed!</h3>
+        <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 16 }}>Verder →</button>
+      </div>
+    );
+  }
 
   return (
     <div>
-      <div style={{
-        background: "rgba(255,255,255,0.8)", borderRadius: 16, padding: 16,
-        marginBottom: 16,
-      }}>
-        <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, margin: "0 0 10px", textAlign: "center" }}>
-          🔄 Cijferwiel — verschuiving: <strong>{shift}</strong>
-        </p>
-        <div style={{ display: "flex", justifyContent: "center", gap: 4, flexWrap: "wrap", marginBottom: 8 }}>
-          {alphabet.split("").map((c, i) => (
-            <div key={i} style={{
-              display: "flex", flexDirection: "column", alignItems: "center",
-              width: 22, fontSize: 12, fontFamily: "monospace",
-            }}>
-              <span style={{ color: "#1e40af", fontWeight: 700 }}>{c}</span>
-              <span style={{ color: "#dc3545", fontSize: 10 }}>↓</span>
-              <span style={{ color: "#dc3545", fontWeight: 700 }}>{alphabet[(i + shift) % 26]}</span>
-            </div>
-          ))}
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", gap: 8 }}>
-          <button onClick={() => setShift(s => (s - 1 + 26) % 26)} style={{
-            width: 36, height: 36, borderRadius: "50%", border: "2px solid #F7931A",
-            background: "#fff", fontSize: 18, cursor: "pointer",
-          }}>←</button>
-          <button onClick={() => setShift(s => (s + 1) % 26)} style={{
-            width: 36, height: 36, borderRadius: "50%", border: "2px solid #F7931A",
-            background: "#fff", fontSize: 18, cursor: "pointer",
-          }}>→</button>
-        </div>
+      <ProgressDots total={activity.statements.length} current={idx} color={color} />
+      <div style={{ ...S.card(), textAlign: "center", margin: "16px 0" }}>
+        <p style={{ ...S.heading, fontSize: 22, color: "#1a1a2e" }}>{st.text}</p>
       </div>
-
-      {!allSolved ? (
-        <div style={{
-          background: "rgba(255,255,255,0.8)", borderRadius: 16, padding: 20,
-        }}>
-          <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: 14, margin: "0 0 4px", color: "rgba(0,0,0,0.5)" }}>
-            Opdracht {challengeIdx + 1} van {challenges.length} — Hint: {currentChallenge.hint}
-          </p>
-          <p style={{
-            fontFamily: "monospace", fontSize: 28, fontWeight: 700,
-            letterSpacing: 6, textAlign: "center", margin: "12px 0",
-            color: "#dc3545",
-          }}>{currentChallenge.encoded}</p>
-          <div style={{ display: "flex", gap: 8 }}>
-            <input
-              value={guess}
-              onChange={e => setGuess(e.target.value)}
-              placeholder="Typ het geheime woord..."
-              onKeyDown={e => e.key === "Enter" && checkAnswer()}
-              style={{
-                flex: 1, padding: "10px 14px", borderRadius: 12,
-                border: "2px solid rgba(0,0,0,0.1)", fontSize: 18,
-                fontFamily: "monospace", textTransform: "uppercase",
-                letterSpacing: 3,
-              }}
-            />
-            <button onClick={checkAnswer} style={{
-              padding: "10px 20px", borderRadius: 12, border: "none",
-              background: "#4ECDC4", color: "#fff", fontSize: 16,
-              fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-            }}>Check</button>
-          </div>
+      {!feedback ? (
+        <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
+          <button onClick={() => answer(true)} style={{
+            ...S.btn("#22C55E", 18), padding: "18px 32px", borderRadius: 18, flex: 1, maxWidth: 160,
+          }}>🌍 Openbaar</button>
+          <button onClick={() => answer(false)} style={{
+            ...S.btn("#DC2626", 18), padding: "18px 32px", borderRadius: 18, flex: 1, maxWidth: 160,
+          }}>🔐 Privé</button>
         </div>
       ) : (
-        <div style={{ textAlign: "center", padding: 20 }}>
-          <p style={{ fontSize: 48 }}>🔓</p>
-          <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, fontWeight: 700 }}>
-            Alle codes gekraakt!
+        <div style={{
+          padding: 16, borderRadius: 16, animation: "slideUp 0.25s ease",
+          background: feedback.correct ? "#F0FDF4" : "#FEF2F2",
+        }}>
+          <p style={{ ...S.body, fontSize: 15 }}>
+            {feedback.correct ? "✅ Goed! " : "❌ Niet helemaal. "}{feedback.explanation}
           </p>
-          <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: 16 }}>
-            Je bent een echte Cypherpunk!
-          </p>
-          <button onClick={onComplete} style={{
-            marginTop: 12, padding: "12px 28px", borderRadius: 14, border: "none",
-            background: "#F7931A", color: "#fff", fontSize: 16,
-            fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-          }}>Terug naar de kaart</button>
+          <button onClick={next} style={{ ...S.btn(color, 15), marginTop: 10 }}>Volgende →</button>
         </div>
       )}
     </div>
   );
 }
 
-// ----- Mining Game -----
-function MiningActivity({ activity, onComplete }) {
-  const symbols = ["⛏️", "🔗", "🪙", "🔑", "🛡️", "📦", "⚡", "🌐"];
+// ── CATEGORIZE ──
+function CategorizeActivity({ activity, color, onComplete }) {
+  const [remaining, setRemaining] = useState(() => [...activity.items].sort(() => Math.random() - 0.5));
+  const [placed, setPlaced] = useState(activity.categories.map(() => []));
+  const [checked, setChecked] = useState(false);
+
+  const place = (catIdx) => {
+    if (remaining.length === 0 || checked) return;
+    const item = remaining[0];
+    const newPlaced = placed.map((arr, i) => i === catIdx ? [...arr, item] : arr);
+    setPlaced(newPlaced);
+    setRemaining(r => r.slice(1));
+  };
+
+  const score = placed.flat().filter(it => it.cat === activity.categories.indexOf(
+    activity.categories[placed.findIndex(arr => arr.includes(it))]
+  )).length;
+
+  const totalCorrect = placed.reduce((sum, arr, catIdx) =>
+    sum + arr.filter(it => it.cat === catIdx).length, 0
+  );
+
+  return (
+    <div>
+      {remaining.length > 0 && !checked && (
+        <div style={{ ...S.card(), textAlign: "center", marginBottom: 14 }}>
+          <p style={{ ...S.body, fontSize: 13, color: "#888", marginBottom: 4 }}>
+            Nog {remaining.length} over — waar hoort dit?
+          </p>
+          <p style={{ ...S.heading, fontSize: 20, color: "#1a1a2e" }}>{remaining[0].name}</p>
+        </div>
+      )}
+      <div style={{ display: "flex", gap: 8 }}>
+        {activity.categories.map((cat, ci) => (
+          <button key={ci} onClick={() => place(ci)} style={{
+            flex: 1, padding: 10, borderRadius: 14, minHeight: 120,
+            border: `2px solid ${["#D97706","#0D9488","#7C3AED"][ci]}33`,
+            background: `${["#FEF3C7","#CCFBF1","#EDE9FE"][ci]}`,
+            cursor: remaining.length > 0 && !checked ? "pointer" : "default",
+            display: "flex", flexDirection: "column", alignItems: "center",
+          }}>
+            <p style={{ ...S.heading, fontSize: 13, color: "#1a1a2e", marginBottom: 6 }}>{cat}</p>
+            {placed[ci].map((it, ii) => (
+              <span key={ii} style={{
+                ...S.body, fontSize: 11, fontWeight: 600,
+                background: checked ? (it.cat === ci ? "#DCFCE7" : "#FEE2E2") : "#fff",
+                padding: "3px 8px", borderRadius: 8, marginBottom: 3, display: "block",
+                border: checked ? (it.cat === ci ? "1px solid #22C55E" : "1px solid #EF4444") : "1px solid rgba(0,0,0,0.06)",
+              }}>{it.name}</span>
+            ))}
+          </button>
+        ))}
+      </div>
+      {remaining.length === 0 && !checked && (
+        <div style={{ textAlign: "center", marginTop: 14 }}>
+          <button onClick={() => setChecked(true)} style={S.btn(color)}>Controleer!</button>
+        </div>
+      )}
+      {checked && (
+        <div style={{ textAlign: "center", marginTop: 14 }}>
+          <p style={{ ...S.heading, fontSize: 20, color: totalCorrect === activity.items.length ? "#22C55E" : "#D97706" }}>
+            {totalCorrect} / {activity.items.length} goed!
+          </p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 8 }}>Verder →</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── CIPHER ──
+function CipherActivity({ activity, color, onComplete }) {
+  const [shift, setShift] = useState(3);
+  const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const encode = (t) => t.toUpperCase().split("").map(c => { const i = alpha.indexOf(c); return i === -1 ? c : alpha[(i + shift) % 26]; }).join("");
+  const challenges = [
+    { word: "BITCOIN", hint: "Digitaal geld" },
+    { word: "SATOSHI", hint: "De mysterieuze bedenker" },
+    { word: "SCHAARS", hint: "Er is niet veel van" },
+    { word: "WALLET", hint: "Hierin bewaar je bitcoin" },
+    { word: "BLOK", hint: "Transacties zitten hierin" },
+  ];
+  const [ci, setCi] = useState(0);
+  const [guess, setGuess] = useState("");
+  const [solved, setSolved] = useState([]);
+  const ch = challenges[ci];
+  const allDone = solved.length === challenges.length;
+
+  const check = () => {
+    if (guess.toUpperCase().trim() === ch.word) {
+      const ns = [...solved, ci]; setSolved(ns);
+      if (ci < challenges.length - 1) { setCi(i => i + 1); setGuess(""); }
+    }
+  };
+
+  return (
+    <div>
+      <div style={{ ...S.card(), marginBottom: 14, textAlign: "center" }}>
+        <p style={{ ...S.heading, fontSize: 15, color: "#888", marginBottom: 6 }}>
+          🔄 Cijferwiel — verschuiving: <strong>{shift}</strong>
+        </p>
+        <div style={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap", marginBottom: 8 }}>
+          {alpha.split("").map((c, i) => (
+            <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 20, fontSize: 11, fontFamily: "monospace" }}>
+              <span style={{ color: "#1E40AF", fontWeight: 700 }}>{c}</span>
+              <span style={{ fontSize: 8, color: "#999" }}>↓</span>
+              <span style={{ color: "#DC2626", fontWeight: 700 }}>{alpha[(i + shift) % 26]}</span>
+            </div>
+          ))}
+        </div>
+        <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
+          <button onClick={() => setShift(s => (s - 1 + 26) % 26)} style={{ width: 34, height: 34, borderRadius: "50%", border: `2px solid ${color}`, background: "#fff", fontSize: 16, cursor: "pointer" }}>←</button>
+          <button onClick={() => setShift(s => (s + 1) % 26)} style={{ width: 34, height: 34, borderRadius: "50%", border: `2px solid ${color}`, background: "#fff", fontSize: 16, cursor: "pointer" }}>→</button>
+        </div>
+      </div>
+      {!allDone ? (
+        <div style={S.card()}>
+          <p style={{ ...S.body, fontSize: 13, color: "#888", marginBottom: 2 }}>
+            Opdracht {ci + 1}/{challenges.length} — Hint: {ch.hint}
+          </p>
+          <p style={{ fontFamily: "monospace", fontSize: 26, fontWeight: 700, letterSpacing: 5, textAlign: "center", margin: "10px 0", color: "#DC2626" }}>
+            {encode(ch.word)}
+          </p>
+          <div style={{ display: "flex", gap: 6 }}>
+            <input value={guess} onChange={e => setGuess(e.target.value)}
+              onKeyDown={e => e.key === "Enter" && check()}
+              placeholder="Typ het woord..."
+              style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "2px solid rgba(0,0,0,0.08)", fontSize: 17, fontFamily: "monospace", textTransform: "uppercase", letterSpacing: 3 }}
+            />
+            <button onClick={check} style={S.btn(color, 15)}>Check</button>
+          </div>
+        </div>
+      ) : (
+        <div style={{ textAlign: "center", padding: 16 }}>
+          <Confetti active={true} />
+          <p style={{ fontSize: 48 }}>🔓</p>
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>Alle codes gekraakt!</p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 12 }}>Verder →</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── MINING (MEMORY) ──
+function MiningActivity({ activity, color, onComplete }) {
+  const syms = ["⛏️","🔗","🪙","🔑","🛡️","📦","⚡","🌐"];
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
   const [moves, setMoves] = useState(0);
-  const [mined, setMined] = useState(0);
 
   useEffect(() => {
-    const deck = [...symbols, ...symbols]
-      .sort(() => Math.random() - 0.5)
-      .map((s, i) => ({ id: i, symbol: s }));
-    setCards(deck);
+    setCards([...syms, ...syms].sort(() => Math.random() - 0.5).map((s, i) => ({ id: i, sym: s })));
   }, []);
 
-  const handleFlip = (id) => {
+  const flip = (id) => {
     if (flipped.length === 2 || flipped.includes(id) || matched.includes(id)) return;
-    const newFlipped = [...flipped, id];
-    setFlipped(newFlipped);
-    setMoves(m => m + 1);
-
-    if (newFlipped.length === 2) {
-      const [a, b] = newFlipped;
-      if (cards[a].symbol === cards[b].symbol) {
-        setMatched(m => [...m, a, b]);
-        setMined(m => m + 1);
-        setFlipped([]);
-      } else {
-        setTimeout(() => setFlipped([]), 700);
-      }
+    const nf = [...flipped, id]; setFlipped(nf); setMoves(m => m + 1);
+    if (nf.length === 2) {
+      if (cards[nf[0]].sym === cards[nf[1]].sym) { setMatched(m => [...m, ...nf]); setFlipped([]); }
+      else setTimeout(() => setFlipped([]), 600);
     }
   };
 
-  const allDone = matched.length === cards.length && cards.length > 0;
+  const done = matched.length === cards.length && cards.length > 0;
 
   return (
     <div>
-      <div style={{
-        display: "flex", justifyContent: "space-between", marginBottom: 12,
-        fontFamily: "'Nunito', sans-serif", fontSize: 14, fontWeight: 600,
-      }}>
-        <span>⛏️ Gemined: {mined}/{symbols.length}</span>
+      <div style={{ display: "flex", justifyContent: "space-between", ...S.body, fontSize: 14, fontWeight: 600, marginBottom: 10, color: "#666" }}>
+        <span>⛏️ Gemined: {matched.length / 2}/{syms.length}</span>
         <span>🎯 Pogingen: {moves}</span>
       </div>
-      <div style={{
-        display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8,
-      }}>
-        {cards.map((card) => {
-          const isFlipped = flipped.includes(card.id) || matched.includes(card.id);
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 7 }}>
+        {cards.map(c => {
+          const vis = flipped.includes(c.id) || matched.includes(c.id);
           return (
-            <button key={card.id} onClick={() => handleFlip(card.id)} style={{
+            <button key={c.id} onClick={() => flip(c.id)} style={{
               aspectRatio: "1", borderRadius: 14, border: "none",
-              background: matched.includes(card.id)
-                ? "linear-gradient(135deg, #d4edda, #c3e6cb)"
-                : isFlipped ? "#fff" : "linear-gradient(135deg, #F7931A, #E8A838)",
-              fontSize: 28, cursor: isFlipped ? "default" : "pointer",
-              transition: "all 0.3s",
-              transform: isFlipped ? "rotateY(0deg)" : "rotateY(0deg)",
-              boxShadow: matched.includes(card.id) ? "none" : "0 2px 8px rgba(0,0,0,0.15)",
+              background: matched.includes(c.id) ? "#DCFCE7" : vis ? "#fff" : `linear-gradient(135deg, ${color}, ${color}CC)`,
+              fontSize: 26, cursor: vis ? "default" : "pointer",
+              boxShadow: matched.includes(c.id) ? "none" : "0 2px 8px rgba(0,0,0,0.12)",
               display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              {isFlipped ? card.symbol : "₿"}
-            </button>
+              transition: "all 0.25s",
+            }}>{vis ? c.sym : "₿"}</button>
           );
         })}
       </div>
-      {allDone && (
-        <div style={{ textAlign: "center", marginTop: 20 }}>
+      {done && (
+        <div style={{ textAlign: "center", marginTop: 16 }}>
           <Confetti active={true} />
-          <p style={{ fontSize: 48 }}>🏆</p>
-          <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700 }}>
-            Blok voltooid in {moves} pogingen!
-          </p>
-          <button onClick={onComplete} style={{
-            marginTop: 12, padding: "12px 28px", borderRadius: 14, border: "none",
-            background: "#F7931A", color: "#fff", fontSize: 16,
-            fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-          }}>Terug naar de kaart</button>
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>🏆 Blok voltooid in {moves} pogingen!</p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 10 }}>Verder →</button>
         </div>
       )}
     </div>
   );
 }
 
-// ----- Energy Tracker -----
-function EnergyActivity({ activity, onComplete }) {
-  const dayActivities = [
-    { time: "07:00", name: "🌅 Opstaan", energy: 3 },
-    { time: "07:30", name: "🥣 Ontbijt", energy: 5 },
-    { time: "08:30", name: "🏫 School", energy: -2 },
-    { time: "10:00", name: "📝 Toets", energy: -4 },
-    { time: "10:30", name: "🏃 Pauze buiten", energy: 3 },
-    { time: "12:00", name: "🍎 Lunch", energy: 4 },
-    { time: "13:30", name: "📚 Huiswerk", energy: -3 },
-    { time: "15:00", name: "⚽ Sporten", energy: 2 },
-    { time: "17:00", name: "🎮 Gamen", energy: 1 },
-    { time: "18:30", name: "🍽️ Avondeten", energy: 3 },
-    { time: "20:00", name: "📖 Lezen", energy: -1 },
-    { time: "21:00", name: "😴 Slapen", energy: 5 },
-  ];
+// ── WORD SCRAMBLE ──
+function ScrambleActivity({ activity, color, onComplete }) {
+  const [wi, setWi] = useState(0);
+  const [guess, setGuess] = useState("");
+  const [solved, setSolved] = useState([]);
+  const [wrong, setWrong] = useState(false);
+  const w = activity.words[wi];
+  const allDone = solved.length === activity.words.length;
 
-  const [active, setActive] = useState([]);
-  const toggleActivity = (i) => {
-    setActive(a => a.includes(i) ? a.filter(x => x !== i) : [...a, i].sort((x, y) => x - y));
+  const check = () => {
+    if (guess.toUpperCase().trim() === w.answer) {
+      const ns = [...solved, wi]; setSolved(ns);
+      setGuess("");
+      if (wi < activity.words.length - 1) setWi(i => i + 1);
+    } else { setWrong(true); setTimeout(() => setWrong(false), 500); }
   };
-
-  let runningEnergy = 5;
-  const energyLine = active.map(i => {
-    runningEnergy = Math.max(0, Math.min(10, runningEnergy + dayActivities[i].energy));
-    return { idx: i, level: runningEnergy, activity: dayActivities[i] };
-  });
 
   return (
     <div>
-      <p style={{
-        fontFamily: "'Fredoka', sans-serif", fontSize: 16, textAlign: "center",
-        margin: "0 0 12px", color: "#1a1a2e",
-      }}>Klik op activiteiten om je dagelijkse energie te zien!</p>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6, marginBottom: 16 }}>
-        {dayActivities.map((a, i) => (
-          <button key={i} onClick={() => toggleActivity(i)} style={{
-            padding: "8px 10px", borderRadius: 10,
-            border: active.includes(i) ? "2px solid #4ECDC4" : "2px solid rgba(0,0,0,0.08)",
-            background: active.includes(i) ? "#d4edda" : "rgba(255,255,255,0.8)",
-            fontSize: 13, fontFamily: "'Nunito', sans-serif", fontWeight: 600,
-            cursor: "pointer", textAlign: "left", transition: "all 0.2s",
-          }}>
-            <span style={{ fontSize: 11, color: "rgba(0,0,0,0.4)" }}>{a.time}</span>
-            <br />{a.name}
-            <span style={{ float: "right", color: a.energy > 0 ? "#28a745" : "#dc3545" }}>
-              {a.energy > 0 ? `+${a.energy}` : a.energy}
-            </span>
-          </button>
-        ))}
-      </div>
-      {active.length > 0 && (
-        <div style={{
-          background: "rgba(255,255,255,0.8)", borderRadius: 14, padding: 16,
-        }}>
-          <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, margin: "0 0 10px", textAlign: "center" }}>
-            ⚡ Jouw energieverloop
+      <ProgressDots total={activity.words.length} current={solved.length} color={color} />
+      {!allDone ? (
+        <div style={{ ...S.card(), textAlign: "center", margin: "12px 0" }}>
+          <p style={{ ...S.body, fontSize: 13, color: "#888", marginBottom: 4 }}>
+            Hint: {w.hint}
           </p>
-          <div style={{ display: "flex", alignItems: "flex-end", gap: 4, height: 120, justifyContent: "center" }}>
-            {energyLine.map((e, i) => (
+          <div style={{
+            display: "flex", gap: 8, justifyContent: "center", margin: "16px 0",
+            animation: wrong ? "shake 0.35s ease" : "none",
+          }}>
+            {w.scrambled.split("").map((c, i) => (
               <div key={i} style={{
-                width: Math.max(20, 200 / energyLine.length),
-                height: `${e.level * 12}px`,
-                background: e.level > 6 ? "#28a745" : e.level > 3 ? "#F59E0B" : "#dc3545",
-                borderRadius: "6px 6px 0 0", transition: "height 0.3s",
-                display: "flex", alignItems: "flex-start", justifyContent: "center",
-                fontSize: 10, color: "#fff", fontWeight: 700, paddingTop: 2,
-                minHeight: 16,
-              }}>{e.level}</div>
+                width: 40, height: 48, borderRadius: 10,
+                background: `linear-gradient(135deg, ${color}22, ${color}11)`,
+                border: `2px solid ${color}44`,
+                display: "flex", alignItems: "center", justifyContent: "center",
+                ...S.heading, fontSize: 22, color: color,
+              }}>{c}</div>
             ))}
           </div>
+          <div style={{ display: "flex", gap: 6 }}>
+            <input value={guess} onChange={e => setGuess(e.target.value)}
+              onKeyDown={e => e.key === "Enter" && check()}
+              placeholder="Typ het woord..."
+              style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "2px solid rgba(0,0,0,0.08)", fontSize: 17, fontFamily: "monospace", textTransform: "uppercase", letterSpacing: 3 }}
+            />
+            <button onClick={check} style={S.btn(color, 15)}>Check</button>
+          </div>
+        </div>
+      ) : (
+        <div style={{ textAlign: "center", padding: 16 }}>
+          <Confetti active={true} />
+          <p style={{ fontSize: 48 }}>🧩</p>
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>Alle woorden gevonden!</p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 12 }}>Verder →</button>
         </div>
       )}
-      <div style={{ textAlign: "center", marginTop: 16 }}>
-        <button onClick={onComplete} style={{
-          padding: "12px 28px", borderRadius: 14, border: "none",
-          background: "#F7931A", color: "#fff", fontSize: 16,
-          fontWeight: 700, cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
-        }}>Terug naar de kaart</button>
-      </div>
     </div>
   );
 }
 
-// ===== Activity Router =====
-function ActivityView({ activity, onComplete }) {
+// ── Activity Router ──
+function ActivityView({ activity, color, onComplete }) {
+  const props = { activity, color, onComplete };
   switch (activity.type) {
-    case "quiz": return <QuizActivity activity={activity} onComplete={onComplete} />;
-    case "sort": return <SortActivity activity={activity} onComplete={onComplete} />;
-    case "match": return <MatchActivity activity={activity} onComplete={onComplete} />;
-    case "cipher": return <CipherActivity activity={activity} onComplete={onComplete} />;
-    case "mining": return <MiningActivity activity={activity} onComplete={onComplete} />;
-    case "energy": return <EnergyActivity activity={activity} onComplete={onComplete} />;
-    default: return <p>Activiteit niet gevonden</p>;
+    case "quiz": return <QuizActivity {...props} />;
+    case "sort": return <SortActivity {...props} />;
+    case "match": return <MatchActivity {...props} />;
+    case "cipher": return <CipherActivity {...props} />;
+    case "mining": return <MiningActivity {...props} />;
+    case "truefalse": return <TrueFalseActivity {...props} />;
+    case "categorize": return <CategorizeActivity {...props} />;
+    case "scramble": return <ScrambleActivity {...props} />;
+    default: return <p>Onbekende activiteit</p>;
   }
 }
 
-// ===== MODULE VIEW =====
-function ModuleView({ module, onBack, completedActivities, setCompletedActivities }) {
-  const [activeActivity, setActiveActivity] = useState(null);
+// ═══════════════════════════════════════
+// MODULE VIEW
+// ═══════════════════════════════════════
+
+function ModuleView({ module, progress, setProgress, onBack }) {
+  const [actIdx, setActIdx] = useState(null);
 
   const handleComplete = () => {
-    if (activeActivity !== null) {
-      const key = `${module.id}-${activeActivity}`;
-      if (!completedActivities.includes(key)) {
-        setCompletedActivities(c => [...c, key]);
+    if (actIdx !== null) {
+      const key = `${module.id}-${actIdx}`;
+      if (!progress.completed.includes(key)) {
+        const np = { ...progress, completed: [...progress.completed, key] };
+        // Check if module fully complete → earn badge
+        const modDone = module.activities.every((_, ai) => np.completed.includes(`${module.id}-${ai}`));
+        if (modDone && !np.badges.includes(module.badge)) {
+          np.badges = [...np.badges, module.badge];
+          np._newBadge = module.badge;
+        }
+        setProgress(np); saveProgress(np);
       }
     }
-    setActiveActivity(null);
+    setActIdx(null);
   };
 
-  if (activeActivity !== null) {
+  const modCompleted = module.activities.filter((_, ai) => progress.completed.includes(`${module.id}-${ai}`)).length;
+  const allDone = modCompleted === module.activities.length;
+
+  if (actIdx !== null) {
     return (
-      <div style={{
-        minHeight: "100vh", padding: "20px 16px",
-        background: `linear-gradient(180deg, ${module.color}22 0%, #FFF8F0 100%)`,
-      }}>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-        <div style={{ maxWidth: 540, margin: "0 auto" }}>
-          <button onClick={() => setActiveActivity(null)} style={{
-            background: "none", border: "none", fontSize: 16,
-            cursor: "pointer", fontFamily: "'Nunito', sans-serif",
-            fontWeight: 700, color: module.color, marginBottom: 8,
+      <div style={{ minHeight: "100vh", padding: "16px 14px", background: `linear-gradient(180deg, ${module.bg} 0%, #FFFBF5 100%)` }}>
+        <Fonts />
+        <div style={{ maxWidth: 520, margin: "0 auto" }}>
+          <button onClick={() => setActIdx(null)} style={{
+            background: "none", border: "none", ...S.heading, fontSize: 15,
+            cursor: "pointer", color: module.color, marginBottom: 6,
           }}>← Terug</button>
-          <h2 style={{
-            fontFamily: "'Fredoka', sans-serif", fontSize: 24, margin: "0 0 4px",
-            color: "#1a1a2e",
-          }}>{module.activities[activeActivity].title}</h2>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif", fontSize: 15, margin: "0 0 16px",
-            color: "rgba(0,0,0,0.6)",
-          }}>{module.activities[activeActivity].intro}</p>
-          <ActivityView
-            activity={module.activities[activeActivity]}
-            onComplete={handleComplete}
-          />
+          <h2 style={{ ...S.heading, fontSize: 22, color: "#1a1a2e", marginBottom: 2 }}>
+            {module.activities[actIdx].title}
+          </h2>
+          <p style={{ ...S.body, fontSize: 14, color: "#888", marginBottom: 14 }}>
+            {module.activities[actIdx].intro}
+          </p>
+          <ActivityView activity={module.activities[actIdx]} color={module.color} onComplete={handleComplete} />
         </div>
       </div>
     );
   }
 
   return (
-    <div style={{
-      minHeight: "100vh", padding: "20px 16px",
-      background: `linear-gradient(180deg, ${module.color}22 0%, #FFF8F0 100%)`,
-    }}>
-      <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-      <div style={{ maxWidth: 540, margin: "0 auto" }}>
+    <div style={{ minHeight: "100vh", padding: "16px 14px", background: `linear-gradient(180deg, ${module.bg} 0%, #FFFBF5 100%)` }}>
+      <Fonts />
+      <div style={{ maxWidth: 520, margin: "0 auto" }}>
         <button onClick={onBack} style={{
-          background: "none", border: "none", fontSize: 16,
-          cursor: "pointer", fontFamily: "'Nunito', sans-serif",
-          fontWeight: 700, color: module.color, marginBottom: 8,
+          background: "none", border: "none", ...S.heading, fontSize: 15,
+          cursor: "pointer", color: module.color, marginBottom: 6,
         }}>← Schatkaart</button>
+
+        {/* Module header */}
         <div style={{
           background: `linear-gradient(135deg, ${module.color}, ${module.color}CC)`,
-          borderRadius: 24, padding: "32px 24px", textAlign: "center",
-          color: "#fff", marginBottom: 24,
-          boxShadow: `0 8px 32px ${module.color}44`,
+          borderRadius: 24, padding: "28px 22px", textAlign: "center", color: "#fff",
+          marginBottom: 20, boxShadow: `0 8px 28px ${module.color}33`,
         }}>
-          <div style={{ fontSize: 56, marginBottom: 8 }}>{module.icon}</div>
-          <h1 style={{
-            fontFamily: "'Fredoka', sans-serif", fontSize: 26,
-            margin: "0 0 8px", lineHeight: 1.2,
-          }}>Module {module.id}: {module.title}</h1>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif", fontSize: 16,
-            margin: 0, opacity: 0.9,
-          }}>{module.description}</p>
+          <div style={{ fontSize: 48, marginBottom: 4 }}>{module.icon}</div>
+          <h1 style={{ ...S.heading, fontSize: 24 }}>Module {module.id}</h1>
+          <p style={{ ...S.body, fontSize: 16, opacity: 0.9, marginTop: 4 }}>{module.title}</p>
+          {allDone && <div style={{ marginTop: 10, fontSize: 14, background: "rgba(255,255,255,0.2)", borderRadius: 10, padding: "6px 12px", display: "inline-block" }}>🎖️ {module.badge}</div>}
         </div>
 
-        <h3 style={{
-          fontFamily: "'Fredoka', sans-serif", fontSize: 20,
-          margin: "0 0 12px", color: "#1a1a2e",
-        }}>Activiteiten</h3>
+        {/* Summary card */}
+        <div style={{ ...S.card(), marginBottom: 16, border: `2px solid ${module.color}22` }}>
+          <p style={{ ...S.heading, fontSize: 14, color: module.color, marginBottom: 4 }}>💡 Kernidee</p>
+          <p style={{ ...S.body, fontSize: 14, color: "#555" }}>{module.summary}</p>
+        </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        {/* Activities */}
+        <h3 style={{ ...S.heading, fontSize: 18, color: "#1a1a2e", marginBottom: 10 }}>Activiteiten</h3>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {module.activities.map((act, i) => {
-            const key = `${module.id}-${i}`;
-            const done = completedActivities.includes(key);
+            const done = progress.completed.includes(`${module.id}-${i}`);
+            const typeLabel = { quiz: "Quiz", sort: "Sorteren", match: "Koppelen", cipher: "Codes kraken", mining: "Memory", truefalse: "Openbaar/Privé", categorize: "Categoriseren", scramble: "Woordkraker" }[act.type];
+            const typeIcon = { quiz: "❓", sort: "↕️", match: "🔗", cipher: "🔐", mining: "⛏️", truefalse: "⚖️", categorize: "📂", scramble: "🧩" }[act.type];
             return (
-              <button key={i} onClick={() => setActiveActivity(i)} style={{
-                display: "flex", alignItems: "center", gap: 14,
-                padding: "16px 18px", borderRadius: 16,
-                border: done ? `2px solid #28a745` : `2px solid ${module.color}44`,
-                background: done ? "#d4edda" : "rgba(255,255,255,0.85)",
+              <button key={i} onClick={() => setActIdx(i)} style={{
+                display: "flex", alignItems: "center", gap: 12,
+                padding: "14px 16px", borderRadius: 16,
+                border: done ? "2px solid #22C55E" : `2px solid ${module.color}22`,
+                background: done ? "#F0FDF4" : "rgba(255,255,255,0.9)",
                 cursor: "pointer", textAlign: "left", transition: "all 0.2s",
               }}>
                 <div style={{
-                  width: 44, height: 44, borderRadius: 12,
-                  background: done ? "#28a745" : module.color,
+                  width: 42, height: 42, borderRadius: 12,
+                  background: done ? "#22C55E" : module.color,
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 22, color: "#fff", flexShrink: 0,
-                }}>
-                  {done ? "✓" : act.type === "quiz" ? "❓" : act.type === "sort" ? "↕️" : act.type === "match" ? "🔗" : act.type === "cipher" ? "🔐" : act.type === "mining" ? "⛏️" : "⚡"}
-                </div>
+                  fontSize: 20, color: "#fff", flexShrink: 0,
+                }}>{done ? "✓" : typeIcon}</div>
                 <div>
-                  <p style={{
-                    fontFamily: "'Fredoka', sans-serif", fontSize: 17,
-                    fontWeight: 600, margin: 0, color: "#1a1a2e",
-                  }}>{act.title}</p>
-                  <p style={{
-                    fontFamily: "'Nunito', sans-serif", fontSize: 13,
-                    margin: "2px 0 0", color: "rgba(0,0,0,0.5)",
-                  }}>{act.type === "quiz" ? "Quiz" : act.type === "sort" ? "Sorteren" : act.type === "match" ? "Koppelen" : act.type === "cipher" ? "Codes kraken" : act.type === "mining" ? "Memory spel" : "Tracker"}</p>
+                  <p style={{ ...S.heading, fontSize: 16, color: "#1a1a2e" }}>{act.title}</p>
+                  <p style={{ ...S.body, fontSize: 12, color: "#888" }}>{typeLabel}</p>
                 </div>
               </button>
             );
@@ -1101,192 +904,243 @@ function ModuleView({ module, onBack, completedActivities, setCompletedActivitie
   );
 }
 
-// ===== MAIN APP =====
-export default function App() {
+// ═══════════════════════════════════════
+// MAIN APP — TREASURE MAP
+// ═══════════════════════════════════════
+
+function Fonts() {
+  return <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />;
+}
+
+export default function BitcoinVoorJunioren() {
+  const [progress, setProgress] = useState(loadProgress);
   const [activeModule, setActiveModule] = useState(null);
-  const [completedActivities, setCompletedActivities] = useState([]);
+  const [newBadge, setNewBadge] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [showName, setShowName] = useState(!progress.name);
+  const [nameInput, setNameInput] = useState("");
+
+  useEffect(() => { setTimeout(() => setLoaded(true), 80); }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    if (progress._newBadge) {
+      setNewBadge(progress._newBadge);
+      const np = { ...progress }; delete np._newBadge;
+      setProgress(np); saveProgress(np);
+    }
+  }, [progress]);
 
-  const totalActivities = MODULES.reduce((sum, m) => sum + m.activities.length, 0);
-  const progress = completedActivities.length;
+  const totalActs = MODULES.reduce((s, m) => s + m.activities.length, 0);
+  const done = progress.completed.length;
+
+  const saveName = () => {
+    if (!nameInput.trim()) return;
+    const np = { ...progress, name: nameInput.trim() };
+    setProgress(np); saveProgress(np); setShowName(false);
+  };
+
+  const resetProgress = () => {
+    if (window.confirm("Weet je zeker dat je opnieuw wilt beginnen? Alle voortgang wordt gewist.")) {
+      const np = { completed: [], badges: [], name: progress.name };
+      setProgress(np); saveProgress(np);
+    }
+  };
+
+  if (showName) {
+    return (
+      <div style={{
+        minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center",
+        background: "linear-gradient(180deg, #0C1222 0%, #1A2744 50%, #234E52 100%)",
+        padding: 20,
+      }}>
+        <Fonts />
+        <div style={{ textAlign: "center", maxWidth: 360 }}>
+          <div style={{ fontSize: 64, marginBottom: 12 }}>🏴‍☠️</div>
+          <h1 style={{ ...S.heading, fontSize: 28, color: "#FBBF24", marginBottom: 8 }}>
+            Ahoy, avonturier!
+          </h1>
+          <p style={{ ...S.body, fontSize: 16, color: "rgba(255,255,255,0.7)", marginBottom: 20 }}>
+            Hoe heet jij?
+          </p>
+          <input value={nameInput} onChange={e => setNameInput(e.target.value)}
+            onKeyDown={e => e.key === "Enter" && saveName()}
+            placeholder="Jouw naam..."
+            style={{
+              width: "100%", padding: "14px 16px", borderRadius: 14,
+              border: "2px solid rgba(251,191,36,0.4)", background: "rgba(255,255,255,0.08)",
+              fontSize: 20, textAlign: "center", color: "#fff",
+              ...S.body, fontWeight: 600, marginBottom: 12,
+              outline: "none",
+            }}
+          />
+          <button onClick={saveName} style={S.btn("#F7931A", 18)}>Start het avontuur! 🚀</button>
+        </div>
+      </div>
+    );
+  }
 
   if (activeModule !== null) {
     return (
-      <ModuleView
-        module={MODULES[activeModule]}
-        onBack={() => setActiveModule(null)}
-        completedActivities={completedActivities}
-        setCompletedActivities={setCompletedActivities}
-      />
+      <>
+        <ModuleView
+          module={MODULES[activeModule]}
+          progress={progress}
+          setProgress={setProgress}
+          onBack={() => setActiveModule(null)}
+        />
+        {newBadge && <BadgeUnlock badge={newBadge} onClose={() => setNewBadge(null)} />}
+      </>
     );
   }
 
   return (
     <div style={{
-      minHeight: "100vh",
-      background: "linear-gradient(180deg, #0d1b2a 0%, #1b2838 30%, #1a3a4a 60%, #2d6a4f 80%, #40916c 100%)",
-      padding: "20px 16px 40px",
-      position: "relative",
-      overflow: "hidden",
+      minHeight: "100vh", padding: "20px 16px 40px",
+      background: "linear-gradient(180deg, #0C1222 0%, #152238 25%, #1A3A4A 55%, #234E52 75%, #2D6A4F 100%)",
+      position: "relative", overflow: "hidden",
     }}>
-      <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+      <Fonts />
 
-      {/* Stars */}
+      {/* Animated stars */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-        {Array.from({ length: 40 }, (_, i) => (
+        {Array.from({ length: 50 }, (_, i) => (
           <div key={i} style={{
-            position: "absolute",
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 35}%`,
-            width: 2 + Math.random() * 2,
-            height: 2 + Math.random() * 2,
-            borderRadius: "50%",
-            background: "#fff",
-            opacity: 0.3 + Math.random() * 0.5,
-            animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 3}s`,
+            position: "absolute", left: `${Math.random() * 100}%`, top: `${Math.random() * 40}%`,
+            width: 1.5 + Math.random() * 2, height: 1.5 + Math.random() * 2,
+            borderRadius: "50%", background: "#fff",
+            opacity: 0.2 + Math.random() * 0.5,
+            animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite ${Math.random() * 3}s`,
           }} />
         ))}
       </div>
 
-      <div style={{ maxWidth: 540, margin: "0 auto", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 520, margin: "0 auto", position: "relative", zIndex: 1 }}>
         {/* Header */}
         <div style={{
-          textAlign: "center", marginBottom: 24,
-          opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(-20px)",
-          transition: "all 0.6s ease",
+          textAlign: "center", marginBottom: 20,
+          opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(-16px)",
+          transition: "all 0.5s ease",
         }}>
-          <div style={{ fontSize: 48, marginBottom: 4 }}>₿</div>
+          <p style={{ ...S.body, fontSize: 14, color: "rgba(255,255,255,0.5)", marginBottom: 2 }}>
+            Ahoy, <span style={{ color: "#FBBF24", fontWeight: 700 }}>{progress.name}</span>! 🏴‍☠️
+          </p>
           <h1 style={{
-            fontFamily: "'Fredoka', sans-serif",
-            fontSize: 32, fontWeight: 700,
-            background: "linear-gradient(135deg, #F7931A, #FFCF44)",
+            ...S.heading, fontSize: 30,
+            background: "linear-gradient(135deg, #F7931A, #FBBF24)",
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-            margin: "0 0 4px", lineHeight: 1.1,
+            marginBottom: 4,
           }}>Bitcoin voor Junioren</h1>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif", fontSize: 15,
-            color: "rgba(255,255,255,0.7)", margin: "0 0 16px",
-          }}>Ontdek de wereld van geld, waarde en Bitcoin!</p>
+          <p style={{ ...S.body, fontSize: 14, color: "rgba(255,255,255,0.55)" }}>
+            Ontdek de wereld van geld, waarde en Bitcoin!
+          </p>
+        </div>
 
-          {/* Progress */}
-          <div style={{
-            background: "rgba(255,255,255,0.1)", borderRadius: 16,
-            padding: "10px 16px", backdropFilter: "blur(8px)",
-          }}>
-            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-              <span style={{
-                fontFamily: "'Nunito', sans-serif", fontSize: 13,
-                color: "rgba(255,255,255,0.7)", fontWeight: 600,
-              }}>Voortgang</span>
-              <span style={{
-                fontFamily: "'Nunito', sans-serif", fontSize: 13,
-                color: "#FFCF44", fontWeight: 700,
-              }}>{progress}/{totalActivities} activiteiten</span>
-            </div>
-            <ProgressBar current={progress} total={totalActivities} />
+        {/* Progress */}
+        <div style={{
+          background: "rgba(255,255,255,0.06)", borderRadius: 16, padding: "12px 16px",
+          marginBottom: 6, backdropFilter: "blur(8px)",
+          border: "1px solid rgba(255,255,255,0.08)",
+        }}>
+          <div style={{ display: "flex", justifyContent: "space-between", ...S.body, fontSize: 13, marginBottom: 6 }}>
+            <span style={{ color: "rgba(255,255,255,0.6)" }}>Voortgang</span>
+            <span style={{ color: "#FBBF24", fontWeight: 700 }}>{done}/{totalActs}</span>
+          </div>
+          <div style={{ height: 14, borderRadius: 10, background: "rgba(0,0,0,0.2)", overflow: "hidden" }}>
+            <div style={{
+              height: "100%", width: `${(done / totalActs) * 100}%`, borderRadius: 10,
+              background: "linear-gradient(90deg, #F7931A, #FBBF24)",
+              transition: "width 0.5s ease",
+            }} />
           </div>
         </div>
 
-        {/* Module Cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-          {MODULES.map((mod, i) => {
-            const modCompleted = mod.activities.filter((_, ai) =>
-              completedActivities.includes(`${mod.id}-${ai}`)
-            ).length;
-            const allDone = modCompleted === mod.activities.length;
+        {/* Badges */}
+        {progress.badges.length > 0 && (
+          <div style={{
+            display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18, justifyContent: "center",
+          }}>
+            {progress.badges.map((b, i) => (
+              <span key={i} style={{
+                ...S.body, fontSize: 11, fontWeight: 700, color: "#FBBF24",
+                background: "rgba(251,191,36,0.12)", borderRadius: 10, padding: "4px 10px",
+                border: "1px solid rgba(251,191,36,0.2)",
+              }}>{b}</span>
+            ))}
+          </div>
+        )}
 
+        {/* Module cards */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 10 }}>
+          {MODULES.map((mod, i) => {
+            const mc = mod.activities.filter((_, ai) => progress.completed.includes(`${mod.id}-${ai}`)).length;
+            const ad = mc === mod.activities.length;
             return (
               <button key={mod.id} onClick={() => setActiveModule(i)} style={{
-                display: "flex", alignItems: "center", gap: 16,
-                padding: "18px 18px", borderRadius: 20,
-                border: allDone ? "2px solid #28a745" : "2px solid rgba(255,255,255,0.1)",
-                background: allDone
-                  ? "rgba(40,167,69,0.15)"
-                  : "rgba(255,255,255,0.06)",
-                backdropFilter: "blur(8px)",
-                cursor: "pointer", textAlign: "left",
+                display: "flex", alignItems: "center", gap: 14,
+                padding: "16px 16px", borderRadius: 20,
+                border: ad ? "2px solid #22C55E" : "1px solid rgba(255,255,255,0.08)",
+                background: ad ? "rgba(34,197,94,0.1)" : "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(6px)", cursor: "pointer", textAlign: "left",
                 transition: "all 0.3s ease",
-                opacity: loaded ? 1 : 0,
-                transform: loaded ? "translateY(0)" : "translateY(20px)",
-                transitionDelay: `${i * 0.08}s`,
+                opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(16px)",
+                transitionDelay: `${i * 0.06}s`,
               }}>
                 <div style={{
-                  width: 56, height: 56, borderRadius: 16,
+                  width: 52, height: 52, borderRadius: 14,
                   background: `linear-gradient(135deg, ${mod.color}, ${mod.color}BB)`,
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 28, flexShrink: 0,
-                  boxShadow: `0 4px 16px ${mod.color}44`,
+                  fontSize: 26, flexShrink: 0, boxShadow: `0 4px 14px ${mod.color}33`,
                 }}>{mod.icon}</div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <p style={{
-                    fontFamily: "'Fredoka', sans-serif", fontSize: 17,
-                    fontWeight: 600, margin: 0, color: "#fff",
-                    lineHeight: 1.2,
-                  }}>
-                    {mod.id}. {mod.title}
-                    {allDone && <span style={{ marginLeft: 6 }}>✅</span>}
+                  <p style={{ ...S.heading, fontSize: 16, color: "#fff", marginBottom: 2 }}>
+                    {mod.id}. {mod.title} {ad && "✅"}
                   </p>
-                  <p style={{
-                    fontFamily: "'Nunito', sans-serif", fontSize: 13,
-                    margin: "3px 0 0", color: "rgba(255,255,255,0.55)",
-                    lineHeight: 1.3,
-                  }}>{mod.description}</p>
-                  {mod.activities.length > 0 && (
-                    <div style={{
-                      display: "flex", gap: 4, marginTop: 6,
-                    }}>
-                      {mod.activities.map((_, ai) => (
-                        <div key={ai} style={{
-                          width: 8, height: 8, borderRadius: "50%",
-                          background: completedActivities.includes(`${mod.id}-${ai}`)
-                            ? "#28a745" : "rgba(255,255,255,0.2)",
-                          transition: "background 0.3s",
-                        }} />
-                      ))}
-                    </div>
-                  )}
+                  <p style={{ ...S.body, fontSize: 12, color: "rgba(255,255,255,0.45)" }}>
+                    {mod.description}
+                  </p>
+                  <div style={{ display: "flex", gap: 4, marginTop: 5 }}>
+                    {mod.activities.map((_, ai) => (
+                      <div key={ai} style={{
+                        width: 8, height: 8, borderRadius: "50%",
+                        background: progress.completed.includes(`${mod.id}-${ai}`) ? "#22C55E" : "rgba(255,255,255,0.15)",
+                        transition: "background 0.3s",
+                      }} />
+                    ))}
+                  </div>
                 </div>
-                <div style={{
-                  color: "rgba(255,255,255,0.3)", fontSize: 20,
-                }}>›</div>
+                <span style={{ color: "rgba(255,255,255,0.2)", fontSize: 18 }}>›</span>
               </button>
             );
           })}
         </div>
 
+        {/* Reset */}
+        <div style={{ textAlign: "center", marginTop: 28 }}>
+          <button onClick={resetProgress} style={{
+            background: "none", border: "none", ...S.body, fontSize: 12,
+            color: "rgba(255,255,255,0.2)", cursor: "pointer",
+            textDecoration: "underline",
+          }}>Voortgang resetten</button>
+        </div>
+
         {/* Footer */}
-        <div style={{
-          textAlign: "center", marginTop: 32, padding: "16px 0",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-        }}>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif", fontSize: 12,
-            color: "rgba(255,255,255,0.3)", margin: 0,
-          }}>
-            Gebaseerd op Bitcoin voor Junioren van My First Bitcoin
-          </p>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif", fontSize: 11,
-            color: "rgba(255,255,255,0.2)", margin: "4px 0 0",
-          }}>
-            CC BY-SA 4.0
+        <div style={{ textAlign: "center", marginTop: 16, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+          <p style={{ ...S.body, fontSize: 11, color: "rgba(255,255,255,0.2)" }}>
+            Gebaseerd op Bitcoin voor Junioren van My First Bitcoin · CC BY-SA 4.0
           </p>
         </div>
       </div>
 
+      {newBadge && <BadgeUnlock badge={newBadge} onClose={() => setNewBadge(null)} />}
+
       <style>{`
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.3; }
-          50% { opacity: 0.8; }
-        }
-        * { box-sizing: border-box; }
-        button:hover { filter: brightness(1.05); }
+        @keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:0.7} }
+        @keyframes confFall { 0%{transform:translateY(0) rotate(0);opacity:1} 100%{transform:translateY(100vh) rotate(720deg);opacity:0} }
+        @keyframes slideUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+        @keyframes popIn { 0%{opacity:0;transform:scale(0.7)} 100%{opacity:1;transform:scale(1)} }
+        *{box-sizing:border-box} button:hover{filter:brightness(1.05)}
+        input:focus{outline:2px solid #F7931A;outline-offset:0}
       `}</style>
     </div>
   );
