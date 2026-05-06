@@ -1,0 +1,171 @@
+export const MODULES = [
+  {
+    id: 1, title: "Uitwisseling, Waarde & Prijs", icon: "⚓",
+    color: "#D97706", bg: "#FEF3C7",
+    summary: "Waarde hangt af van wat je nodig hebt. Prijs is hoeveel iets kost. Geld lost het ruilprobleem op.",
+    description: "Ontdek waarom we geld gebruiken en wat dingen écht waard zijn!",
+    badge: "🏝️ Eilandhandelaar",
+    activities: [
+      {
+        type: "quiz", title: "Eiland Overleven", intro: "Je bent schipbreukeling op een onbewoond eiland!",
+        questions: [
+          { q: "Je spoelt aan op een verlaten eiland. Wat is het meest waard?", options: ["💎 Diamant", "🔪 Een kapmes", "📱 Smartphone", "💰 100 euro"], correct: 1, explanation: "Op een eiland kun je met een kapmes hout hakken, eten snijden en een schuilplaats bouwen. Geld en diamanten zijn daar nutteloos!" },
+          { q: "Je hebt 5 hengels maar geen tent. Je buurman heeft 3 tenten maar geen hengel. Wat doen jullie?", options: ["Allebei wachten", "Ruilen: een hengel voor een tent!", "Niks, pech gehad", "Samen huilen"], correct: 1, explanation: "Ruilen is de oudste manier om handel te drijven! Je geeft wat je over hebt voor wat je nodig hebt." },
+          { q: "Waarom is ruilen soms heel lastig?", options: ["Omdat het saai is", "Omdat je iemand moet vinden die precies wil wat jij hebt", "Omdat het verboden is", "Omdat spullen te zwaar zijn"], correct: 1, explanation: "Dit heet het 'samenvallen van behoeften'. Geld lost dit probleem op — iedereen accepteert geld!" },
+          { q: "Schelpen werden vroeger als geld gebruikt. Wat maakt iets goed geld?", options: ["Het moet mooi zijn", "Het moet schaars, draagbaar en door iedereen geaccepteerd zijn", "Het moet eetbaar zijn", "Het moet van de overheid komen"], correct: 1, explanation: "Goed geld is schaars (niet eindeloos te vinden), makkelijk mee te nemen, en iedereen moet het als betaling accepteren." },
+          { q: "Een flesje water kost €1 in de supermarkt. In de woestijn biedt iemand je €100 voor hetzelfde flesje. Waarom?", options: ["De winkel was duurder", "Omdat water in de woestijn veel schaarser en belangrijker is", "Het is ander water", "De woestijn is ver weg"], correct: 1, explanation: "Schaarste verandert waarde! Hoe minder er van iets is en hoe harder je het nodig hebt, hoe meer het waard wordt." },
+          { q: "Wat is het verschil tussen prijs en waarde?", options: ["Er is geen verschil", "Prijs is hoeveel iets kost, waarde is hoe belangrijk iets voor jou is", "Prijs is altijd hoger dan waarde", "Waarde gaat alleen over geld"], correct: 1, explanation: "Een tekening van je kind heeft misschien geen prijs maar enorme waarde. Prijs en waarde zijn niet hetzelfde!" },
+        ]
+      },
+      {
+        type: "sort", title: "Prijslijn", intro: "Zet de voorwerpen in de juiste volgorde van goedkoop naar duur!",
+        items: [
+          { name: "🍎 Appel", value: 1 }, { name: "📖 Boek", value: 2 },
+          { name: "⚽ Voetbal", value: 3 }, { name: "📱 Telefoon", value: 4 },
+          { name: "🛵 Scooter", value: 5 }, { name: "🏠 Huis", value: 6 },
+        ]
+      },
+    ]
+  },
+  {
+    id: 2, title: "Tijd, Energie & Beloning", icon: "⚡",
+    color: "#0D9488", bg: "#CCFBF1",
+    summary: "Energie is beperkt. Balans tussen werk, rust en spel is belangrijk. Geduld leidt tot betere resultaten.",
+    description: "Hoe gebruik jij je tijd en energie? En waarom is wachten soms slimmer?",
+    badge: "⏳ Tijdmeester",
+    activities: [
+      {
+        type: "categorize", title: "Werk, Rust of Spel?", intro: "Sleep elke activiteit naar de juiste categorie!",
+        categories: ["💼 Werk", "😴 Rust", "🎮 Spel"],
+        items: [
+          { name: "Huiswerk maken", cat: 0 }, { name: "Slapen", cat: 1 },
+          { name: "Voetballen", cat: 2 }, { name: "Kamer opruimen", cat: 0 },
+          { name: "Een boek lezen", cat: 1 }, { name: "Tekenen", cat: 2 },
+          { name: "Tafel dekken", cat: 0 }, { name: "Dutje doen", cat: 1 },
+          { name: "Gamen", cat: 2 }, { name: "Boodschappen doen", cat: 0 },
+          { name: "Muziek luisteren", cat: 1 }, { name: "Naar het park", cat: 2 },
+        ]
+      },
+      {
+        type: "quiz", title: "Tijdvoorkeur", intro: "Kies jij voor NU of voor LATER?",
+        questions: [
+          { q: "In het verhaal van De drie biggetjes: welk huis bleef staan?", options: ["🌾 Stro (snel gebouwd)", "🪵 Hout (gemiddeld)", "🧱 Baksteen (kostte het meeste tijd)"], correct: 2, explanation: "Het bakstenen huis kostte de meeste tijd en moeite, maar was het enige dat bleef staan. Geduld loont!" },
+          { q: "Wat betekent 'lage tijdvoorkeur'?", options: ["Je wilt alles NU", "Je bent bereid te wachten op iets beters", "Je hebt geen horloge", "Je slaapt veel"], correct: 1, explanation: "Lage tijdvoorkeur = bereid om te wachten voor een beter resultaat. Zoals de big die een stenen huis bouwde!" },
+          { q: "Je krijgt 1 snoepje nu, of 3 snoepjes als je 10 minuten wacht. Wat is de slimste keuze?", options: ["1 snoepje NU!", "Wachten: 3 snoepjes > 1 snoepje", "Snoep is ongezond", "Wegrennen"], correct: 1, explanation: "Dit is de beroemde marshmallow-test! Kinderen die konden wachten hadden later vaak betere resultaten op school." },
+          { q: "Je hebt een belangrijke toets morgen. Wat is lage tijdvoorkeur?", options: ["Nu gamen en morgen leren", "Vandaag studeren zodat je morgen goed scoort", "De toets overslaan", "Hopen op geluk"], correct: 1, explanation: "Nu iets moeilijks doen (studeren) zodat je later iets goeds krijgt (een goed cijfer) — dat is lage tijdvoorkeur." },
+          { q: "Wat gebeurt er als je al je energie 's ochtends opmaakt?", options: ["Je wordt sterker", "Je hebt niks meer over voor de rest van de dag", "Je krijgt superkrachten", "Niks bijzonders"], correct: 1, explanation: "Energie is beperkt! Slim verdelen is belangrijk — net als geld." },
+        ]
+      },
+    ]
+  },
+  {
+    id: 3, title: "Analoog versus Digitaal", icon: "🔄",
+    color: "#7C3AED", bg: "#EDE9FE",
+    summary: "Technologie verandert steeds. Elke uitvinding lost een probleem op. Niet alles nieuw is automatisch beter.",
+    description: "Van postduif tot internet — hoe technologie de wereld verandert!",
+    badge: "🚀 Techpionier",
+    activities: [
+      {
+        type: "match", title: "Oud ↔ Nieuw", intro: "Koppel elke oude technologie aan de moderne versie!",
+        pairs: [
+          { old: "✉️ Brief", new: "📧 E-mail" },
+          { old: "📞 Draaitelefoon", new: "📱 Smartphone" },
+          { old: "🗺️ Papieren kaart", new: "📍 GPS" },
+          { old: "📷 Filmrolletje", new: "📸 Digitale camera" },
+          { old: "📰 Krant", new: "🌐 Nieuwswebsite" },
+          { old: "💰 Muntgeld", new: "₿ Bitcoin" },
+        ]
+      },
+      {
+        type: "quiz", title: "Bedenk de Toekomst", intro: "Hoe zou technologie er over 20 jaar uitzien?",
+        questions: [
+          { q: "Waarom veranderen technologieën door de tijd heen?", options: ["Omdat oude dingen stuk gaan", "Omdat mensen problemen oplossen met nieuwe uitvindingen", "Omdat de overheid het wil", "Zonder reden"], correct: 1, explanation: "Elke uitvinding lost een probleem op. De auto loste het probleem op dat paarden langzaam en moe worden!" },
+          { q: "Is nieuwe technologie ALTIJD beter dan oude?", options: ["Ja, altijd", "Nee, soms is het oude beter of betrouwbaarder", "Nieuwe tech bestaat niet", "Alleen als het duurder is"], correct: 1, explanation: "Een papieren boek heeft geen batterij nodig! Soms zijn oude oplossingen nog steeds slim." },
+          { q: "Bitcoin is digitaal geld. Wat heeft het gemeen met oude schelpen?", options: ["Allebei komen uit de zee", "Allebei zijn schaars en worden gebruikt als ruilmiddel", "Niks", "Allebei zijn ze gratis"], correct: 1, explanation: "Zowel schelpen als Bitcoin zijn schaars (er is een beperkte hoeveelheid) en worden als ruilmiddel gebruikt." },
+          { q: "Wat is innovatie?", options: ["Iets nieuws kopen", "Een slimme verbetering of uitvinding die een probleem oplost", "Een moeilijk woord voor niks", "Alleen voor wetenschappers"], correct: 1, explanation: "Innovatie = een nieuwe of betere oplossing voor een bestaand probleem. Iedereen kan innoveren!" },
+        ]
+      },
+    ]
+  },
+  {
+    id: 4, title: "Veiligheid & Privacy", icon: "🛡️",
+    color: "#DC2626", bg: "#FEE2E2",
+    summary: "Jij bepaalt welke informatie je deelt. Codes beschermen berichten. Vertrouwen is niet altijd nodig als je encryptie hebt.",
+    description: "Geheime codes, privacy en hoe je jezelf online beschermt!",
+    badge: "🔐 Cypherpunk",
+    activities: [
+      {
+        type: "truefalse", title: "Openbaar of Privé?", intro: "Is deze informatie openbaar of privé? Beslis snel!",
+        statements: [
+          { text: "Je wachtwoord", answer: false, label: "Privé!", explanation: "Een wachtwoord is altijd privé. Deel het nooit!" },
+          { text: "Je naam op school", answer: true, label: "Openbaar", explanation: "Op school weet iedereen hoe je heet — dat is openbare informatie." },
+          { text: "Je pincode", answer: false, label: "Privé!", explanation: "Je pincode is geheim — het beschermt je bankrekening." },
+          { text: "Een park in de stad", answer: true, label: "Openbaar", explanation: "Een park is een openbare plek — iedereen mag er komen." },
+          { text: "Je dagboek", answer: false, label: "Privé!", explanation: "Je dagboek is privé — alleen jij bepaalt wie het mag lezen." },
+          { text: "De kleur van je fiets", answer: true, label: "Openbaar", explanation: "Iedereen kan zien welke kleur je fiets heeft." },
+          { text: "Je thuisadres", answer: false, label: "Privé!", explanation: "Je adres deel je niet met vreemden — dat is privé-informatie." },
+          { text: "Het weer vandaag", answer: true, label: "Openbaar", explanation: "Het weer is voor iedereen hetzelfde — volledig openbaar!" },
+          { text: "Je Bitcoin-sleutel", answer: false, label: "Privé!", explanation: "Je privésleutel is het allerbelangrijkste geheim. Wie die heeft, heeft je bitcoin!" },
+        ]
+      },
+      {
+        type: "cipher", title: "Geheime Code", intro: "Kraak de geheime Bitcoin-woorden met het cijferwiel!",
+      },
+    ]
+  },
+  {
+    id: 5, title: "Geldzaken", icon: "🏦",
+    color: "#B45309", bg: "#FEF3C7",
+    summary: "Geld kun je verdienen, sparen, investeren en uitgeven. Budgetteren is kiezen. Eerlijke regels zijn belangrijk.",
+    description: "Verdienen, sparen, investeren — word een geldexpert!",
+    badge: "💎 Geldwijze",
+    activities: [
+      {
+        type: "quiz", title: "Slim met Geld", intro: "Test hoe slim jij bent met geldzaken!",
+        questions: [
+          { q: "Wat is sparen?", options: ["Geld direct uitgeven", "Geld opzij leggen voor later", "Geld weggooien", "Geld lenen van een vriend"], correct: 1, explanation: "Sparen = geld bewaren zodat je later iets groters of belangrijkers kunt kopen." },
+          { q: "Wat is investeren?", options: ["Geld verstoppen", "Je geld of tijd ergens insteken zodat het later meer waard wordt", "Alles vandaag uitgeven", "Geld verbrandenderen"], correct: 1, explanation: "Investeren is je geld of tijd ergens in steken met de hoop dat het later meer waard wordt." },
+          { q: "Je hebt 12 schelpen. Een tent kost 8 en een hengel kost 6. Kun je allebei kopen?", options: ["Ja!", "Nee, 8 + 6 = 14, en je hebt maar 12", "Alleen met korting", "Schelpen zijn geen geld"], correct: 1, explanation: "8 + 6 = 14, maar je hebt maar 12 schelpen. Je moet kiezen! Dat is budgetteren." },
+          { q: "Bij een veiling gaat de prijs van een zeldzaam item steeds omhoog. Waarom?", options: ["De verkoper is gemeen", "Meerdere mensen willen het, maar er is er maar één (schaarste + vraag)", "Het item wordt steeds groter", "Omdat iemand vals speelt"], correct: 1, explanation: "Als veel mensen iets willen maar er weinig van is, stijgt de prijs. Dat is hoe vraag en aanbod werkt!" },
+          { q: "Waarom zijn eerlijke regels bij geld belangrijk?", options: ["Dat zijn ze niet", "Zodat iedereen dezelfde kans krijgt", "Alleen voor kinderen", "Zodat het moeilijker wordt"], correct: 1, explanation: "Eerlijke regels zorgen dat niemand kan valsspelen en iedereen dezelfde kans heeft." },
+          { q: "Wat is lenen?", options: ["Geld stelen", "Geld van iemand anders krijgen dat je later moet terugbetalen", "Geld sparen", "Geld verliezen"], correct: 1, explanation: "Lenen betekent dat je geld van iemand anders krijgt, maar het later moet terugbetalen — vaak met extra (rente)." },
+        ]
+      },
+    ]
+  },
+  {
+    id: 6, title: "Basisprincipes van Bitcoin", icon: "₿",
+    color: "#EA580C", bg: "#FFF7ED",
+    summary: "Bitcoin is schaars digitaal geld zonder tussenpersoon. Mining bevestigt transacties. Satoshi is anoniem gebleven.",
+    description: "Het grote Bitcoin-avontuur: van Satoshi tot mining!",
+    badge: "⛏️ Bitcoinminer",
+    activities: [
+      {
+        type: "quiz", title: "Wie is Satoshi?", intro: "Ontdek het verhaal achter Bitcoin!",
+        questions: [
+          { q: "Wie heeft Bitcoin bedacht?", options: ["Elon Musk", "Satoshi Nakamoto", "De bank", "Google"], correct: 1, explanation: "Satoshi Nakamoto publiceerde in 2008 een 'white paper' met het idee voor Bitcoin. Niemand weet wie Satoshi echt is!" },
+          { q: "Wat is een 'white paper'?", options: ["Een leeg blaadje", "Een document waarin je een nieuw idee uitlegt", "Een geheime brief", "Een schoolopdracht"], correct: 1, explanation: "Een white paper is een document waarin je een nieuw idee of oplossing presenteert aan de wereld." },
+          { q: "Wat is de Genesis Block?", options: ["Een computerspel", "Het allereerste blok van Bitcoin", "Een soort steen", "Een geheim wachtwoord"], correct: 1, explanation: "Op 3 januari 2009 werd de Genesis Block gemaakt — het allereerste blok in de Bitcoin-blockchain." },
+          { q: "Hoeveel bitcoins zullen er ooit bestaan?", options: ["Oneindig veel", "Maximaal 21 miljoen", "Precies 1 miljard", "Dat weet niemand"], correct: 1, explanation: "Er zullen nooit meer dan 21 miljoen bitcoins bestaan. Die schaarste is ingebouwd in de regels!" },
+          { q: "Wat is 'minen' bij Bitcoin?", options: ["Graven in de grond", "Met computers puzzels oplossen om transacties te bevestigen", "Bitcoins printen", "Bitcoins tekenen"], correct: 1, explanation: "Miners gebruiken computers om wiskundige puzzels op te lossen. Als bewijs dat ze werk hebben gedaan, mogen ze transacties bevestigen." },
+          { q: "Wat is Proof of Work?", options: ["Een rapport van school", "Bewijs dat iemand echt moeite heeft gedaan om iets te verdienen", "Een wachtwoord", "Een soort diploma"], correct: 1, explanation: "Proof of Work = bewijs van werk. Net als het dobbelsteenspel: iedereen volgt dezelfde regels en heeft dezelfde kans." },
+          { q: "Waarom is Satoshi verdwenen?", options: ["Hij ging op vakantie", "Waarschijnlijk om Bitcoin echt van iedereen te laten zijn, zonder leider", "Hij werd boos", "Hij bestaat niet"], correct: 1, explanation: "Door te verdwijnen zorgde Satoshi ervoor dat Bitcoin niet van één persoon is. Het netwerk draait op regels, niet op een leider." },
+        ]
+      },
+      {
+        type: "mining", title: "Bitcoin Minen!", intro: "Vind gelijke paren om blokken te minen — net als echte miners!",
+      },
+      {
+        type: "scramble", title: "Bitcoin Woordkraker", intro: "Ontwar de door-elkaar-gehusselde Bitcoin-woorden!",
+        words: [
+          { scrambled: "COINBIT", answer: "BITCOIN", hint: "Digitaal geld" },
+          { scrambled: "SHATISO", answer: "SATOSHI", hint: "De mysterieuze uitvinder" },
+          { scrambled: "KLOB", answer: "BLOK", hint: "Transacties zitten hierin" },
+          { scrambled: "CHRAASS", answer: "SCHAARS", hint: "Er is niet veel van" },
+          { scrambled: "NIJEM", answer: "MINEN", hint: "Puzzels oplossen met computers" },
+          { scrambled: "TEWALL", answer: "WALLET", hint: "Hierin bewaar je bitcoin" },
+        ]
+      },
+    ]
+  },
+];
