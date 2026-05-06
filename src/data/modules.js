@@ -162,7 +162,7 @@ export const MODULES = [
           { scrambled: "SHATISO", answer: "SATOSHI", hint: "De mysterieuze uitvinder" },
           { scrambled: "KLOB", answer: "BLOK", hint: "Transacties zitten hierin" },
           { scrambled: "CHRAASS", answer: "SCHAARS", hint: "Er is niet veel van" },
-          { scrambled: "NIJEM", answer: "MINEN", hint: "Puzzels oplossen met computers" },
+          { scrambled: "NENIM", answer: "MINEN", hint: "Puzzels oplossen met computers" },
           { scrambled: "TEWALL", answer: "WALLET", hint: "Hierin bewaar je bitcoin" },
         ]
       },
