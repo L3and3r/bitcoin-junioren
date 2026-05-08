@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Confetti from "../components/Confetti";
 import ProgressDots from "../components/ProgressDots";
 import { S } from "../styles/shared";
+
+function shuffleQuestions(questions) {
+  return questions.map(q => {
+    const indexed = q.options.map((opt, i) => ({ opt, isCorrect: i === q.correct }));
+    for (let i = indexed.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indexed[i], indexed[j]] = [indexed[j], indexed[i]];
+    }
+    return { ...q, options: indexed.map(x => x.opt), correct: indexed.findIndex(x => x.isCorrect) };
+  });
+}
 
 export default function QuizActivity({ activity, color, onComplete }) {
   const [qi, setQi] = useState(0);
@@ -9,7 +20,8 @@ export default function QuizActivity({ activity, color, onComplete }) {
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
   const [conf, setConf] = useState(false);
-  const q = activity.questions[qi];
+  const questions = useMemo(() => shuffleQuestions(activity.questions), [activity.questions]);
+  const q = questions[qi];
 
   const pick = (i) => {
     if (sel !== null) return;
@@ -17,7 +29,7 @@ export default function QuizActivity({ activity, color, onComplete }) {
     if (i === q.correct) { setScore(s => s + 1); setConf(true); setTimeout(() => setConf(false), 1500); }
   };
   const next = () => {
-    if (qi === activity.questions.length - 1) setDone(true);
+    if (qi === questions.length - 1) setDone(true);
     else { setQi(i => i + 1); setSel(null); }
   };
 
@@ -31,7 +43,7 @@ export default function QuizActivity({ activity, color, onComplete }) {
           {pct === 100 ? "Alles goed!" : pct >= 60 ? "Goed bezig!" : "Blijf oefenen!"}
         </h3>
         <p style={{ ...S.body, fontSize: 20, fontWeight: 700, color, margin: "4px 0 20px" }}>
-          {score} / {activity.questions.length} correct
+          {score} / {questions.length} correct
         </p>
         <button onClick={onComplete} style={S.btn("#F7931A")}>Verder →</button>
       </div>
@@ -41,7 +53,7 @@ export default function QuizActivity({ activity, color, onComplete }) {
   return (
     <div>
       <Confetti active={conf} />
-      <ProgressDots total={activity.questions.length} current={qi} color={color} />
+      <ProgressDots total={questions.length} current={qi} color={color} />
       <div style={{ ...S.card(), margin: "12px 0" }}>
         <p style={{ ...S.heading, fontSize: 19, color: "#1a1a2e" }}>{q.q}</p>
       </div>
@@ -72,7 +84,7 @@ export default function QuizActivity({ activity, color, onComplete }) {
             {sel === q.correct ? "✅ " : "❌ "}{q.explanation}
           </p>
           <button onClick={next} style={{ ...S.btn(color, 15), marginTop: 10 }}>
-            {qi === activity.questions.length - 1 ? "Resultaat" : "Volgende →"}
+            {qi === questions.length - 1 ? "Resultaat" : "Volgende →"}
           </button>
         </div>
       )}

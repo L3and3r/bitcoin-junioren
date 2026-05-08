@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Bitcoin voor Junioren
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interactieve web-app waarmee kinderen (8–14 jaar) spelenderwijs leren over geld, waarde en Bitcoin. Gebouwd voor gebruik op school, in een club, of thuis.
 
-## Available Scripts
+**Live:** https://L3and3r.github.io/bitcoin-junioren
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Wat zit erin?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6 modules, elk met 1–3 activiteiten:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| # | Module | Thema |
+|---|--------|-------|
+| 1 | Uitwisseling, Waarde & Prijs | Ruilen, schaarste, prijs vs. waarde |
+| 2 | Tijd, Energie & Beloning | Werk/rust/spel, tijdvoorkeur, geduld |
+| 3 | Analoog versus Digitaal | Technologie door de tijd, innovatie |
+| 4 | Veiligheid & Privacy | Openbaar vs. privé, encryptie, geheime codes |
+| 5 | Geldzaken | Sparen, investeren, budgetteren |
+| 6 | Basisprincipes van Bitcoin | Satoshi, mining, blockchain, schaarste |
 
-### `npm test`
+**Activiteittypen:** quiz (met gerandomiseerde antwoordvolgorde), sorteren, koppelen, waar/niet waar, categoriseren, cijfercode kraken, mining-spel, woordkraker.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Voortgang en badges worden opgeslagen in `localStorage`. Elke speler voert bij de start een naam in. Met "Nieuwe speler starten" wordt alles gewist zodat het volgende kind meteen kan beginnen.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Lokaal draaien
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open http://localhost:3000 in de browser.
 
-### `npm run eject`
+## Deployen naar GitHub Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run deploy
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Dit bouwt de app en pusht naar de `gh-pages`-branch. De live URL staat ingesteld in `package.json` via de `homepage`-sleutel.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Projectstructuur
 
-## Learn More
+```
+src/
+  data/modules.js          # Alle content: vragen, antwoorden, activiteiten
+  activities/              # QuizActivity, SortActivity, MatchActivity, ...
+  components/              # Confetti, BadgeUnlock, ProgressDots
+  views/ModuleView.jsx     # Module-navigatie en activiteiten-flow
+  utils/storage.js         # localStorage helpers
+  styles/shared.js         # Gedeelde stijlen
+  BitcoinVoorJunioren.jsx  # Root component
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Nieuwe vragen of modules toevoegen? Pas alleen `src/data/modules.js` aan — geen andere bestanden nodig.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Licentie
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Gebaseerd op het lesmateriaal van [My First Bitcoin](https://myfirstbitcoin.io/) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

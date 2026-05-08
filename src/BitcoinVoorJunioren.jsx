@@ -28,10 +28,11 @@ export default function BitcoinVoorJunioren() {
     setProgress(np); saveProgress(np); setShowName(false);
   };
 
-  const resetProgress = () => {
-    if (window.confirm("Weet je zeker dat je opnieuw wilt beginnen? Alle voortgang wordt gewist.")) {
-      const np = { completed: [], badges: [], name: progress.name };
+  const newPlayer = () => {
+    if (window.confirm("Nieuwe speler starten? De huidige voortgang wordt gewist.")) {
+      const np = { completed: [], badges: [], name: "" };
       setProgress(np); saveProgress(np);
+      setNameInput(""); setShowName(true);
     }
   };
 
@@ -199,11 +200,11 @@ export default function BitcoinVoorJunioren() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 28 }}>
-          <button onClick={resetProgress} style={{
-            background: "none", border: "none", ...S.body, fontSize: 12,
-            color: "rgba(255,255,255,0.2)", cursor: "pointer",
-            textDecoration: "underline",
-          }}>Voortgang resetten</button>
+          <button onClick={newPlayer} style={{
+            background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)",
+            borderRadius: 10, padding: "8px 16px", ...S.body, fontSize: 13,
+            color: "rgba(255,255,255,0.4)", cursor: "pointer",
+          }}>Nieuwe speler starten</button>
         </div>
 
         <div style={{ textAlign: "center", marginTop: 16, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.06)" }}>

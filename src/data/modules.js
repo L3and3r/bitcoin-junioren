@@ -40,10 +40,10 @@ export const MODULES = [
         items: [
           { name: "Huiswerk maken", cat: 0 }, { name: "Slapen", cat: 1 },
           { name: "Voetballen", cat: 2 }, { name: "Kamer opruimen", cat: 0 },
-          { name: "Een boek lezen", cat: 1 }, { name: "Tekenen", cat: 2 },
+          { name: "Een boek lezen", cat: 1 }, { name: "Tikkertje spelen", cat: 2 },
           { name: "Tafel dekken", cat: 0 }, { name: "Dutje doen", cat: 1 },
           { name: "Gamen", cat: 2 }, { name: "Boodschappen doen", cat: 0 },
-          { name: "Muziek luisteren", cat: 1 }, { name: "Naar het park", cat: 2 },
+          { name: "Muziek luisteren", cat: 1 }, { name: "Naar de klimtuin", cat: 2 },
         ]
       },
       {
