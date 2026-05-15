@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "اسحب من الأرخص إلى الأغلى",
-      "check": "تحقق من الترتيب"
+      "check": "تحقق من الترتيب",
+      "cheap": "💰 رخيص",
+      "expensive": "💎 غالي",
+      "perfect": "🎉 ممتاز!",
+      "almost": "تقريباً! عدّل الترتيب."
     },
     "categorize": {
-      "instruction": "اسحب إلى الفئة الصحيحة"
+      "instruction": "اسحب إلى الفئة الصحيحة",
+      "remaining": "تبقى {count} — أين تنتمي هذه؟",
+      "check": "تحقق!",
+      "score": "{score} / {total} صحيح!"
     },
     "match": {
-      "instruction": "طابق الأزواج"
+      "instruction": "طابق الأزواج",
+      "old": "🏛️ قديم",
+      "new": "🚀 جديد",
+      "allDone": "🎉 تم ربط الكل!"
     },
     "truefalse": {
       "public": "عام",
-      "private": "خاص"
+      "private": "خاص",
+      "score": "{score} / {total} صحيح!"
     },
     "cipher": {
-      "instruction": "افكّ الشيفرة باستخدام عجلة الأرقام"
+      "instruction": "افكّ الشيفرة باستخدام عجلة الأرقام",
+      "wheel": "عجلة التشفير — الإزاحة",
+      "challenge": "التحدي",
+      "hint": "تلميح",
+      "placeholder": "اكتب الكلمة...",
+      "check": "تحقق",
+      "allDone": "تم كسر جميع الرموز!",
+      "next": "متابعة →"
     },
     "mining": {
-      "instruction": "ابحث عن الأزواج المتشابهة"
+      "instruction": "ابحث عن الأزواج المتشابهة",
+      "mined": "تم التعدين",
+      "attempts": "المحاولات",
+      "done": "اكتمل الكتلة في {moves} محاولة!",
+      "next": "متابعة →"
     },
     "scramble": {
       "instruction": "رتّب الكلمة المبعثرة",
-      "hint": "تلميح"
+      "hint": "تلميح",
+      "placeholder": "اكتب الكلمة...",
+      "check": "تحقق",
+      "allDone": "تم العثور على جميع الكلمات!"
     },
     "moduleView": {
       "back": "→ رجوع",
@@ -64,6 +89,19 @@
       "truefalse": "عام/خاص",
       "categorize": "تصنيف",
       "scramble": "محلّل الكلمات"
+    },
+    "common": {
+      "continue": "متابعة →",
+      "next": "التالي →",
+      "result": "النتيجة",
+      "correct": "✅ صحيح!",
+      "wrong": "❌ ليس تماماً.",
+      "score": "{score} / {total} صحيح!"
+    },
+    "quiz": {
+      "perfect": "كل الإجابات صحيحة!",
+      "great": "أداء رائع!",
+      "practice": "استمر في التدريب!"
     }
   },
   "modules": [

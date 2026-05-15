@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Tsala ukusuka kweyona ixabiso eliphantsi ukuya kweyona ixabiso eliphezulu",
-      "check": "Jonga uhlelo"
+      "check": "Jonga uhlelo",
+      "cheap": "💰 Iyafifordeka",
+      "expensive": "💎 Iduru",
+      "perfect": "🎉 Igqibelele!",
+      "almost": "Malunga! Lungisa uhlobo."
     },
     "categorize": {
-      "instruction": "Tsala uye kwisigaba esifanelekileyo"
+      "instruction": "Tsala uye kwisigaba esifanelekileyo",
+      "remaining": "Kusele {count} — iya phi le?",
+      "check": "Hlola!",
+      "score": "{score} / {total} zilungile!"
     },
     "match": {
-      "instruction": "Dibanisa amaqela"
+      "instruction": "Dibanisa amaqela",
+      "old": "🏛️ Endala",
+      "new": "🚀 Entsha",
+      "allDone": "🎉 Konke kudibanisiwe!"
     },
     "truefalse": {
       "public": "Esidlangalaleni",
-      "private": "Yimfihlo"
+      "private": "Yimfihlo",
+      "score": "{score} / {total} zilungile!"
     },
     "cipher": {
-      "instruction": "Qhekeza ikhowudi ngesondo lenombolo"
+      "instruction": "Qhekeza ikhowudi ngesondo lenombolo",
+      "wheel": "Isondo sekhowudi — ukuguqulwa",
+      "challenge": "Umsebenzi",
+      "hint": "Isikhombisi",
+      "placeholder": "Tsala igama...",
+      "check": "Hlola",
+      "allDone": "Onke akhowudi aphukiwe!",
+      "next": "Qhubeka →"
     },
     "mining": {
-      "instruction": "Fumana amaqela afanayo"
+      "instruction": "Fumana amaqela afanayo",
+      "mined": "Iminwe",
+      "attempts": "Imizamo",
+      "done": "Ibhloko igqityiwe kwimizamo engu-{moves}!",
+      "next": "Qhubeka →"
     },
     "scramble": {
       "instruction": "Lungisa igama elixakekileyo",
-      "hint": "Ishaleli"
+      "hint": "Ishaleli",
+      "placeholder": "Tsala igama...",
+      "check": "Hlola",
+      "allDone": "Onke amagama afunyenwe!"
     },
     "moduleView": {
       "back": "← Emva",
@@ -64,6 +89,19 @@
       "truefalse": "Esidlangalaleni/Yimfihlo",
       "categorize": "Beka kwisigaba",
       "scramble": "Qhekeza igama"
+    },
+    "common": {
+      "continue": "Qhubeka →",
+      "next": "Elandelayo →",
+      "result": "Isiphumo",
+      "correct": "✅ Kulungile!",
+      "wrong": "❌ Hayi ncakasana.",
+      "score": "{score} / {total} zilungile!"
+    },
+    "quiz": {
+      "perfect": "Konke kulungile!",
+      "great": "Wenza kakuhle!",
+      "practice": "Qhubeka uqeqesha!"
     }
   },
   "modules": [

@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "سستے سے مہنگے کی طرف کھینچو",
-      "check": "ترتیب چیک کرو"
+      "check": "ترتیب چیک کرو",
+      "cheap": "💰 سستا",
+      "expensive": "💎 مہنگا",
+      "perfect": "🎉 بالکل درست!",
+      "almost": "قریب! ترتیب درست کریں۔"
     },
     "categorize": {
-      "instruction": "صحیح زمرے میں کھینچو"
+      "instruction": "صحیح زمرے میں کھینچو",
+      "remaining": "ابھی {count} باقی — یہ کہاں جاتا ہے؟",
+      "check": "جانچیں!",
+      "score": "{score} / {total} درست!"
     },
     "match": {
-      "instruction": "جوڑے ملاؤ"
+      "instruction": "جوڑے ملاؤ",
+      "old": "🏛️ پرانا",
+      "new": "🚀 نیا",
+      "allDone": "🎉 سب جوڑ لیے گئے!"
     },
     "truefalse": {
       "public": "عوامی",
-      "private": "ذاتی"
+      "private": "ذاتی",
+      "score": "{score} / {total} درست!"
     },
     "cipher": {
-      "instruction": "کوڈ وہیل سے خفیہ کوڈ توڑو"
+      "instruction": "کوڈ وہیل سے خفیہ کوڈ توڑو",
+      "wheel": "سائفر وہیل — شفٹ",
+      "challenge": "چیلنج",
+      "hint": "اشارہ",
+      "placeholder": "لفظ ٹائپ کریں...",
+      "check": "جانچیں",
+      "allDone": "تمام کوڈ حل ہو گئے!",
+      "next": "جاری رکھیں →"
     },
     "mining": {
-      "instruction": "ایک جیسے جوڑے ڈھونڈو"
+      "instruction": "ایک جیسے جوڑے ڈھونڈو",
+      "mined": "مائن کیا گیا",
+      "attempts": "کوششیں",
+      "done": "بلاک {moves} کوششوں میں مکمل ہوا!",
+      "next": "جاری رکھیں →"
     },
     "scramble": {
       "instruction": "الجھے ہوئے لفظ کو سلجھاؤ",
-      "hint": "اشارہ"
+      "hint": "اشارہ",
+      "placeholder": "لفظ ٹائپ کریں...",
+      "check": "جانچیں",
+      "allDone": "تمام الفاظ مل گئے!"
     },
     "moduleView": {
       "back": "← واپس",
@@ -64,6 +89,19 @@
       "truefalse": "عوامی/ذاتی",
       "categorize": "زمرہ بندی",
       "scramble": "لف�� توڑنا"
+    },
+    "common": {
+      "continue": "جاری رکھیں →",
+      "next": "اگلا →",
+      "result": "نتیجہ",
+      "correct": "✅ درست!",
+      "wrong": "❌ بالکل نہیں۔",
+      "score": "{score} / {total} درست!"
+    },
+    "quiz": {
+      "perfect": "سب درست!",
+      "great": "شاباش!",
+      "practice": "مشق جاری رکھیں!"
     }
   },
   "modules": [

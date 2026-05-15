@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "גרור מהזול ליקר",
-      "check": "בדוק סדר"
+      "check": "בדוק סדר",
+      "cheap": "💰 זול",
+      "expensive": "💎 יקר",
+      "perfect": "🎉 מושלם!",
+      "almost": "כמעט! התאם את הסדר."
     },
     "categorize": {
-      "instruction": "גרור לקטגוריה המתאימה"
+      "instruction": "גרור לקטגוריה המתאימה",
+      "remaining": "עוד {count} נשאר — איפה זה שייך?",
+      "check": "בדוק!",
+      "score": "{score} / {total} נכון!"
     },
     "match": {
-      "instruction": "חבר את הזוגות"
+      "instruction": "חבר את הזוגות",
+      "old": "🏛️ ישן",
+      "new": "🚀 חדש",
+      "allDone": "🎉 הכל קושר!"
     },
     "truefalse": {
       "public": "ציבורי",
-      "private": "פרטי"
+      "private": "פרטי",
+      "score": "{score} / {total} נכון!"
     },
     "cipher": {
-      "instruction": "פצח את הקוד עם גלגל הצופן"
+      "instruction": "פצח את הקוד עם גלגל הצופן",
+      "wheel": "גלגל צופן — הזזה",
+      "challenge": "משימה",
+      "hint": "רמז",
+      "placeholder": "הקלד את המילה...",
+      "check": "בדוק",
+      "allDone": "כל הקודים פוענחו!",
+      "next": "המשך →"
     },
     "mining": {
-      "instruction": "מצא את הזוגות הזהים"
+      "instruction": "מצא את הזוגות הזהים",
+      "mined": "נכרה",
+      "attempts": "ניסיונות",
+      "done": "הבלוק הושלם ב־{moves} ניסיונות!",
+      "next": "המשך →"
     },
     "scramble": {
       "instruction": "פענח את המילה",
-      "hint": "רמז"
+      "hint": "רמז",
+      "placeholder": "הקלד את המילה...",
+      "check": "בדוק",
+      "allDone": "כל המילים נמצאו!"
     },
     "moduleView": {
       "back": "← חזרה",
@@ -64,6 +89,19 @@
       "truefalse": "ציבורי/פרטי",
       "categorize": "קטגוריזציה",
       "scramble": "פצחן מילים"
+    },
+    "common": {
+      "continue": "המשך →",
+      "next": "הבא →",
+      "result": "תוצאה",
+      "correct": "✅ נכון!",
+      "wrong": "❌ לא ממש.",
+      "score": "{score} / {total} נכון!"
+    },
+    "quiz": {
+      "perfect": "הכל נכון!",
+      "great": "כל הכבוד!",
+      "practice": "המשך להתאמן!"
     }
   },
   "modules": [

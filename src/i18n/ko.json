@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "저렴한 것부터 비싼 것 순으로 드래그하세요",
-      "check": "순서 확인"
+      "check": "순서 확인",
+      "cheap": "💰 저렴",
+      "expensive": "💎 비쌈",
+      "perfect": "🎉 완벽!",
+      "almost": "거의 다 왔어요! 순서를 조정해 보세요."
     },
     "categorize": {
-      "instruction": "올바른 카테고리로 드래그하세요"
+      "instruction": "올바른 카테고리로 드래그하세요",
+      "remaining": "아직 {count}개 남았어요 — 이건 어디에 속할까요?",
+      "check": "확인!",
+      "score": "{score} / {total} 정답!"
     },
     "match": {
-      "instruction": "쌍을 연결하세요"
+      "instruction": "쌍을 연결하세요",
+      "old": "🏛️ 구형",
+      "new": "🚀 신형",
+      "allDone": "🎉 모두 연결됐어요!"
     },
     "truefalse": {
       "public": "공개",
-      "private": "비공개"
+      "private": "비공개",
+      "score": "{score} / {total} 정답!"
     },
     "cipher": {
-      "instruction": "암호 바퀴로 코드를 해독하세요"
+      "instruction": "암호 바퀴로 코드를 해독하세요",
+      "wheel": "암호 휠 — 이동",
+      "challenge": "문제",
+      "hint": "힌트",
+      "placeholder": "단어를 입력하세요...",
+      "check": "확인",
+      "allDone": "모든 코드를 해독했어요!",
+      "next": "계속 →"
     },
     "mining": {
-      "instruction": "같은 쌍을 찾으세요"
+      "instruction": "같은 쌍을 찾으세요",
+      "mined": "채굴됨",
+      "attempts": "시도 횟수",
+      "done": "블록이 {moves}번 만에 완료됐어요!",
+      "next": "계속 →"
     },
     "scramble": {
       "instruction": "뒤섞인 단어를 맞춰보세요",
-      "hint": "힌트"
+      "hint": "힌트",
+      "placeholder": "단어를 입력하세요...",
+      "check": "확인",
+      "allDone": "모든 단어를 찾았어요!"
     },
     "moduleView": {
       "back": "← 뒤로",
@@ -64,6 +89,19 @@
       "truefalse": "공개/비공개",
       "categorize": "분류",
       "scramble": "단어 맞추기"
+    },
+    "common": {
+      "continue": "계속 →",
+      "next": "다음 →",
+      "result": "결과",
+      "correct": "✅ 정답!",
+      "wrong": "❌ 아쉬워요.",
+      "score": "{score} / {total} 정답!"
+    },
+    "quiz": {
+      "perfect": "모두 정답!",
+      "great": "잘하고 있어요!",
+      "practice": "계속 연습하세요!"
     }
   },
   "modules": [

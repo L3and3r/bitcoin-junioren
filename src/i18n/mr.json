@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "स्वस्त ते महाग असा क्रम लावा",
-      "check": "क्रम तपासा"
+      "check": "क्रम तपासा",
+      "cheap": "💰 स्वस्त",
+      "expensive": "💎 महाग",
+      "perfect": "🎉 परफेक्ट!",
+      "almost": "जवळजवळ! क्रम बदलून पहा."
     },
     "categorize": {
-      "instruction": "योग्य गटात ओढा"
+      "instruction": "योग्य गटात ओढा",
+      "remaining": "अजून {count} बाकी — हे कुठे जाते?",
+      "check": "तपासा!",
+      "score": "{score} / {total} बरोबर!"
     },
     "match": {
-      "instruction": "जोड्या जुळवा"
+      "instruction": "जोड्या जुळवा",
+      "old": "🏛️ जुने",
+      "new": "🚀 नवीन",
+      "allDone": "🎉 सर्व जोडले!"
     },
     "truefalse": {
       "public": "सार्वजनिक",
-      "private": "खासगी"
+      "private": "खासगी",
+      "score": "{score} / {total} बरोबर!"
     },
     "cipher": {
-      "instruction": "सांकेतिक चाकाने कोड उलगडा"
+      "instruction": "सांकेतिक चाकाने कोड उलगडा",
+      "wheel": "सायफर चाक — बदल",
+      "challenge": "आव्हान",
+      "hint": "संकेत",
+      "placeholder": "शब्द टाइप करा...",
+      "check": "तपासा",
+      "allDone": "सर्व कोड उलगडले!",
+      "next": "पुढे →"
     },
     "mining": {
-      "instruction": "सारख्या जोड्या शोधा"
+      "instruction": "सारख्या जोड्या शोधा",
+      "mined": "मायन केले",
+      "attempts": "प्रयत्न",
+      "done": "ब्लॉक {moves} प्रयत्नांत पूर्ण झाला!",
+      "next": "पुढे →"
     },
     "scramble": {
       "instruction": "शब्द उलगडा",
-      "hint": "힌트"
+      "hint": "힌트",
+      "placeholder": "शब्द टाइप करा...",
+      "check": "तपासा",
+      "allDone": "सर्व शब्द सापडले!"
     },
     "moduleView": {
       "back": "← मागे",
@@ -64,6 +89,19 @@
       "truefalse": "सार्वजनिक/खासगी",
       "categorize": "वर्गीकरण करा",
       "scramble": "शब्द उलगडा"
+    },
+    "common": {
+      "continue": "पुढे →",
+      "next": "पुढील →",
+      "result": "निकाल",
+      "correct": "✅ बरोबर!",
+      "wrong": "❌ पूर्णपणे नाही.",
+      "score": "{score} / {total} बरोबर!"
+    },
+    "quiz": {
+      "perfect": "सर्व बरोबर!",
+      "great": "छान काम!",
+      "practice": "सराव करत राहा!"
     }
   },
   "modules": [

@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "安いものから高いものへならべよう",
-      "check": "じゅんばんを確認"
+      "check": "じゅんばんを確認",
+      "cheap": "💰 安い",
+      "expensive": "💎 高い",
+      "perfect": "🎉 完璧！",
+      "almost": "惜しい！順番を調整してください。"
     },
     "categorize": {
-      "instruction": "正しいカテゴリにドラッグしよう"
+      "instruction": "正しいカテゴリにドラッグしよう",
+      "remaining": "残り {count} 個 — これはどこに入る？",
+      "check": "確認！",
+      "score": "{score} / {total} 正解！"
     },
     "match": {
-      "instruction": "ペアをつなごう"
+      "instruction": "ペアをつなごう",
+      "old": "🏛️ 旧",
+      "new": "🚀 新",
+      "allDone": "🎉 すべてマッチ完了！"
     },
     "truefalse": {
       "public": "公開",
-      "private": "プライベート"
+      "private": "プライベート",
+      "score": "{score} / {total} 正解！"
     },
     "cipher": {
-      "instruction": "暗号ホイールでコードをかいせきしよう"
+      "instruction": "暗号ホイールでコードをかいせきしよう",
+      "wheel": "暗号ホイール — シフト",
+      "challenge": "課題",
+      "hint": "ヒント",
+      "placeholder": "単語を入力...",
+      "check": "確認",
+      "allDone": "すべての暗号を解読！",
+      "next": "次へ →"
     },
     "mining": {
-      "instruction": "同じペアをみつけよう"
+      "instruction": "同じペアをみつけよう",
+      "mined": "採掘済み",
+      "attempts": "試行回数",
+      "done": "{moves} 回の試行でブロック完了！",
+      "next": "次へ ���"
     },
     "scramble": {
       "instruction": "バラバラの文字をならべかえよう",
-      "hint": "ヒント"
+      "hint": "ヒント",
+      "placeholder": "単語を入力...",
+      "check": "確認",
+      "allDone": "すべての単語を発見！"
     },
     "moduleView": {
       "back": "← もどる",
@@ -64,6 +89,19 @@
       "truefalse": "公開／プライベート",
       "categorize": "なかまわけ",
       "scramble": "もじならべ"
+    },
+    "common": {
+      "continue": "次へ →",
+      "next": "次へ →",
+      "result": "結果",
+      "correct": "✅ 正解！",
+      "wrong": "❌ 惜しい！",
+      "score": "{score} / {total} 正解！"
+    },
+    "quiz": {
+      "perfect": "全問正解！",
+      "great": "よくできました！",
+      "practice": "練習を続けよう！"
     }
   },
   "modules": [

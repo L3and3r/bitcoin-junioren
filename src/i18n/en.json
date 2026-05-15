@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Drag from cheapest to most expensive",
-      "check": "Check order"
+      "check": "Check order",
+      "cheap": "💰 Cheap",
+      "expensive": "💎 Expensive",
+      "perfect": "🎉 Perfect!",
+      "almost": "Almost! Adjust the order."
     },
     "categorize": {
-      "instruction": "Drag to the correct category"
+      "instruction": "Drag to the correct category",
+      "remaining": "{count} remaining — where does this belong?",
+      "check": "Check!",
+      "score": "{score} / {total} correct!"
     },
     "match": {
-      "instruction": "Match the pairs"
+      "instruction": "Match the pairs",
+      "old": "🏛️ Old",
+      "new": "🚀 New",
+      "allDone": "🎉 All matched!"
     },
     "truefalse": {
       "public": "Public",
-      "private": "Private"
+      "private": "Private",
+      "score": "{score} / {total} correct!"
     },
     "cipher": {
-      "instruction": "Crack the code using the cipher wheel"
+      "instruction": "Crack the code using the cipher wheel",
+      "wheel": "Cipher wheel — shift",
+      "challenge": "Challenge",
+      "hint": "Hint",
+      "placeholder": "Type the word...",
+      "check": "Check",
+      "allDone": "All codes cracked!",
+      "next": "Continue →"
     },
     "mining": {
-      "instruction": "Find the matching pairs"
+      "instruction": "Find the matching pairs",
+      "mined": "Mined",
+      "attempts": "Attempts",
+      "done": "Block completed in {moves} attempts!",
+      "next": "Continue →"
     },
     "scramble": {
       "instruction": "Unscramble the word",
-      "hint": "Hint"
+      "hint": "Hint",
+      "placeholder": "Type the word...",
+      "check": "Check",
+      "allDone": "All words found!"
     },
     "moduleView": {
       "back": "← Back",
@@ -64,6 +89,19 @@
       "truefalse": "Public/Private",
       "categorize": "Categorize",
       "scramble": "Word Scramble"
+    },
+    "common": {
+      "continue": "Continue →",
+      "next": "Next →",
+      "result": "Result",
+      "correct": "✅ Correct!",
+      "wrong": "❌ Not quite.",
+      "score": "{score} / {total} correct!"
+    },
+    "quiz": {
+      "perfect": "All correct!",
+      "great": "Well done!",
+      "practice": "Keep practicing!"
     }
   },
   "modules": [

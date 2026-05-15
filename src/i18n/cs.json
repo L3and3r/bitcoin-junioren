@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Přetáhni od nejlevnějšího k nejdražšímu",
-      "check": "Zkontrolovat pořadí"
+      "check": "Zkontrolovat pořadí",
+      "cheap": "💰 Levné",
+      "expensive": "💎 Drahé",
+      "perfect": "🎉 Perfektní!",
+      "almost": "Skoro! Upravte pořadí."
     },
     "categorize": {
-      "instruction": "Přetáhni do správné kategorie"
+      "instruction": "Přetáhni do správné kategorie",
+      "remaining": "Ještě {count} zbývá — kam to patří?",
+      "check": "Zkontrolovat!",
+      "score": "{score} / {total} správně!"
     },
     "match": {
-      "instruction": "Spoj dvojice"
+      "instruction": "Spoj dvojice",
+      "old": "🏛️ Staré",
+      "new": "🚀 Nové",
+      "allDone": "🎉 Vše spárováno!"
     },
     "truefalse": {
       "public": "Veřejné",
-      "private": "Soukromé"
+      "private": "Soukromé",
+      "score": "{score} / {total} správně!"
     },
     "cipher": {
-      "instruction": "Rozluštěte kód pomocí šifrovacího kolečka"
+      "instruction": "Rozluštěte kód pomocí šifrovacího kolečka",
+      "wheel": "Šifrové kolo — posun",
+      "challenge": "Úkol",
+      "hint": "Nápověda",
+      "placeholder": "Napište slovo...",
+      "check": "Zkontrolovat",
+      "allDone": "Všechny kódy rozluštěny!",
+      "next": "Pokračovat →"
     },
     "mining": {
-      "instruction": "Najdi stejné dvojice"
+      "instruction": "Najdi stejné dvojice",
+      "mined": "Vytěženo",
+      "attempts": "Pokusy",
+      "done": "Blok dokončen za {moves} pokusů!",
+      "next": "Pokračovat →"
     },
     "scramble": {
       "instruction": "Rozluštěte slovo",
-      "hint": "Nápověda"
+      "hint": "Nápověda",
+      "placeholder": "Napište slovo...",
+      "check": "Zkontrolovat",
+      "allDone": "Všechna slova nalezena!"
     },
     "moduleView": {
       "back": "← Zpět",
@@ -64,6 +89,19 @@
       "truefalse": "Veřejné/Soukromé",
       "categorize": "Třídění",
       "scramble": "Hádat slovo"
+    },
+    "common": {
+      "continue": "Pokračovat →",
+      "next": "Další →",
+      "result": "Výsledek",
+      "correct": "✅ Správně!",
+      "wrong": "❌ Není úplně správně.",
+      "score": "{score} / {total} správně!"
+    },
+    "quiz": {
+      "perfect": "Vše správně!",
+      "great": "Skvělá práce!",
+      "practice": "Stále cvičte!"
     }
   },
   "modules": [

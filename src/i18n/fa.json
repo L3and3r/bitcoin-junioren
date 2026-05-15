@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "از ارزان به گران بکش",
-      "check": "بررسی ترتیب"
+      "check": "بررسی ترتیب",
+      "cheap": "💰 ارزان",
+      "expensive": "💎 گران",
+      "perfect": "🎉 عالی!",
+      "almost": "نزدیک بود! ترتیب را تنظیم کن."
     },
     "categorize": {
-      "instruction": "به دسته درست بکش"
+      "instruction": "به دسته درست بکش",
+      "remaining": "هنوز {count} مورد باقی مانده — این کجا می‌رود؟",
+      "check": "بررسی!",
+      "score": "{score} / {total} درست!"
     },
     "match": {
-      "instruction": "جفت‌ها را به هم وصل کن"
+      "instruction": "جفت‌ها را به هم وصل کن",
+      "old": "🏛️ قدیمی",
+      "new": "🚀 جدید",
+      "allDone": "🎉 همه جفت شدند!"
     },
     "truefalse": {
       "public": "عمومی",
-      "private": "خصوصی"
+      "private": "خصوصی",
+      "score": "{score} / {total} درست!"
     },
     "cipher": {
-      "instruction": "کد را با چرخ رمز بشکن"
+      "instruction": "کد را با چرخ رمز بشکن",
+      "wheel": "چرخ رمز — جابجایی",
+      "challenge": "چالش",
+      "hint": "راهنما",
+      "placeholder": "کلمه را تایپ کن...",
+      "check": "بررسی",
+      "allDone": "همه کدها شکسته شدند!",
+      "next": "ادامه →"
     },
     "mining": {
-      "instruction": "جفت‌های یکسان را پیدا کن"
+      "instruction": "جفت‌های یکسان را پیدا کن",
+      "mined": "استخراج ��ده",
+      "attempts": "تلاش‌ها",
+      "done": "بلوک در {moves} تلاش تکمیل شد!",
+      "next": "ادامه →"
     },
     "scramble": {
       "instruction": "کلمه را مرتب کن",
-      "hint": "راهنما"
+      "hint": "راهنما",
+      "placeholder": "کلمه را تایپ کن...",
+      "check": "بررسی",
+      "allDone": "همه کلمات پیدا شدند!"
     },
     "moduleView": {
       "back": "← برگشت",
@@ -64,6 +89,19 @@
       "truefalse": "عمومی/خصوصی",
       "categorize": "دسته‌بندی",
       "scramble": "کلمه‌سازی"
+    },
+    "common": {
+      "continue": "ادامه →",
+      "next": "بعدی →",
+      "result": "نتیجه",
+      "correct": "✅ درست!",
+      "wrong": "❌ کاملاً درست نیست.",
+      "score": "{score} / {total} درست!"
+    },
+    "quiz": {
+      "perfect": "همه درست!",
+      "great": "آفرین!",
+      "practice": "به تمرین ادامه بده!"
     }
   },
   "modules": [

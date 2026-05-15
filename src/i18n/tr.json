@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Ucuzdan pahalıya doğru sürükle",
-      "check": "Sırayı kontrol et"
+      "check": "Sırayı kontrol et",
+      "cheap": "💰 Ucuz",
+      "expensive": "💎 Pahalı",
+      "perfect": "🎉 Mükemmel!",
+      "almost": "Neredeyse! Sırayı düzenle."
     },
     "categorize": {
-      "instruction": "Doğru kategoriye sürükle"
+      "instruction": "Doğru kategoriye sürükle",
+      "remaining": "Henüz {count} kaldı — bu nereye ait?",
+      "check": "Kontrol et!",
+      "score": "{score} / {total} doğru!"
     },
     "match": {
-      "instruction": "Eşleşen çiftleri bul"
+      "instruction": "Eşleşen çiftleri bul",
+      "old": "🏛️ Eski",
+      "new": "🚀 Yeni",
+      "allDone": "🎉 Hepsi eşleştirildi!"
     },
     "truefalse": {
       "public": "Herkese açık",
-      "private": "Özel"
+      "private": "Özel",
+      "score": "{score} / {total} doğru!"
     },
     "cipher": {
-      "instruction": "Şifre tekerleğiyle kodu çöz"
+      "instruction": "Şifre tekerleğiyle kodu çöz",
+      "wheel": "Şifre çarkı — kaydırma",
+      "challenge": "Görev",
+      "hint": "İpucu",
+      "placeholder": "Kelimeyi yaz...",
+      "check": "Kontrol et",
+      "allDone": "Tüm kodlar kırıldı!",
+      "next": "Devam →"
     },
     "mining": {
-      "instruction": "Eşleşen çiftleri bul"
+      "instruction": "Eşleşen çiftleri bul",
+      "mined": "Madencilik yapıldı",
+      "attempts": "Denemeler",
+      "done": "Blok {moves} denemede tamamlandı!",
+      "next": "Devam →"
     },
     "scramble": {
       "instruction": "Karışık harfleri çöz",
-      "hint": "İpucu"
+      "hint": "İpucu",
+      "placeholder": "Kelimeyi yaz...",
+      "check": "Kontrol et",
+      "allDone": "Tüm kelimeler bulundu!"
     },
     "moduleView": {
       "back": "← Geri",
@@ -64,6 +89,19 @@
       "truefalse": "Herkese Açık/Özel",
       "categorize": "Kategorilere Ayırma",
       "scramble": "Kelime Bulmaca"
+    },
+    "common": {
+      "continue": "Devam →",
+      "next": "Sonraki →",
+      "result": "Sonuç",
+      "correct": "✅ Doğru!",
+      "wrong": "❌ Tam değil.",
+      "score": "{score} / {total} doğru!"
+    },
+    "quiz": {
+      "perfect": "Hepsi doğru!",
+      "great": "Harika gidiyorsun!",
+      "practice": "Pratik yapmaya devam et!"
     }
   },
   "modules": [

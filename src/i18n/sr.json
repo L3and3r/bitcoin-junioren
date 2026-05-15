@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Превуци од јефтиног ка скупом",
-      "check": "Провери редослед"
+      "check": "Провери редослед",
+      "cheap": "💰 Jeftino",
+      "expensive": "💎 Skupo",
+      "perfect": "🎉 Savršeno!",
+      "almost": "Skoro! Prilagodi redosled."
     },
     "categorize": {
-      "instruction": "Превуци у одговарајућу категорију"
+      "instruction": "Превуци у одговарајућу категорију",
+      "remaining": "Još {count} — gde ovo pripada?",
+      "check": "Proveri!",
+      "score": "{score} / {total} tačno!"
     },
     "match": {
-      "instruction": "Повежи парове"
+      "instruction": "Повежи парове",
+      "old": "🏛️ Staro",
+      "new": "🚀 Novo",
+      "allDone": "🎉 Sve spojeno!"
     },
     "truefalse": {
       "public": "Јавно",
-      "private": "Приватно"
+      "private": "Приватно",
+      "score": "{score} / {total} tačno!"
     },
     "cipher": {
-      "instruction": "Разбиј шифру помоћу точка са бројевима"
+      "instruction": "Разбиј шифру помоћу точка са бројевима",
+      "wheel": "Šifarski točak — pomeraj",
+      "challenge": "Zadatak",
+      "hint": "Nagoveštaj",
+      "placeholder": "Ukucaj reč...",
+      "check": "Proveri",
+      "allDone": "Sve šifre su dešifrovane!",
+      "next": "Dalje →"
     },
     "mining": {
-      "instruction": "Пронађи одговарајуће парове"
+      "instruction": "Пронађи одговарајуће парове",
+      "mined": "Iskopano",
+      "attempts": "Pokušaji",
+      "done": "Blok završen za {moves} pokušaja!",
+      "next": "Dalje →"
     },
     "scramble": {
       "instruction": "Složi слово",
-      "hint": "Савет"
+      "hint": "Савет",
+      "placeholder": "Ukucaj reč...",
+      "check": "Proveri",
+      "allDone": "Sve reči su pronađene!"
     },
     "moduleView": {
       "back": "← Назад",
@@ -64,6 +89,19 @@
       "truefalse": "Јавно/Приватно",
       "categorize": "Категоризација",
       "scramble": "Словарка"
+    },
+    "common": {
+      "continue": "Dalje →",
+      "next": "Sledeće →",
+      "result": "Rezultat",
+      "correct": "✅ Tačno!",
+      "wrong": "❌ Nije sasvim.",
+      "score": "{score} / {total} tačno!"
+    },
+    "quiz": {
+      "perfect": "Sve tačno!",
+      "great": "Odlično!",
+      "practice": "Nastavi da vežbaš!"
     }
   },
   "modules": [

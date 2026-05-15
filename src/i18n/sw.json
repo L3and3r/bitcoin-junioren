@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Buruta kutoka bei nafuu hadi ghali",
-      "check": "Angalia mpangilio"
+      "check": "Angalia mpangilio",
+      "cheap": "💰 Bei nafuu",
+      "expensive": "💎 Ghali",
+      "perfect": "🎉 Kamili!",
+      "almost": "Karibu! Rekebisha mpangilio."
     },
     "categorize": {
-      "instruction": "Buruta kwenye aina sahihi"
+      "instruction": "Buruta kwenye aina sahihi",
+      "remaining": "Bado {count} zilizobaki — hii inaenda wapi?",
+      "check": "Angalia!",
+      "score": "{score} / {total} sahihi!"
     },
     "match": {
-      "instruction": "Oanisha jozi"
+      "instruction": "Oanisha jozi",
+      "old": "🏛️ ya Zamani",
+      "new": "🚀 Mpya",
+      "allDone": "🎉 Yote yameunganishwa!"
     },
     "truefalse": {
       "public": "Hadharani",
-      "private": "Siri"
+      "private": "Siri",
+      "score": "{score} / {total} sahihi!"
     },
     "cipher": {
-      "instruction": "Vunja msimbo kwa gurudumu la nambari"
+      "instruction": "Vunja msimbo kwa gurudumu la nambari",
+      "wheel": "Gurudumu la msimbo — mabadiliko",
+      "challenge": "Changamoto",
+      "hint": "Kidokezo",
+      "placeholder": "Andika neno...",
+      "check": "Kagua",
+      "allDone": "Misimbo yote imefunguliwa!",
+      "next": "Endelea →"
     },
     "mining": {
-      "instruction": "Tafuta jozi zinazofanana"
+      "instruction": "Tafuta jozi zinazofanana",
+      "mined": "Imechimbwa",
+      "attempts": "Majaribio",
+      "done": "Bloku imekamilika katika majaribio {moves}!",
+      "next": "Endelea →"
     },
     "scramble": {
       "instruction": "Tenganisha neno",
-      "hint": "Kidokezo"
+      "hint": "Kidokezo",
+      "placeholder": "Andika neno...",
+      "check": "Kagua",
+      "allDone": "Maneno yote yamepatikana!"
     },
     "moduleView": {
       "back": "← Rudi",
@@ -64,6 +89,19 @@
       "truefalse": "Hadharani/Siri",
       "categorize": "Kategorisha",
       "scramble": "Mvunjaji wa Maneno"
+    },
+    "common": {
+      "continue": "Endelea →",
+      "next": "Inayofuata →",
+      "result": "Matokeo",
+      "correct": "✅ Sahihi!",
+      "wrong": "❌ Si sahihi kabisa.",
+      "score": "{score} / {total} sahihi!"
+    },
+    "quiz": {
+      "perfect": "Yote ni sahihi!",
+      "great": "Unafanya vizuri!",
+      "practice": "Endelea kufanya mazoezi!"
     }
   },
   "modules": [

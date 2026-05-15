@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Arraste do mais barato ao mais caro",
-      "check": "Verificar ordem"
+      "check": "Verificar ordem",
+      "cheap": "💰 Barato",
+      "expensive": "💎 Caro",
+      "perfect": "🎉 Perfeito!",
+      "almost": "Quase! Ajuste a ordem."
     },
     "categorize": {
-      "instruction": "Arraste para a categoria correta"
+      "instruction": "Arraste para a categoria correta",
+      "remaining": "Ainda {count} restante — onde isso se encaixa?",
+      "check": "Verificar!",
+      "score": "{score} / {total} correto!"
     },
     "match": {
-      "instruction": "Conecte os pares"
+      "instruction": "Conecte os pares",
+      "old": "🏛️ Antigo",
+      "new": "🚀 Novo",
+      "allDone": "🎉 Tudo correspondido!"
     },
     "truefalse": {
       "public": "Público",
-      "private": "Privado"
+      "private": "Privado",
+      "score": "{score} / {total} correto!"
     },
     "cipher": {
-      "instruction": "Decifre o código com a roda de cifra"
+      "instruction": "Decifre o código com a roda de cifra",
+      "wheel": "Roda de cifra — deslocamento",
+      "challenge": "Desafio",
+      "hint": "Dica",
+      "placeholder": "Digite a palavra...",
+      "check": "Verificar",
+      "allDone": "Todos os códigos decifrados!",
+      "next": "Continuar →"
     },
     "mining": {
-      "instruction": "Encontre os pares iguais"
+      "instruction": "Encontre os pares iguais",
+      "mined": "Minerado",
+      "attempts": "Tentativas",
+      "done": "Bloco concluído em {moves} tentativas!",
+      "next": "Continuar →"
     },
     "scramble": {
       "instruction": "Descubra a palavra embaralhada",
-      "hint": "Dica"
+      "hint": "Dica",
+      "placeholder": "Digite a palavra...",
+      "check": "Verificar",
+      "allDone": "Todas as palavras encontradas!"
     },
     "moduleView": {
       "back": "← Voltar",
@@ -64,6 +89,19 @@
       "truefalse": "Público/Privado",
       "categorize": "Categorizar",
       "scramble": "Caça-palavras"
+    },
+    "common": {
+      "continue": "Continuar →",
+      "next": "Próximo →",
+      "result": "Resultado",
+      "correct": "✅ Correto!",
+      "wrong": "❌ Não exatamente.",
+      "score": "{score} / {total} correto!"
+    },
+    "quiz": {
+      "perfect": "Tudo certo!",
+      "great": "Muito bem!",
+      "practice": "Continue praticando!"
     }
   },
   "modules": [

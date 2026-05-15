@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "સસ્તાથી મોંઘા તરફ ખેંચો",
-      "check": "ક્રમ તપાસો"
+      "check": "ક્રમ તપાસો",
+      "cheap": "💰 સસ્તું",
+      "expensive": "💎 મોંઘું",
+      "perfect": "🎉 પરફેક્ટ!",
+      "almost": "લગભગ! ક્રમ બદલો."
     },
     "categorize": {
-      "instruction": "સાચી શ્રેણીમાં ખેંચો"
+      "instruction": "સાચી શ્રેણીમાં ખેંચો",
+      "remaining": "હજી {count} બાકી — આ ક્યાં જાય?",
+      "check": "તપાસો!",
+      "score": "{score} / {total} સાચાં!"
     },
     "match": {
-      "instruction": "જોડકાં મેળવો"
+      "instruction": "જોડકાં મેળવો",
+      "old": "🏛️ જૂનું",
+      "new": "🚀 નવું",
+      "allDone": "🎉 બધું જોડાઈ ગયું!"
     },
     "truefalse": {
       "public": "જાહેર",
-      "private": "ખાનગી"
+      "private": "ખાનગી",
+      "score": "{score} / {total} સાચાં!"
     },
     "cipher": {
-      "instruction": "સાઇફર વ્હીલ વડે કોડ તોડો"
+      "instruction": "સાઇફર વ્હીલ વડે કોડ તોડો",
+      "wheel": "સાઇફર વ્હીલ — શિફ્ટ",
+      "challenge": "પડકાર",
+      "hint": "સંકેત",
+      "placeholder": "શબ્દ લખો...",
+      "check": "તપાસો",
+      "allDone": "બધા કોડ તૂટી ગયા!",
+      "next": "આગળ →"
     },
     "mining": {
-      "instruction": "સરખાં જોડકાં શોધો"
+      "instruction": "સરખાં જોડકાં શોધો",
+      "mined": "માઇન થયું",
+      "attempts": "પ્રયાસો",
+      "done": "બ્લૉક {moves} પ્રયાસોમાં પૂર્ણ!",
+      "next": "આગળ →"
     },
     "scramble": {
       "instruction": "શબ્દ ઉકેલો",
-      "hint": "સંકેત"
+      "hint": "સંકેત",
+      "placeholder": "શબ્દ લખો...",
+      "check": "તપાસો",
+      "allDone": "બધા શબ્દો મળી ગયા!"
     },
     "moduleView": {
       "back": "← પાછળ",
@@ -64,6 +89,19 @@
       "truefalse": "જાહેર/ખાનગી",
       "categorize": "વર્ગીકરણ",
       "scramble": "શબ્દ ઉકેલો"
+    },
+    "common": {
+      "continue": "આગળ →",
+      "next": "આગળ →",
+      "result": "પરિણામ",
+      "correct": "✅ સાચું!",
+      "wrong": "❌ બરાબર નહીં.",
+      "score": "{score} / {total} સાચાં!"
+    },
+    "quiz": {
+      "perfect": "બધું સાચું!",
+      "great": "સરસ કામ!",
+      "practice": "પ્રેક્ટિસ કરતા રહો!"
     }
   },
   "modules": [

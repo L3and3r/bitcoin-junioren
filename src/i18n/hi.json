@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "सस्ते से महंगे की तरफ खींचो",
-      "check": "क्रम जांचो"
+      "check": "क्रम जांचो",
+      "cheap": "💰 सस्ता",
+      "expensive": "💎 महंगा",
+      "perfect": "🎉 एकदम सही!",
+      "almost": "लगभग! क्रम को ठीक करें।"
     },
     "categorize": {
-      "instruction": "सही श्रेणी में खींचो"
+      "instruction": "सही श्रेणी में खींचो",
+      "remaining": "अभी {count} बचे हैं — यह कहाँ जाता है?",
+      "check": "जाँचें!",
+      "score": "{score} / {total} सही!"
     },
     "match": {
-      "instruction": "जोड़े मिलाओ"
+      "instruction": "जोड़े मिलाओ",
+      "old": "🏛️ पुराना",
+      "new": "🚀 नया",
+      "allDone": "🎉 सब जोड़ दिए गए!"
     },
     "truefalse": {
       "public": "सार्वजनिक",
-      "private": "निजी"
+      "private": "निजी",
+      "score": "{score} / {total} सही!"
     },
     "cipher": {
-      "instruction": "सिफर व्हील से कोड तोड़ो"
+      "instruction": "सिफर व्हील से कोड तोड़ो",
+      "wheel": "सिफर व्हील — बदलाव",
+      "challenge": "चुनौती",
+      "hint": "संकेत",
+      "placeholder": "श��्द टाइप करें...",
+      "check": "जाँचें",
+      "allDone": "सभी कोड तोड़ दिए गए!",
+      "next": "आगे बढ़ें →"
     },
     "mining": {
-      "instruction": "एक जैसे जोड़े खोजो"
+      "instruction": "एक जैसे जोड़े खोजो",
+      "mined": "माइन किया गया",
+      "attempts": "प्रयास",
+      "done": "ब्लॉक {moves} प्रयासों में पूरा हुआ!",
+      "next": "आगे बढ़ें →"
     },
     "scramble": {
       "instruction": "शब्द सुलझाओ",
-      "hint": "संकेत"
+      "hint": "संकेत",
+      "placeholder": "शब्द टाइप करें...",
+      "check": "जाँचें",
+      "allDone": "सभी शब्द मिल गए!"
     },
     "moduleView": {
       "back": "← वापस",
@@ -64,6 +89,19 @@
       "truefalse": "सार्वजनिक/निजी",
       "categorize": "वर्गीकरण करो",
       "scramble": "शब्द पहेली"
+    },
+    "common": {
+      "continue": "आगे बढ़ें →",
+      "next": "अगला →",
+      "result": "परिणाम",
+      "correct": "✅ सही!",
+      "wrong": "❌ पूरी तरह सही नहीं।",
+      "score": "{score} / {total} सही!"
+    },
+    "quiz": {
+      "perfect": "सब सही!",
+      "great": "बढ़िया काम!",
+      "practice": "अभ्यास जारी रखें!"
     }
   },
   "modules": [

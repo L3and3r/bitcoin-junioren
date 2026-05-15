@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Przeciągnij od najtańszego do najdroższego",
-      "check": "Sprawdź kolejność"
+      "check": "Sprawdź kolejność",
+      "cheap": "💰 Tanie",
+      "expensive": "💎 Drogie",
+      "perfect": "🎉 Idealnie!",
+      "almost": "Prawie! Popraw kolejność."
     },
     "categorize": {
-      "instruction": "Przeciągnij do właściwej kategorii"
+      "instruction": "Przeciągnij do właściwej kategorii",
+      "remaining": "Jeszcze {count} — gdzie to należy?",
+      "check": "Sprawdź!",
+      "score": "{score} / {total} dobrze!"
     },
     "match": {
-      "instruction": "Połącz pary"
+      "instruction": "Połącz pary",
+      "old": "🏛️ Stare",
+      "new": "🚀 Nowe",
+      "allDone": "🎉 Wszystko połączone!"
     },
     "truefalse": {
       "public": "Publiczne",
-      "private": "Prywatne"
+      "private": "Prywatne",
+      "score": "{score} / {total} dobrze!"
     },
     "cipher": {
-      "instruction": "Złam kod za pomocą koła szyfrującego"
+      "instruction": "Złam kod za pomocą koła szyfrującego",
+      "wheel": "Koło szyfrowe — przesunięcie",
+      "challenge": "Zadanie",
+      "hint": "Wskazówka",
+      "placeholder": "Wpisz słowo...",
+      "check": "Sprawdź",
+      "allDone": "Wszystkie kody złamane!",
+      "next": "Dalej →"
     },
     "mining": {
-      "instruction": "Znajdź pasujące pary"
+      "instruction": "Znajdź pasujące pary",
+      "mined": "Wydobyto",
+      "attempts": "Próby",
+      "done": "Blok ukończony w {moves} próbach!",
+      "next": "Dalej →"
     },
     "scramble": {
       "instruction": "Ułóż rozsypane słowo",
-      "hint": "Podpowiedź"
+      "hint": "Podpowiedź",
+      "placeholder": "Wpisz słowo...",
+      "check": "Sprawdź",
+      "allDone": "Wszystkie słowa znalezione!"
     },
     "moduleView": {
       "back": "← Wróć",
@@ -64,6 +89,19 @@
       "truefalse": "Publiczne/Prywatne",
       "categorize": "Kategoryzowanie",
       "scramble": "Łamigłówka słowna"
+    },
+    "common": {
+      "continue": "Dalej →",
+      "next": "Następny →",
+      "result": "Wynik",
+      "correct": "✅ Dobrze!",
+      "wrong": "❌ Nie do końca.",
+      "score": "{score} / {total} dobrze!"
+    },
+    "quiz": {
+      "perfect": "Wszystko poprawnie!",
+      "great": "Świetna robota!",
+      "practice": "Ćwicz dalej!"
     }
   },
   "modules": [

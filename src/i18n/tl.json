@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "I-drag mula sa pinakamura hanggang pinakamahal",
-      "check": "Suriin ang pagkakasunod-sunod"
+      "check": "Suriin ang pagkakasunod-sunod",
+      "cheap": "💰 Mura",
+      "expensive": "💎 Mahal",
+      "perfect": "🎉 Perpekto!",
+      "almost": "Halos na! Ayusin ang pagkakasunod-sunod."
     },
     "categorize": {
-      "instruction": "I-drag sa tamang kategorya"
+      "instruction": "I-drag sa tamang kategorya",
+      "remaining": "May {count} pa — saan ito nabibilang?",
+      "check": "Suriin!",
+      "score": "{score} / {total} tama!"
     },
     "match": {
-      "instruction": "Itugma ang mga pares"
+      "instruction": "Itugma ang mga pares",
+      "old": "🏛️ Luma",
+      "new": "🚀 Bago",
+      "allDone": "🎉 Lahat naipares na!"
     },
     "truefalse": {
       "public": "Pampubliko",
-      "private": "Pribado"
+      "private": "Pribado",
+      "score": "{score} / {total} tama!"
     },
     "cipher": {
-      "instruction": "Basagin ang code gamit ang cipher wheel"
+      "instruction": "Basagin ang code gamit ang cipher wheel",
+      "wheel": "Cipher wheel — pomiliang",
+      "challenge": "Hamon",
+      "hint": "Pahiwatig",
+      "placeholder": "I-type ang salita...",
+      "check": "Suriin",
+      "allDone": "Lahat ng code nalabas na!",
+      "next": "Magpatuloy →"
     },
     "mining": {
-      "instruction": "Hanapin ang magkaparehong pares"
+      "instruction": "Hanapin ang magkaparehong pares",
+      "mined": "Na-mine",
+      "attempts": "Mga pagsubok",
+      "done": "Bloke natapos sa {moves} pagsubok!",
+      "next": "Magpatuloy →"
     },
     "scramble": {
       "instruction": "Ayusin ang salita",
-      "hint": "Pahiwatig"
+      "hint": "Pahiwatig",
+      "placeholder": "I-type ang salita...",
+      "check": "Suriin",
+      "allDone": "Lahat ng salita nahanap na!"
     },
     "moduleView": {
       "back": "← Bumalik",
@@ -64,6 +89,19 @@
       "truefalse": "Pampubliko/Pribado",
       "categorize": "Pag-uuri",
       "scramble": "Salitang Palaisipan"
+    },
+    "common": {
+      "continue": "Magpatuloy →",
+      "next": "Susunod →",
+      "result": "Resulta",
+      "correct": "✅ Tama!",
+      "wrong": "❌ Hindi quite.",
+      "score": "{score} / {total} tama!"
+    },
+    "quiz": {
+      "perfect": "Lahat tama!",
+      "great": "Magaling!",
+      "practice": "Patuloy na mag-aral!"
     }
   },
   "modules": [

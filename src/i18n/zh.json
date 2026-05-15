@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "从便宜到贵拖动排序",
-      "check": "检查顺序"
+      "check": "检查顺序",
+      "cheap": "💰 便宜",
+      "expensive": "💎 昂贵",
+      "perfect": "🎉 完美！",
+      "almost": "差一点！请调整顺序。"
     },
     "categorize": {
-      "instruction": "���动到正确的分类"
+      "instruction": "���动到正确的分类",
+      "remaining": "还剩 {count} 个 — 这个属于哪里？",
+      "check": "检查！",
+      "score": "{score} / {total} 正确！"
     },
     "match": {
-      "instruction": "配对匹配"
+      "instruction": "配对匹配",
+      "old": "🏛️ 旧",
+      "new": "🚀 新",
+      "allDone": "🎉 全部匹配完成！"
     },
     "truefalse": {
       "public": "公开",
-      "private": "私密"
+      "private": "私密",
+      "score": "{score} / {total} 正确！"
     },
     "cipher": {
-      "instruction": "用密码轮破解密码"
+      "instruction": "用密码轮破解密码",
+      "wheel": "密码轮 — 位移",
+      "challenge": "任务",
+      "hint": "提示",
+      "placeholder": "输入单词...",
+      "check": "检查",
+      "allDone": "所有密码已破解！",
+      "next": "继续 →"
     },
     "mining": {
-      "instruction": "找到相同的配对"
+      "instruction": "找到相同的配对",
+      "mined": "已挖掘",
+      "attempts": "尝试次数",
+      "done": "在 {moves} 次尝试中完成区块！",
+      "next": "继续 →"
     },
     "scramble": {
       "instruction": "还原打乱的单词",
-      "hint": "提示"
+      "hint": "提示",
+      "placeholder": "输入单词...",
+      "check": "检查",
+      "allDone": "所有单词已找到！"
     },
     "moduleView": {
       "back": "← 返回",
@@ -64,6 +89,19 @@
       "truefalse": "公开／私密",
       "categorize": "分类",
       "scramble": "单词破解"
+    },
+    "common": {
+      "continue": "继续 →",
+      "next": "下一个 →",
+      "result": "结果",
+      "correct": "✅ 正确！",
+      "wrong": "❌ 不太对。",
+      "score": "{score} / {total} 正确！"
+    },
+    "quiz": {
+      "perfect": "全部正确！",
+      "great": "做得很好！",
+      "practice": "继续练习！"
     }
   },
   "modules": [

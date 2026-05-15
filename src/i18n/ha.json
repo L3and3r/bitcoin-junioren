@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Ja daga mai araha zuwa mai tsada",
-      "check": "Duba tsari"
+      "check": "Duba tsari",
+      "cheap": "💰 Mai arha",
+      "expensive": "💎 Mai tsada",
+      "perfect": "🎉 Cikakke!",
+      "almost": "Kusan! Ka gyara jerin."
     },
     "categorize": {
-      "instruction": "Ja zuwa nau'i da ya dace"
+      "instruction": "Ja zuwa nau'i da ya dace",
+      "remaining": "Har yanzu {count} ya rage — ina wannan ya kamata?",
+      "check": "Duba!",
+      "score": "{score} / {total} daidai!"
     },
     "match": {
-      "instruction": "Haɗa nau'i-nau'i"
+      "instruction": "Haɗa nau'i-nau'i",
+      "old": "🏛️ Tsoho",
+      "new": "🚀 Sabo",
+      "allDone": "🎉 Duk an haɗa!"
     },
     "truefalse": {
       "public": "Bayyane",
-      "private": "Sirri"
+      "private": "Sirri",
+      "score": "{score} / {total} daidai!"
     },
     "cipher": {
-      "instruction": "Karya lambar sirri da farantin lambobi"
+      "instruction": "Karya lambar sirri da farantin lambobi",
+      "wheel": "Farar lamba — matsawa",
+      "challenge": "Ƙalubale",
+      "hint": "Taimako",
+      "placeholder": "Rubuta kalmar...",
+      "check": "Duba",
+      "allDone": "An karya duk lambobin!",
+      "next": "Ci gaba →"
     },
     "mining": {
-      "instruction": "Nemo nau'i-nau'i masu kama da juna"
+      "instruction": "Nemo nau'i-nau'i masu kama da juna",
+      "mined": "An haƙa",
+      "attempts": "Yunkuri",
+      "done": "An kammala toshe a cikin {moves} yunƙuri!",
+      "next": "Ci gaba →"
     },
     "scramble": {
       "instruction": "Warware kalmar da aka gurbata",
-      "hint": "Taimako"
+      "hint": "Taimako",
+      "placeholder": "Rubuta kalmar...",
+      "check": "Duba",
+      "allDone": "An sami duk kalmomi!"
     },
     "moduleView": {
       "back": "← Koma baya",
@@ -64,6 +89,19 @@
       "truefalse": "Bayyane/Sirri",
       "categorize": "Rarraba",
       "scramble": "Warware Kalma"
+    },
+    "common": {
+      "continue": "Ci gaba →",
+      "next": "Na gaba →",
+      "result": "Sakamakon",
+      "correct": "✅ Daidai!",
+      "wrong": "❌ Ba daidai ba gaba ɗaya.",
+      "score": "{score} / {total} daidai!"
+    },
+    "quiz": {
+      "perfect": "Duk daidai!",
+      "great": "Kyakkyawan aiki!",
+      "practice": "Ci gaba da atisaye!"
     }
   },
   "modules": [

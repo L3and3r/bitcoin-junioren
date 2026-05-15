@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Kéo từ rẻ nhất đến đắt nhất",
-      "check": "Kiểm tra thứ tự"
+      "check": "Kiểm tra thứ tự",
+      "cheap": "💰 Rẻ",
+      "expensive": "💎 Đắt",
+      "perfect": "🎉 Hoàn hảo!",
+      "almost": "Gần đúng rồi! Hãy điều chỉnh lại thứ tự."
     },
     "categorize": {
-      "instruction": "Kéo vào đúng danh mục"
+      "instruction": "Kéo vào đúng danh mục",
+      "remaining": "Còn {count} cái nữa — cái này thuộc về đâu?",
+      "check": "Kiểm tra!",
+      "score": "{score} / {total} đúng!"
     },
     "match": {
-      "instruction": "Ghép các cặp với nhau"
+      "instruction": "Ghép các cặp với nhau",
+      "old": "🏛️ Cũ",
+      "new": "🚀 Mới",
+      "allDone": "🎉 Đã ghép xong tất cả!"
     },
     "truefalse": {
       "public": "Công khai",
-      "private": "Riêng tư"
+      "private": "Riêng tư",
+      "score": "{score} / {total} đúng!"
     },
     "cipher": {
-      "instruction": "Giải mã bằng vòng quay mật mã"
+      "instruction": "Giải mã bằng vòng quay mật mã",
+      "wheel": "Bánh xe mã hóa — độ dịch chuyển",
+      "challenge": "Nhiệm vụ",
+      "hint": "Gợi ý",
+      "placeholder": "Nhập từ...",
+      "check": "Kiểm tra",
+      "allDone": "Tất cả mã đã được giải!",
+      "next": "Tiếp tục →"
     },
     "mining": {
-      "instruction": "Tìm các cặp giống nhau"
+      "instruction": "Tìm các cặp giống nhau",
+      "mined": "Đã khai thác",
+      "attempts": "Số lần thử",
+      "done": "Khối hoàn thành trong {moves} lần thử!",
+      "next": "Tiếp tục →"
     },
     "scramble": {
       "instruction": "Sắp xếp lại chữ cái",
-      "hint": "Gợi ý"
+      "hint": "Gợi ý",
+      "placeholder": "Nhập từ...",
+      "check": "Kiểm tra",
+      "allDone": "Tất cả các từ đã được tìm thấy!"
     },
     "moduleView": {
       "back": "← Quay lại",
@@ -64,6 +89,19 @@
       "truefalse": "Công khai/Riêng tư",
       "categorize": "Phân loại",
       "scramble": "Đố chữ"
+    },
+    "common": {
+      "continue": "Tiếp tục →",
+      "next": "Tiếp theo →",
+      "result": "Kết quả",
+      "correct": "✅ Đúng rồi!",
+      "wrong": "❌ Chưa chính xác.",
+      "score": "{score} / {total} đúng!"
+    },
+    "quiz": {
+      "perfect": "Hoàn hảo!",
+      "great": "Làm tốt lắm!",
+      "practice": "Hãy tiếp tục luyện tập!"
     }
   },
   "modules": [

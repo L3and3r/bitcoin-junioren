@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Trascina dal più economico al più caro",
-      "check": "Controlla l'ordine"
+      "check": "Controlla l'ordine",
+      "cheap": "💰 Economico",
+      "expensive": "💎 Costoso",
+      "perfect": "🎉 Perfetto!",
+      "almost": "Quasi! Aggiusta l'ordine."
     },
     "categorize": {
-      "instruction": "Trascina nella categoria giusta"
+      "instruction": "Trascina nella categoria giusta",
+      "remaining": "Ancora {count} — dove va questo?",
+      "check": "Controlla!",
+      "score": "{score} / {total} corretti!"
     },
     "match": {
-      "instruction": "Abbina le coppie"
+      "instruction": "Abbina le coppie",
+      "old": "🏛️ Vecchio",
+      "new": "🚀 Nuovo",
+      "allDone": "🎉 Tutto collegato!"
     },
     "truefalse": {
       "public": "Pubblico",
-      "private": "Privato"
+      "private": "Privato",
+      "score": "{score} / {total} corretti!"
     },
     "cipher": {
-      "instruction": "Decifra il codice con la ruota cifrata"
+      "instruction": "Decifra il codice con la ruota cifrata",
+      "wheel": "Ruota cifrante — scorrimento",
+      "challenge": "Sfida",
+      "hint": "Suggerimento",
+      "placeholder": "Scrivi la parola...",
+      "check": "Controlla",
+      "allDone": "Tutti i codici decifrati!",
+      "next": "Avanti →"
     },
     "mining": {
-      "instruction": "Trova le coppie uguali"
+      "instruction": "Trova le coppie uguali",
+      "mined": "Estratto",
+      "attempts": "Tentativi",
+      "done": "Blocco completato in {moves} tentativi!",
+      "next": "Avanti →"
     },
     "scramble": {
       "instruction": "Ricomponi la parola",
-      "hint": "Suggerimento"
+      "hint": "Suggerimento",
+      "placeholder": "Scrivi la parola...",
+      "check": "Controlla",
+      "allDone": "Tutte le parole trovate!"
     },
     "moduleView": {
       "back": "← Indietro",
@@ -64,6 +89,19 @@
       "truefalse": "Pubblico/Privato",
       "categorize": "Categorizza",
       "scramble": "Rimescolatore di parole"
+    },
+    "common": {
+      "continue": "Continua →",
+      "next": "Avanti →",
+      "result": "Risultato",
+      "correct": "✅ Corretto!",
+      "wrong": "❌ Non proprio.",
+      "score": "{score} / {total} corretti!"
+    },
+    "quiz": {
+      "perfect": "Tutto esatto!",
+      "great": "Ottimo lavoro!",
+      "practice": "Continua a esercitarti!"
     }
   },
   "modules": [

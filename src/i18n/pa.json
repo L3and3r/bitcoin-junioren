@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "ਸਸਤੇ ਤੋਂ ਮਹਿੰਗੇ ਵੱਲ ਖਿੱਚੋ",
-      "check": "ਕ੍ਰਮ ਜਾਂਚੋ"
+      "check": "ਕ੍ਰਮ ਜਾਂਚੋ",
+      "cheap": "💰 ਸਸਤਾ",
+      "expensive": "💎 ਮਹਿੰਗਾ",
+      "perfect": "🎉 ਸੰਪੂਰਨ!",
+      "almost": "ਲਗਭਗ! ਕ੍ਰਮ ਠੀਕ ਕਰੋ।"
     },
     "categorize": {
-      "instruction": "ਸਹੀ ਸ਼੍ਰੇਣੀ ਵਿੱਚ ਖਿੱਚੋ"
+      "instruction": "ਸਹੀ ਸ਼੍ਰੇਣੀ ਵਿੱਚ ਖਿੱਚੋ",
+      "remaining": "ਅਜੇ {count} ਬਾਕੀ — ਇਹ ਕਿੱਥੇ ਆਉਂਦਾ ਹੈ?",
+      "check": "ਜਾਂਚ ਕਰੋ!",
+      "score": "{score} / {total} ਸਹੀ!"
     },
     "match": {
-      "instruction": "ਜੋੜੇ ਮਿਲਾਓ"
+      "instruction": "ਜੋੜੇ ਮਿਲਾਓ",
+      "old": "🏛️ ਪੁਰਾਣਾ",
+      "new": "🚀 ਨਵਾਂ",
+      "allDone": "🎉 ਸਭ ਜੋੜੇ ਗਏ!"
     },
     "truefalse": {
       "public": "ਜਨਤਕ",
-      "private": "ਨਿੱਜੀ"
+      "private": "ਨਿੱਜੀ",
+      "score": "{score} / {total} ਸਹੀ!"
     },
     "cipher": {
-      "instruction": "ਕੋਡ ਪਹੀਏ ਨਾਲ ਕੋਡ ਤੋੜੋ"
+      "instruction": "ਕੋਡ ਪਹੀਏ ਨਾਲ ਕੋਡ ਤੋੜੋ",
+      "wheel": "ਸਿਫਰ ਪਹੀਆ — ਬਦਲਾਅ",
+      "challenge": "ਕੰਮ",
+      "hint": "ਸੰਕੇਤ",
+      "placeholder": "ਸ਼ਬਦ ਟਾਈਪ ਕਰੋ...",
+      "check": "ਜਾਂ�� ਕਰੋ",
+      "allDone": "ਸਾਰੇ ਕੋਡ ਤੋੜੇ ਗਏ!",
+      "next": "ਅਗਲਾ →"
     },
     "mining": {
-      "instruction": "ਇੱਕੋ ਜਿਹੇ ਜੋੜੇ ਲੱਭੋ"
+      "instruction": "ਇੱਕੋ ਜਿਹੇ ਜੋੜੇ ਲੱਭੋ",
+      "mined": "ਮਾਈਨ ਕੀਤਾ",
+      "attempts": "ਕੋਸ਼ਿਸ਼ਾਂ",
+      "done": "ਬਲਾਕ {moves} ਕੋਸ਼ਿਸ਼ਾਂ ਵਿੱਚ ਪੂਰਾ ਹੋਇਆ!",
+      "next": "ਅਗਲਾ →"
     },
     "scramble": {
       "instruction": "ਸ਼ਬਦ ਸੁਲਝਾਓ",
-      "hint": "ਸੰਕੇਤ"
+      "hint": "ਸੰਕੇਤ",
+      "placeholder": "ਸ਼ਬਦ ਟਾਈਪ ਕਰੋ...",
+      "check": "ਜਾਂਚ ਕਰੋ",
+      "allDone": "ਸਾਰੇ ਸ਼ਬਦ ਲੱਭ ਲਏ ਗਏ!"
     },
     "moduleView": {
       "back": "← ਵਾਪਸ",
@@ -64,6 +89,19 @@
       "truefalse": "ਜਨਤਕ/ਨਿੱਜੀ",
       "categorize": "ਸ਼੍ਰੇਣੀਬੱਧ ਕਰੋ",
       "scramble": "ਸ਼ਬਦ ਬੁਝਾਰਤ"
+    },
+    "common": {
+      "continue": "ਜਾਰੀ ਰੱਖੋ →",
+      "next": "ਅਗਲਾ →",
+      "result": "ਨਤੀਜਾ",
+      "correct": "✅ ਸਹੀ!",
+      "wrong": "❌ ਬਿਲਕੁਲ ਨਹੀਂ।",
+      "score": "{score} / {total} ਸਹੀ!"
+    },
+    "quiz": {
+      "perfect": "ਸਭ ਸਹੀ!",
+      "great": "ਵਧੀਆ ਕੰਮ!",
+      "practice": "ਅਭਿਆਸ ਕਰਦੇ ਰਹੋ!"
     }
   },
   "modules": [

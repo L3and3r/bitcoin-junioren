@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Glisse du moins cher au plus cher",
-      "check": "Vérifier l'ordre"
+      "check": "Vérifier l'ordre",
+      "cheap": "💰 Bon marché",
+      "expensive": "💎 Cher",
+      "perfect": "🎉 Parfait !",
+      "almost": "Presque ! Ajuste l'ordre."
     },
     "categorize": {
-      "instruction": "Glisse vers la bonne catégorie"
+      "instruction": "Glisse vers la bonne catégorie",
+      "remaining": "Encore {count} — où est sa place ?",
+      "check": "Vérifier !",
+      "score": "{score} / {total} correct !"
     },
     "match": {
-      "instruction": "Associe les paires"
+      "instruction": "Associe les paires",
+      "old": "🏛️ Ancien",
+      "new": "🚀 Nouveau",
+      "allDone": "🎉 Tout est associé !"
     },
     "truefalse": {
       "public": "Public",
-      "private": "Privé"
+      "private": "Privé",
+      "score": "{score} / {total} correct !"
     },
     "cipher": {
-      "instruction": "Décode le message avec la roue chiffrée"
+      "instruction": "Décode le message avec la roue chiffrée",
+      "wheel": "Roue de chiffrement — décalage",
+      "challenge": "Défi",
+      "hint": "Indice",
+      "placeholder": "Tape le mot...",
+      "check": "Vérifier",
+      "allDone": "Tous les codes déchiffrés !",
+      "next": "Continuer →"
     },
     "mining": {
-      "instruction": "Trouve les paires identiques"
+      "instruction": "Trouve les paires identiques",
+      "mined": "Miné",
+      "attempts": "Tentatives",
+      "done": "Bloc terminé en {moves} tentatives !",
+      "next": "Continuer →"
     },
     "scramble": {
       "instruction": "Démêle le mot",
-      "hint": "Indice"
+      "hint": "Indice",
+      "placeholder": "Tape le mot...",
+      "check": "Vérifier",
+      "allDone": "Tous les mots trouvés !"
     },
     "moduleView": {
       "back": "← Retour",
@@ -64,6 +89,19 @@
       "truefalse": "Public/Privé",
       "categorize": "Catégoriser",
       "scramble": "Mots mélangés"
+    },
+    "common": {
+      "continue": "Continuer →",
+      "next": "Suivant →",
+      "result": "Résultat",
+      "correct": "✅ Correct !",
+      "wrong": "❌ Pas tout à fait.",
+      "score": "{score} / {total} correct !"
+    },
+    "quiz": {
+      "perfect": "Parfait !",
+      "great": "Bien joué !",
+      "practice": "Continue à t'entraîner !"
     }
   },
   "modules": [

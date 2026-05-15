@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Trage de la ieftin la scump",
-      "check": "Verifică ordinea"
+      "check": "Verifică ordinea",
+      "cheap": "💰 Ieftin",
+      "expensive": "💎 Scump",
+      "perfect": "🎉 Perfect!",
+      "almost": "Aproape! Ajustează ordinea."
     },
     "categorize": {
-      "instruction": "Trage în categoria corectă"
+      "instruction": "Trage în categoria corectă",
+      "remaining": "Încă {count} rămase — unde se potrivește?",
+      "check": "Verifică!",
+      "score": "{score} / {total} corecte!"
     },
     "match": {
-      "instruction": "Asociază perechile"
+      "instruction": "Asociază perechile",
+      "old": "🏛️ Vechi",
+      "new": "🚀 Nou",
+      "allDone": "🎉 Totul asociat!"
     },
     "truefalse": {
       "public": "Public",
-      "private": "Privat"
+      "private": "Privat",
+      "score": "{score} / {total} corecte!"
     },
     "cipher": {
-      "instruction": "Sparge codul cu roata cifrului"
+      "instruction": "Sparge codul cu roata cifrului",
+      "wheel": "Roata cifrului — deplasare",
+      "challenge": "Provocare",
+      "hint": "Indiciu",
+      "placeholder": "Scrie cuvântul...",
+      "check": "Verifică",
+      "allDone": "Toate codurile sparte!",
+      "next": "Continuă →"
     },
     "mining": {
-      "instruction": "G��sește perechile identice"
+      "instruction": "G��sește perechile identice",
+      "mined": "Minat",
+      "attempts": "Încercări",
+      "done": "Bloc finalizat în {moves} încercări!",
+      "next": "Continuă →"
     },
     "scramble": {
       "instruction": "Descurcă cuvântul",
-      "hint": "Indiciu"
+      "hint": "Indiciu",
+      "placeholder": "Scrie cuvântul...",
+      "check": "Verifică",
+      "allDone": "Toate cuvintele găsite!"
     },
     "moduleView": {
       "back": "← Înapoi",
@@ -64,6 +89,19 @@
       "truefalse": "Public/Privat",
       "categorize": "Categorizare",
       "scramble": "Descurcă cuvântul"
+    },
+    "common": {
+      "continue": "Continuă →",
+      "next": "Următor →",
+      "result": "Rezultat",
+      "correct": "✅ Corect!",
+      "wrong": "❌ Nu chiar.",
+      "score": "{score} / {total} corecte!"
+    },
+    "quiz": {
+      "perfect": "Totul corect!",
+      "great": "Merge bine!",
+      "practice": "Continuă să exersezi!"
     }
   },
   "modules": [

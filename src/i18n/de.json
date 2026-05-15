@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Ziehe vom Günstigsten zum Teuersten",
-      "check": "Reihenfolge prüfen"
+      "check": "Reihenfolge prüfen",
+      "cheap": "💰 Günstig",
+      "expensive": "💎 Teuer",
+      "perfect": "🎉 Perfekt!",
+      "almost": "Fast! Passe die Reihenfolge an."
     },
     "categorize": {
-      "instruction": "Ziehe in die richtige Kategorie"
+      "instruction": "Ziehe in die richtige Kategorie",
+      "remaining": "Noch {count} übrig — wohin gehört das?",
+      "check": "Überprüfen!",
+      "score": "{score} / {total} richtig!"
     },
     "match": {
-      "instruction": "Verbinde die Paare"
+      "instruction": "Verbinde die Paare",
+      "old": "🏛️ Alt",
+      "new": "🚀 Neu",
+      "allDone": "🎉 Alles verknüpft!"
     },
     "truefalse": {
       "public": "Öffentlich",
-      "private": "Privat"
+      "private": "Privat",
+      "score": "{score} / {total} richtig!"
     },
     "cipher": {
-      "instruction": "Knacke den Code mit dem Zahlenrad"
+      "instruction": "Knacke den Code mit dem Zahlenrad",
+      "wheel": "Chiffrierscheibe — Verschiebung",
+      "challenge": "Aufgabe",
+      "hint": "Hinweis",
+      "placeholder": "Tippe das Wort...",
+      "check": "Prüfen",
+      "allDone": "Alle Codes geknackt!",
+      "next": "Weiter →"
     },
     "mining": {
-      "instruction": "Finde die gleichen Paare"
+      "instruction": "Finde die gleichen Paare",
+      "mined": "Geschürft",
+      "attempts": "Versuche",
+      "done": "Block abgeschlossen in {moves} Versuchen!",
+      "next": "Weiter →"
     },
     "scramble": {
       "instruction": "Entziffere das Wort",
-      "hint": "Hinweis"
+      "hint": "Hinweis",
+      "placeholder": "Tippe das Wort...",
+      "check": "Prüfen",
+      "allDone": "Alle Wörter gefunden!"
     },
     "moduleView": {
       "back": "← Zurück",
@@ -64,6 +89,19 @@
       "truefalse": "Öffentlich/Privat",
       "categorize": "Kategorisieren",
       "scramble": "Wortknacker"
+    },
+    "common": {
+      "continue": "Weiter →",
+      "next": "Nächste →",
+      "result": "Ergebnis",
+      "correct": "✅ Richtig!",
+      "wrong": "❌ Nicht ganz.",
+      "score": "{score} / {total} richtig!"
+    },
+    "quiz": {
+      "perfect": "Alles richtig!",
+      "great": "Weiter so!",
+      "practice": "Bleib dran!"
     }
   },
   "modules": [

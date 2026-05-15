@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Seret dari murah ke mahal",
-      "check": "Semak urutan"
+      "check": "Semak urutan",
+      "cheap": "💰 Murah",
+      "expensive": "💎 Mahal",
+      "perfect": "🎉 Sempurna!",
+      "almost": "Hampir! Susun semula urutan."
     },
     "categorize": {
-      "instruction": "Seret ke kategori yang betul"
+      "instruction": "Seret ke kategori yang betul",
+      "remaining": "Masih {count} lagi — ini tergolong di mana?",
+      "check": "Semak!",
+      "score": "{score} / {total} betul!"
     },
     "match": {
-      "instruction": "Padankan pasangan"
+      "instruction": "Padankan pasangan",
+      "old": "🏛️ Lama",
+      "new": "🚀 Baharu",
+      "allDone": "🎉 Semua telah dipadankan!"
     },
     "truefalse": {
       "public": "Awam",
-      "private": "Peribadi"
+      "private": "Peribadi",
+      "score": "{score} / {total} betul!"
     },
     "cipher": {
-      "instruction": "Pecahkan kod dengan roda cipher"
+      "instruction": "Pecahkan kod dengan roda cipher",
+      "wheel": "Roda sifir — anjakan",
+      "challenge": "Cabaran",
+      "hint": "Petunjuk",
+      "placeholder": "Taip perkataan...",
+      "check": "Semak",
+      "allDone": "Semua kod telah dipecahkan!",
+      "next": "Teruskan →"
     },
     "mining": {
-      "instruction": "Cari pasangan yang sama"
+      "instruction": "Cari pasangan yang sama",
+      "mined": "Dilombong",
+      "attempts": "Percubaan",
+      "done": "Blok selesai dalam {moves} percubaan!",
+      "next": "Teruskan →"
     },
     "scramble": {
       "instruction": "Susun semula perkataan",
-      "hint": "Petunjuk"
+      "hint": "Petunjuk",
+      "placeholder": "Taip perkataan...",
+      "check": "Semak",
+      "allDone": "Semua perkataan telah ditemui!"
     },
     "moduleView": {
       "back": "← Kembali",
@@ -64,6 +89,19 @@
       "truefalse": "Awam/Peribadi",
       "categorize": "Kategorikan",
       "scramble": "Penggali Kata"
+    },
+    "common": {
+      "continue": "Teruskan →",
+      "next": "Seterusnya →",
+      "result": "Keputusan",
+      "correct": "✅ Betul!",
+      "wrong": "❌ Tidak tepat.",
+      "score": "{score} / {total} betul!"
+    },
+    "quiz": {
+      "perfect": "Semua betul!",
+      "great": "Bagus!",
+      "practice": "Teruskan berlatih!"
     }
   },
   "modules": [

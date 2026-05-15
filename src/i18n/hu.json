@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Húzd olcsótól drágáig sorrendbe",
-      "check": "Sorrend ellenőrzése"
+      "check": "Sorrend ellenőrzése",
+      "cheap": "💰 Olcsó",
+      "expensive": "💎 Drága",
+      "perfect": "🎉 Tökéletes!",
+      "almost": "Majdnem! Igazítsd meg a sorrendet."
     },
     "categorize": {
-      "instruction": "Húzd a megfelelő kategóriába"
+      "instruction": "Húzd a megfelelő kategóriába",
+      "remaining": "Még {count} maradt — hova tartozik ez?",
+      "check": "Ellenőrzés!",
+      "score": "{score} / {total} helyes!"
     },
     "match": {
-      "instruction": "Párosítsd össze a párokat"
+      "instruction": "Párosítsd össze a párokat",
+      "old": "🏛️ Régi",
+      "new": "🚀 Új",
+      "allDone": "🎉 Minden párosítva!"
     },
     "truefalse": {
       "public": "Nyilvános",
-      "private": "Privát"
+      "private": "Privát",
+      "score": "{score} / {total} helyes!"
     },
     "cipher": {
-      "instruction": "Fejtsd meg a kódot a rejtjelkerékkel"
+      "instruction": "Fejtsd meg a kódot a rejtjelkerékkel",
+      "wheel": "Titkosítókerék — eltolás",
+      "challenge": "Feladat",
+      "hint": "Tipp",
+      "placeholder": "Írd be a szót...",
+      "check": "Ellenőrzés",
+      "allDone": "Minden kód feltörve!",
+      "next": "Tovább →"
     },
     "mining": {
-      "instruction": "Keresd meg az egyező párokat"
+      "instruction": "Keresd meg az egyező párokat",
+      "mined": "Kibányászva",
+      "attempts": "Kísérletek",
+      "done": "A blokk {moves} kísérlettel teljesítve!",
+      "next": "Tovább →"
     },
     "scramble": {
       "instruction": "Fejtsd meg az összekevert szót",
-      "hint": "Tipp"
+      "hint": "Tipp",
+      "placeholder": "Írd be a szót...",
+      "check": "Ellenőrzés",
+      "allDone": "Minden szó megtalálva!"
     },
     "moduleView": {
       "back": "← Vissza",
@@ -64,6 +89,19 @@
       "truefalse": "Nyilvános/Privát",
       "categorize": "Kategorizálás",
       "scramble": "Szókeverő"
+    },
+    "common": {
+      "continue": "Tovább →",
+      "next": "Következő →",
+      "result": "Eredmény",
+      "correct": "✅ Helyes!",
+      "wrong": "❌ Nem egészen.",
+      "score": "{score} / {total} helyes!"
+    },
+    "quiz": {
+      "perfect": "Minden helyes!",
+      "great": "Szép munka!",
+      "practice": "Gyakorolj tovább!"
     }
   },
   "modules": [

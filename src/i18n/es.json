@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Arrastra de más barato a más caro",
-      "check": "Verificar orden"
+      "check": "Verificar orden",
+      "cheap": "💰 Barato",
+      "expensive": "💎 Caro",
+      "perfect": "🎉 ¡Perfecto!",
+      "almost": "¡Casi! Ajusta el orden."
     },
     "categorize": {
-      "instruction": "Arrastra a la categoría correcta"
+      "instruction": "Arrastra a la categoría correcta",
+      "remaining": "Quedan {count} — ¿dónde va esto?",
+      "check": "¡Comprobar!",
+      "score": "¡{score} / {total} correctas!"
     },
     "match": {
-      "instruction": "Une las parejas"
+      "instruction": "Une las parejas",
+      "old": "🏛️ Antiguo",
+      "new": "🚀 Nuevo",
+      "allDone": "🎉 ¡Todo emparejado!"
     },
     "truefalse": {
       "public": "Público",
-      "private": "Privado"
+      "private": "Privado",
+      "score": "¡{score} / {total} correctas!"
     },
     "cipher": {
-      "instruction": "Descifra el código con la rueda de cifrado"
+      "instruction": "Descifra el código con la rueda de cifrado",
+      "wheel": "Rueda de cifrado — desplazamiento",
+      "challenge": "Reto",
+      "hint": "Pista",
+      "placeholder": "Escribe la palabra...",
+      "check": "Comprobar",
+      "allDone": "¡Todos los códigos descifrados!",
+      "next": "Continuar →"
     },
     "mining": {
-      "instruction": "Encuentra las parejas iguales"
+      "instruction": "Encuentra las parejas iguales",
+      "mined": "Minado",
+      "attempts": "Intentos",
+      "done": "¡Bloque completado en {moves} intentos!",
+      "next": "Continuar →"
     },
     "scramble": {
       "instruction": "Ordena las letras para formar la palabra",
-      "hint": "Pista"
+      "hint": "Pista",
+      "placeholder": "Escribe la palabra...",
+      "check": "Comprobar",
+      "allDone": "¡Todas las palabras encontradas!"
     },
     "moduleView": {
       "back": "← Volver",
@@ -64,6 +89,19 @@
       "truefalse": "Público/Privado",
       "categorize": "Categorizar",
       "scramble": "Adivinador de palabras"
+    },
+    "common": {
+      "continue": "Continuar →",
+      "next": "Siguiente →",
+      "result": "Resultado",
+      "correct": "✅ ¡Correcto!",
+      "wrong": "❌ No del todo.",
+      "score": "¡{score} / {total} correctas!"
+    },
+    "quiz": {
+      "perfect": "¡Todo correcto!",
+      "great": "¡Buen trabajo!",
+      "practice": "¡Sigue practicando!"
     }
   },
   "modules": [

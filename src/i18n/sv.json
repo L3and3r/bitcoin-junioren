@@ -26,27 +26,52 @@
     },
     "sort": {
       "instruction": "Dra från billigast till dyrast",
-      "check": "Kontrollera ordningen"
+      "check": "Kontrollera ordningen",
+      "cheap": "💰 Billigt",
+      "expensive": "💎 Dyrt",
+      "perfect": "🎉 Perfekt!",
+      "almost": "Nästan! Justera ordningen."
     },
     "categorize": {
-      "instruction": "Dra till rätt kategori"
+      "instruction": "Dra till rätt kategori",
+      "remaining": "Nog {count} kvar — var hör detta hemma?",
+      "check": "Kontrollera!",
+      "score": "{score} / {total} rätt!"
     },
     "match": {
-      "instruction": "Koppla ihop paren"
+      "instruction": "Koppla ihop paren",
+      "old": "🏛️ Gammalt",
+      "new": "🚀 Nytt",
+      "allDone": "🎉 Allt ihopkopplat!"
     },
     "truefalse": {
       "public": "Offentligt",
-      "private": "Privat"
+      "private": "Privat",
+      "score": "{score} / {total} rätt!"
     },
     "cipher": {
-      "instruction": "Knäck koden med chifferskivan"
+      "instruction": "Knäck koden med chifferskivan",
+      "wheel": "Chifferhjul — förskjutning",
+      "challenge": "Uppgift",
+      "hint": "Tips",
+      "placeholder": "Skriv ordet...",
+      "check": "Kontrollera",
+      "allDone": "Alla koder knäckta!",
+      "next": "Fortsätt →"
     },
     "mining": {
-      "instruction": "Hitta matchande par"
+      "instruction": "Hitta matchande par",
+      "mined": "Utvunnet",
+      "attempts": "Försök",
+      "done": "Blocket klart på {moves} försök!",
+      "next": "Fortsätt →"
     },
     "scramble": {
       "instruction": "Lösa upp ordet",
-      "hint": "Tips"
+      "hint": "Tips",
+      "placeholder": "Skriv ordet...",
+      "check": "Kontrollera",
+      "allDone": "Alla ord hittade!"
     },
     "moduleView": {
       "back": "← Tillbaka",
@@ -64,6 +89,19 @@
       "truefalse": "Offentligt/Privat",
       "categorize": "Kategorisera",
       "scramble": "Ordknäckare"
+    },
+    "common": {
+      "continue": "Fortsätt →",
+      "next": "Nästa →",
+      "result": "Resultat",
+      "correct": "✅ Rätt!",
+      "wrong": "❌ Inte riktigt.",
+      "score": "{score} / {total} rätt!"
+    },
+    "quiz": {
+      "perfect": "Allt rätt!",
+      "great": "Bra jobbat!",
+      "practice": "Fortsätt öva!"
     }
   },
   "modules": [
