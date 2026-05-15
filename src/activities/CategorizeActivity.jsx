@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import { S } from "../styles/shared";
 
 export default function CategorizeActivity({ activity, color, onComplete }) {
+  const { t } = useLanguage();
+  const cat_ = t?.ui?.categorize || {};
+  const c = t?.ui?.common || {};
+
   const [remaining, setRemaining] = useState(() => [...activity.items].sort(() => Math.random() - 0.5));
   const [placed, setPlaced] = useState(activity.categories.map(() => []));
   const [checked, setChecked] = useState(false);
@@ -17,12 +22,15 @@ export default function CategorizeActivity({ activity, color, onComplete }) {
     sum + arr.filter(it => it.cat === catIdx).length, 0
   );
 
+  const scoreStr = (cat_.score || c.score || "{score} / {total} correct")
+    .replace("{score}", totalCorrect).replace("{total}", activity.items.length);
+
   return (
     <div>
       {remaining.length > 0 && !checked && (
         <div style={{ ...S.card(), textAlign: "center", marginBottom: 14 }}>
           <p style={{ ...S.body, fontSize: 13, color: "#888", marginBottom: 4 }}>
-            Nog {remaining.length} over — waar hoort dit?
+            {(cat_.remaining || "{count} left — where does this go?").replace("{count}", remaining.length)}
           </p>
           <p style={{ ...S.heading, fontSize: 20, color: "#1a1a2e" }}>{remaining[0].name}</p>
         </div>
@@ -50,15 +58,15 @@ export default function CategorizeActivity({ activity, color, onComplete }) {
       </div>
       {remaining.length === 0 && !checked && (
         <div style={{ textAlign: "center", marginTop: 14 }}>
-          <button onClick={() => setChecked(true)} style={S.btn(color)}>Controleer!</button>
+          <button onClick={() => setChecked(true)} style={S.btn(color)}>{cat_.check || "Check!"}</button>
         </div>
       )}
       {checked && (
         <div style={{ textAlign: "center", marginTop: 14 }}>
           <p style={{ ...S.heading, fontSize: 20, color: totalCorrect === activity.items.length ? "#22C55E" : "#D97706" }}>
-            {totalCorrect} / {activity.items.length} goed!
+            {scoreStr}
           </p>
-          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 8 }}>Verder →</button>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 8 }}>{c.continue || "Continue →"}</button>
         </div>
       )}
     </div>

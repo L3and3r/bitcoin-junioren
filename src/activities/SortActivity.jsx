@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import { S } from "../styles/shared";
 
 export default function SortActivity({ activity, color, onComplete }) {
+  const { t } = useLanguage();
+  const s_ = t?.ui?.sort || {};
+  const c = t?.ui?.common || {};
+
   const [items, setItems] = useState(() => [...activity.items].sort(() => Math.random() - 0.5));
   const [checked, setChecked] = useState(false);
   const correct = items.every((it, i) => it.value === i + 1);
@@ -15,7 +20,8 @@ export default function SortActivity({ activity, color, onComplete }) {
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", ...S.body, fontSize: 13, color: "#888", marginBottom: 10 }}>
-        <span>💰 Goedkoop</span><span>💎 Duur</span>
+        <span>{s_.cheap || "💰 Cheap"}</span>
+        <span>{s_.expensive || "💎 Expensive"}</span>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {items.map((it, i) => (
@@ -35,12 +41,14 @@ export default function SortActivity({ activity, color, onComplete }) {
         ))}
       </div>
       <div style={{ display: "flex", gap: 8, marginTop: 14, justifyContent: "center" }}>
-        <button onClick={() => setChecked(true)} style={S.btn(color)}>Controleer</button>
-        {checked && <button onClick={onComplete} style={S.btn("#F7931A")}>Verder →</button>}
+        <button onClick={() => setChecked(true)} style={S.btn(color)}>{s_.check || "Check"}</button>
+        {checked && <button onClick={onComplete} style={S.btn("#F7931A")}>{c.continue || "Continue →"}</button>}
       </div>
-      {checked && <p style={{ ...S.heading, textAlign: "center", marginTop: 10, fontSize: 18, color: correct ? "#22C55E" : "#EF4444" }}>
-        {correct ? "🎉 Perfect!" : "Bijna! Pas de volgorde aan."}
-      </p>}
+      {checked && (
+        <p style={{ ...S.heading, textAlign: "center", marginTop: 10, fontSize: 18, color: correct ? "#22C55E" : "#EF4444" }}>
+          {correct ? (s_.perfect || "🎉 Perfect!") : (s_.almost || "Almost! Adjust the order.")}
+        </p>
+      )}
     </div>
   );
 }

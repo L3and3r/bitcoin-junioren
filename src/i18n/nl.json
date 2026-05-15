@@ -24,19 +24,41 @@
       "completed": "Afgerond!",
       "badgeEarned": "Badge verdiend!"
     },
+    "common": {
+      "continue": "Verder →",
+      "next": "Volgende →",
+      "result": "Resultaat",
+      "correct": "✅ Goed!",
+      "wrong": "❌ Niet helemaal.",
+      "score": "{score} / {total} goed!"
+    },
+    "quiz": {
+      "perfect": "Alles goed!",
+      "great": "Goed bezig!",
+      "practice": "Blijf oefenen!"
+    },
     "sort": {
-      "instruction": "Sleep van goedkoop naar duur",
-      "check": "Controleer volgorde"
+      "cheap": "💰 Goedkoop",
+      "expensive": "💎 Duur",
+      "check": "Controleer",
+      "perfect": "🎉 Perfect!",
+      "almost": "Bijna! Pas de volgorde aan."
     },
     "categorize": {
-      "instruction": "Sleep naar de juiste categorie"
+      "remaining": "Nog {count} over — waar hoort dit?",
+      "check": "Controleer!",
+      "score": "{score} / {total} goed!"
     },
     "match": {
-      "instruction": "Koppel de paren"
+      "instruction": "Klik eerst OUD, dan NIEUW",
+      "old": "🏛️ Oud",
+      "new": "🚀 Nieuw",
+      "allDone": "🎉 Alles gekoppeld!"
     },
     "truefalse": {
-      "public": "Openbaar",
-      "private": "Privé"
+      "public": "🌍 Openbaar",
+      "private": "🔐 Privé",
+      "score": "{score} / {total} goed!"
     },
     "cipher": {
       "instruction": "Kraak de code met het cijferwiel"
@@ -45,8 +67,10 @@
       "instruction": "Vind de gelijke paren"
     },
     "scramble": {
-      "instruction": "Ontwar het woord",
-      "hint": "Hint"
+      "hint": "Hint",
+      "placeholder": "Typ het woord...",
+      "check": "Check",
+      "allDone": "Alle woorden gevonden!"
     },
     "moduleView": {
       "back": "← Terug",

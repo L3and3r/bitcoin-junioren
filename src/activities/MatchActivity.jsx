@@ -1,8 +1,13 @@
 import { useState, useRef } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import Confetti from "../components/Confetti";
 import { S } from "../styles/shared";
 
 export default function MatchActivity({ activity, color, onComplete }) {
+  const { t } = useLanguage();
+  const m_ = t?.ui?.match || {};
+  const c = t?.ui?.common || {};
+
   const [sel, setSel] = useState(null);
   const [matched, setMatched] = useState([]);
   const [wrong, setWrong] = useState(null);
@@ -19,12 +24,12 @@ export default function MatchActivity({ activity, color, onComplete }) {
 
   return (
     <div>
-      <p style={{ ...S.heading, fontSize: 16, textAlign: "center", color: "#888", marginBottom: 10 }}>
-        Klik eerst OUD, dan NIEUW ({matched.length}/{activity.pairs.length})
+      <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#888", marginBottom: 10 }}>
+        {(m_.instruction || "Click OLD first, then NEW")} ({matched.length}/{activity.pairs.length})
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
         <div>
-          <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#92400E", marginBottom: 6 }}>🏛️ Oud</p>
+          <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#92400E", marginBottom: 6 }}>{m_.old || "🏛️ Old"}</p>
           {activity.pairs.map((p, i) => {
             const done = matched.includes(i);
             return (
@@ -39,7 +44,7 @@ export default function MatchActivity({ activity, color, onComplete }) {
           })}
         </div>
         <div>
-          <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#1E40AF", marginBottom: 6 }}>🚀 Nieuw</p>
+          <p style={{ ...S.heading, fontSize: 14, textAlign: "center", color: "#1E40AF", marginBottom: 6 }}>{m_.new || "🚀 New"}</p>
           {shuffled.map((p, i) => {
             const done = matched.some(mi => activity.pairs[mi].new === p.new);
             return (
@@ -58,8 +63,8 @@ export default function MatchActivity({ activity, color, onComplete }) {
       {allDone && (
         <div style={{ textAlign: "center", marginTop: 16 }}>
           <Confetti active={true} />
-          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>🎉 Alles gekoppeld!</p>
-          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 8 }}>Verder →</button>
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>{m_.allDone || "🎉 All matched!"}</p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 8 }}>{c.continue || "Continue →"}</button>
         </div>
       )}
     </div>

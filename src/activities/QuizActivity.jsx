@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import Confetti from "../components/Confetti";
 import ProgressDots from "../components/ProgressDots";
 import { S } from "../styles/shared";
@@ -15,6 +16,10 @@ function shuffleQuestions(questions) {
 }
 
 export default function QuizActivity({ activity, color, onComplete }) {
+  const { t } = useLanguage();
+  const c = t?.ui?.common || {};
+  const q_ = t?.ui?.quiz || {};
+
   const [qi, setQi] = useState(0);
   const [sel, setSel] = useState(null);
   const [score, setScore] = useState(0);
@@ -34,18 +39,18 @@ export default function QuizActivity({ activity, color, onComplete }) {
   };
 
   if (done) {
-    const pct = Math.round((score / activity.questions.length) * 100);
+    const pct = Math.round((score / questions.length) * 100);
+    const scoreStr = (c.score || "{score} / {total} correct")
+      .replace("{score}", score).replace("{total}", questions.length);
     return (
       <div style={{ textAlign: "center", padding: 12 }}>
         <Confetti active={pct === 100} />
         <div style={{ fontSize: 56, marginBottom: 8 }}>{pct === 100 ? "🏆" : pct >= 60 ? "⭐" : "💪"}</div>
         <h3 style={{ ...S.heading, fontSize: 26, color: "#1a1a2e" }}>
-          {pct === 100 ? "Alles goed!" : pct >= 60 ? "Goed bezig!" : "Blijf oefenen!"}
+          {pct === 100 ? (q_.perfect || "Perfect!") : pct >= 60 ? (q_.great || "Well done!") : (q_.practice || "Keep practising!")}
         </h3>
-        <p style={{ ...S.body, fontSize: 20, fontWeight: 700, color, margin: "4px 0 20px" }}>
-          {score} / {questions.length} correct
-        </p>
-        <button onClick={onComplete} style={S.btn("#F7931A")}>Verder →</button>
+        <p style={{ ...S.body, fontSize: 20, fontWeight: 700, color, margin: "4px 0 20px" }}>{scoreStr}</p>
+        <button onClick={onComplete} style={S.btn("#F7931A")}>{c.continue || "Continue →"}</button>
       </div>
     );
   }
@@ -84,7 +89,7 @@ export default function QuizActivity({ activity, color, onComplete }) {
             {sel === q.correct ? "✅ " : "❌ "}{q.explanation}
           </p>
           <button onClick={next} style={{ ...S.btn(color, 15), marginTop: 10 }}>
-            {qi === questions.length - 1 ? "Resultaat" : "Volgende →"}
+            {qi === questions.length - 1 ? (c.result || "Result") : (c.next || "Next →")}
           </button>
         </div>
       )}

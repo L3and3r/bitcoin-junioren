@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem /\\bitcoin-junioren\\\\src -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object FullName | Sort-Object FullName)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(npm start *)",
+      "Bash(npm run *)",
+      "WebFetch(domain:l3and3r.github.io)",
+      "Bash(curl -s https://L3and3r.github.io/bitcoin-junioren/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://L3and3r.github.io/bitcoin-junioren/static/js/main.0dd35c1c.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://L3and3r.github.io/bitcoin-junioren/static/css/main.e6c13ad2.css)",
+      "PowerShell(Get-ChildItem /\\bitcoin-junioren -File | Where-Object { $_.Extension -in \".md\",\".json\" -and $_.Name -ne \"package-lock.json\" })",
+      "PowerShell(vercel *)"
+    ]
+  }
+}
