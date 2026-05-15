@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import ActivityView from "../activities/ActivityView";
 import { S } from "../styles/shared";
 import { saveProgress } from "../utils/storage";
 
-const TYPE_LABEL = { quiz: "Quiz", sort: "Sorteren", match: "Koppelen", cipher: "Codes kraken", mining: "Memory", truefalse: "Openbaar/Privé", categorize: "Categoriseren", scramble: "Woordkraker" };
-const TYPE_ICON  = { quiz: "❓", sort: "↕️", match: "🔗", cipher: "🔐", mining: "⛏️", truefalse: "⚖️", categorize: "📂", scramble: "🧩" };
-
 export default function ModuleView({ module, progress, setProgress, onBack, onBadgeEarned }) {
+  const { t } = useLanguage();
   const [actIdx, setActIdx] = useState(null);
+
+  const TYPE_LABEL = t.ui.activityTypes;
+  const TYPE_ICON = { quiz: "❓", sort: "↕️", match: "🔗", cipher: "🔐", mining: "⛏️", truefalse: "⚖️", categorize: "📂", scramble: "🧩" };
 
   const handleComplete = () => {
     if (actIdx !== null) {
@@ -36,7 +38,7 @@ export default function ModuleView({ module, progress, setProgress, onBack, onBa
           <button onClick={() => setActIdx(null)} style={{
             background: "none", border: "none", ...S.heading, fontSize: 15,
             cursor: "pointer", color: module.color, marginBottom: 6,
-          }}>← Terug</button>
+          }}>{t.ui.moduleView.back}</button>
           <h2 style={{ ...S.heading, fontSize: 22, color: "#1a1a2e", marginBottom: 2 }}>
             {module.activities[actIdx].title}
           </h2>
@@ -55,7 +57,7 @@ export default function ModuleView({ module, progress, setProgress, onBack, onBa
         <button onClick={onBack} style={{
           background: "none", border: "none", ...S.heading, fontSize: 15,
           cursor: "pointer", color: module.color, marginBottom: 6,
-        }}>← Schatkaart</button>
+        }}>{t.ui.moduleView.map}</button>
 
         <div style={{
           background: `linear-gradient(135deg, ${module.color}, ${module.color}CC)`,
@@ -63,17 +65,17 @@ export default function ModuleView({ module, progress, setProgress, onBack, onBa
           marginBottom: 20, boxShadow: `0 8px 28px ${module.color}33`,
         }}>
           <div style={{ fontSize: 48, marginBottom: 4 }}>{module.icon}</div>
-          <h1 style={{ ...S.heading, fontSize: 24 }}>Module {module.id}</h1>
+          <h1 style={{ ...S.heading, fontSize: 24 }}>{t.ui.moduleView.module} {module.id}</h1>
           <p style={{ ...S.body, fontSize: 16, opacity: 0.9, marginTop: 4 }}>{module.title}</p>
           {allDone && <div style={{ marginTop: 10, fontSize: 14, background: "rgba(255,255,255,0.2)", borderRadius: 10, padding: "6px 12px", display: "inline-block" }}>🎖️ {module.badge}</div>}
         </div>
 
         <div style={{ ...S.card(), marginBottom: 16, border: `2px solid ${module.color}22` }}>
-          <p style={{ ...S.heading, fontSize: 14, color: module.color, marginBottom: 4 }}>💡 Kernidee</p>
+          <p style={{ ...S.heading, fontSize: 14, color: module.color, marginBottom: 4 }}>{t.ui.moduleView.coreIdea}</p>
           <p style={{ ...S.body, fontSize: 14, color: "#555" }}>{module.summary}</p>
         </div>
 
-        <h3 style={{ ...S.heading, fontSize: 18, color: "#1a1a2e", marginBottom: 10 }}>Activiteiten</h3>
+        <h3 style={{ ...S.heading, fontSize: 18, color: "#1a1a2e", marginBottom: 10 }}>{t.ui.moduleView.activities}</h3>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {module.activities.map((act, i) => {
             const done = progress.completed.includes(`${module.id}-${i}`);

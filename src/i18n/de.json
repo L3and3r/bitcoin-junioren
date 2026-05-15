@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoi, {name}! 🏴‍☠️",
+    "title": "Bitcoin für Junioren",
+    "subtitle": "Entdecke die Welt von Geld, Wert und Bitcoin!",
+    "progress": "Fortschritt",
+    "newPlayer": "Neuen Spieler starten",
+    "newPlayerConfirm": "Neuen Spieler starten? Der aktuelle Fortschritt wird gelöscht.",
+    "footer": "Basierend auf Bitcoin für Junioren von My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoi, Abenteurer!",
+      "subtitle": "Wie heißt du?",
+      "placeholder": "Dein Name...",
+      "button": "Starte das Abenteuer! 🚀"
+    },
+    "activity": {
+      "back": "← Zurück",
+      "next": "Weiter →",
+      "finish": "Fertig! 🎉",
+      "correct": "Richtig!",
+      "wrong": "Falsch",
+      "score": "Punkte",
+      "tryAgain": "Nochmal",
+      "completed": "Abgeschlossen!",
+      "badgeEarned": "Abzeichen verdient!"
+    },
+    "sort": {
+      "instruction": "Ziehe vom Günstigsten zum Teuersten",
+      "check": "Reihenfolge prüfen"
+    },
+    "categorize": {
+      "instruction": "Ziehe in die richtige Kategorie"
+    },
+    "match": {
+      "instruction": "Verbinde die Paare"
+    },
+    "truefalse": {
+      "public": "Öffentlich",
+      "private": "Privat"
+    },
+    "cipher": {
+      "instruction": "Knacke den Code mit dem Zahlenrad"
+    },
+    "mining": {
+      "instruction": "Finde die gleichen Paare"
+    },
+    "scramble": {
+      "instruction": "Entziffere das Wort",
+      "hint": "Hinweis"
+    },
+    "moduleView": {
+      "back": "← Zurück",
+      "map": "← Schatzkarte",
+      "coreIdea": "💡 Kernidee",
+      "activities": "Aktivitäten",
+      "module": "Modul"
+    },
+    "activityTypes": {
+      "quiz": "Quiz",
+      "sort": "Sortieren",
+      "match": "Zuordnen",
+      "cipher": "Codes knacken",
+      "mining": "Memory",
+      "truefalse": "Öffentlich/Privat",
+      "categorize": "Kategorisieren",
+      "scramble": "Wortknacker"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Tausch, Wert & Preis",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Wert hängt davon ab, was du brauchst. Preis ist, wie viel etwas kostet. Geld löst das Tauschproblem.",
+      "description": "Entdecke, warum wir Geld benutzen und was Dinge wirklich wert sind!",
+      "badge": "🏝️ Inselhändler",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Überleben auf der Insel",
+          "intro": "Du bist Schiffbrüchiger auf einer einsamen Insel!",
+          "questions": [
+            {
+              "q": "Du strandest auf einer verlassenen Insel. Was ist am wertvollsten?",
+              "options": [
+                "💎 Diamant",
+                "🔪 Eine Machete",
+                "📱 Smartphone",
+                "💰 100 Euro"
+              ],
+              "correct": 1,
+              "explanation": "Auf einer Insel kannst du mit einer Machete Holz hacken, Essen schneiden und eine Unterkunft bauen. Geld und Diamanten sind dort nutzlos!"
+            },
+            {
+              "q": "Du hast 5 Angelruten, aber kein Zelt. Dein Nachbar hat 3 Zelte, aber keine Angelrute. Was tut ihr?",
+              "options": [
+                "Beide warten",
+                "Tauschen: eine Angelrute gegen ein Zelt!",
+                "Nichts, Pech gehabt",
+                "Zusammen weinen"
+              ],
+              "correct": 1,
+              "explanation": "Tauschen ist die älteste Art, Handel zu treiben! Du gibst, was du übrig hast, für das, was du brauchst."
+            },
+            {
+              "q": "Warum ist Tauschen manchmal sehr schwierig?",
+              "options": [
+                "Weil es langweilig ist",
+                "Weil du jemanden finden musst, der genau das will, was du hast",
+                "Weil es verboten ist",
+                "Weil Sachen zu schwer sind"
+              ],
+              "correct": 1,
+              "explanation": "Das nennt sich das 'doppelte Zufallsproblem'. Geld löst dieses Problem — jeder akzeptiert Geld!"
+            },
+            {
+              "q": "Muscheln wurden früher als Geld verwendet. Was macht etwas zu gutem Geld?",
+              "options": [
+                "Es muss schön sein",
+                "Es muss selten, tragbar und von allen akzeptiert sein",
+                "Es muss essbar sein",
+                "Es muss vom Staat kommen"
+              ],
+              "correct": 1,
+              "explanation": "Gutes Geld ist selten (nicht endlos zu finden), leicht mitzunehmen, und jeder muss es als Zahlungsmittel akzeptieren."
+            },
+            {
+              "q": "Eine Flasche Wasser kostet 1 € im Supermarkt. In der Wüste bietet dir jemand 100 € für dieselbe Flasche. Warum?",
+              "options": [
+                "Der Laden war teurer",
+                "Weil Wasser in der Wüste viel seltener und wichtiger ist",
+                "Es ist anderes Wasser",
+                "Die Wüste ist weit weg"
+              ],
+              "correct": 1,
+              "explanation": "Knappheit verändert den Wert! Je weniger es von etwas gibt und je dringender du es brauchst, desto wertvoller wird es."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen Preis und Wert?",
+              "options": [
+                "Es gibt keinen Unterschied",
+                "Preis ist, wie viel etwas kostet, Wert ist, wie wichtig etwas für dich ist",
+                "Der Preis ist immer höher als der Wert",
+                "Wert dreht sich nur um Geld"
+              ],
+              "correct": 1,
+              "explanation": "Eine Zeichnung deines Kindes hat vielleicht keinen Preis, aber einen enormen Wert. Preis und Wert sind nicht dasselbe!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Preisskala",
+          "intro": "Bringe die Gegenstände in die richtige Reihenfolge von günstig bis teuer!",
+          "items": [
+            {
+              "name": "🍎 Apfel",
+              "value": 1
+            },
+            {
+              "name": "📖 Buch",
+              "value": 2
+            },
+            {
+              "name": "⚽ Fußball",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Roller",
+              "value": 5
+            },
+            {
+              "name": "🏠 Haus",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Zeit, Energie & Belohnung",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Energie ist begrenzt. Die Balance zwischen Arbeit, Ruhe und Spiel ist wichtig. Geduld führt zu besseren Ergebnissen.",
+      "description": "Wie nutzt du deine Zeit und Energie? Und warum ist Warten manchmal klüger?",
+      "badge": "⏳ Zeitmeister",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Arbeit, Ruhe oder Spiel?",
+          "intro": "Ziehe jede Aktivität in die richtige Kategorie!",
+          "categories": [
+            "💼 Arbeit",
+            "😴 Ruhe",
+            "🎮 Spiel"
+          ],
+          "items": [
+            {
+              "name": "Hausaufgaben machen",
+              "cat": 0
+            },
+            {
+              "name": "Schlafen",
+              "cat": 1
+            },
+            {
+              "name": "Fußball spielen",
+              "cat": 2
+            },
+            {
+              "name": "Zimmer aufräumen",
+              "cat": 0
+            },
+            {
+              "name": "Ein Buch lesen",
+              "cat": 1
+            },
+            {
+              "name": "Fangen spielen",
+              "cat": 2
+            },
+            {
+              "name": "Den Tisch decken",
+              "cat": 0
+            },
+            {
+              "name": "Ein Nickerchen machen",
+              "cat": 1
+            },
+            {
+              "name": "Zocken",
+              "cat": 2
+            },
+            {
+              "name": "Einkaufen gehen",
+              "cat": 0
+            },
+            {
+              "name": "Musik hören",
+              "cat": 1
+            },
+            {
+              "name": "Auf den Spielplatz gehen",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Zeitpräferenz",
+          "intro": "Entscheidest du dich für JETZT oder für SPÄTER?",
+          "questions": [
+            {
+              "q": "In der Geschichte von den drei kleinen Schweinchen: Welches Haus blieb stehen?",
+              "options": [
+                "🌾 Stroh (schnell gebaut)",
+                "🪵 Holz (mittelmäßig)",
+                "🧱 Ziegel (hat am längsten gedauert)"
+              ],
+              "correct": 2,
+              "explanation": "Das Backsteinhaus hat am meisten Zeit und Mühe gekostet, war aber das einzige, das stehen blieb. Geduld zahlt sich aus!"
+            },
+            {
+              "q": "Was bedeutet 'niedrige Zeitpräferenz'?",
+              "options": [
+                "Du willst alles JETZT",
+                "Du bist bereit, auf etwas Besseres zu warten",
+                "Du hast keine Uhr",
+                "Du schläfst viel"
+              ],
+              "correct": 1,
+              "explanation": "Niedrige Zeitpräferenz = bereit sein zu warten, um ein besseres Ergebnis zu erzielen. Wie das Schweinchen, das ein Steinhaus gebaut hat!"
+            },
+            {
+              "q": "Du bekommst jetzt 1 Bonbon oder 3 Bonbons, wenn du 10 Minuten wartest. Was ist die klügste Wahl?",
+              "options": [
+                "1 Bonbon JETZT!",
+                "Warten: 3 Bonbons > 1 Bonbon",
+                "Süßigkeiten sind ungesund",
+                "Weglaufen"
+              ],
+              "correct": 1,
+              "explanation": "Das ist der berühmte Marshmallow-Test! Kinder, die warten konnten, hatten später oft bessere Ergebnisse in der Schule."
+            },
+            {
+              "q": "Du hast morgen eine wichtige Prüfung. Was ist niedrige Zeitpräferenz?",
+              "options": [
+                "Jetzt zocken und morgen lernen",
+                "Heute lernen, damit du morgen gut abschneidest",
+                "Die Prüfung schwänzen",
+                "Auf Glück hoffen"
+              ],
+              "correct": 1,
+              "explanation": "Jetzt etwas Schwieriges tun (lernen), damit du später etwas Gutes bekommst (eine gute Note) — das ist niedrige Zeitpräferenz."
+            },
+            {
+              "q": "Was passiert, wenn du deine gesamte Energie am Morgen verbrauchst?",
+              "options": [
+                "Du wirst stärker",
+                "Du hast für den Rest des Tages nichts mehr übrig",
+                "Du bekommst Superkräfte",
+                "Nichts Besonderes"
+              ],
+              "correct": 1,
+              "explanation": "Energie ist begrenzt! Clever einteilen ist wichtig — genau wie Geld."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analog versus Digital",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Technologie verändert sich ständig. Jede Erfindung löst ein Problem. Nicht alles Neue ist automatisch besser.",
+      "description": "Von der Brieftaube bis zum Internet — wie Technologie die Welt verändert!",
+      "badge": "🚀 Techpionier",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Alt ↔ Neu",
+          "intro": "Verbinde jede alte Technologie mit ihrer modernen Version!",
+          "pairs": [
+            {
+              "old": "✉️ Brief",
+              "new": "📧 E-Mail"
+            },
+            {
+              "old": "📞 Wählscheiben-Telefon",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Papierkarte",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Fotofilm",
+              "new": "📸 Digitalkamera"
+            },
+            {
+              "old": "📰 Zeitung",
+              "new": "🌐 Nachrichtenwebsite"
+            },
+            {
+              "old": "💰 Münzgeld",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Denk die Zukunft aus",
+          "intro": "Wie könnte Technologie in 20 Jahren aussehen?",
+          "questions": [
+            {
+              "q": "Warum verändert sich Technologie im Laufe der Zeit?",
+              "options": [
+                "Weil alte Dinge kaputtgehen",
+                "Weil Menschen Probleme mit neuen Erfindungen lösen",
+                "Weil der Staat es will",
+                "Ohne Grund"
+              ],
+              "correct": 1,
+              "explanation": "Jede Erfindung löst ein Problem. Das Auto löste das Problem, dass Pferde langsam werden und ermüden!"
+            },
+            {
+              "q": "Ist neue Technologie IMMER besser als alte?",
+              "options": [
+                "Ja, immer",
+                "Nein, manchmal ist das Alte besser oder zuverlässiger",
+                "Neue Technik gibt es nicht",
+                "Nur wenn sie teurer ist"
+              ],
+              "correct": 1,
+              "explanation": "Ein Papierbuch braucht keinen Akku! Manchmal sind alte Lösungen immer noch clever."
+            },
+            {
+              "q": "Bitcoin ist digitales Geld. Was hat es mit alten Muscheln gemeinsam?",
+              "options": [
+                "Beide kommen aus dem Meer",
+                "Beide sind selten und werden als Tauschmittel verwendet",
+                "Nichts",
+                "Beide sind kostenlos"
+              ],
+              "correct": 1,
+              "explanation": "Sowohl Muscheln als auch Bitcoin sind selten (es gibt eine begrenzte Menge) und werden als Tauschmittel verwendet."
+            },
+            {
+              "q": "Was ist Innovation?",
+              "options": [
+                "Etwas Neues kaufen",
+                "Eine clevere Verbesserung oder Erfindung, die ein Problem löst",
+                "Ein schwieriges Wort für nichts",
+                "Nur für Wissenschaftler"
+              ],
+              "correct": 1,
+              "explanation": "Innovation = eine neue oder bessere Lösung für ein bestehendes Problem. Jeder kann innovieren!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sicherheit & Privatsphäre",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Du entscheidest, welche Informationen du teilst. Codes schützen Nachrichten. Vertrauen ist nicht immer nötig, wenn du Verschlüsselung hast.",
+      "description": "Geheimcodes, Privatsphäre und wie du dich online schützt!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Öffentlich oder Privat?",
+          "intro": "Ist diese Information öffentlich oder privat? Entscheide schnell!",
+          "statements": [
+            {
+              "text": "Dein Passwort",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Ein Passwort ist immer privat. Teile es niemals!"
+            },
+            {
+              "text": "Dein Name in der Schule",
+              "answer": true,
+              "label": "Öffentlich",
+              "explanation": "In der Schule weiß jeder, wie du heißt — das ist öffentliche Information."
+            },
+            {
+              "text": "Deine PIN",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Deine PIN ist geheim — sie schützt dein Bankkonto."
+            },
+            {
+              "text": "Ein Park in der Stadt",
+              "answer": true,
+              "label": "Öffentlich",
+              "explanation": "Ein Park ist ein öffentlicher Ort — jeder darf hinkommen."
+            },
+            {
+              "text": "Dein Tagebuch",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Dein Tagebuch ist privat — nur du entscheidest, wer es lesen darf."
+            },
+            {
+              "text": "Die Farbe deines Fahrrads",
+              "answer": true,
+              "label": "Öffentlich",
+              "explanation": "Jeder kann sehen, welche Farbe dein Fahrrad hat."
+            },
+            {
+              "text": "Deine Heimatadresse",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Deine Adresse teilst du nicht mit Fremden — das ist private Information."
+            },
+            {
+              "text": "Das Wetter heute",
+              "answer": true,
+              "label": "Öffentlich",
+              "explanation": "Das Wetter ist für alle gleich — vollkommen öffentlich!"
+            },
+            {
+              "text": "Dein Bitcoin-Schlüssel",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Dein privater Schlüssel ist das allerwichtigste Geheimnis. Wer ihn hat, hat deine Bitcoin!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Geheimcode",
+          "intro": "Knacke die geheimen Bitcoin-Wörter mit dem Zahlenrad!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Geldangelegenheiten",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Geld kann man verdienen, sparen, investieren und ausgeben. Budgetieren bedeutet wählen. Faire Regeln sind wichtig.",
+      "description": "Verdienen, sparen, investieren — werde ein Geldexperte!",
+      "badge": "💎 Geldweise",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Clever mit Geld",
+          "intro": "Teste, wie clever du mit Geldangelegenheiten bist!",
+          "questions": [
+            {
+              "q": "Was ist Sparen?",
+              "options": [
+                "Geld sofort ausgeben",
+                "Geld für später zurücklegen",
+                "Geld wegwerfen",
+                "Geld von einem Freund leihen"
+              ],
+              "correct": 1,
+              "explanation": "Sparen = Geld aufbewahren, damit du später etwas Größeres oder Wichtigeres kaufen kannst."
+            },
+            {
+              "q": "Was ist Investieren?",
+              "options": [
+                "Geld verstecken",
+                "Sein Geld oder seine Zeit in etwas stecken, damit es später mehr wert wird",
+                "Heute alles ausgeben",
+                "Geld verbrennen"
+              ],
+              "correct": 1,
+              "explanation": "Investieren bedeutet, sein Geld oder seine Zeit in etwas zu stecken, in der Hoffnung, dass es später mehr wert wird."
+            },
+            {
+              "q": "Du hast 12 Muscheln. Ein Zelt kostet 8 und eine Angelrute kostet 6. Kannst du beides kaufen?",
+              "options": [
+                "Ja!",
+                "Nein, 8 + 6 = 14, und du hast nur 12",
+                "Nur mit Rabatt",
+                "Muscheln sind kein Geld"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, aber du hast nur 12 Muscheln. Du musst wählen! Das ist Budgetieren."
+            },
+            {
+              "q": "Bei einer Auktion steigt der Preis eines seltenen Gegenstands immer weiter. Warum?",
+              "options": [
+                "Der Verkäufer ist gemein",
+                "Mehrere Menschen wollen ihn, aber es gibt nur einen (Knappheit + Nachfrage)",
+                "Der Gegenstand wird immer größer",
+                "Weil jemand schummelt"
+              ],
+              "correct": 1,
+              "explanation": "Wenn viele Menschen etwas wollen, aber es nur wenig davon gibt, steigt der Preis. So funktioniert Angebot und Nachfrage!"
+            },
+            {
+              "q": "Warum sind faire Regeln bei Geld wichtig?",
+              "options": [
+                "Das sind sie nicht",
+                "Damit jeder die gleiche Chance bekommt",
+                "Nur für Kinder",
+                "Damit es schwieriger wird"
+              ],
+              "correct": 1,
+              "explanation": "Faire Regeln sorgen dafür, dass niemand schummeln kann und jeder die gleiche Chance hat."
+            },
+            {
+              "q": "Was ist Leihen?",
+              "options": [
+                "Geld stehlen",
+                "Geld von jemand anderem bekommen, das du später zurückzahlen musst",
+                "Geld sparen",
+                "Geld verlieren"
+              ],
+              "correct": 1,
+              "explanation": "Leihen bedeutet, dass du Geld von jemand anderem bekommst, es aber später zurückzahlen musst — oft mit extra Zinsen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Grundlagen von Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin ist knappes digitales Geld ohne Mittelsmänner. Mining bestätigt Transaktionen. Satoshi ist anonym geblieben.",
+      "description": "Das große Bitcoin-Abenteuer: von Satoshi bis zum Mining!",
+      "badge": "⛏️ Bitcoinminer",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Wer ist Satoshi?",
+          "intro": "Entdecke die Geschichte hinter Bitcoin!",
+          "questions": [
+            {
+              "q": "Wer hat Bitcoin erfunden?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Die Bank",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto veröffentlichte 2008 ein 'White Paper' mit der Idee für Bitcoin. Niemand weiß, wer Satoshi wirklich ist!"
+            },
+            {
+              "q": "Was ist ein 'White Paper'?",
+              "options": [
+                "Ein leeres Blatt",
+                "Ein Dokument, in dem du eine neue Idee erklärst",
+                "Ein geheimer Brief",
+                "Eine Schulaufgabe"
+              ],
+              "correct": 1,
+              "explanation": "Ein White Paper ist ein Dokument, in dem du eine neue Idee oder Lösung der Welt präsentierst."
+            },
+            {
+              "q": "Was ist der Genesis Block?",
+              "options": [
+                "Ein Computerspiel",
+                "Der allererste Block von Bitcoin",
+                "Eine Art Stein",
+                "Ein geheimes Passwort"
+              ],
+              "correct": 1,
+              "explanation": "Am 3. Januar 2009 wurde der Genesis Block erstellt — der allererste Block in der Bitcoin-Blockchain."
+            },
+            {
+              "q": "Wie viele Bitcoins wird es jemals geben?",
+              "options": [
+                "Unendlich viele",
+                "Maximal 21 Millionen",
+                "Genau 1 Milliarde",
+                "Das weiß niemand"
+              ],
+              "correct": 1,
+              "explanation": "Es wird niemals mehr als 21 Millionen Bitcoins geben. Diese Knappheit ist in die Regeln eingebaut!"
+            },
+            {
+              "q": "Was ist 'Mining' bei Bitcoin?",
+              "options": [
+                "Im Boden graben",
+                "Mit Computern Rätsel lösen, um Transaktionen zu bestätigen",
+                "Bitcoins drucken",
+                "Bitcoins zeichnen"
+              ],
+              "correct": 1,
+              "explanation": "Miner nutzen Computer, um mathematische Rätsel zu lösen. Als Beweis ihrer geleisteten Arbeit dürfen sie Transaktionen bestätigen."
+            },
+            {
+              "q": "Was ist Proof of Work?",
+              "options": [
+                "Ein Schulzeugnis",
+                "Beweis, dass jemand wirklich Mühe aufgewendet hat, um etwas zu verdienen",
+                "Ein Passwort",
+                "Eine Art Diplom"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = Arbeitsbeweis. Genau wie beim Würfelspiel: Alle folgen denselben Regeln und haben die gleiche Chance."
+            },
+            {
+              "q": "Warum ist Satoshi verschwunden?",
+              "options": [
+                "Er ging in den Urlaub",
+                "Wahrscheinlich damit Bitcoin wirklich allen gehört, ohne einen Anführer",
+                "Er wurde wütend",
+                "Er existiert nicht"
+              ],
+              "correct": 1,
+              "explanation": "Durch sein Verschwinden sorgte Satoshi dafür, dass Bitcoin niemandem allein gehört. Das Netzwerk läuft nach Regeln, nicht nach einem Anführer."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Bitcoin minen!",
+          "intro": "Finde gleiche Paare, um Blöcke zu minen — genau wie echte Miner!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoin-Wortknacker",
+          "intro": "Entziffere die durcheinandergewürfelten Bitcoin-Wörter!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Digitales Geld"
+            },
+            {
+              "scrambled": "SHATIOS",
+              "answer": "SATOSHI",
+              "hint": "Der mysteriöse Erfinder"
+            },
+            {
+              "scrambled": "KCBLO",
+              "answer": "BLOCK",
+              "hint": "Transaktionen sind darin enthalten"
+            },
+            {
+              "scrambled": "PANTPKH",
+              "answer": "KNAPPHEIT",
+              "hint": "Es gibt nicht viel davon"
+            },
+            {
+              "scrambled": "IGNMIN",
+              "answer": "MINING",
+              "hint": "Rätsel mit Computern lösen"
+            },
+            {
+              "scrambled": "LLEATW",
+              "answer": "WALLET",
+              "hint": "Hier bewahrst du Bitcoin auf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin pour Juniors",
+    "subtitle": "Découvre le monde de l'argent, de la valeur et du Bitcoin !",
+    "progress": "Progression",
+    "newPlayer": "Nouveau joueur",
+    "newPlayerConfirm": "Démarrer un nouveau joueur ? La progression actuelle sera effacée.",
+    "footer": "Basé sur Bitcoin pour Juniors de My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, aventurier !",
+      "subtitle": "Comment tu t'appelles ?",
+      "placeholder": "Ton prénom...",
+      "button": "Lance l'aventure ! 🚀"
+    },
+    "activity": {
+      "back": "← Retour",
+      "next": "Suivant →",
+      "finish": "Terminé ! 🎉",
+      "correct": "Correct !",
+      "wrong": "Faux",
+      "score": "Score",
+      "tryAgain": "Réessayer",
+      "completed": "Complété !",
+      "badgeEarned": "Badge gagné !"
+    },
+    "sort": {
+      "instruction": "Glisse du moins cher au plus cher",
+      "check": "Vérifier l'ordre"
+    },
+    "categorize": {
+      "instruction": "Glisse vers la bonne catégorie"
+    },
+    "match": {
+      "instruction": "Associe les paires"
+    },
+    "truefalse": {
+      "public": "Public",
+      "private": "Privé"
+    },
+    "cipher": {
+      "instruction": "Décode le message avec la roue chiffrée"
+    },
+    "mining": {
+      "instruction": "Trouve les paires identiques"
+    },
+    "scramble": {
+      "instruction": "Démêle le mot",
+      "hint": "Indice"
+    },
+    "moduleView": {
+      "back": "← Retour",
+      "map": "← Carte au trésor",
+      "coreIdea": "💡 Idée clé",
+      "activities": "Activités",
+      "module": "Module"
+    },
+    "activityTypes": {
+      "quiz": "Quiz",
+      "sort": "Trier",
+      "match": "Associer",
+      "cipher": "Déchiffrer",
+      "mining": "Memory",
+      "truefalse": "Public/Privé",
+      "categorize": "Catégoriser",
+      "scramble": "Mots mélangés"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Échange, Valeur & Prix",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "La valeur dépend de ce dont tu as besoin. Le prix, c'est combien quelque chose coûte. L'argent résout le problème du troc.",
+      "description": "Découvre pourquoi on utilise l'argent et ce que les choses valent vraiment !",
+      "badge": "🏝️ Marchand de l'île",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Survivre sur une île",
+          "intro": "Tu es naufragé sur une île déserte !",
+          "questions": [
+            {
+              "q": "Tu t'échoues sur une île déserte. Qu'est-ce qui a le plus de valeur ?",
+              "options": [
+                "💎 Diamant",
+                "🔪 Une machette",
+                "📱 Smartphone",
+                "💰 100 euros"
+              ],
+              "correct": 1,
+              "explanation": "Sur une île, avec une machette tu peux couper du bois, préparer à manger et construire un abri. L'argent et les diamants n'y servent à rien !"
+            },
+            {
+              "q": "Tu as 5 cannes à pêche mais pas de tente. Ton voisin a 3 tentes mais pas de canne à pêche. Que faites-vous ?",
+              "options": [
+                "Attendre tous les deux",
+                "Échanger : une canne à pêche contre une tente !",
+                "Rien, tant pis",
+                "Pleurer ensemble"
+              ],
+              "correct": 1,
+              "explanation": "Le troc est la plus ancienne façon de faire du commerce ! Tu donnes ce que tu as en trop contre ce dont tu as besoin."
+            },
+            {
+              "q": "Pourquoi le troc est-il parfois très compliqué ?",
+              "options": [
+                "Parce que c'est ennuyeux",
+                "Parce qu'il faut trouver quelqu'un qui veut exactement ce que tu as",
+                "Parce que c'est interdit",
+                "Parce que les objets sont trop lourds"
+              ],
+              "correct": 1,
+              "explanation": "C'est ce qu'on appelle la « double coïncidence des besoins ». L'argent résout ce problème — tout le monde accepte l'argent !"
+            },
+            {
+              "q": "Autrefois, des coquillages servaient de monnaie. Qu'est-ce qui fait un bon argent ?",
+              "options": [
+                "Il doit être beau",
+                "Il doit être rare, portable et accepté par tout le monde",
+                "Il doit être comestible",
+                "Il doit venir du gouvernement"
+              ],
+              "correct": 1,
+              "explanation": "Un bon argent est rare (pas trouvable en quantité infinie), facile à transporter, et tout le monde doit l'accepter comme paiement."
+            },
+            {
+              "q": "Une bouteille d'eau coûte 1 € au supermarché. Dans le désert, quelqu'un t'en offre 100 € pour la même bouteille. Pourquoi ?",
+              "options": [
+                "Le magasin était plus cher",
+                "Parce que l'eau est bien plus rare et importante dans le désert",
+                "C'est une autre eau",
+                "Le désert est loin"
+              ],
+              "correct": 1,
+              "explanation": "La rareté change la valeur ! Moins il y a de quelque chose et plus tu en as besoin, plus ça a de la valeur."
+            },
+            {
+              "q": "Quelle est la différence entre le prix et la valeur ?",
+              "options": [
+                "Il n'y a pas de différence",
+                "Le prix c'est combien quelque chose coûte, la valeur c'est l'importance que ça a pour toi",
+                "Le prix est toujours plus élevé que la valeur",
+                "La valeur ne concerne que l'argent"
+              ],
+              "correct": 1,
+              "explanation": "Un dessin de ton enfant n'a peut-être pas de prix mais une valeur immense. Le prix et la valeur, ce n'est pas la même chose !"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Ligne de prix",
+          "intro": "Mets les objets dans le bon ordre, du moins cher au plus cher !",
+          "items": [
+            {
+              "name": "🍎 Pomme",
+              "value": 1
+            },
+            {
+              "name": "📖 Livre",
+              "value": 2
+            },
+            {
+              "name": "⚽ Ballon de foot",
+              "value": 3
+            },
+            {
+              "name": "📱 Téléphone",
+              "value": 4
+            },
+            {
+              "name": "🛵 Scooter",
+              "value": 5
+            },
+            {
+              "name": "🏠 Maison",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Temps, Énergie & Récompense",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "L'énergie est limitée. L'équilibre entre travail, repos et jeu est important. La patience mène à de meilleurs résultats.",
+      "description": "Comment utilises-tu ton temps et ton énergie ? Et pourquoi attendre est parfois plus malin ?",
+      "badge": "⏳ Maître du temps",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Travail, Repos ou Jeu ?",
+          "intro": "Glisse chaque activité vers la bonne catégorie !",
+          "categories": [
+            "💼 Travail",
+            "😴 Repos",
+            "🎮 Jeu"
+          ],
+          "items": [
+            {
+              "name": "Faire ses devoirs",
+              "cat": 0
+            },
+            {
+              "name": "Dormir",
+              "cat": 1
+            },
+            {
+              "name": "Jouer au foot",
+              "cat": 2
+            },
+            {
+              "name": "Ranger sa chambre",
+              "cat": 0
+            },
+            {
+              "name": "Lire un livre",
+              "cat": 1
+            },
+            {
+              "name": "Jouer à chat",
+              "cat": 2
+            },
+            {
+              "name": "Mettre la table",
+              "cat": 0
+            },
+            {
+              "name": "Faire une sieste",
+              "cat": 1
+            },
+            {
+              "name": "Jouer aux jeux vidéo",
+              "cat": 2
+            },
+            {
+              "name": "Faire les courses",
+              "cat": 0
+            },
+            {
+              "name": "Écouter de la musique",
+              "cat": 1
+            },
+            {
+              "name": "Aller à l'aire de jeux",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Préférence de temps",
+          "intro": "Tu choisis MAINTENANT ou PLUS TARD ?",
+          "questions": [
+            {
+              "q": "Dans l'histoire des trois petits cochons : quelle maison est restée debout ?",
+              "options": [
+                "🌾 Paille (construite rapidement)",
+                "🪵 Bois (construction moyenne)",
+                "🧱 Briques (a pris le plus de temps)"
+              ],
+              "correct": 2,
+              "explanation": "La maison en briques a demandé le plus de temps et d'efforts, mais c'était la seule qui tenait debout. La patience paie !"
+            },
+            {
+              "q": "Que signifie « faible préférence temporelle » ?",
+              "options": [
+                "Tu veux tout MAINTENANT",
+                "Tu es prêt à attendre pour quelque chose de mieux",
+                "Tu n'as pas de montre",
+                "Tu dors beaucoup"
+              ],
+              "correct": 1,
+              "explanation": "Faible préférence temporelle = être prêt à attendre pour un meilleur résultat. Comme le cochon qui a construit sa maison en briques !"
+            },
+            {
+              "q": "Tu reçois 1 bonbon maintenant, ou 3 bonbons si tu attends 10 minutes. Quel est le choix le plus malin ?",
+              "options": [
+                "1 bonbon MAINTENANT !",
+                "Attendre : 3 bonbons > 1 bonbon",
+                "Les bonbons sont mauvais pour la santé",
+                "Se sauver en courant"
+              ],
+              "correct": 1,
+              "explanation": "C'est le célèbre test de la guimauve ! Les enfants qui savaient attendre obtenaient souvent de meilleurs résultats à l'école."
+            },
+            {
+              "q": "Tu as un examen important demain. Qu'est-ce que la faible préférence temporelle ?",
+              "options": [
+                "Jouer aux jeux vidéo maintenant et réviser demain",
+                "Réviser aujourd'hui pour bien réussir demain",
+                "Sécher l'examen",
+                "Espérer avoir de la chance"
+              ],
+              "correct": 1,
+              "explanation": "Faire quelque chose de difficile maintenant (réviser) pour obtenir quelque chose de bien plus tard (une bonne note) — c'est la faible préférence temporelle."
+            },
+            {
+              "q": "Que se passe-t-il si tu dépenses toute ton énergie le matin ?",
+              "options": [
+                "Tu deviens plus fort",
+                "Il ne t'en reste plus pour le reste de la journée",
+                "Tu obtiens des super-pouvoirs",
+                "Rien de spécial"
+              ],
+              "correct": 1,
+              "explanation": "L'énergie est limitée ! La répartir intelligemment est important — tout comme l'argent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analogique versus Numérique",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "La technologie évolue sans cesse. Chaque invention résout un problème. Ce qui est nouveau n'est pas forcément mieux.",
+      "description": "Du pigeon voyageur à Internet — comment la technologie change le monde !",
+      "badge": "🚀 Pionnier de la tech",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Ancien ↔ Nouveau",
+          "intro": "Associe chaque ancienne technologie à sa version moderne !",
+          "pairs": [
+            {
+              "old": "✉️ Lettre",
+              "new": "📧 E-mail"
+            },
+            {
+              "old": "📞 Téléphone à cadran",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Carte papier",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Pellicule photo",
+              "new": "📸 Appareil photo numérique"
+            },
+            {
+              "old": "📰 Journal",
+              "new": "🌐 Site d'actualités"
+            },
+            {
+              "old": "💰 Pièces de monnaie",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Invente le futur",
+          "intro": "À quoi ressemblera la technologie dans 20 ans ?",
+          "questions": [
+            {
+              "q": "Pourquoi les technologies changent-elles au fil du temps ?",
+              "options": [
+                "Parce que les vieilles choses se cassent",
+                "Parce que les gens résolvent des problèmes grâce à de nouvelles inventions",
+                "Parce que le gouvernement le veut",
+                "Sans raison"
+              ],
+              "correct": 1,
+              "explanation": "Chaque invention résout un problème. La voiture a résolu le problème que les chevaux sont lents et se fatiguent !"
+            },
+            {
+              "q": "La nouvelle technologie est-elle TOUJOURS meilleure que l'ancienne ?",
+              "options": [
+                "Oui, toujours",
+                "Non, parfois l'ancienne est meilleure ou plus fiable",
+                "La nouvelle technologie n'existe pas",
+                "Seulement si elle est plus chère"
+              ],
+              "correct": 1,
+              "explanation": "Un livre papier n'a pas besoin de batterie ! Parfois, les anciennes solutions sont encore très efficaces."
+            },
+            {
+              "q": "Bitcoin est une monnaie numérique. Qu'a-t-il en commun avec les anciens coquillages ?",
+              "options": [
+                "Ils viennent tous les deux de la mer",
+                "Ils sont tous les deux rares et utilisés comme moyen d'échange",
+                "Rien",
+                "Ils sont tous les deux gratuits"
+              ],
+              "correct": 1,
+              "explanation": "Aussi bien les coquillages que le Bitcoin sont rares (il y en a une quantité limitée) et utilisés comme moyen d'échange."
+            },
+            {
+              "q": "Qu'est-ce que l'innovation ?",
+              "options": [
+                "Acheter quelque chose de nouveau",
+                "Une amélioration ou une invention intelligente qui résout un problème",
+                "Un grand mot pour rien dire",
+                "Réservé aux scientifiques"
+              ],
+              "correct": 1,
+              "explanation": "Innovation = une solution nouvelle ou meilleure à un problème existant. Tout le monde peut innover !"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sécurité & Vie privée",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "C'est toi qui décides quelles informations tu partages. Les codes protègent les messages. La confiance n'est pas toujours nécessaire quand on a le chiffrement.",
+      "description": "Codes secrets, vie privée et comment te protéger en ligne !",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Public ou Privé ?",
+          "intro": "Cette information est-elle publique ou privée ? Décide vite !",
+          "statements": [
+            {
+              "text": "Ton mot de passe",
+              "answer": false,
+              "label": "Privé !",
+              "explanation": "Un mot de passe est toujours privé. Ne le partage jamais !"
+            },
+            {
+              "text": "Ton prénom à l'école",
+              "answer": true,
+              "label": "Public",
+              "explanation": "À l'école, tout le monde sait comment tu t'appelles — c'est une information publique."
+            },
+            {
+              "text": "Ton code PIN",
+              "answer": false,
+              "label": "Privé !",
+              "explanation": "Ton code PIN est secret — il protège ton compte bancaire."
+            },
+            {
+              "text": "Un parc en ville",
+              "answer": true,
+              "label": "Public",
+              "explanation": "Un parc est un endroit public — tout le monde peut y aller."
+            },
+            {
+              "text": "Ton journal intime",
+              "answer": false,
+              "label": "Privé !",
+              "explanation": "Ton journal intime est privé — c'est toi seul qui décides qui peut le lire."
+            },
+            {
+              "text": "La couleur de ton vélo",
+              "answer": true,
+              "label": "Public",
+              "explanation": "Tout le monde peut voir de quelle couleur est ton vélo."
+            },
+            {
+              "text": "Ton adresse personnelle",
+              "answer": false,
+              "label": "Privé !",
+              "explanation": "Tu ne donnes pas ton adresse à des inconnus — c'est une information privée."
+            },
+            {
+              "text": "La météo aujourd'hui",
+              "answer": true,
+              "label": "Public",
+              "explanation": "La météo est la même pour tout le monde — complètement publique !"
+            },
+            {
+              "text": "Ta clé Bitcoin",
+              "answer": false,
+              "label": "Privé !",
+              "explanation": "Ta clé privée est le secret le plus important. Celui qui l'a possède tes bitcoins !"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Code secret",
+          "intro": "Décode les mots secrets de Bitcoin avec la roue chiffrée !"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Questions d'argent",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "On peut gagner, épargner, investir et dépenser de l'argent. Faire un budget, c'est faire des choix. Des règles équitables sont importantes.",
+      "description": "Gagner, épargner, investir — deviens un expert de l'argent !",
+      "badge": "💎 Sage de l'argent",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Malin avec l'argent",
+          "intro": "Teste à quel point tu es doué avec l'argent !",
+          "questions": [
+            {
+              "q": "Qu'est-ce qu'épargner ?",
+              "options": [
+                "Dépenser l'argent tout de suite",
+                "Mettre de l'argent de côté pour plus tard",
+                "Jeter l'argent",
+                "Emprunter de l'argent à un ami"
+              ],
+              "correct": 1,
+              "explanation": "Épargner = garder de l'argent pour pouvoir acheter quelque chose de plus grand ou de plus important plus tard."
+            },
+            {
+              "q": "Qu'est-ce qu'investir ?",
+              "options": [
+                "Cacher de l'argent",
+                "Mettre son argent ou son temps dans quelque chose pour que ça vaille plus plus tard",
+                "Tout dépenser aujourd'hui",
+                "Brûler de l'argent"
+              ],
+              "correct": 1,
+              "explanation": "Investir, c'est mettre son argent ou son temps dans quelque chose en espérant que ça vaudra plus plus tard."
+            },
+            {
+              "q": "Tu as 12 coquillages. Une tente coûte 8 et une canne à pêche coûte 6. Peux-tu acheter les deux ?",
+              "options": [
+                "Oui !",
+                "Non, 8 + 6 = 14, et tu n'en as que 12",
+                "Seulement avec une réduction",
+                "Les coquillages ne sont pas de l'argent"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, mais tu n'as que 12 coquillages. Tu dois choisir ! C'est ça, faire un budget."
+            },
+            {
+              "q": "Lors d'une vente aux enchères, le prix d'un objet rare monte sans cesse. Pourquoi ?",
+              "options": [
+                "Le vendeur est méchant",
+                "Plusieurs personnes le veulent, mais il n'y en a qu'un seul (rareté + demande)",
+                "L'objet devient de plus en plus grand",
+                "Parce que quelqu'un triche"
+              ],
+              "correct": 1,
+              "explanation": "Quand beaucoup de gens veulent quelque chose mais qu'il y en a peu, le prix monte. C'est ainsi que fonctionne l'offre et la demande !"
+            },
+            {
+              "q": "Pourquoi des règles équitables sont-elles importantes en matière d'argent ?",
+              "options": [
+                "Elles ne le sont pas",
+                "Pour que tout le monde ait les mêmes chances",
+                "Seulement pour les enfants",
+                "Pour que ce soit plus difficile"
+              ],
+              "correct": 1,
+              "explanation": "Des règles équitables font que personne ne peut tricher et que tout le monde a les mêmes chances."
+            },
+            {
+              "q": "Qu'est-ce qu'emprunter ?",
+              "options": [
+                "Voler de l'argent",
+                "Recevoir de l'argent de quelqu'un d'autre qu'on doit rembourser plus tard",
+                "Épargner de l'argent",
+                "Perdre de l'argent"
+              ],
+              "correct": 1,
+              "explanation": "Emprunter signifie recevoir de l'argent de quelqu'un d'autre, mais devoir le rembourser plus tard — souvent avec un peu plus (les intérêts)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Les bases du Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin est une monnaie numérique rare sans intermédiaire. Le minage confirme les transactions. Satoshi est resté anonyme.",
+      "description": "La grande aventure Bitcoin : de Satoshi au minage !",
+      "badge": "⛏️ Mineur de Bitcoin",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Qui est Satoshi ?",
+          "intro": "Découvre l'histoire derrière Bitcoin !",
+          "questions": [
+            {
+              "q": "Qui a inventé Bitcoin ?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "La banque",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto a publié en 2008 un « livre blanc » avec l'idée du Bitcoin. Personne ne sait qui est vraiment Satoshi !"
+            },
+            {
+              "q": "Qu'est-ce qu'un « livre blanc » ?",
+              "options": [
+                "Une feuille vide",
+                "Un document dans lequel on explique une nouvelle idée",
+                "Une lettre secrète",
+                "Un devoir scolaire"
+              ],
+              "correct": 1,
+              "explanation": "Un livre blanc est un document dans lequel on présente une nouvelle idée ou solution au monde."
+            },
+            {
+              "q": "Qu'est-ce que le bloc de genèse ?",
+              "options": [
+                "Un jeu vidéo",
+                "Le tout premier bloc de Bitcoin",
+                "Une sorte de pierre",
+                "Un mot de passe secret"
+              ],
+              "correct": 1,
+              "explanation": "Le 3 janvier 2009, le bloc de genèse a été créé — le tout premier bloc de la blockchain Bitcoin."
+            },
+            {
+              "q": "Combien de bitcoins existeront jamais ?",
+              "options": [
+                "Une infinité",
+                "21 millions au maximum",
+                "Exactement 1 milliard",
+                "Personne ne le sait"
+              ],
+              "correct": 1,
+              "explanation": "Il n'existera jamais plus de 21 millions de bitcoins. Cette rareté est intégrée dans les règles !"
+            },
+            {
+              "q": "Qu'est-ce que le « minage » dans Bitcoin ?",
+              "options": [
+                "Creuser dans le sol",
+                "Résoudre des puzzles avec des ordinateurs pour confirmer des transactions",
+                "Imprimer des bitcoins",
+                "Dessiner des bitcoins"
+              ],
+              "correct": 1,
+              "explanation": "Les mineurs utilisent des ordinateurs pour résoudre des puzzles mathématiques. Comme preuve de leur travail, ils peuvent confirmer des transactions."
+            },
+            {
+              "q": "Qu'est-ce que la preuve de travail ?",
+              "options": [
+                "Un bulletin scolaire",
+                "La preuve que quelqu'un a vraiment fait des efforts pour gagner quelque chose",
+                "Un mot de passe",
+                "Une sorte de diplôme"
+              ],
+              "correct": 1,
+              "explanation": "Preuve de travail = preuve qu'on a travaillé. Comme le jeu de dés : tout le monde suit les mêmes règles et a les mêmes chances."
+            },
+            {
+              "q": "Pourquoi Satoshi a-t-il disparu ?",
+              "options": [
+                "Il est parti en vacances",
+                "Probablement pour que Bitcoin appartienne vraiment à tout le monde, sans chef",
+                "Il était en colère",
+                "Il n'existe pas"
+              ],
+              "correct": 1,
+              "explanation": "En disparaissant, Satoshi a fait en sorte que Bitcoin n'appartienne à personne en particulier. Le réseau fonctionne sur des règles, pas sur un chef."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Miner des Bitcoins !",
+          "intro": "Trouve les paires identiques pour miner des blocs — comme de vrais mineurs !"
+        },
+        {
+          "type": "scramble",
+          "title": "Mots mélangés Bitcoin",
+          "intro": "Démêle les mots Bitcoin mélangés !",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Monnaie numérique"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "Le mystérieux inventeur"
+            },
+            {
+              "scrambled": "COLB",
+              "answer": "BLOC",
+              "hint": "Les transactions y sont stockées"
+            },
+            {
+              "scrambled": "CARER",
+              "answer": "RARES",
+              "hint": "Il n'y en a pas beaucoup"
+            },
+            {
+              "scrambled": "GAENIM",
+              "answer": "MINAGE",
+              "hint": "Résoudre des puzzles avec des ordinateurs"
+            },
+            {
+              "scrambled": "TELELORP",
+              "answer": "PORTEFEUILLE",
+              "hint": "C'est là que tu gardes tes bitcoins"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

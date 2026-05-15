@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import Confetti from "../components/Confetti";
 import { S } from "../styles/shared";
 
 const SYMBOLS = ["⛏️","🔗","🪙","🔑","🛡️","📦","⚡","🌐"];
 
 export default function MiningActivity({ activity, color, onComplete }) {
+  const { t } = useLanguage();
+  const ui = t?.ui?.mining || {};
+
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
@@ -28,8 +32,8 @@ export default function MiningActivity({ activity, color, onComplete }) {
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", ...S.body, fontSize: 14, fontWeight: 600, marginBottom: 10, color: "#666" }}>
-        <span>⛏️ Gemined: {matched.length / 2}/{SYMBOLS.length}</span>
-        <span>🎯 Pogingen: {moves}</span>
+        <span>⛏️ {ui.mined || "Mined"}: {matched.length / 2}/{SYMBOLS.length}</span>
+        <span>🎯 {ui.attempts || "Attempts"}: {moves}</span>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 7 }}>
         {cards.map(c => {
@@ -49,8 +53,10 @@ export default function MiningActivity({ activity, color, onComplete }) {
       {done && (
         <div style={{ textAlign: "center", marginTop: 16 }}>
           <Confetti active={true} />
-          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>🏆 Blok voltooid in {moves} pogingen!</p>
-          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 10 }}>Verder →</button>
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>
+            🏆 {(ui.done || "Block completed in {moves} attempts!").replace("{moves}", moves)}
+          </p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 10 }}>{ui.next || "Continue →"}</button>
         </div>
       )}
     </div>

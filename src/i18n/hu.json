@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin Junioroknak",
+    "subtitle": "Fedezd fel a pénz, az érték és a Bitcoin világát!",
+    "progress": "Haladás",
+    "newPlayer": "Új játékos indítása",
+    "newPlayerConfirm": "Új játékost indítasz? A jelenlegi haladás törlődik.",
+    "footer": "A My First Bitcoin – Bitcoin Junioroknak anyaga alapján · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, kalandor!",
+      "subtitle": "Mi a neved?",
+      "placeholder": "A neved...",
+      "button": "Induljon a kaland! 🚀"
+    },
+    "activity": {
+      "back": "← Vissza",
+      "next": "Következő →",
+      "finish": "Kész! 🎉",
+      "correct": "Helyes!",
+      "wrong": "Hibás",
+      "score": "Pontszám",
+      "tryAgain": "Újra",
+      "completed": "Teljesítve!",
+      "badgeEarned": "Jelvény szereztél!"
+    },
+    "sort": {
+      "instruction": "Húzd olcsótól drágáig sorrendbe",
+      "check": "Sorrend ellenőrzése"
+    },
+    "categorize": {
+      "instruction": "Húzd a megfelelő kategóriába"
+    },
+    "match": {
+      "instruction": "Párosítsd össze a párokat"
+    },
+    "truefalse": {
+      "public": "Nyilvános",
+      "private": "Privát"
+    },
+    "cipher": {
+      "instruction": "Fejtsd meg a kódot a rejtjelkerékkel"
+    },
+    "mining": {
+      "instruction": "Keresd meg az egyező párokat"
+    },
+    "scramble": {
+      "instruction": "Fejtsd meg az összekevert szót",
+      "hint": "Tipp"
+    },
+    "moduleView": {
+      "back": "← Vissza",
+      "map": "← Kincstérkép",
+      "coreIdea": "💡 Fő gondolat",
+      "activities": "Feladatok",
+      "module": "Modul"
+    },
+    "activityTypes": {
+      "quiz": "Kvíz",
+      "sort": "Rendezés",
+      "match": "Párosítás",
+      "cipher": "Kódfejtés",
+      "mining": "Memória",
+      "truefalse": "Nyilvános/Privát",
+      "categorize": "Kategorizálás",
+      "scramble": "Szókeverő"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Csere, Érték és Ár",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Az érték attól függ, mire van szükséged. Az ár az, amennyibe valami kerül. A pénz megoldja a csere problémáját.",
+      "description": "Fedezd fel, miért használunk pénzt, és mi az, aminek valódi értéke van!",
+      "badge": "🏝️ Szigetkereskedő",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Túlélés a szigeten",
+          "intro": "Hajótörést szenvedtél egy lakatlan szigeten!",
+          "questions": [
+            {
+              "q": "Partra vetődsz egy elhagyatott szigeten. Mi a legértékesebb?",
+              "options": [
+                "💎 Gyémánt",
+                "🔪 Egy bozótvágó kés",
+                "📱 Okostelefon",
+                "💰 100 euró"
+              ],
+              "correct": 1,
+              "explanation": "Egy szigeten a bozótvágó késsel fát vághatsz, ételt szeletelhetsz és menedéket építhetsz. A pénz és a gyémánt ott semmit sem ér!"
+            },
+            {
+              "q": "Van 5 horgászteled, de nincs sátrad. A szomszédodnak van 3 sátra, de nincs horgászbotja. Mit tesztek?",
+              "options": [
+                "Mindketten várnak",
+                "Csere: egy horgászbot egy sátorért!",
+                "Semmi, pech",
+                "Együtt sírnak"
+              ],
+              "correct": 1,
+              "explanation": "A csere a legősibb kereskedelmi módszer! Azt adod, amiből felesleged van, azért, amire szükséged van."
+            },
+            {
+              "q": "Miért lehet a csere néha nagyon nehéz?",
+              "options": [
+                "Mert unalmas",
+                "Mert olyan valakit kell találnod, aki pontosan azt akarja, amid van",
+                "Mert tilos",
+                "Mert a dolgok túl nehezek"
+              ],
+              "correct": 1,
+              "explanation": "Ezt hívják a 'szükségletek egybeesésének'. A pénz megoldja ezt a problémát — mindenki elfogadja a pénzt!"
+            },
+            {
+              "q": "Régen kagylókat használtak pénzként. Mi tesz valamit jó pénzzé?",
+              "options": [
+                "Szépnek kell lennie",
+                "Ritkának, hordozhatónak és mindenki által elfogadottnak kell lennie",
+                "Ehetőnek kell lennie",
+                "A kormánytól kell származnia"
+              ],
+              "correct": 1,
+              "explanation": "A jó pénz ritka (nem található végtelen mennyiségben), könnyen hordozható, és mindenki elfogadja fizetségként."
+            },
+            {
+              "q": "Egy üveg víz 1 eurót koszt a boltban. A sivatagban valaki 100 eurót ajánl ugyanazért az üvegért. Miért?",
+              "options": [
+                "Az üzlet drágább volt",
+                "Mert a víz a sivatagban sokkal ritkább és fontosabb",
+                "Ez más víz",
+                "A sivatag messze van"
+              ],
+              "correct": 1,
+              "explanation": "A ritkaság megváltoztatja az értéket! Minél kevesebb van valamiből, és minél jobban szükséged van rá, annál értékesebb lesz."
+            },
+            {
+              "q": "Mi a különbség az ár és az érték között?",
+              "options": [
+                "Nincs különbség",
+                "Az ár az, amennyibe valami kerül, az érték az, mennyire fontos számodra",
+                "Az ár mindig magasabb, mint az érték",
+                "Az érték csak a pénzről szól"
+              ],
+              "correct": 1,
+              "explanation": "A gyermeked rajzának talán nincs ára, de hatalmas értéke van. Az ár és az érték nem ugyanaz!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Árvonal",
+          "intro": "Rendezd a tárgyakat a megfelelő sorrendbe olcsótól drágáig!",
+          "items": [
+            {
+              "name": "🍎 Alma",
+              "value": 1
+            },
+            {
+              "name": "📖 Könyv",
+              "value": 2
+            },
+            {
+              "name": "⚽ Focilabda",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Robogó",
+              "value": 5
+            },
+            {
+              "name": "🏠 Ház",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Idő, Energia és Jutalom",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Az energia véges. Fontos az egyensúly a munka, a pihenés és a játék között. A türelem jobb eredményekhez vezet.",
+      "description": "Hogyan használod az idődet és energiádat? És miért okosabb néha várni?",
+      "badge": "⏳ Időmester",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Munka, Pihenés vagy Játék?",
+          "intro": "Húzd minden tevékenységet a megfelelő kategóriába!",
+          "categories": [
+            "💼 Munka",
+            "😴 Pihenés",
+            "🎮 Játék"
+          ],
+          "items": [
+            {
+              "name": "Házi feladat",
+              "cat": 0
+            },
+            {
+              "name": "Alvás",
+              "cat": 1
+            },
+            {
+              "name": "Focizás",
+              "cat": 2
+            },
+            {
+              "name": "Szoba rendbetétele",
+              "cat": 0
+            },
+            {
+              "name": "Könyv olvasása",
+              "cat": 1
+            },
+            {
+              "name": "Fogócska játék",
+              "cat": 2
+            },
+            {
+              "name": "Asztal megterítése",
+              "cat": 0
+            },
+            {
+              "name": "Szunyókálás",
+              "cat": 1
+            },
+            {
+              "name": "Videójátékozás",
+              "cat": 2
+            },
+            {
+              "name": "Bevásárlás",
+              "cat": 0
+            },
+            {
+              "name": "Zenehallgatás",
+              "cat": 1
+            },
+            {
+              "name": "Mászóparkon játszani",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Időpreferencia",
+          "intro": "MOST vagy KÉSŐBB választasz?",
+          "questions": [
+            {
+              "q": "A három kismalac meséjében melyik ház maradt állva?",
+              "options": [
+                "🌾 Szalmából (gyorsan épült)",
+                "🪵 Fából (közepesen)",
+                "🧱 Téglából (legtöbb időbe telt)"
+              ],
+              "correct": 2,
+              "explanation": "A téglából épült ház kerülte a legtöbb időbe és fáradságba, mégis ez volt az egyetlen, amely megmaradt. A türelem megtérül!"
+            },
+            {
+              "q": "Mit jelent az 'alacsony időpreferencia'?",
+              "options": [
+                "Mindent MOST akarsz",
+                "Hajlandó vagy várni valamire, ami jobb",
+                "Nincs órád",
+                "Sokat alszol"
+              ],
+              "correct": 1,
+              "explanation": "Alacsony időpreferencia = hajlandó vagy várni a jobb eredményért. Mint a kismalac, aki kőházat épített!"
+            },
+            {
+              "q": "Kapsz 1 cukorkát most, vagy 3 cukorkát, ha 10 percet vársz. Mi az okosabb döntés?",
+              "options": [
+                "1 cukorka MOST!",
+                "Várni: 3 cukorka > 1 cukorka",
+                "A cukorka egészségtelen",
+                "Elfutni"
+              ],
+              "correct": 1,
+              "explanation": "Ez a híres mályvacukor-teszt! Azok a gyerekek, akik tudtak várni, általában jobb eredményeket értek el az iskolában."
+            },
+            {
+              "q": "Fontos vizsgád van holnap. Mi az alacsony időpreferencia?",
+              "options": [
+                "Most játékozni, és holnap tanulni",
+                "Ma tanulni, hogy holnap jól szerepelj",
+                "Kihagyni a vizsgát",
+                "Reménykedni a szerencsében"
+              ],
+              "correct": 1,
+              "explanation": "Most csinálni valami nehezet (tanulás), hogy később valami jót kapj (jó jegy) — ez az alacsony időpreferencia."
+            },
+            {
+              "q": "Mi történik, ha reggel felhasználod az összes energiádat?",
+              "options": [
+                "Erősebb leszel",
+                "Nem marad semmi a nap hátralévő részére",
+                "Szuperképességeket kapsz",
+                "Semmi különös"
+              ],
+              "correct": 1,
+              "explanation": "Az energia véges! Az okos elosztás fontos — pont úgy, mint a pénznél."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analóg versus Digitális",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "A technológia folyamatosan változik. Minden találmány megold egy problémát. Nem minden újdonság automatikusan jobb.",
+      "description": "A galambpostától az internetig — hogyan változtatja meg a technológia a világot!",
+      "badge": "🚀 Techpionír",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Régi ↔ Új",
+          "intro": "Párosítsd össze a régi technológiát a modern változatával!",
+          "pairs": [
+            {
+              "old": "✉️ Levél",
+              "new": "📧 E-mail"
+            },
+            {
+              "old": "📞 Tárcsás telefon",
+              "new": "📱 Okostelefon"
+            },
+            {
+              "old": "🗺️ Papírtérkép",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Fényképezőgép-film",
+              "new": "📸 Digitális fényképezőgép"
+            },
+            {
+              "old": "📰 Újság",
+              "new": "🌐 Hírweboldal"
+            },
+            {
+              "old": "💰 Érmepénz",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Képzeld el a jövőt",
+          "intro": "Hogyan nézhet ki a technológia 20 év múlva?",
+          "questions": [
+            {
+              "q": "Miért változnak a technológiák az idők során?",
+              "options": [
+                "Mert a régi dolgok tönkremennek",
+                "Mert az emberek új találmányokkal oldanak meg problémákat",
+                "Mert a kormány így akarja",
+                "Ok nélkül"
+              ],
+              "correct": 1,
+              "explanation": "Minden találmány megold egy problémát. Az autó megoldotta azt a problémát, hogy a lovak lassúak és elfáradnak!"
+            },
+            {
+              "q": "Az új technológia MINDIG jobb a réginél?",
+              "options": [
+                "Igen, mindig",
+                "Nem, néha a régi jobb vagy megbízhatóbb",
+                "Az új technológia nem létezik",
+                "Csak ha drágább"
+              ],
+              "correct": 1,
+              "explanation": "Egy papírk��nyvhöz nem kell töltő! Néha a régi megoldások még mindig okosak."
+            },
+            {
+              "q": "A Bitcoin digitális pénz. Mi a közös benne a régi kagylókkal?",
+              "options": [
+                "Mindkettő a tengerből való",
+                "Mindkettő ritka, és csereeszközként használják",
+                "Semmi",
+                "Mindkettő ingyenes"
+              ],
+              "correct": 1,
+              "explanation": "Mind a kagylók, mind a Bitcoin ritkák (korlátozott mennyiségük van), és csereeszközként használják őket."
+            },
+            {
+              "q": "Mi az innováció?",
+              "options": [
+                "Valami újat vásárolni",
+                "Egy okos fejlesztés vagy találmány, amely megold egy problémát",
+                "Egy nehéz szó semmiért",
+                "Csak tudósoknak való"
+              ],
+              "correct": 1,
+              "explanation": "Innováció = új vagy jobb megoldás egy meglévő problémára. Bárki innoválhat!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Biztonság és Adatvédelem",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Te döntöd el, milyen információt osztasz meg. A kódok védik az üzeneteket. A bizalom nem mindig szükséges, ha van titkosítás.",
+      "description": "Titkos kódok, adatvédelem és hogyan védd meg magad online!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Nyilvános vagy Privát?",
+          "intro": "Ez az információ nyilvános vagy privát? Döntsd el gyorsan!",
+          "statements": [
+            {
+              "text": "A jelszavad",
+              "answer": false,
+              "label": "Privát!",
+              "explanation": "A jelszó mindig privát. Soha ne add meg senkinek!"
+            },
+            {
+              "text": "A neved az iskolában",
+              "answer": true,
+              "label": "Nyilvános",
+              "explanation": "Az iskolában mindenki tudja, hogy hívnak — ez nyilvános információ."
+            },
+            {
+              "text": "A PIN-kódod",
+              "answer": false,
+              "label": "Privát!",
+              "explanation": "A PIN-kódod titkos — védi a bankszámládat."
+            },
+            {
+              "text": "Egy park a városban",
+              "answer": true,
+              "label": "Nyilvános",
+              "explanation": "A park nyilvános hely — bárki odamehet."
+            },
+            {
+              "text": "A naplód",
+              "answer": false,
+              "label": "Privát!",
+              "explanation": "A naplód privát — csak te döntöd el, ki olvashatja."
+            },
+            {
+              "text": "A kerékpárod színe",
+              "answer": true,
+              "label": "Nyilvános",
+              "explanation": "Bárki láthatja, milyen színű a kerékpárod."
+            },
+            {
+              "text": "A lakcímed",
+              "answer": false,
+              "label": "Privát!",
+              "explanation": "A címedet nem osztod meg idegenekkel — ez privát információ."
+            },
+            {
+              "text": "A mai időjárás",
+              "answer": true,
+              "label": "Nyilvános",
+              "explanation": "Az időjárás mindenki számára ugyanolyan — teljesen nyilvános!"
+            },
+            {
+              "text": "A Bitcoin-kulcsod",
+              "answer": false,
+              "label": "Privát!",
+              "explanation": "A privát kulcsod a legfontosabb titok. Aki megszerzi, az hozzáfér a bitcoinjaidhoz!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Titkos kód",
+          "intro": "Fejtsd meg a titkos Bitcoin-szavakat a rejtjelkerékkel!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Pénzügyek",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "A pénzt lehet keresni, megtakarítani, befektetni és elkölteni. A költségvetés tervezése választás kérdése. A tisztességes szabályok fontosak.",
+      "description": "Keresés, megtakarítás, befektetés — válj pénzügyi szakértővé!",
+      "badge": "💎 Pénzügyi Bölcs",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Okosan a pénzzel",
+          "intro": "Teszteld, mennyire vagy okos a pénzügyekben!",
+          "questions": [
+            {
+              "q": "Mi a megtakarítás?",
+              "options": [
+                "A pénzt azonnal elkölteni",
+                "A pénzt félretenni a jövőre",
+                "A pénzt eldobni",
+                "Pénzt kölcsönkérni egy baráttól"
+              ],
+              "correct": 1,
+              "explanation": "Megtakarítás = a pénzt megőrizni, hogy később valami nagyobbat vagy fontosabbat vehess."
+            },
+            {
+              "q": "Mi a befektetés?",
+              "options": [
+                "A pénzt elrejteni",
+                "A pénzedet vagy idődet valamibe fektetni, hogy később többet érjen",
+                "Mindent ma elkölteni",
+                "A pénzt elégetni"
+              ],
+              "correct": 1,
+              "explanation": "Befektetés = a pénzedet vagy idődet valamibe fektetni azzal a reménnyel, hogy később többet fog érni."
+            },
+            {
+              "q": "Van 12 kagylód. Egy sátor 8-ba kerül, egy horgászbot 6-ba. Meg tudod venni mindkettőt?",
+              "options": [
+                "Igen!",
+                "Nem, 8 + 6 = 14, neked pedig csak 12 van",
+                "Csak kedvezménnyel",
+                "A kagyló nem pénz"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, de csak 12 kagylód van. Választanod kell! Ez a költségvetés tervezése."
+            },
+            {
+              "q": "Egy árverésen egy ritka tárgy ára folyamatosan emelkedik. Miért?",
+              "options": [
+                "Az eladó gonosz",
+                "Sokan akarják, de csak egy van belőle (ritkaság + kereslet)",
+                "A tárgy egyre nagyobb lesz",
+                "Mert valaki csal"
+              ],
+              "correct": 1,
+              "explanation": "Ha sokan akarnak valamit, de kevés van belőle, az ár emelkedik. Így működik a kereslet és a kínálat!"
+            },
+            {
+              "q": "Miért fontosak a tisztességes szabályok a pénznél?",
+              "options": [
+                "Nem fontosak",
+                "Hogy mindenki egyenlő esélyt kapjon",
+                "Csak gyerekeknek",
+                "Hogy nehezebb legyen"
+              ],
+              "correct": 1,
+              "explanation": "A tisztességes szabályok biztosítják, hogy senki ne csalhessen, és mindenki egyenlő eséllyel induljon."
+            },
+            {
+              "q": "Mi a kölcsönzés?",
+              "options": [
+                "Pénzt lopni",
+                "Valaki más pénzét megkapni, amit később vissza kell fizetni",
+                "Pénzt megtakarítani",
+                "Pénzt elveszíteni"
+              ],
+              "correct": 1,
+              "explanation": "Kölcsönzés azt jelenti, hogy valaki más pénzét kapod meg, de később vissza kell fizetned — általában kamattal együtt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "A Bitcoin alapjai",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "A Bitcoin ritka digitális pénz közvetítő nélkül. A bányászat megerősíti a tranzakciókat. Satoshi névtelen maradt.",
+      "description": "A nagy Bitcoin-kaland: Satoshitól a bányászatig!",
+      "badge": "⛏️ Bitcoinbányász",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Ki az a Satoshi?",
+          "intro": "Fedezd fel a Bitcoin mögötti történetet!",
+          "questions": [
+            {
+              "q": "Ki találta fel a Bitcoint?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "A bank",
+                "A Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto 2008-ban tett közzé egy 'fehér könyvet' a Bitcoin ötletével. Senki sem tudja, ki Satoshi valójában!"
+            },
+            {
+              "q": "Mi az a 'fehér könyv'?",
+              "options": [
+                "Egy üres papírlap",
+                "Egy dokumentum, amelyben elmagyarázol egy új ötletet",
+                "Egy titkos levél",
+                "Egy iskolai feladat"
+              ],
+              "correct": 1,
+              "explanation": "A fehér könyv egy dokumentum, amelyben egy új ötletet vagy megoldást mutatnak be a világnak."
+            },
+            {
+              "q": "Mi az a Genesis Block?",
+              "options": [
+                "Egy számítógépes játék",
+                "A Bitcoin legelső blokkja",
+                "Egyfajta kő",
+                "Egy titkos jelszó"
+              ],
+              "correct": 1,
+              "explanation": "2009. január 3-án jött létre a Genesis Block — a Bitcoin-blokklánc legelső blokkja."
+            },
+            {
+              "q": "Hány bitcoin fog valaha létezni?",
+              "options": [
+                "Végtelen sok",
+                "Legfeljebb 21 millió",
+                "Pontosan 1 milliárd",
+                "Ezt senki sem tudja"
+              ],
+              "correct": 1,
+              "explanation": "Soha nem lesz több mint 21 millió bitcoin. Ez a ritkaság bele van építve a szabályokba!"
+            },
+            {
+              "q": "Mit jelent a 'bányászat' a Bitcoinnál?",
+              "options": [
+                "Ásni a földben",
+                "Számítógépekkel rejtvényeket megoldani a tranzakciók megerősítéséhez",
+                "Bitcoinokat nyomtatni",
+                "Bitcoinokat rajzolni"
+              ],
+              "correct": 1,
+              "explanation": "A bányászok számítógépekkel oldanak meg matematikai rejtvényeket. Annak bizonyítékaként, hogy elvégezték a munkát, megerősíthetik a tranzakciókat."
+            },
+            {
+              "q": "Mi az a Proof of Work?",
+              "options": [
+                "Egy iskolai bizonyítvány",
+                "Bizonyíték arra, hogy valaki valóban megdolgozott valamiért",
+                "Egy jelszó",
+                "Egyfajta diploma"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = a munka bizonyítéka. Mint a kockajátékban: mindenki ugyanazokat a szabályokat követi és egyenlő eséllyel indul."
+            },
+            {
+              "q": "Miért tűnt el Satoshi?",
+              "options": [
+                "Nyaralni ment",
+                "Valószínűleg azért, hogy a Bitcoin valóban mindenkié legyen, vezető nélkül",
+                "Megharagudott",
+                "Nem létezik"
+              ],
+              "correct": 1,
+              "explanation": "Azzal, hogy eltűnt, Satoshi biztosította, hogy a Bitcoin ne tartozzon egyetlen személyhez sem. A hálózat szabályokon működik, nem egy vezéren."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Bitcoin bányászat!",
+          "intro": "Keresd meg az egyező párokat a blokkok kibányászásához — akárcsak az igazi bányászok!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoin szókeverő",
+          "intro": "Fejtsd meg az összekevert Bitcoin-szavakat!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Digitális pénz"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "A titokzatos feltaláló"
+            },
+            {
+              "scrambled": "KBLO",
+              "answer": "BLOKK",
+              "hint": "A tranzakciók ebben tárolódnak"
+            },
+            {
+              "scrambled": "AKRÁT",
+              "answer": "RITKA",
+              "hint": "Nem sok van belőle"
+            },
+            {
+              "scrambled": "ÁSZÁNYB",
+              "answer": "BÁNYÁSZ",
+              "hint": "Rejtvényeket old meg számítógéppel"
+            },
+            {
+              "scrambled": "ÁRCÁT",
+              "answer": "TÁRCA",
+              "hint": "Ebben tárolod a bitcoinodat"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

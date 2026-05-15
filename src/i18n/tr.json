@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Merhaba, {name}! 🏴‍☠️",
+    "title": "Gençler İçin Bitcoin",
+    "subtitle": "Para, değer ve Bitcoin dünyasını keşfet!",
+    "progress": "İlerleme",
+    "newPlayer": "Yeni oyuncu başlat",
+    "newPlayerConfirm": "Yeni oyuncu başlatılsın mı? Mevcut ilerleme silinecek.",
+    "footer": "My First Bitcoin'in Gençler İçin Bitcoin içeriğine dayanmaktadır · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Merhaba, maceracı!",
+      "subtitle": "Adın ne?",
+      "placeholder": "Adını yaz...",
+      "button": "Maceraya başla! 🚀"
+    },
+    "activity": {
+      "back": "← Geri",
+      "next": "İleri →",
+      "finish": "Bitti! 🎉",
+      "correct": "Doğru!",
+      "wrong": "Yanlış",
+      "score": "Puan",
+      "tryAgain": "Tekrar dene",
+      "completed": "Tamamlandı!",
+      "badgeEarned": "Rozet kazanıldı!"
+    },
+    "sort": {
+      "instruction": "Ucuzdan pahalıya doğru sürükle",
+      "check": "Sırayı kontrol et"
+    },
+    "categorize": {
+      "instruction": "Doğru kategoriye sürükle"
+    },
+    "match": {
+      "instruction": "Eşleşen çiftleri bul"
+    },
+    "truefalse": {
+      "public": "Herkese açık",
+      "private": "Özel"
+    },
+    "cipher": {
+      "instruction": "Şifre tekerleğiyle kodu çöz"
+    },
+    "mining": {
+      "instruction": "Eşleşen çiftleri bul"
+    },
+    "scramble": {
+      "instruction": "Karışık harfleri çöz",
+      "hint": "İpucu"
+    },
+    "moduleView": {
+      "back": "← Geri",
+      "map": "← Hazine Haritası",
+      "coreIdea": "💡 Temel Fikir",
+      "activities": "Etkinlikler",
+      "module": "Modül"
+    },
+    "activityTypes": {
+      "quiz": "Quiz",
+      "sort": "Sıralama",
+      "match": "Eşleştirme",
+      "cipher": "Kod Kırma",
+      "mining": "Hafıza Oyunu",
+      "truefalse": "Herkese Açık/Özel",
+      "categorize": "Kategorilere Ayırma",
+      "scramble": "Kelime Bulmaca"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Takas, Değer ve Fiyat",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Değer, neye ihtiyaç duyduğuna bağlıdır. Fiyat, bir şeyin ne kadar tuttuğudur. Para, takas sorununu çözer.",
+      "description": "Neden para kullandığımızı ve şeylerin gerçekte ne kadar değerli olduğunu keşfet!",
+      "badge": "🏝️ Ada Tüccarı",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Adada Hayatta Kalmak",
+          "intro": "Issız bir adaya vuran bir kazazedesin!",
+          "questions": [
+            {
+              "q": "Tenha bir adaya vuruyorsun. En değerli olan ne?",
+              "options": [
+                "💎 Elmas",
+                "🔪 Bir bıçak",
+                "📱 Akıllı telefon",
+                "💰 100 euro"
+              ],
+              "correct": 1,
+              "explanation": "Bir adada bıçakla odun kesebilir, yiyecek hazırlayabilir ve barınak yapabilirsin. Para ve elmasın orada hiçbir faydası yok!"
+            },
+            {
+              "q": "5 olta ipliğin var ama çadırın yok. Komşunun 3 çadırı var ama oltası yok. Ne yaparsınız?",
+              "options": [
+                "İkisi de bekler",
+                "Takas: bir olta karşılığında bir çadır!",
+                "Hiçbir şey, şansınız yok",
+                "Birlikte ağlarsınız"
+              ],
+              "correct": 1,
+              "explanation": "Takas, ticaret yapmanın en eski yoludur! Fazlandan olan şeyi, ihtiyacın olan şeyle değiş tokuş edersin."
+            },
+            {
+              "q": "Neden takas etmek bazen çok zordur?",
+              "options": [
+                "Çünkü sıkıcıdır",
+                "Çünkü tam olarak senin sahip olduğunu isteyen birini bulman gerekir",
+                "Çünkü yasaktır",
+                "Çünkü eşyalar çok ağırdır"
+              ],
+              "correct": 1,
+              "explanation": "Buna 'ihtiyaçların çakışması' denir. Para bu sorunu çözer — herkes parayı kabul eder!"
+            },
+            {
+              "q": "Eski zamanlarda deniz kabukları para olarak kullanılırdı. Neyin iyi para yaptığı nedir?",
+              "options": [
+                "Güzel olmalı",
+                "Kıt, taşınabilir ve herkes tarafından kabul edilebilir olmalı",
+                "Yenilebilir olmalı",
+                "Hükümetten gelmeli"
+              ],
+              "correct": 1,
+              "explanation": "İyi para kıttır (sonsuz bulunamaz), taşınması kolaydır ve herkes onu ödeme olarak kabul etmelidir."
+            },
+            {
+              "q": "Bir şişe su markette 1 TL'ye satılıyor. Çölde biri sana aynı şişe için 100 TL teklif ediyor. Neden?",
+              "options": [
+                "Mağaza daha pahalıydı",
+                "Çünkü su çölde çok daha kıt ve önemlidir",
+                "Farklı bir sudur",
+                "Çöl çok uzakta"
+              ],
+              "correct": 1,
+              "explanation": "Kıtlık değeri değiştirir! Bir şey ne kadar az bulunursa ve ne kadar çok ihtiyaç duyulursa, o kadar değerli olur."
+            },
+            {
+              "q": "Fiyat ile değer arasındaki fark nedir?",
+              "options": [
+                "Hiç fark yok",
+                "Fiyat bir şeyin ne kadar tuttuğudur, değer ise senin için ne kadar önemli olduğudur",
+                "Fiyat her zaman değerden yüksektir",
+                "Değer yalnızca parayla ilgilidir"
+              ],
+              "correct": 1,
+              "explanation": "Çocuğunun çizdiği resmin belki bir fiyatı olmayabilir ama büyük bir değeri vardır. Fiyat ve değer aynı şey değildir!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Fiyat Sıralaması",
+          "intro": "Nesneleri ucuzdan pahalıya doğru sırala!",
+          "items": [
+            {
+              "name": "🍎 Elma",
+              "value": 1
+            },
+            {
+              "name": "📖 Kitap",
+              "value": 2
+            },
+            {
+              "name": "⚽ Futbol topu",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Scooter",
+              "value": 5
+            },
+            {
+              "name": "🏠 Ev",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Zaman, Enerji ve Ödül",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Enerji sınırlıdır. Çalışma, dinlenme ve oyun arasındaki denge önemlidir. Sabır daha iyi sonuçlara yol açar.",
+      "description": "Zamanını ve enerjini nasıl kullanıyorsun? Ve neden beklemek bazen daha akıllıca?",
+      "badge": "⏳ Zaman Ustası",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Çalışma, Dinlenme mi Oyun mu?",
+          "intro": "Her etkinliği doğru kategoriye sürükle!",
+          "categories": [
+            "💼 Çalışma",
+            "😴 Dinlenme",
+            "🎮 Oyun"
+          ],
+          "items": [
+            {
+              "name": "Ödev yapmak",
+              "cat": 0
+            },
+            {
+              "name": "Uyumak",
+              "cat": 1
+            },
+            {
+              "name": "Futbol oynamak",
+              "cat": 2
+            },
+            {
+              "name": "Odayı toplamak",
+              "cat": 0
+            },
+            {
+              "name": "Kitap okumak",
+              "cat": 1
+            },
+            {
+              "name": "Saklambaç oynamak",
+              "cat": 2
+            },
+            {
+              "name": "Masayı kurmak",
+              "cat": 0
+            },
+            {
+              "name": "Şekerleme yapmak",
+              "cat": 1
+            },
+            {
+              "name": "Oyun oynamak",
+              "cat": 2
+            },
+            {
+              "name": "Alışveriş yapmak",
+              "cat": 0
+            },
+            {
+              "name": "Müzik dinlemek",
+              "cat": 1
+            },
+            {
+              "name": "Tırmanma parkına gitmek",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Zaman Tercihi",
+          "intro": "ŞİMDİ mi yoksa SONRA mı seçiyorsun?",
+          "questions": [
+            {
+              "q": "Üç Küçük Domuz masalında: hangi ev ayakta kaldı?",
+              "options": [
+                "🌾 Saman (hızlı yapıldı)",
+                "🪵 Tahta (ortalama)",
+                "🧱 Tuğla (en fazla zaman aldı)"
+              ],
+              "correct": 2,
+              "explanation": "Tuğla ev en fazla zaman ve emek aldı, ama ayakta kalan tek evdi. Sabır meyvesini verir!"
+            },
+            {
+              "q": "'Düşük zaman tercihi' ne anlama gelir?",
+              "options": [
+                "Her şeyi ŞİMDİ istiyorsun",
+                "Daha iyi bir şey için beklemeye hazırsın",
+                "Saatin yok",
+                "Çok uyuyorsun"
+              ],
+              "correct": 1,
+              "explanation": "Düşük zaman tercihi = daha iyi bir sonuç için beklemeye razı olmak. Tıpkı taş ev yapan domuz gibi!"
+            },
+            {
+              "q": "Şimdi 1 şeker alabilirsin ya da 10 dakika beklersen 3 şeker alırsın. En akıllıca seçim ne?",
+              "options": [
+                "1 şeker ŞİMDİ!",
+                "Beklemek: 3 şeker > 1 şeker",
+                "Şeker sağlıksız",
+                "Kaçmak"
+              ],
+              "correct": 1,
+              "explanation": "Bu ünlü marshmallow testidir! Bekleyebilen çocuklar genellikle okulda daha iyi sonuçlar elde etti."
+            },
+            {
+              "q": "Yarın önemli bir sınav var. Düşük zaman tercihi nedir?",
+              "options": [
+                "Şimdi oyun oynayıp yarın çalışmak",
+                "Bugün çalışmak ki yarın iyi not alasın",
+                "Sınavı geçmek",
+                "Şansa güvenmek"
+              ],
+              "correct": 1,
+              "explanation": "Şimdi zor bir şey yapmak (çalışmak) ki sonradan iyi bir şey elde edesin (iyi bir not) — işte bu düşük zaman tercihi."
+            },
+            {
+              "q": "Tüm enerjini sabah harcarsan ne olur?",
+              "options": [
+                "Daha güçlü olursun",
+                "Günün geri kalanı için hiçbir şeyin kalmaz",
+                "Süper güç kazanırsın",
+                "Özel bir şey olmaz"
+              ],
+              "correct": 1,
+              "explanation": "Enerji sınırlıdır! Akıllıca dağıtmak önemlidir — tıpkı para gibi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analog ve Dijital",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Teknoloji sürekli değişiyor. Her icat bir sorunu çözer. Yeni olan her şey otomatik olarak daha iyi değildir.",
+      "description": "Posta güvercininden internete — teknoloji dünyayı nasıl değiştiriyor!",
+      "badge": "🚀 Teknoloji Öncüsü",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Eski ↔ Yeni",
+          "intro": "Her eski teknolojiyi modern versiyonuyla eşleştir!",
+          "pairs": [
+            {
+              "old": "✉️ Mektup",
+              "new": "📧 E-posta"
+            },
+            {
+              "old": "📞 Çevirme Telefonу",
+              "new": "📱 Akıllı Telefon"
+            },
+            {
+              "old": "🗺️ Kağıt harita",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Film rulosu",
+              "new": "📸 Dijital kamera"
+            },
+            {
+              "old": "📰 Gazete",
+              "new": "🌐 Haber sitesi"
+            },
+            {
+              "old": "💰 Madeni para",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Geleceği Hayal Et",
+          "intro": "Teknoloji 20 yıl sonra nasıl görünür?",
+          "questions": [
+            {
+              "q": "Teknolojiler neden zaman içinde değişir?",
+              "options": [
+                "Çünkü eski şeyler bozulur",
+                "Çünkü insanlar yeni icatlarla sorunları çözer",
+                "Çünkü hükümet istiyor",
+                "Sebepsiz"
+              ],
+              "correct": 1,
+              "explanation": "Her icat bir sorunu çözer. Otomobil, atların yavaş ve yorulmasını çözdü!"
+            },
+            {
+              "q": "Yeni teknoloji HER ZAMAN eskisinden daha iyi midir?",
+              "options": [
+                "Evet, her zaman",
+                "Hayır, bazen eskisi daha iyi ya da güvenilirdir",
+                "Yeni teknoloji diye bir şey yok",
+                "Sadece daha pahalıysa"
+              ],
+              "correct": 1,
+              "explanation": "Kağıt kitabın pillere ihtiyacı yok! Bazen eski çözümler hâlâ akıllıcadır."
+            },
+            {
+              "q": "Bitcoin dijital paradır. Eski deniz kabuklarıyla ne ortak yönü var?",
+              "options": [
+                "İkisi de denizden geliyor",
+                "İkisi de kıttır ve takas aracı olarak kullanılır",
+                "Hiçbir şey",
+                "İkisi de bedavadır"
+              ],
+              "correct": 1,
+              "explanation": "Hem deniz kabukları hem de Bitcoin kıttır (sınırlı miktarda vardır) ve takas aracı olarak kullanılır."
+            },
+            {
+              "q": "İnovasyon nedir?",
+              "options": [
+                "Yeni bir şey satın almak",
+                "Bir sorunu çözen akıllı bir gelişme veya icat",
+                "Zor ama anlamsız bir kelime",
+                "Yalnızca bilim insanları içindir"
+              ],
+              "correct": 1,
+              "explanation": "İnovasyon = mevcut bir soruna yeni ya da daha iyi bir çözüm. Herkes inovasyon yapabilir!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Güvenlik ve Gizlilik",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Hangi bilgileri paylaştığına sen karar verirsin. Kodlar mesajları korur. Şifrelen varsa güvene her zaman ihtiyaç yoktur.",
+      "description": "Gizli kodlar, gizlilik ve çevrimiçi kendini nasıl korursun!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Herkese Açık mı, Özel mi?",
+          "intro": "Bu bilgi herkese açık mı yoksa özel mi? Hızlı karar ver!",
+          "statements": [
+            {
+              "text": "Şifren",
+              "answer": false,
+              "label": "Özel!",
+              "explanation": "Şifre her zaman özeldir. Asla kimseyle paylaşma!"
+            },
+            {
+              "text": "Okuldaki adın",
+              "answer": true,
+              "label": "Herkese açık",
+              "explanation": "Okulda herkes adını bilir — bu herkese açık bir bilgidir."
+            },
+            {
+              "text": "PIN kodun",
+              "answer": false,
+              "label": "Özel!",
+              "explanation": "PIN kodun gizlidir — banka hesabını korur."
+            },
+            {
+              "text": "Şehirdeki bir park",
+              "answer": true,
+              "label": "Herkese açık",
+              "explanation": "Park herkese açık bir yerdir — herkes gelebilir."
+            },
+            {
+              "text": "Günlüğün",
+              "answer": false,
+              "label": "Özel!",
+              "explanation": "Günlüğün özeldir — kimin okuyacağına yalnızca sen karar verirsin."
+            },
+            {
+              "text": "Bisikletinin rengi",
+              "answer": true,
+              "label": "Herkese açık",
+              "explanation": "Herkes bisikletinin rengini görebilir."
+            },
+            {
+              "text": "Ev adresin",
+              "answer": false,
+              "label": "Özel!",
+              "explanation": "Adresini yabancılarla paylaşmazsın — bu özel bir bilgidir."
+            },
+            {
+              "text": "Bugünkü hava durumu",
+              "answer": true,
+              "label": "Herkese açık",
+              "explanation": "Hava durumu herkes için aynıdır — tamamen herkese açıktır!"
+            },
+            {
+              "text": "Bitcoin anahtarın",
+              "answer": false,
+              "label": "Özel!",
+              "explanation": "Özel anahtarın en önemli sırrındır. Kim elinde tutarsa bitcoin de onundur!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Gizli Kod",
+          "intro": "Şifre tekerleğiyle gizli Bitcoin kelimelerini çöz!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Para İşleri",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Parayı kazanabilir, biriktirebilir, yatırım yapabilir ve harcayabilirsin. Bütçe yapmak seçim yapmaktır. Adil kurallar önemlidir.",
+      "description": "Kazanmak, biriktirmek, yatırım yapmak — para uzmanı ol!",
+      "badge": "💎 Para Bilgesi",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Parayla Akıllıca",
+          "intro": "Para konusunda ne kadar akıllı olduğunu test et!",
+          "questions": [
+            {
+              "q": "Birikim yapmak ne demektir?",
+              "options": [
+                "Parayı hemen harcamak",
+                "Daha sonrası için parayı bir kenara koymak",
+                "Parayı atmak",
+                "Bir arkadaştan para ödünç almak"
+              ],
+              "correct": 1,
+              "explanation": "Birikim yapmak = daha sonra daha büyük veya daha önemli bir şey satın alabilmek için parayı saklamak."
+            },
+            {
+              "q": "Yatırım yapmak ne demektir?",
+              "options": [
+                "Parayı saklamak",
+                "Paranı ya da zamanını bir yere koymak ki sonradan daha değerli olsun",
+                "Bugün her şeyi harcamak",
+                "Parayı yakmak"
+              ],
+              "correct": 1,
+              "explanation": "Yatırım yapmak, paranı veya zamanını bir şeye koyarak sonradan daha değerli olmasını ummaktır."
+            },
+            {
+              "q": "12 deniz kabuğun var. Bir çadır 8, bir olta 6 kabuk tutuyor. İkisini de satın alabilir misin?",
+              "options": [
+                "Evet!",
+                "Hayır, 8 + 6 = 14, ama elinde yalnızca 12 var",
+                "Yalnızca indirimle",
+                "Deniz kabukları para değil"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, ama elinde yalnızca 12 deniz kabuğu var. Seçim yapmak zorundasın! İşte bu bütçe yapmaktır."
+            },
+            {
+              "q": "Bir açık artırmada nadir bir eşyanın fiyatı sürekli yükseliyor. Neden?",
+              "options": [
+                "Satıcı kötü niyetli",
+                "Birden fazla kişi istiyor ama yalnızca bir tane var (kıtlık + talep)",
+                "Eşya giderek büyüyor",
+                "Birisi hile yapıyor"
+              ],
+              "correct": 1,
+              "explanation": "Pek çok kişi bir şeyi istediğinde ama az sayıda varsa fiyat yükselir. İşte arz ve talep böyle çalışır!"
+            },
+            {
+              "q": "Para konusunda adil kurallar neden önemlidir?",
+              "options": [
+                "Değil",
+                "Herkesin eşit şansa sahip olması için",
+                "Yalnızca çocuklar için",
+                "İşleri zorlaştırmak için"
+              ],
+              "correct": 1,
+              "explanation": "Adil kurallar, kimsenin hile yapamamasını ve herkesin eşit şansa sahip olmasını sağlar."
+            },
+            {
+              "q": "Borç almak ne demektir?",
+              "options": [
+                "Para çalmak",
+                "Daha sonra geri ödemen gereken parayı başkasından almak",
+                "Para biriktirmek",
+                "Para kaybetmek"
+              ],
+              "correct": 1,
+              "explanation": "Borç almak, birisinin parasını alıp daha sonra geri ödemen gerektiği anlamına gelir — çoğunlukla fazlas��yla (faiz)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Bitcoin'in Temelleri",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin, aracısız kıt bir dijital paradır. Madencilik işlemleri doğrular. Satoshi anonim kaldı.",
+      "description": "Büyük Bitcoin macerası: Satoshi'den madenciliğe!",
+      "badge": "⛏️ Bitcoin Madencisi",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Satoshi Kim?",
+          "intro": "Bitcoin'in arkasındaki hikayeyi keşfet!",
+          "questions": [
+            {
+              "q": "Bitcoin'i kim icat etti?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Banka",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto, 2008'de Bitcoin fikrini içeren bir 'beyaz bülten' yayımladı. Satoshi'nin gerçekte kim olduğunu kimse bilmiyor!"
+            },
+            {
+              "q": "'Beyaz bülten' nedir?",
+              "options": [
+                "Boş bir kağıt",
+                "Yeni bir fikri açıkladığın bir belge",
+                "Gizli bir mektup",
+                "Okul ödevi"
+              ],
+              "correct": 1,
+              "explanation": "Beyaz bülten, yeni bir fikri ya da çözümü dünyaya sunduğun bir belgedir."
+            },
+            {
+              "q": "Genesis Block nedir?",
+              "options": [
+                "Bir bilgisayar oyunu",
+                "Bitcoin'in ilk bloğu",
+                "Bir tür taş",
+                "Gizli bir şifre"
+              ],
+              "correct": 1,
+              "explanation": "3 Ocak 2009'da Genesis Block oluşturuldu — Bitcoin blok zincirindeki ilk blok."
+            },
+            {
+              "q": "Toplam kaç Bitcoin olacak?",
+              "options": [
+                "Sonsuz",
+                "En fazla 21 milyon",
+                "Tam olarak 1 milyar",
+                "Kimse bilmiyor"
+              ],
+              "correct": 1,
+              "explanation": "Hiçbir zaman 21 milyondan fazla Bitcoin olmayacak. Bu kıtlık kurallara işlenmiştir!"
+            },
+            {
+              "q": "Bitcoin'de 'madencilik' nedir?",
+              "options": [
+                "Yerde kazı yapmak",
+                "İşlemleri doğrulamak için bilgisayarlarla bulmacalar çözmek",
+                "Bitcoin basmak",
+                "Bitcoin çizmek"
+              ],
+              "correct": 1,
+              "explanation": "Madenciler matematiksel bulmacaları çözmek için bilgisayar kullanır. Çalıştıklarının kanıtı olarak işlemleri doğrulama hakkını kazanırlar."
+            },
+            {
+              "q": "İş Kanıtı (Proof of Work) nedir?",
+              "options": [
+                "Okul karnesi",
+                "Birisinin bir şeyi kazanmak için gerçekten emek harcadığının kanıtı",
+                "Bir şifre",
+                "Bir tür diploma"
+              ],
+              "correct": 1,
+              "explanation": "İş Kanıtı = çalışmanın ispatı. Tıpkı zar oyunu gibi: herkes aynı kuralları izler ve aynı şansa sahiptir."
+            },
+            {
+              "q": "Satoshi neden ortadan kayboldu?",
+              "options": [
+                "Tatile gitti",
+                "Muhtemelen Bitcoin'in gerçekten herkese ait olması için, lidersiz",
+                "Kızgındı",
+                "Var olmadı"
+              ],
+              "correct": 1,
+              "explanation": "Ortadan kaybolarak Satoshi, Bitcoin'in tek bir kişiye ait olmadığını garantiledi. Ağ liderle değil, kurallarla çalışır."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Bitcoin Madenciliği!",
+          "intro": "Blok kazmak için eşleşen çiftleri bul — tıpkı gerçek madenciler gibi!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoin Kelime Bulmacası",
+          "intro": "Karışık Bitcoin kelimelerini çöz!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Dijital para"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "Gizemli mucit"
+            },
+            {
+              "scrambled": "OKBL",
+              "answer": "BLOK",
+              "hint": "İşlemler burada saklanır"
+            },
+            {
+              "scrambled": "KITLI",
+              "answer": "KITLIK",
+              "hint": "Çok azı var"
+            },
+            {
+              "scrambled": "NICAMED",
+              "answer": "MADENCI",
+              "hint": "Bilgisayarlarla bulmaca çözen kişi"
+            },
+            {
+              "scrambled": "ZETCÜ",
+              "answer": "CÜZDAN",
+              "hint": "Bitcoin'ini burada saklarsın"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoj, {name}! 🏴‍☠️",
+    "title": "Bitcoin för Juniorer",
+    "subtitle": "Utforska världen av pengar, värde och Bitcoin!",
+    "progress": "Framsteg",
+    "newPlayer": "Starta ny spelare",
+    "newPlayerConfirm": "Starta ny spelare? Det nuvarande framsteget raderas.",
+    "footer": "Baserad på Bitcoin för Juniorer av My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoj, äventyrare!",
+      "subtitle": "Vad heter du?",
+      "placeholder": "Ditt namn...",
+      "button": "Starta äventyret! 🚀"
+    },
+    "activity": {
+      "back": "← Tillbaka",
+      "next": "Nästa →",
+      "finish": "Klart! 🎉",
+      "correct": "Rätt!",
+      "wrong": "Fel",
+      "score": "Poäng",
+      "tryAgain": "Försök igen",
+      "completed": "Avklarat!",
+      "badgeEarned": "Bricka intjänad!"
+    },
+    "sort": {
+      "instruction": "Dra från billigast till dyrast",
+      "check": "Kontrollera ordningen"
+    },
+    "categorize": {
+      "instruction": "Dra till rätt kategori"
+    },
+    "match": {
+      "instruction": "Koppla ihop paren"
+    },
+    "truefalse": {
+      "public": "Offentligt",
+      "private": "Privat"
+    },
+    "cipher": {
+      "instruction": "Knäck koden med chifferskivan"
+    },
+    "mining": {
+      "instruction": "Hitta matchande par"
+    },
+    "scramble": {
+      "instruction": "Lösa upp ordet",
+      "hint": "Tips"
+    },
+    "moduleView": {
+      "back": "← Tillbaka",
+      "map": "← Skattekarta",
+      "coreIdea": "💡 Kärnidé",
+      "activities": "Aktiviteter",
+      "module": "Modul"
+    },
+    "activityTypes": {
+      "quiz": "Quiz",
+      "sort": "Sortera",
+      "match": "Koppla",
+      "cipher": "Knäck koden",
+      "mining": "Memory",
+      "truefalse": "Offentligt/Privat",
+      "categorize": "Kategorisera",
+      "scramble": "Ordknäckare"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Utbyte, Värde & Pris",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Värde beror på vad du behöver. Pris är hur mycket något kostar. Pengar löser bytesproblemet.",
+      "description": "Upptäck varför vi använder pengar och vad saker verkligen är värda!",
+      "badge": "🏝️ Öhandlare",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Överleva på en ö",
+          "intro": "Du är skeppsbrutna på en öde ö!",
+          "questions": [
+            {
+              "q": "Du spolas upp på en öde ö. Vad är mest värt?",
+              "options": [
+                "💎 Diamant",
+                "🔪 En machete",
+                "📱 Smartphone",
+                "💰 100 euro"
+              ],
+              "correct": 1,
+              "explanation": "På en ö kan du med en machete hugga ved, skära mat och bygga ett skydd. Pengar och diamanter är värdelösa där!"
+            },
+            {
+              "q": "Du har 5 fiskespön men inget tält. Din granne har 3 tält men inget fiskespö. Vad gör ni?",
+              "options": [
+                "Båda väntar",
+                "Byta: ett fiskespö mot ett tält!",
+                "Ingenting, synd om er",
+                "Gråter tillsammans"
+              ],
+              "correct": 1,
+              "explanation": "Att byta är det äldsta sättet att handla! Du ger vad du har över mot vad du behöver."
+            },
+            {
+              "q": "Varför är byteshandel ibland väldigt svårt?",
+              "options": [
+                "För att det är tråkigt",
+                "För att du måste hitta någon som vill precis det du har",
+                "För att det är förbjudet",
+                "För att saker är för tunga"
+              ],
+              "correct": 1,
+              "explanation": "Det kallas 'sammanfall av behov'. Pengar löser det här problemet — alla accepterar pengar!"
+            },
+            {
+              "q": "Snäckor användes förr som pengar. Vad gör något till bra pengar?",
+              "options": [
+                "Det måste vara vackert",
+                "Det måste vara sällsynt, bärbart och accepteras av alla",
+                "Det måste vara ätbart",
+                "Det måste komma från staten"
+              ],
+              "correct": 1,
+              "explanation": "Bra pengar är sällsynta (inte oändliga), lätta att bära med sig och alla måste acceptera dem som betalning."
+            },
+            {
+              "q": "En flaska vatten kostar 1 kr i affären. I öknen erbjuder någon dig 100 kr för samma flaska. Varför?",
+              "options": [
+                "Affären var dyrare",
+                "För att vatten i öknen är mycket mer sällsynt och viktigt",
+                "Det är annat vatten",
+                "Öknen är långt borta"
+              ],
+              "correct": 1,
+              "explanation": "Sällsynthet förändrar värdet! Ju mindre det finns av något och ju mer du behöver det, desto mer värt är det."
+            },
+            {
+              "q": "Vad är skillnaden mellan pris och värde?",
+              "options": [
+                "Det finns ingen skillnad",
+                "Pris är hur mycket något kostar, värde är hur viktigt något är för dig",
+                "Priset är alltid högre än värdet",
+                "Värde handlar bara om pengar"
+              ],
+              "correct": 1,
+              "explanation": "En teckning av ditt barn kanske inte har något pris men har enormt värde. Pris och värde är inte samma sak!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Prislinje",
+          "intro": "Sätt föremålen i rätt ordning från billigast till dyrast!",
+          "items": [
+            {
+              "name": "🍎 Äpple",
+              "value": 1
+            },
+            {
+              "name": "📖 Bok",
+              "value": 2
+            },
+            {
+              "name": "⚽ Fotboll",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Moped",
+              "value": 5
+            },
+            {
+              "name": "🏠 Hus",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tid, Energi & Belöning",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Energi är begränsad. Balans mellan arbete, vila och lek är viktigt. Tålamod leder till bättre resultat.",
+      "description": "Hur använder du din tid och energi? Och varför är det ibland smartare att vänta?",
+      "badge": "⏳ Tidsmästare",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Arbete, Vila eller Lek?",
+          "intro": "Dra varje aktivitet till rätt kategori!",
+          "categories": [
+            "💼 Arbete",
+            "😴 Vila",
+            "🎮 Lek"
+          ],
+          "items": [
+            {
+              "name": "Göra läxor",
+              "cat": 0
+            },
+            {
+              "name": "Sova",
+              "cat": 1
+            },
+            {
+              "name": "Spela fotboll",
+              "cat": 2
+            },
+            {
+              "name": "Städa rummet",
+              "cat": 0
+            },
+            {
+              "name": "Läsa en bok",
+              "cat": 1
+            },
+            {
+              "name": "Leka kurragömma",
+              "cat": 2
+            },
+            {
+              "name": "Duka bordet",
+              "cat": 0
+            },
+            {
+              "name": "Ta en tupplur",
+              "cat": 1
+            },
+            {
+              "name": "Spela datorspel",
+              "cat": 2
+            },
+            {
+              "name": "Handla mat",
+              "cat": 0
+            },
+            {
+              "name": "Lyssna på musik",
+              "cat": 1
+            },
+            {
+              "name": "Till klätterparken",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Tidspreferens",
+          "intro": "Väljer du NU eller SENARE?",
+          "questions": [
+            {
+              "q": "I sagan om De tre små grisarna: vilket hus stod kvar?",
+              "options": [
+                "🌾 Halm (byggdes snabbt)",
+                "🪵 Trä (mellanting)",
+                "🧱 Tegel (tog mest tid)"
+              ],
+              "correct": 2,
+              "explanation": "Tegelhuset tog mest tid och möda, men var det enda som stod kvar. Tålamod lönar sig!"
+            },
+            {
+              "q": "Vad betyder 'låg tidspreferens'?",
+              "options": [
+                "Du vill ha allt NU",
+                "Du är beredd att vänta på något bättre",
+                "Du har ingen klocka",
+                "Du sover mycket"
+              ],
+              "correct": 1,
+              "explanation": "Låg tidspreferens = beredd att vänta för ett bättre resultat. Som grisen som byggde ett stenhus!"
+            },
+            {
+              "q": "Du får 1 godis nu, eller 3 godis om du väntar 10 minuter. Vad är det smartaste valet?",
+              "options": [
+                "1 godis NU!",
+                "Vänta: 3 godis > 1 godis",
+                "Godis är onyttigt",
+                "Springa iväg"
+              ],
+              "correct": 1,
+              "explanation": "Det här är det berömda marshmallow-testet! Barn som kunde vänta hade ofta bättre resultat i skolan senare."
+            },
+            {
+              "q": "Du har ett viktigt prov imorgon. Vad är låg tidspreferens?",
+              "options": [
+                "Spela spel nu och plugga imorgon",
+                "Plugga idag så att du klarar provet bra imorgon",
+                "Hoppa över provet",
+                "Hoppas på tur"
+              ],
+              "correct": 1,
+              "explanation": "Att göra något svårt nu (plugga) för att få något bra senare (ett bra betyg) — det är låg tidspreferens."
+            },
+            {
+              "q": "Vad händer om du förbrukar all din energi på morgonen?",
+              "options": [
+                "Du blir starkare",
+                "Du har ingenting kvar för resten av dagen",
+                "Du får superkrafter",
+                "Ingenting särskilt"
+              ],
+              "correct": 1,
+              "explanation": "Energi är begränsad! Att fördela den klokt är viktigt — precis som pengar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analogt kontra Digitalt",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Teknologin förändras hela tiden. Varje uppfinning löser ett problem. Inte allt nytt är automatiskt bättre.",
+      "description": "Från brevduva till internet — hur teknologi förändrar världen!",
+      "badge": "🚀 Teknikpionjär",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Gammalt ↔ Nytt",
+          "intro": "Koppla ihop varje gammal teknologi med den moderna versionen!",
+          "pairs": [
+            {
+              "old": "✉️ Brev",
+              "new": "📧 E-post"
+            },
+            {
+              "old": "📞 Snurrtelefon",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Papperskarta",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Fotorulle",
+              "new": "📸 Digitalkamera"
+            },
+            {
+              "old": "📰 Tidning",
+              "new": "🌐 Nyhetssajt"
+            },
+            {
+              "old": "💰 Mynt",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Föreställ dig framtiden",
+          "intro": "Hur skulle teknologin se ut om 20 år?",
+          "questions": [
+            {
+              "q": "Varför förändras teknologier med tiden?",
+              "options": [
+                "För att gamla saker går sönder",
+                "För att människor löser problem med nya uppfinningar",
+                "För att staten vill det",
+                "Utan anledning"
+              ],
+              "correct": 1,
+              "explanation": "Varje uppfinning löser ett problem. Bilen löste problemet att hästar är långsamma och blir trötta!"
+            },
+            {
+              "q": "Är ny teknologi ALLTID bättre än gammal?",
+              "options": [
+                "Ja, alltid",
+                "Nej, ibland är det gamla bättre eller mer pålitligt",
+                "Ny teknik finns inte",
+                "Bara om det är dyrare"
+              ],
+              "correct": 1,
+              "explanation": "En pappersbok behöver inget batteri! Ibland är gamla lösningar fortfarande smarta."
+            },
+            {
+              "q": "Bitcoin är digitala pengar. Vad har det gemensamt med gamla snäckor?",
+              "options": [
+                "Båda kommer från havet",
+                "Båda är sällsynta och används som bytesmedel",
+                "Ingenting",
+                "Båda är gratis"
+              ],
+              "correct": 1,
+              "explanation": "Både snäckor och Bitcoin är sällsynta (det finns en begränsad mängd) och används som bytesmedel."
+            },
+            {
+              "q": "Vad är innovation?",
+              "options": [
+                "Att köpa något nytt",
+                "En smart förbättring eller uppfinning som löser ett problem",
+                "Ett svårt ord för ingenting",
+                "Bara för forskare"
+              ],
+              "correct": 1,
+              "explanation": "Innovation = en ny eller bättre lösning på ett befintligt problem. Vem som helst kan innovera!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Säkerhet & Integritet",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Du bestämmer vilken information du delar. Koder skyddar meddelanden. Förtroende behövs inte alltid om du har kryptering.",
+      "description": "Hemliga koder, integritet och hur du skyddar dig online!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Offentligt eller Privat?",
+          "intro": "Är den här informationen offentlig eller privat? Bestäm dig snabbt!",
+          "statements": [
+            {
+              "text": "Ditt lösenord",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Ett lösenord är alltid privat. Dela det aldrig!"
+            },
+            {
+              "text": "Ditt namn i skolan",
+              "answer": true,
+              "label": "Offentligt",
+              "explanation": "I skolan vet alla vad du heter — det är offentlig information."
+            },
+            {
+              "text": "Din pinkod",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Din pinkod är hemlig — den skyddar ditt bankkonto."
+            },
+            {
+              "text": "En park i staden",
+              "answer": true,
+              "label": "Offentligt",
+              "explanation": "En park är en offentlig plats — alla får komma dit."
+            },
+            {
+              "text": "Din dagbok",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Din dagbok är privat — bara du bestämmer vem som får läsa den."
+            },
+            {
+              "text": "Färgen på din cykel",
+              "answer": true,
+              "label": "Offentligt",
+              "explanation": "Alla kan se vilken färg din cykel har."
+            },
+            {
+              "text": "Din hemadress",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Du delar inte din adress med främlingar — det är privat information."
+            },
+            {
+              "text": "Vädret idag",
+              "answer": true,
+              "label": "Offentligt",
+              "explanation": "Vädret är detsamma för alla — helt offentligt!"
+            },
+            {
+              "text": "Din Bitcoin-nyckel",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Din privata nyckel är den viktigaste hemligheten. Den som har den, har dina bitcoin!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Hemlig Kod",
+          "intro": "Knäck de hemliga Bitcoin-orden med chifferskivan!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Pengar och ekonomi",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Pengar kan du tjäna, spara, investera och spendera. Att budgetera är att välja. Rättvisa regler är viktiga.",
+      "description": "Tjäna, spara, investera — bli en pengaexpert!",
+      "badge": "💎 Pengaklok",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Smart med Pengar",
+          "intro": "Testa hur smart du är med pengar!",
+          "questions": [
+            {
+              "q": "Vad är att spara?",
+              "options": [
+                "Spendera pengar direkt",
+                "Lägga undan pengar för senare",
+                "Kasta pengar",
+                "Låna pengar av en kompis"
+              ],
+              "correct": 1,
+              "explanation": "Spara = förvara pengar så att du senare kan köpa något större eller viktigare."
+            },
+            {
+              "q": "Vad är att investera?",
+              "options": [
+                "Gömma pengar",
+                "Satsa dina pengar eller din tid på något så att det blir mer värt senare",
+                "Spendera allt idag",
+                "Bränna pengar"
+              ],
+              "correct": 1,
+              "explanation": "Att investera är att satsa pengar eller tid på något med hoppet att det blir mer värt senare."
+            },
+            {
+              "q": "Du har 12 snäckor. Ett tält kostar 8 och ett fiskespö kostar 6. Kan du köpa båda?",
+              "options": [
+                "Ja!",
+                "Nej, 8 + 6 = 14, och du har bara 12",
+                "Bara med rabatt",
+                "Snäckor är inga pengar"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, men du har bara 12 snäckor. Du måste välja! Det är att budgetera."
+            },
+            {
+              "q": "På en auktion går priset på ett sällsynt föremål hela tiden upp. Varför?",
+              "options": [
+                "Säljaren är elak",
+                "Flera personer vill ha det, men det finns bara ett (sällsynthet + efterfrågan)",
+                "Föremålet blir hela tiden större",
+                "För att någon fuskar"
+              ],
+              "correct": 1,
+              "explanation": "När många vill ha något men det finns lite av det, stiger priset. Det är hur utbud och efterfrågan fungerar!"
+            },
+            {
+              "q": "Varför är rättvisa regler viktiga när det gäller pengar?",
+              "options": [
+                "Det är de inte",
+                "För att alla ska få samma chans",
+                "Bara för barn",
+                "För att det ska bli svårare"
+              ],
+              "correct": 1,
+              "explanation": "Rättvisa regler ser till att ingen kan fuska och att alla har samma chans."
+            },
+            {
+              "q": "Vad är att låna?",
+              "options": [
+                "Stjäla pengar",
+                "Få pengar av någon annan som du måste betala tillbaka senare",
+                "Spara pengar",
+                "Förlora pengar"
+              ],
+              "correct": 1,
+              "explanation": "Att låna betyder att du får pengar av någon annan, men måste betala tillbaka dem senare — ofta med lite extra (ränta)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Grunderna i Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin är sällsynta digitala pengar utan mellanhänder. Mining bekräftar transaktioner. Satoshi har förblivit anonym.",
+      "description": "Det stora Bitcoin-äventyret: från Satoshi till mining!",
+      "badge": "⛏️ Bitcoingruvarbetare",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Vem är Satoshi?",
+          "intro": "Upptäck historien bakom Bitcoin!",
+          "questions": [
+            {
+              "q": "Vem kom på Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Banken",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto publicerade 2008 ett 'white paper' med idén om Bitcoin. Ingen vet vem Satoshi egentligen är!"
+            },
+            {
+              "q": "Vad är ett 'white paper'?",
+              "options": [
+                "Ett tomt papper",
+                "Ett dokument där du förklarar en ny idé",
+                "Ett hemligt brev",
+                "En skoluppgift"
+              ],
+              "correct": 1,
+              "explanation": "Ett white paper är ett dokument där du presenterar en ny idé eller lösning för världen."
+            },
+            {
+              "q": "Vad är Genesis Block?",
+              "options": [
+                "Ett datorspel",
+                "Det allra första blocket i Bitcoin",
+                "En sorts sten",
+                "Ett hemligt lösenord"
+              ],
+              "correct": 1,
+              "explanation": "Den 3 januari 2009 skapades Genesis Block — det allra första blocket i Bitcoin-blockkedjan."
+            },
+            {
+              "q": "Hur många bitcoins kommer det någonsin att finnas?",
+              "options": [
+                "Oändligt många",
+                "Maximalt 21 miljoner",
+                "Exakt 1 miljard",
+                "Det vet ingen"
+              ],
+              "correct": 1,
+              "explanation": "Det kommer aldrig att finnas fler än 21 miljoner bitcoins. Den sällsyntheten är inbyggd i reglerna!"
+            },
+            {
+              "q": "Vad är 'mining' i Bitcoin?",
+              "options": [
+                "Att gräva i marken",
+                "Att använda datorer för att lösa pussel och bekräfta transaktioner",
+                "Att skriva ut bitcoins",
+                "Att rita bitcoins"
+              ],
+              "correct": 1,
+              "explanation": "Miners använder datorer för att lösa matematiska pussel. Som bevis på att de gjort arbetet får de bekräfta transaktioner."
+            },
+            {
+              "q": "Vad är Proof of Work?",
+              "options": [
+                "En rapport från skolan",
+                "Bevis på att någon verkligen har ansträngt sig för att tjäna något",
+                "Ett lösenord",
+                "En sorts diplom"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = bevis på arbete. Precis som i ett tärningsspel: alla följer samma regler och har samma chans."
+            },
+            {
+              "q": "Varför försvann Satoshi?",
+              "options": [
+                "Han gick på semester",
+                "Förmodligen för att låta Bitcoin verkligen tillhöra alla, utan ledare",
+                "Han blev arg",
+                "Han finns inte"
+              ],
+              "correct": 1,
+              "explanation": "Genom att försvinna såg Satoshi till att Bitcoin inte tillhör en enda person. Nätverket styrs av regler, inte av en ledare."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Bryta Bitcoin!",
+          "intro": "Hitta matchande par för att bryta block — precis som riktiga miners!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoin Ordknäckare",
+          "intro": "Lösa upp de blandade Bitcoin-orden!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Digitala pengar"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "Den mystiske uppfinnaren"
+            },
+            {
+              "scrambled": "KCBOL",
+              "answer": "BLOCK",
+              "hint": "Transaktioner finns här"
+            },
+            {
+              "scrambled": "ÄLLSYNTS",
+              "answer": "SÄLLSYNT",
+              "hint": "Det finns inte mycket av det"
+            },
+            {
+              "scrambled": "NNIGMI",
+              "answer": "MINING",
+              "hint": "Lösa pussel med datorer"
+            },
+            {
+              "scrambled": "LETAWL",
+              "answer": "WALLET",
+              "hint": "Här förvarar du dina bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

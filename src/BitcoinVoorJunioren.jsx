@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
-import { MODULES } from "./data/modules";
+import { useState, useEffect, useMemo } from "react";
+import { useLanguage } from "./contexts/LanguageContext";
 import { loadProgress, saveProgress } from "./utils/storage";
 import { S } from "./styles/shared";
 import BadgeUnlock from "./components/BadgeUnlock";
+import LanguageSelector from "./components/LanguageSelector";
+import DonateButton from "./components/DonateButton";
 import ModuleView from "./views/ModuleView";
 
 function Fonts() {
@@ -10,15 +12,26 @@ function Fonts() {
 }
 
 export default function BitcoinVoorJunioren() {
+  const { t } = useLanguage();
   const [progress, setProgress] = useState(loadProgress);
   const [activeModule, setActiveModule] = useState(null);
   const [newBadge, setNewBadge] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [showName, setShowName] = useState(!progress.name);
+  const [showName, setShowName] = useState(!loadProgress().name);
   const [nameInput, setNameInput] = useState("");
 
   useEffect(() => { setTimeout(() => setLoaded(true), 80); }, []);
 
+  const stars = useMemo(() => Array.from({ length: 50 }, (_, i) => ({
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 40}%`,
+    size: 1.5 + Math.random() * 2,
+    opacity: 0.2 + Math.random() * 0.5,
+    duration: `${2 + Math.random() * 3}s`,
+    delay: `${Math.random() * 3}s`,
+  })), []);
+
+  const MODULES = t.modules;
   const totalActs = MODULES.reduce((s, m) => s + m.activities.length, 0);
   const done = progress.completed.length;
 
@@ -29,7 +42,7 @@ export default function BitcoinVoorJunioren() {
   };
 
   const newPlayer = () => {
-    if (window.confirm("Nieuwe speler starten? De huidige voortgang wordt gewist.")) {
+    if (window.confirm(t.ui.newPlayerConfirm)) {
       const np = { completed: [], badges: [], name: "" };
       setProgress(np); saveProgress(np);
       setNameInput(""); setShowName(true);
@@ -44,26 +57,31 @@ export default function BitcoinVoorJunioren() {
         padding: 20,
       }}>
         <Fonts />
+        <div style={{ position: "absolute", top: 16, right: 16 }}>
+          <LanguageSelector />
+        </div>
         <div style={{ textAlign: "center", maxWidth: 360 }}>
           <div style={{ fontSize: 64, marginBottom: 12 }}>🏴‍☠️</div>
           <h1 style={{ ...S.heading, fontSize: 28, color: "#FBBF24", marginBottom: 8 }}>
-            Ahoy, avonturier!
+            {t.ui.nameScreen.title}
           </h1>
           <p style={{ ...S.body, fontSize: 16, color: "rgba(255,255,255,0.7)", marginBottom: 20 }}>
-            Hoe heet jij?
+            {t.ui.nameScreen.subtitle}
           </p>
-          <input value={nameInput} onChange={e => setNameInput(e.target.value)}
-            onKeyDown={e => e.key === "Enter" && saveName()}
-            placeholder="Jouw naam..."
-            style={{
-              width: "100%", padding: "14px 16px", borderRadius: 14,
-              border: "2px solid rgba(251,191,36,0.4)", background: "rgba(255,255,255,0.08)",
-              fontSize: 20, textAlign: "center", color: "#fff",
-              ...S.body, fontWeight: 600, marginBottom: 12,
-              outline: "none",
-            }}
-          />
-          <button onClick={saveName} style={S.btn("#F7931A", 18)}>Start het avontuur! 🚀</button>
+          <div style={{ width: "100%", marginBottom: 12 }}>
+            <input value={nameInput} onChange={e => setNameInput(e.target.value)}
+              onKeyDown={e => e.key === "Enter" && saveName()}
+              placeholder={t.ui.nameScreen.placeholder}
+              style={{
+                width: "100%", padding: "14px 16px", borderRadius: 14,
+                border: "2px solid rgba(251,191,36,0.4)", background: "rgba(255,255,255,0.08)",
+                fontSize: 20, textAlign: "center", color: "#fff",
+                ...S.body, fontWeight: 600,
+                outline: "none", boxSizing: "border-box",
+              }}
+            />
+          </div>
+          <button onClick={saveName} style={S.btn("#F7931A", 18)}>{t.ui.nameScreen.button}</button>
         </div>
       </div>
     );
@@ -94,34 +112,38 @@ export default function BitcoinVoorJunioren() {
       <Fonts />
 
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-        {Array.from({ length: 50 }, (_, i) => (
+        {stars.map((s, i) => (
           <div key={i} style={{
-            position: "absolute", left: `${Math.random() * 100}%`, top: `${Math.random() * 40}%`,
-            width: 1.5 + Math.random() * 2, height: 1.5 + Math.random() * 2,
+            position: "absolute", left: s.left, top: s.top,
+            width: s.size, height: s.size,
             borderRadius: "50%", background: "#fff",
-            opacity: 0.2 + Math.random() * 0.5,
-            animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite ${Math.random() * 3}s`,
+            opacity: s.opacity,
+            animation: `twinkle ${s.duration} ease-in-out infinite ${s.delay}`,
           }} />
         ))}
       </div>
 
       <div style={{ maxWidth: 520, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8 }}>
+          <LanguageSelector />
+        </div>
+
         <div style={{
           textAlign: "center", marginBottom: 20,
           opacity: loaded ? 1 : 0, transform: loaded ? "none" : "translateY(-16px)",
           transition: "all 0.5s ease",
         }}>
           <p style={{ ...S.body, fontSize: 14, color: "rgba(255,255,255,0.5)", marginBottom: 2 }}>
-            Ahoy, <span style={{ color: "#FBBF24", fontWeight: 700 }}>{progress.name}</span>! 🏴‍☠️
+            {t.ui.greeting.replace("{name}", progress.name)}
           </p>
           <h1 style={{
             ...S.heading, fontSize: 30,
             background: "linear-gradient(135deg, #F7931A, #FBBF24)",
             WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             marginBottom: 4,
-          }}>Bitcoin voor Junioren</h1>
+          }}>{t.ui.title}</h1>
           <p style={{ ...S.body, fontSize: 14, color: "rgba(255,255,255,0.55)" }}>
-            Ontdek de wereld van geld, waarde en Bitcoin!
+            {t.ui.subtitle}
           </p>
         </div>
 
@@ -131,7 +153,7 @@ export default function BitcoinVoorJunioren() {
           border: "1px solid rgba(255,255,255,0.08)",
         }}>
           <div style={{ display: "flex", justifyContent: "space-between", ...S.body, fontSize: 13, marginBottom: 6 }}>
-            <span style={{ color: "rgba(255,255,255,0.6)" }}>Voortgang</span>
+            <span style={{ color: "rgba(255,255,255,0.6)" }}>{t.ui.progress}</span>
             <span style={{ color: "#FBBF24", fontWeight: 700 }}>{done}/{totalActs}</span>
           </div>
           <div style={{ height: 14, borderRadius: 10, background: "rgba(0,0,0,0.2)", overflow: "hidden" }}>
@@ -204,12 +226,13 @@ export default function BitcoinVoorJunioren() {
             background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)",
             borderRadius: 10, padding: "8px 16px", ...S.body, fontSize: 13,
             color: "rgba(255,255,255,0.4)", cursor: "pointer",
-          }}>Nieuwe speler starten</button>
+          }}>{t.ui.newPlayer}</button>
         </div>
 
         <div style={{ textAlign: "center", marginTop: 16, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-          <p style={{ ...S.body, fontSize: 11, color: "rgba(255,255,255,0.2)" }}>
-            Gebaseerd op Bitcoin voor Junioren van My First Bitcoin · CC BY-SA 4.0
+          <DonateButton />
+          <p style={{ ...S.body, fontSize: 11, color: "rgba(255,255,255,0.2)", marginTop: 12 }}>
+            {t.ui.footer}
           </p>
         </div>
       </div>

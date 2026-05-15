@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin for Juniors",
+    "subtitle": "Discover the world of money, value, and Bitcoin!",
+    "progress": "Progress",
+    "newPlayer": "Start new player",
+    "newPlayerConfirm": "Start a new player? The current progress will be erased.",
+    "footer": "Based on Bitcoin for Juniors by My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, adventurer!",
+      "subtitle": "What's your name?",
+      "placeholder": "Your name...",
+      "button": "Start the adventure! 🚀"
+    },
+    "activity": {
+      "back": "← Back",
+      "next": "Next →",
+      "finish": "Done! 🎉",
+      "correct": "Correct!",
+      "wrong": "Wrong",
+      "score": "Score",
+      "tryAgain": "Try again",
+      "completed": "Completed!",
+      "badgeEarned": "Badge earned!"
+    },
+    "sort": {
+      "instruction": "Drag from cheapest to most expensive",
+      "check": "Check order"
+    },
+    "categorize": {
+      "instruction": "Drag to the correct category"
+    },
+    "match": {
+      "instruction": "Match the pairs"
+    },
+    "truefalse": {
+      "public": "Public",
+      "private": "Private"
+    },
+    "cipher": {
+      "instruction": "Crack the code using the cipher wheel"
+    },
+    "mining": {
+      "instruction": "Find the matching pairs"
+    },
+    "scramble": {
+      "instruction": "Unscramble the word",
+      "hint": "Hint"
+    },
+    "moduleView": {
+      "back": "← Back",
+      "map": "← Treasure Map",
+      "coreIdea": "💡 Core Idea",
+      "activities": "Activities",
+      "module": "Module"
+    },
+    "activityTypes": {
+      "quiz": "Quiz",
+      "sort": "Sort",
+      "match": "Match",
+      "cipher": "Code Cracking",
+      "mining": "Memory",
+      "truefalse": "Public/Private",
+      "categorize": "Categorize",
+      "scramble": "Word Scramble"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Exchange, Value & Price",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Value depends on what you need. Price is how much something costs. Money solves the problem of trading.",
+      "description": "Discover why we use money and what things are really worth!",
+      "badge": "🏝️ Island Trader",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Island Survival",
+          "intro": "You're a castaway on a deserted island!",
+          "questions": [
+            {
+              "q": "You wash up on a deserted island. What is worth the most?",
+              "options": [
+                "💎 Diamond",
+                "🔪 A machete",
+                "📱 Smartphone",
+                "💰 100 euros"
+              ],
+              "correct": 1,
+              "explanation": "On an island, a machete lets you chop wood, cut food, and build a shelter. Money and diamonds are useless there!"
+            },
+            {
+              "q": "You have 5 fishing rods but no tent. Your neighbor has 3 tents but no fishing rod. What do you do?",
+              "options": [
+                "Both wait",
+                "Trade: a fishing rod for a tent!",
+                "Nothing, tough luck",
+                "Cry together"
+              ],
+              "correct": 1,
+              "explanation": "Trading is the oldest way to do business! You give what you have extra of in exchange for what you need."
+            },
+            {
+              "q": "Why is trading sometimes really difficult?",
+              "options": [
+                "Because it's boring",
+                "Because you have to find someone who wants exactly what you have",
+                "Because it's not allowed",
+                "Because things are too heavy"
+              ],
+              "correct": 1,
+              "explanation": "This is called the 'double coincidence of wants'. Money solves this problem — everyone accepts money!"
+            },
+            {
+              "q": "Shells were once used as money. What makes something good money?",
+              "options": [
+                "It has to be pretty",
+                "It has to be scarce, portable, and accepted by everyone",
+                "It has to be edible",
+                "It has to come from the government"
+              ],
+              "correct": 1,
+              "explanation": "Good money is scarce (not endlessly available), easy to carry, and everyone must accept it as payment."
+            },
+            {
+              "q": "A bottle of water costs €1 at the supermarket. In the desert, someone offers you €100 for the same bottle. Why?",
+              "options": [
+                "The store was more expensive",
+                "Because water in the desert is much scarcer and more important",
+                "It's different water",
+                "The desert is far away"
+              ],
+              "correct": 1,
+              "explanation": "Scarcity changes value! The less there is of something and the more you need it, the more it's worth."
+            },
+            {
+              "q": "What is the difference between price and value?",
+              "options": [
+                "There is no difference",
+                "Price is how much something costs, value is how important something is to you",
+                "Price is always higher than value",
+                "Value is only about money"
+              ],
+              "correct": 1,
+              "explanation": "A drawing made by your child might have no price but enormous value. Price and value are not the same thing!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Price Line",
+          "intro": "Put the items in the correct order from cheapest to most expensive!",
+          "items": [
+            {
+              "name": "🍎 Apple",
+              "value": 1
+            },
+            {
+              "name": "📖 Book",
+              "value": 2
+            },
+            {
+              "name": "⚽ Soccer ball",
+              "value": 3
+            },
+            {
+              "name": "📱 Phone",
+              "value": 4
+            },
+            {
+              "name": "🛵 Scooter",
+              "value": 5
+            },
+            {
+              "name": "🏠 House",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Time, Energy & Reward",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Energy is limited. Balance between work, rest, and play is important. Patience leads to better results.",
+      "description": "How do you use your time and energy? And why is waiting sometimes smarter?",
+      "badge": "⏳ Time Master",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Work, Rest, or Play?",
+          "intro": "Drag each activity to the correct category!",
+          "categories": [
+            "💼 Work",
+            "😴 Rest",
+            "🎮 Play"
+          ],
+          "items": [
+            {
+              "name": "Doing homework",
+              "cat": 0
+            },
+            {
+              "name": "Sleeping",
+              "cat": 1
+            },
+            {
+              "name": "Playing soccer",
+              "cat": 2
+            },
+            {
+              "name": "Cleaning your room",
+              "cat": 0
+            },
+            {
+              "name": "Reading a book",
+              "cat": 1
+            },
+            {
+              "name": "Playing tag",
+              "cat": 2
+            },
+            {
+              "name": "Setting the table",
+              "cat": 0
+            },
+            {
+              "name": "Taking a nap",
+              "cat": 1
+            },
+            {
+              "name": "Playing video games",
+              "cat": 2
+            },
+            {
+              "name": "Going grocery shopping",
+              "cat": 0
+            },
+            {
+              "name": "Listening to music",
+              "cat": 1
+            },
+            {
+              "name": "Going to the climbing park",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Time Preference",
+          "intro": "Do you choose NOW or LATER?",
+          "questions": [
+            {
+              "q": "In the story of The Three Little Pigs: which house was left standing?",
+              "options": [
+                "🌾 Straw (built quickly)",
+                "🪵 Wood (in between)",
+                "🧱 Brick (took the most time)"
+              ],
+              "correct": 2,
+              "explanation": "The brick house took the most time and effort, but it was the only one left standing. Patience pays off!"
+            },
+            {
+              "q": "What does 'low time preference' mean?",
+              "options": [
+                "You want everything NOW",
+                "You are willing to wait for something better",
+                "You don't have a watch",
+                "You sleep a lot"
+              ],
+              "correct": 1,
+              "explanation": "Low time preference = being willing to wait for a better outcome. Just like the pig who built a house of bricks!"
+            },
+            {
+              "q": "You get 1 candy now, or 3 candies if you wait 10 minutes. What is the smartest choice?",
+              "options": [
+                "1 candy NOW!",
+                "Wait: 3 candies > 1 candy",
+                "Candy is unhealthy",
+                "Run away"
+              ],
+              "correct": 1,
+              "explanation": "This is the famous marshmallow test! Kids who could wait often did better in school later on."
+            },
+            {
+              "q": "You have an important test tomorrow. What is low time preference?",
+              "options": [
+                "Gaming now and studying tomorrow",
+                "Studying today so you do well tomorrow",
+                "Skipping the test",
+                "Hoping for luck"
+              ],
+              "correct": 1,
+              "explanation": "Doing something hard now (studying) so you get something good later (a good grade) — that's low time preference."
+            },
+            {
+              "q": "What happens if you use up all your energy in the morning?",
+              "options": [
+                "You get stronger",
+                "You have nothing left for the rest of the day",
+                "You get superpowers",
+                "Nothing special"
+              ],
+              "correct": 1,
+              "explanation": "Energy is limited! Spreading it out wisely is important — just like money."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analog versus Digital",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Technology keeps changing. Every invention solves a problem. Not everything new is automatically better.",
+      "description": "From carrier pigeons to the internet — how technology changes the world!",
+      "badge": "🚀 Tech Pioneer",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Old ↔ New",
+          "intro": "Match each old technology to its modern version!",
+          "pairs": [
+            {
+              "old": "✉️ Letter",
+              "new": "📧 Email"
+            },
+            {
+              "old": "📞 Rotary phone",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Paper map",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Film roll",
+              "new": "📸 Digital camera"
+            },
+            {
+              "old": "📰 Newspaper",
+              "new": "🌐 News website"
+            },
+            {
+              "old": "💰 Coins",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Imagine the Future",
+          "intro": "What might technology look like in 20 years?",
+          "questions": [
+            {
+              "q": "Why do technologies change over time?",
+              "options": [
+                "Because old things break",
+                "Because people solve problems with new inventions",
+                "Because the government wants it",
+                "For no reason"
+              ],
+              "correct": 1,
+              "explanation": "Every invention solves a problem. The car solved the problem of horses being slow and getting tired!"
+            },
+            {
+              "q": "Is new technology ALWAYS better than old technology?",
+              "options": [
+                "Yes, always",
+                "No, sometimes the old way is better or more reliable",
+                "New tech doesn't exist",
+                "Only if it's more expensive"
+              ],
+              "correct": 1,
+              "explanation": "A paper book doesn't need a battery! Sometimes old solutions are still really smart."
+            },
+            {
+              "q": "Bitcoin is digital money. What does it have in common with old shells?",
+              "options": [
+                "They both come from the sea",
+                "Both are scarce and used as a means of exchange",
+                "Nothing",
+                "Both are free"
+              ],
+              "correct": 1,
+              "explanation": "Both shells and Bitcoin are scarce (there is a limited amount) and are used as a means of exchange."
+            },
+            {
+              "q": "What is innovation?",
+              "options": [
+                "Buying something new",
+                "A clever improvement or invention that solves a problem",
+                "A fancy word for nothing",
+                "Only for scientists"
+              ],
+              "correct": 1,
+              "explanation": "Innovation = a new or better solution to an existing problem. Anyone can innovate!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Safety & Privacy",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "You decide what information you share. Codes protect messages. Trust isn't always needed when you have encryption.",
+      "description": "Secret codes, privacy, and how to protect yourself online!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Public or Private?",
+          "intro": "Is this information public or private? Decide fast!",
+          "statements": [
+            {
+              "text": "Your password",
+              "answer": false,
+              "label": "Private!",
+              "explanation": "A password is always private. Never share it!"
+            },
+            {
+              "text": "Your name at school",
+              "answer": true,
+              "label": "Public",
+              "explanation": "At school everyone knows your name — that's public information."
+            },
+            {
+              "text": "Your PIN code",
+              "answer": false,
+              "label": "Private!",
+              "explanation": "Your PIN is secret — it protects your bank account."
+            },
+            {
+              "text": "A park in the city",
+              "answer": true,
+              "label": "Public",
+              "explanation": "A park is a public place — anyone can go there."
+            },
+            {
+              "text": "Your diary",
+              "answer": false,
+              "label": "Private!",
+              "explanation": "Your diary is private — only you decide who gets to read it."
+            },
+            {
+              "text": "The color of your bike",
+              "answer": true,
+              "label": "Public",
+              "explanation": "Anyone can see what color your bike is."
+            },
+            {
+              "text": "Your home address",
+              "answer": false,
+              "label": "Private!",
+              "explanation": "You don't share your address with strangers — that's private information."
+            },
+            {
+              "text": "Today's weather",
+              "answer": true,
+              "label": "Public",
+              "explanation": "The weather is the same for everyone — completely public!"
+            },
+            {
+              "text": "Your Bitcoin key",
+              "answer": false,
+              "label": "Private!",
+              "explanation": "Your private key is the most important secret of all. Whoever has it controls your bitcoin!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Secret Code",
+          "intro": "Crack the secret Bitcoin words using the cipher wheel!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Money Matters",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "You can earn, save, invest, and spend money. Budgeting means making choices. Fair rules are important.",
+      "description": "Earning, saving, investing — become a money expert!",
+      "badge": "💎 Money Wise",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Smart with Money",
+          "intro": "Test how smart you are with money!",
+          "questions": [
+            {
+              "q": "What is saving?",
+              "options": [
+                "Spending money right away",
+                "Putting money aside for later",
+                "Throwing money away",
+                "Borrowing money from a friend"
+              ],
+              "correct": 1,
+              "explanation": "Saving = keeping money so you can buy something bigger or more important later."
+            },
+            {
+              "q": "What is investing?",
+              "options": [
+                "Hiding money",
+                "Putting your money or time into something so it becomes worth more later",
+                "Spending everything today",
+                "Burning money"
+              ],
+              "correct": 1,
+              "explanation": "Investing means putting your money or time into something with the hope that it will be worth more later."
+            },
+            {
+              "q": "You have 12 shells. A tent costs 8 and a fishing rod costs 6. Can you buy both?",
+              "options": [
+                "Yes!",
+                "No, 8 + 6 = 14, and you only have 12",
+                "Only with a discount",
+                "Shells aren't money"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, but you only have 12 shells. You have to choose! That's budgeting."
+            },
+            {
+              "q": "At an auction, the price of a rare item keeps going up. Why?",
+              "options": [
+                "The seller is mean",
+                "Multiple people want it, but there's only one (scarcity + demand)",
+                "The item keeps getting bigger",
+                "Because someone is cheating"
+              ],
+              "correct": 1,
+              "explanation": "When many people want something but there's very little of it, the price goes up. That's how supply and demand works!"
+            },
+            {
+              "q": "Why are fair rules about money important?",
+              "options": [
+                "They're not",
+                "So that everyone gets the same chance",
+                "Only for kids",
+                "So it becomes more difficult"
+              ],
+              "correct": 1,
+              "explanation": "Fair rules make sure no one can cheat and everyone has the same chance."
+            },
+            {
+              "q": "What is borrowing?",
+              "options": [
+                "Stealing money",
+                "Getting money from someone else that you have to pay back later",
+                "Saving money",
+                "Losing money"
+              ],
+              "correct": 1,
+              "explanation": "Borrowing means you get money from someone else, but you have to pay it back later — often with extra (interest)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Bitcoin Basics",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin is scarce digital money without a middleman. Mining confirms transactions. Satoshi remained anonymous.",
+      "description": "The great Bitcoin adventure: from Satoshi to mining!",
+      "badge": "⛏️ Bitcoin Miner",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Who is Satoshi?",
+          "intro": "Discover the story behind Bitcoin!",
+          "questions": [
+            {
+              "q": "Who invented Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "The bank",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto published a 'white paper' in 2008 with the idea for Bitcoin. Nobody knows who Satoshi really is!"
+            },
+            {
+              "q": "What is a 'white paper'?",
+              "options": [
+                "A blank piece of paper",
+                "A document in which you explain a new idea",
+                "A secret letter",
+                "A school assignment"
+              ],
+              "correct": 1,
+              "explanation": "A white paper is a document in which you present a new idea or solution to the world."
+            },
+            {
+              "q": "What is the Genesis Block?",
+              "options": [
+                "A computer game",
+                "The very first block of Bitcoin",
+                "A type of rock",
+                "A secret password"
+              ],
+              "correct": 1,
+              "explanation": "On January 3, 2009, the Genesis Block was created — the very first block in the Bitcoin blockchain."
+            },
+            {
+              "q": "How many bitcoins will ever exist?",
+              "options": [
+                "Infinitely many",
+                "A maximum of 21 million",
+                "Exactly 1 billion",
+                "Nobody knows"
+              ],
+              "correct": 1,
+              "explanation": "There will never be more than 21 million bitcoins. That scarcity is built into the rules!"
+            },
+            {
+              "q": "What is 'mining' in Bitcoin?",
+              "options": [
+                "Digging in the ground",
+                "Using computers to solve puzzles to confirm transactions",
+                "Printing bitcoins",
+                "Drawing bitcoins"
+              ],
+              "correct": 1,
+              "explanation": "Miners use computers to solve mathematical puzzles. As proof that they did the work, they get to confirm transactions."
+            },
+            {
+              "q": "What is Proof of Work?",
+              "options": [
+                "A school report",
+                "Proof that someone really put in effort to earn something",
+                "A password",
+                "A type of diploma"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = proof of work done. Just like a dice game: everyone follows the same rules and has the same chance."
+            },
+            {
+              "q": "Why did Satoshi disappear?",
+              "options": [
+                "He went on vacation",
+                "Probably to make Bitcoin truly belong to everyone, without a leader",
+                "He got angry",
+                "He doesn't exist"
+              ],
+              "correct": 1,
+              "explanation": "By disappearing, Satoshi made sure Bitcoin doesn't belong to one person. The network runs on rules, not on a leader."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Bitcoin Mining!",
+          "intro": "Find matching pairs to mine blocks — just like real miners!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoin Word Scramble",
+          "intro": "Unscramble the jumbled-up Bitcoin words!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Digital money"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "The mysterious inventor"
+            },
+            {
+              "scrambled": "KBCOL",
+              "answer": "BLOCK",
+              "hint": "Transactions are stored inside this"
+            },
+            {
+              "scrambled": "CREASC",
+              "answer": "SCARCE",
+              "hint": "There isn't much of it"
+            },
+            {
+              "scrambled": "INGMIN",
+              "answer": "MINING",
+              "hint": "Solving puzzles with computers"
+            },
+            {
+              "scrambled": "TELLAW",
+              "answer": "WALLET",
+              "hint": "This is where you store your bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

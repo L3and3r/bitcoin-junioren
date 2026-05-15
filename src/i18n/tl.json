@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin para sa mga Junyor",
+    "subtitle": "Tuklasin ang mundo ng pera, halaga, at Bitcoin!",
+    "progress": "Progreso",
+    "newPlayer": "Magsimula ng bagong manlalaro",
+    "newPlayerConfirm": "Magsimula ng bagong manlalaro? Mabubura ang kasalukuyang progreso.",
+    "footer": "Batay sa Bitcoin para sa mga Junyor ng My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, manlalakbay!",
+      "subtitle": "Ano ang iyong pangalan?",
+      "placeholder": "Ang iyong pangalan...",
+      "button": "Simulan ang pakikipagsapalaran! 🚀"
+    },
+    "activity": {
+      "back": "← Bumalik",
+      "next": "Susunod →",
+      "finish": "Tapos na! 🎉",
+      "correct": "Tama!",
+      "wrong": "Mali",
+      "score": "Puntos",
+      "tryAgain": "Subukan ulit",
+      "completed": "Natapos na!",
+      "badgeEarned": "Nakakuha ng badge!"
+    },
+    "sort": {
+      "instruction": "I-drag mula sa pinakamura hanggang pinakamahal",
+      "check": "Suriin ang pagkakasunod-sunod"
+    },
+    "categorize": {
+      "instruction": "I-drag sa tamang kategorya"
+    },
+    "match": {
+      "instruction": "Itugma ang mga pares"
+    },
+    "truefalse": {
+      "public": "Pampubliko",
+      "private": "Pribado"
+    },
+    "cipher": {
+      "instruction": "Basagin ang code gamit ang cipher wheel"
+    },
+    "mining": {
+      "instruction": "Hanapin ang magkaparehong pares"
+    },
+    "scramble": {
+      "instruction": "Ayusin ang salita",
+      "hint": "Pahiwatig"
+    },
+    "moduleView": {
+      "back": "← Bumalik",
+      "map": "← Mapa ng Kayamanan",
+      "coreIdea": "💡 Pangunahing Ideya",
+      "activities": "Mga Aktibidad",
+      "module": "Modyul"
+    },
+    "activityTypes": {
+      "quiz": "Pagsusulit",
+      "sort": "Pag-aayos",
+      "match": "Pagtutugma",
+      "cipher": "Pag-crack ng Code",
+      "mining": "Memory",
+      "truefalse": "Pampubliko/Pribado",
+      "categorize": "Pag-uuri",
+      "scramble": "Salitang Palaisipan"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Palitan, Halaga at Presyo",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Ang halaga ay nakasalalay sa iyong pangangailangan. Ang presyo ay kung magkano ang isang bagay. Nireresolta ng pera ang problema sa palitan.",
+      "description": "Tuklasin kung bakit gumagamit tayo ng pera at kung ano talaga ang halaga ng mga bagay!",
+      "badge": "🏝️ Mangangalakal ng Isla",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Mabuhay sa Isla",
+          "intro": "Ikaw ay isang nalugmok sa isang desyertong isla!",
+          "questions": [
+            {
+              "q": "Napadpad ka sa isang desyertong isla. Ano ang pinaka-mahalaga?",
+              "options": [
+                "💎 Diyamante",
+                "🔪 Isang itak",
+                "📱 Smartphone",
+                "💰 100 euro"
+              ],
+              "correct": 1,
+              "explanation": "Sa isang isla, magagamit mo ang itak para pumutol ng kahoy, putulin ang pagkain, at magtayo ng silungan. Ang pera at diyamante ay walang silbi doon!"
+            },
+            {
+              "q": "Mayroon kang 5 pambingwit ngunit walang tolda. Ang iyong kapitbahay ay may 3 tolda ngunit walang pambingwit. Ano ang gagawin ninyo?",
+              "options": [
+                "Parehong maghintay",
+                "Mag-trade: isang pambingwit para sa isang tolda!",
+                "Wala, malas na",
+                "Umiyak nang sama-sama"
+              ],
+              "correct": 1,
+              "explanation": "Ang palitan ay ang pinakamatandang paraan ng kalakalan! Ibinibigay mo ang labis mo para makuha ang kailangan mo."
+            },
+            {
+              "q": "Bakit minsan mahirap ang palitan?",
+              "options": [
+                "Dahil nakakainis ito",
+                "Dahil kailangan mong mahanap ang isang taong gusto nang tiyak ang mayroon ka",
+                "Dahil ipinagbabawal ito",
+                "Dahil mabigat ang mga bagay"
+              ],
+              "correct": 1,
+              "explanation": "Ito ay tinatawag na 'double coincidence of wants'. Nireresolta ng pera ang problemang ito — tinatanggap ng lahat ang pera!"
+            },
+            {
+              "q": "Ang mga kabibe ay ginamit noon bilang pera. Ano ang nagpapamagaling ng isang bagay bilang pera?",
+              "options": [
+                "Dapat itong maganda",
+                "Dapat itong bihira, madaling dalhin, at tinatanggap ng lahat",
+                "Dapat itong makain",
+                "Dapat itong galing sa pamahalaan"
+              ],
+              "correct": 1,
+              "explanation": "Ang magandang pera ay bihira (hindi walang katapusang mahahanap), madaling dalhin, at dapat tanggapin ng lahat bilang bayad."
+            },
+            {
+              "q": "Ang isang bote ng tubig ay nagkakahalaga ng ₱1 sa supermarket. Sa disyerto, may nag-aalok sa iyo ng ₱100 para sa parehong bote. Bakit?",
+              "options": [
+                "Mas mahal ang tindahan",
+                "Dahil sa disyerto, ang tubig ay mas bihira at mas mahalaga",
+                "Iba ang tubig",
+                "Malayo ang disyerto"
+              ],
+              "correct": 1,
+              "explanation": "Binabago ng kakulangan ang halaga! Habang mas kakaunti ang isang bagay at habang mas kailangan mo ito, mas tumataas ang halaga nito."
+            },
+            {
+              "q": "Ano ang pagkakaiba ng presyo at halaga?",
+              "options": [
+                "Walang pagkakaiba",
+                "Ang presyo ay kung magkano ang isang bagay, ang halaga ay kung gaano ito kahalaga para sa iyo",
+                "Ang presyo ay palaging mas mataas kaysa sa halaga",
+                "Ang halaga ay tungkol lamang sa pera"
+              ],
+              "correct": 1,
+              "explanation": "Ang guhit ng iyong anak ay maaaring walang presyo ngunit napakalaking halaga. Hindi pareho ang presyo at halaga!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Linya ng Presyo",
+          "intro": "Ayusin ang mga bagay sa tamang pagkakasunod-sunod mula sa pinakamura hanggang pinakamahal!",
+          "items": [
+            {
+              "name": "🍎 Mansanas",
+              "value": 1
+            },
+            {
+              "name": "📖 Libro",
+              "value": 2
+            },
+            {
+              "name": "⚽ Bola",
+              "value": 3
+            },
+            {
+              "name": "📱 Telepono",
+              "value": 4
+            },
+            {
+              "name": "🛵 Scooter",
+              "value": 5
+            },
+            {
+              "name": "🏠 Bahay",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Oras, Enerhiya at Gantimpala",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Limitado ang enerhiya. Mahalaga ang balanse sa pagitan ng trabaho, pahinga, at laro. Ang pasensya ay humahantong sa mas magandang resulta.",
+      "description": "Paano mo ginagamit ang iyong oras at enerhiya? At bakit minsan mas matalino ang maghintay?",
+      "badge": "⏳ Panginoon ng Oras",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Trabaho, Pahinga, o Laro?",
+          "intro": "I-drag ang bawat aktibidad sa tamang kategorya!",
+          "categories": [
+            "💼 Trabaho",
+            "😴 Pahinga",
+            "🎮 Laro"
+          ],
+          "items": [
+            {
+              "name": "Paggawa ng takdang-aralin",
+              "cat": 0
+            },
+            {
+              "name": "Pagtulog",
+              "cat": 1
+            },
+            {
+              "name": "Paglalaro ng football",
+              "cat": 2
+            },
+            {
+              "name": "Paglilinis ng kwarto",
+              "cat": 0
+            },
+            {
+              "name": "Pagbabasa ng libro",
+              "cat": 1
+            },
+            {
+              "name": "Paglalaro ng taguan",
+              "cat": 2
+            },
+            {
+              "name": "Paghahanda ng mesa",
+              "cat": 0
+            },
+            {
+              "name": "Pag-idlip",
+              "cat": 1
+            },
+            {
+              "name": "Paglalaro ng video game",
+              "cat": 2
+            },
+            {
+              "name": "Pamimili ng groceries",
+              "cat": 0
+            },
+            {
+              "name": "Pakikinig ng musika",
+              "cat": 1
+            },
+            {
+              "name": "Pagpunta sa playground",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Kagustuhan sa Oras",
+          "intro": "Pipiliin mo ba ang NGAYON o ang MAMAYA?",
+          "questions": [
+            {
+              "q": "Sa kwento ng Tatlong Biik: aling bahay ang nanatiling nakatayo?",
+              "options": [
+                "🌾 Dayami (mabilis na itinayo)",
+                "🪵 Kahoy (katamtaman)",
+                "🧱 Ladrilyo (tumagal ng pinakamataas na oras)"
+              ],
+              "correct": 2,
+              "explanation": "Ang bahay na ladrilyo ay tumagal ng pinakamataas na oras at pagsisikap, ngunit ito ang tanging nanatiling nakatayo. Nagbubunga ang pasensya!"
+            },
+            {
+              "q": "Ano ang ibig sabihin ng 'mababang kagustuhan sa oras'?",
+              "options": [
+                "Gusto mo ng lahat NGAYON",
+                "Handa kang maghintay para sa mas magandang bagay",
+                "Wala kang relo",
+                "Mahilig kang matulog"
+              ],
+              "correct": 1,
+              "explanation": "Mababang kagustuhan sa oras = handang maghintay para sa mas magandang resulta. Tulad ng biik na nagtayo ng bahay na bato!"
+            },
+            {
+              "q": "Makakakuha ka ng 1 kendi ngayon, o 3 kendi kung maghihintay ka ng 10 minuto. Ano ang mas matalinong pagpipilian?",
+              "options": [
+                "1 kendi NGAYON!",
+                "Maghintay: 3 kendi > 1 kendi",
+                "Ang kendi ay hindi malusog",
+                "Tumakbo na lang"
+              ],
+              "correct": 1,
+              "explanation": "Ito ang sikat na marshmallow test! Ang mga batang kayang maghintay ay madalas na nagtatagumpay sa paaralan sa paglaon."
+            },
+            {
+              "q": "Mayroon kang mahalagang pagsusulit bukas. Ano ang mababang kagustuhan sa oras?",
+              "options": [
+                "Maglaro ngayon at matuto bukas",
+                "Mag-aral ngayon para mahusay ka bukas",
+                "Laktawan ang pagsusulit",
+                "Umasa sa swerte"
+              ],
+              "correct": 1,
+              "explanation": "Gumawa ng mahirap na bagay ngayon (pag-aaral) para makakuha ng magandang resulta mamaya (mataas na marka) — iyon ang mababang kagustuhan sa oras."
+            },
+            {
+              "q": "Ano ang mangyayari kung gagastusin mo ang lahat ng iyong enerhiya sa umaga?",
+              "options": [
+                "Magiging mas malakas ka",
+                "Wala ka nang matitira para sa natitirang araw",
+                "Makakakuha ka ng superpower",
+                "Walang espesyal"
+              ],
+              "correct": 1,
+              "explanation": "Limitado ang enerhiya! Mahalaga ang matalinong pamamahagi — tulad ng pera."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analog kumpara sa Digital",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Palaging nagbabago ang teknolohiya. Ang bawat imbensiyon ay naglulutas ng problema. Hindi lahat ng bago ay awtomatikong mas maganda.",
+      "description": "Mula sa kalapati hanggang internet — kung paano binabago ng teknolohiya ang mundo!",
+      "badge": "🚀 Teknolohiyang Pioneer",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Luma ↔ Bago",
+          "intro": "Itugma ang bawat lumang teknolohiya sa modernong bersyon nito!",
+          "pairs": [
+            {
+              "old": "✉️ Sulat",
+              "new": "📧 E-mail"
+            },
+            {
+              "old": "📞 Rotary na telepono",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Papel na mapa",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Film roll",
+              "new": "📸 Digital na camera"
+            },
+            {
+              "old": "📰 Pahayagan",
+              "new": "🌐 Website ng balita"
+            },
+            {
+              "old": "💰 Barya",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Isipin ang Hinaharap",
+          "intro": "Ano ang hitsura ng teknolohiya sa loob ng 20 taon?",
+          "questions": [
+            {
+              "q": "Bakit nagbabago ang teknolohiya sa paglipas ng panahon?",
+              "options": [
+                "Dahil nasisira ang mga lumang bagay",
+                "Dahil nilulutas ng mga tao ang mga problema sa pamamagitan ng mga bagong imbensiyon",
+                "Dahil gusto ng pamahalaan",
+                "Walang dahilan"
+              ],
+              "correct": 1,
+              "explanation": "Ang bawat imbensiyon ay naglulutas ng problema. Nilutas ng kotse ang problema na mabagal at napapagod ang mga kabayo!"
+            },
+            {
+              "q": "Ang bagong teknolohiya ba ay PALAGING mas maganda kaysa sa luma?",
+              "options": [
+                "Oo, palagi",
+                "Hindi, minsan mas maganda o mas mapagkakatiwalaan ang luma",
+                "Hindi umiiral ang bagong teknolohiya",
+                "Tanging kapag mas mahal ito"
+              ],
+              "correct": 1,
+              "explanation": "Ang papel na libro ay hindi nangangailangan ng baterya! Minsan ang mga lumang solusyon ay matalino pa rin."
+            },
+            {
+              "q": "Ang Bitcoin ay digital na pera. Ano ang pagkakatulad nito sa mga lumang kabibe?",
+              "options": [
+                "Parehong galing sa dagat",
+                "Parehong bihira at ginagamit bilang paraan ng palitan",
+                "Wala",
+                "Parehong libre"
+              ],
+              "correct": 1,
+              "explanation": "Ang parehong kabibe at Bitcoin ay bihira (limitado ang dami) at ginagamit bilang paraan ng palitan."
+            },
+            {
+              "q": "Ano ang inobasyon?",
+              "options": [
+                "Bumili ng bagong bagay",
+                "Isang matalinong pagpapabuti o imbensiyon na naglulutas ng problema",
+                "Isang mahirap na salita para sa wala",
+                "Para lamang sa mga siyentipiko"
+              ],
+              "correct": 1,
+              "explanation": "Inobasyon = isang bago o mas mahusay na solusyon sa isang umiiral na problema. Lahat ay kayang mag-innovate!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Kaligtasan at Privacy",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Ikaw ang nagpapasya kung anong impormasyon ang ibabahagi mo. Nagpoprotekta ang mga code sa mga mensahe. Hindi palaging kailangan ng tiwala kapag mayroon kang encryption.",
+      "description": "Mga lihim na code, privacy, at kung paano mo protektahan ang iyong sarili online!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Pampubliko o Pribado?",
+          "intro": "Ang impormasyong ito ba ay pampubliko o pribado? Magpasya nang mabilis!",
+          "statements": [
+            {
+              "text": "Ang iyong password",
+              "answer": false,
+              "label": "Pribado!",
+              "explanation": "Ang password ay palaging pribado. Huwag itong ibahagi kahit kanino!"
+            },
+            {
+              "text": "Ang iyong pangalan sa paaralan",
+              "answer": true,
+              "label": "Pampubliko",
+              "explanation": "Sa paaralan, alam ng lahat ang iyong pangalan — iyon ay pampublikong impormasyon."
+            },
+            {
+              "text": "Ang iyong PIN",
+              "answer": false,
+              "label": "Pribado!",
+              "explanation": "Ang iyong PIN ay lihim — nagpoprotekta ito sa iyong bank account."
+            },
+            {
+              "text": "Isang parke sa lungsod",
+              "answer": true,
+              "label": "Pampubliko",
+              "explanation": "Ang isang parke ay isang pampublikong lugar — lahat ay maaaring pumunta doon."
+            },
+            {
+              "text": "Ang iyong talaarawan",
+              "answer": false,
+              "label": "Pribado!",
+              "explanation": "Ang iyong talaarawan ay pribado — ikaw lamang ang nagpapasya kung sino ang maaaring magbasa nito."
+            },
+            {
+              "text": "Ang kulay ng iyong bisikleta",
+              "answer": true,
+              "label": "Pampubliko",
+              "explanation": "Makikita ng lahat ang kulay ng iyong bisikleta."
+            },
+            {
+              "text": "Ang iyong address sa bahay",
+              "answer": false,
+              "label": "Pribado!",
+              "explanation": "Huwag ibahagi ang iyong address sa mga estranghero — iyon ay pribadong impormasyon."
+            },
+            {
+              "text": "Ang panahon ngayon",
+              "answer": true,
+              "label": "Pampubliko",
+              "explanation": "Ang panahon ay pareho para sa lahat — ganap na pampubliko!"
+            },
+            {
+              "text": "Ang iyong Bitcoin key",
+              "answer": false,
+              "label": "Pribado!",
+              "explanation": "Ang iyong private key ay ang pinaka-importanteng lihim. Ang sinumang nagtataglay nito ay may hawak ng iyong bitcoin!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Lihim na Code",
+          "intro": "I-crack ang mga lihim na salita ng Bitcoin gamit ang cipher wheel!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Pamamahala ng Pera",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Maaari kang kumita, mag-ipon, mag-invest, at gumastos ng pera. Ang pag-budget ay pagpili. Mahalaga ang mga makatarungang patakaran.",
+      "description": "Kumita, mag-ipon, mag-invest — maging eksperto sa pera!",
+      "badge": "💎 Matalinong Pinansyero",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Matalino sa Pera",
+          "intro": "Subukan kung gaano ka katalino pagdating sa pera!",
+          "questions": [
+            {
+              "q": "Ano ang pag-ipon?",
+              "options": [
+                "Gastusin agad ang pera",
+                "Itabi ang pera para sa hinaharap",
+                "Itapon ang pera",
+                "Humiram ng pera sa kaibigan"
+              ],
+              "correct": 1,
+              "explanation": "Pag-ipon = ingatan ang pera para makapag-buy ka ng mas malaki o mas mahalagang bagay sa hinaharap."
+            },
+            {
+              "q": "Ano ang pag-invest?",
+              "options": [
+                "Itago ang pera",
+                "Ilagak ang iyong pera o oras sa isang bagay para ito ay lumago sa hinaharap",
+                "Gastusin ang lahat ngayon",
+                "Sunugin ang pera"
+              ],
+              "correct": 1,
+              "explanation": "Ang pag-invest ay ang paglalagak ng iyong pera o oras sa isang bagay na umaasang magiging mas mahalaga ito sa hinaharap."
+            },
+            {
+              "q": "Mayroon kang 12 kabibe. Nagkakahalaga ng 8 ang tolda at 6 ang pambingwit. Mabibili mo ba ang pareho?",
+              "options": [
+                "Oo!",
+                "Hindi, 8 + 6 = 14, at mayroon ka lamang 12",
+                "Tanging may diskwento",
+                "Ang mga kabibe ay hindi pera"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, ngunit mayroon ka lamang 12 kabibe. Kailangan kang pumili! Iyon ang pag-budget."
+            },
+            {
+              "q": "Sa isang auction, ang presyo ng isang bihirang bagay ay patuloy na tumataas. Bakit?",
+              "options": [
+                "Masama ang nagbebenta",
+                "Maraming tao ang nagnanais nito, ngunit isa lamang (kakulangan + demand)",
+                "Lumalaki ang bagay",
+                "Dahil may nandadaya"
+              ],
+              "correct": 1,
+              "explanation": "Kapag maraming tao ang nagnanais ng isang bagay ngunit kakaunti lamang ito, tumaas ang presyo. Ganyan gumagana ang supply at demand!"
+            },
+            {
+              "q": "Bakit mahalaga ang mga makatarungang patakaran pagdating sa pera?",
+              "options": [
+                "Hindi sila mahalaga",
+                "Para lahat ay magkaroon ng pantay na pagkakataon",
+                "Para sa mga bata lamang",
+                "Para maging mas mahirap ito"
+              ],
+              "correct": 1,
+              "explanation": "Ang mga makatarungang patakaran ay nagtitibok na walang makakasirang at lahat ay may pantay na pagkakataon."
+            },
+            {
+              "q": "Ano ang panghihiram?",
+              "options": [
+                "Magnakaw ng pera",
+                "Makakuha ng pera mula sa iba na kailangan mong ibalik mamaya",
+                "Mag-ipon ng pera",
+                "Mawalan ng pera"
+              ],
+              "correct": 1,
+              "explanation": "Ang panghihiram ay ang pagkuha ng pera mula sa iba, ngunit kailangan mo itong ibalik mamaya — madalas na may karagdagan (interes)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Mga Pangunahing Prinsipyo ng Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Ang Bitcoin ay bihirang digital na pera na walang tagapamagitan. Kinukumpirma ng mining ang mga transaksyon. Nanatiling anonymous si Satoshi.",
+      "description": "Ang malaking pakikipagsapalaran sa Bitcoin: mula kay Satoshi hanggang sa mining!",
+      "badge": "⛏️ Bitcoin Miner",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Sino si Satoshi?",
+          "intro": "Tuklasin ang kwento sa likod ng Bitcoin!",
+          "questions": [
+            {
+              "q": "Sino ang nag-imbento ng Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Ang bangko",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Nag-publish si Satoshi Nakamoto ng isang 'white paper' noong 2008 na nagpapakita ng ideya para sa Bitcoin. Walang nakakaalam kung sino talaga si Satoshi!"
+            },
+            {
+              "q": "Ano ang isang 'white paper'?",
+              "options": [
+                "Isang blangkong papel",
+                "Isang dokumento kung saan mo ipinaliliwanag ang isang bagong ideya",
+                "Isang lihim na sulat",
+                "Isang takdang-aralin sa paaralan"
+              ],
+              "correct": 1,
+              "explanation": "Ang white paper ay isang dokumento kung saan mo ipinepresenta ang isang bagong ideya o solusyon sa mundo."
+            },
+            {
+              "q": "Ano ang Genesis Block?",
+              "options": [
+                "Isang computer game",
+                "Ang unang bloke ng Bitcoin",
+                "Isang uri ng bato",
+                "Isang lihim na password"
+              ],
+              "correct": 1,
+              "explanation": "Noong Enero 3, 2009, nilikha ang Genesis Block — ang unang bloke sa Bitcoin blockchain."
+            },
+            {
+              "q": "Ilan ang bitcoin na maaaring mabuo?",
+              "options": [
+                "Walang katapusan",
+                "Maximum na 21 milyon",
+                "Eksakto 1 bilyon",
+                "Walang nakakaalam"
+              ],
+              "correct": 1,
+              "explanation": "Hindi kailanman magiging higit sa 21 milyong bitcoin. Ang kakulangang iyon ay nakabuilt-in sa mga patakaran!"
+            },
+            {
+              "q": "Ano ang 'mining' sa Bitcoin?",
+              "options": [
+                "Maghukay sa lupa",
+                "Gamitin ang mga computer para lutasin ang mga palaisipan upang kumpirmahin ang mga transaksyon",
+                "Mag-print ng bitcoin",
+                "Gumuhit ng bitcoin"
+              ],
+              "correct": 1,
+              "explanation": "Gumagamit ang mga miner ng computer para lutasin ang mga mathematical na palaisipan. Bilang patunay na nagawa nila ang trabaho, pinapayagan silang kumpirmahin ang mga transaksyon."
+            },
+            {
+              "q": "Ano ang Proof of Work?",
+              "options": [
+                "Isang ulat mula sa paaralan",
+                "Patunay na talagang nagsumikap ang isang tao para kumita ng isang bagay",
+                "Isang password",
+                "Isang uri ng diploma"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = katibayan ng trabaho. Tulad ng laruan ng dais: lahat ay sumusunod sa parehong patakaran at may pantay na pagkakataon."
+            },
+            {
+              "q": "Bakit nawala si Satoshi?",
+              "options": [
+                "Pumunta siya sa bakasyon",
+                "Malamang upang hayaang maging pag-aari ng lahat ang Bitcoin, nang walang lider",
+                "Nagalit siya",
+                "Hindi siya umiiral"
+              ],
+              "correct": 1,
+              "explanation": "Sa pamamagitan ng pagwawala, tiniyak ni Satoshi na ang Bitcoin ay hindi pag-aari ng isang tao. Ang network ay tumatakbo sa mga patakaran, hindi sa isang lider."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Mag-mine ng Bitcoin!",
+          "intro": "Hanapin ang magkaparehong pares para mag-mine ng mga bloke — tulad ng mga tunay na miner!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoin Salitang Palaisipan",
+          "intro": "Ayusin ang mga magulo-gulong salita tungkol sa Bitcoin!",
+          "words": [
+            {
+              "scrambled": "TEPIR",
+              "answer": "PITER",
+              "hint": "Digital na pera"
+            },
+            {
+              "scrambled": "ISAHOTS",
+              "answer": "SATOSHI",
+              "hint": "Ang misteryosong imbentor"
+            },
+            {
+              "scrambled": "KLOEB",
+              "answer": "BLOKE",
+              "hint": "Narito nakalagay ang mga transaksyon"
+            },
+            {
+              "scrambled": "ABIRH",
+              "answer": "BIHIRA",
+              "hint": "Kakaunti lamang"
+            },
+            {
+              "scrambled": "GINNIM",
+              "answer": "MINING",
+              "hint": "Pagluluto ng mga palaisipan sa computer"
+            },
+            {
+              "scrambled": "LATEL",
+              "answer": "WALLET",
+              "hint": "Dito mo itinatago ang iyong bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

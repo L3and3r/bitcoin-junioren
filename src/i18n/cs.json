@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoj, {name}! 🏴‍☠️",
+    "title": "Bitcoin pro Juniory",
+    "subtitle": "Objevte svět peněz, hodnoty a Bitcoinu!",
+    "progress": "Postup",
+    "newPlayer": "Spustit nového hráče",
+    "newPlayerConfirm": "Spustit nového hráče? Aktuální postup bude smazán.",
+    "footer": "Založeno na Bitcoin pro Juniory od My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoj, dobrodruhu!",
+      "subtitle": "Jak se jmenuješ?",
+      "placeholder": "Tvoje jméno...",
+      "button": "Začít dobrodružství! 🚀"
+    },
+    "activity": {
+      "back": "← Zpět",
+      "next": "Další →",
+      "finish": "Hotovo! 🎉",
+      "correct": "Správně!",
+      "wrong": "Špatně",
+      "score": "Skóre",
+      "tryAgain": "Zkusit znovu",
+      "completed": "Dokončeno!",
+      "badgeEarned": "Odznak získán!"
+    },
+    "sort": {
+      "instruction": "Přetáhni od nejlevnějšího k nejdražšímu",
+      "check": "Zkontrolovat pořadí"
+    },
+    "categorize": {
+      "instruction": "Přetáhni do správné kategorie"
+    },
+    "match": {
+      "instruction": "Spoj dvojice"
+    },
+    "truefalse": {
+      "public": "Veřejné",
+      "private": "Soukromé"
+    },
+    "cipher": {
+      "instruction": "Rozluštěte kód pomocí šifrovacího kolečka"
+    },
+    "mining": {
+      "instruction": "Najdi stejné dvojice"
+    },
+    "scramble": {
+      "instruction": "Rozluštěte slovo",
+      "hint": "Nápověda"
+    },
+    "moduleView": {
+      "back": "← Zpět",
+      "map": "← Mapa pokladů",
+      "coreIdea": "💡 Hlavní myšlenka",
+      "activities": "Aktivity",
+      "module": "Modul"
+    },
+    "activityTypes": {
+      "quiz": "Kvíz",
+      "sort": "Řazení",
+      "match": "Párování",
+      "cipher": "Luštění kódů",
+      "mining": "Pexeso",
+      "truefalse": "Veřejné/Soukromé",
+      "categorize": "Třídění",
+      "scramble": "Hádat slovo"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Výměna, Hodnota a Cena",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Hodnota závisí na tom, co potřebuješ. Cena je to, kolik něco stojí. Peníze řeší problém výměny.",
+      "description": "Zjisti, proč používáme peníze a co věci skutečně znamenají!",
+      "badge": "🏝️ Ostrovní obchodník",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Přežití na ostrově",
+          "intro": "Ztroskotals na opuštěném ostrově!",
+          "questions": [
+            {
+              "q": "Vyplavilo tě na opuštěný ostrov. Co má největší hodnotu?",
+              "options": [
+                "💎 Diamant",
+                "🔪 Mačeta",
+                "📱 Smartphone",
+                "💰 100 eur"
+              ],
+              "correct": 1,
+              "explanation": "Na ostrově můžeš mačetou sekat dřevo, krájet jídlo a postavit přístřeší. Peníze a diamanty tam k ničemu nejsou!"
+            },
+            {
+              "q": "Máš 5 rybářských prutů, ale nemáš stan. Tvůj soused má 3 stany, ale žádný prut. Co uděláte?",
+              "options": [
+                "Oba čekat",
+                "Vyměnit: prut za stan!",
+                "Nic, smůla",
+                "Plakat spolu"
+              ],
+              "correct": 1,
+              "explanation": "Výměna je nejstarší způsob obchodování! Dáš, co máš navíc, za to, co potřebuješ."
+            },
+            {
+              "q": "Proč je výměna někdy velmi obtížná?",
+              "options": [
+                "Protože je to nuda",
+                "Protože musíš najít někoho, kdo chce přesně to, co máš ty",
+                "Protože je to zakázané",
+                "Protože věci jsou příliš těžké"
+              ],
+              "correct": 1,
+              "explanation": "Tomu se říká 'dvojí shoda potřeb'. Peníze tento problém řeší — každý přijímá peníze!"
+            },
+            {
+              "q": "Mušle se dříve používaly jako peníze. Co dělá z něčeho dobré peníze?",
+              "options": [
+                "Musí být krásné",
+                "Musí být vzácné, přenosné a všemi přijímané",
+                "Musí být jedlé",
+                "Musí pocházet od vlády"
+              ],
+              "correct": 1,
+              "explanation": "Dobré peníze jsou vzácné (nelze je najít v neomezeném množství), snadno přenosné a každý je musí přijímat jako platbu."
+            },
+            {
+              "q": "Lahev vody stojí 1 € v supermarketu. Na poušti ti někdo nabídne 100 € za stejnou lahev. Proč?",
+              "options": [
+                "Obchod byl dražší",
+                "Protože voda na poušti je mnohem vzácnější a důležitější",
+                "Je to jin�� voda",
+                "Poušť je daleko"
+              ],
+              "correct": 1,
+              "explanation": "Nedostatek mění hodnotu! Čím méně něčeho je a čím víc to potřebuješ, tím více to stojí."
+            },
+            {
+              "q": "Jaký je rozdíl mezi cenou a hodnotou?",
+              "options": [
+                "Žádný rozdíl není",
+                "Cena je to, kolik něco stojí, hodnota je to, jak důležité to pro tebe je",
+                "Cena je vždy vyšší než hodnota",
+                "Hodnota se týká jen peněz"
+              ],
+              "correct": 1,
+              "explanation": "Kresba od tvého dítěte možná nemá žádnou cenu, ale má obrovskou hodnotu. Cena a hodnota nejsou totéž!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Cenová řada",
+          "intro": "Seřaď předměty ve správném pořadí od nejlevnějšího k nejdražšímu!",
+          "items": [
+            {
+              "name": "🍎 Jablko",
+              "value": 1
+            },
+            {
+              "name": "📖 Kniha",
+              "value": 2
+            },
+            {
+              "name": "⚽ Fotbalový míč",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Skútr",
+              "value": 5
+            },
+            {
+              "name": "🏠 Dům",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Čas, Energie a Odměna",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Energie je omezená. Rovnováha mezi prací, odpočinkem a hrou je důležitá. Trpělivost vede k lepším výsledkům.",
+      "description": "Jak využíváš svůj čas a energii? A proč je někdy chytřejší počkat?",
+      "badge": "⏳ Mistr času",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Práce, Odpočinek nebo Hra?",
+          "intro": "Přetáhni každou aktivitu do správné kategorie!",
+          "categories": [
+            "💼 Práce",
+            "😴 Odpočinek",
+            "🎮 Hra"
+          ],
+          "items": [
+            {
+              "name": "Dělat domácí úkoly",
+              "cat": 0
+            },
+            {
+              "name": "Spát",
+              "cat": 1
+            },
+            {
+              "name": "Hrát fotbal",
+              "cat": 2
+            },
+            {
+              "name": "Uklízet pokoj",
+              "cat": 0
+            },
+            {
+              "name": "Číst knihu",
+              "cat": 1
+            },
+            {
+              "name": "Hrát honičku",
+              "cat": 2
+            },
+            {
+              "name": "Prostírat stůl",
+              "cat": 0
+            },
+            {
+              "name": "Zdřímnout si",
+              "cat": 1
+            },
+            {
+              "name": "Hrát videohry",
+              "cat": 2
+            },
+            {
+              "name": "Nakupovat",
+              "cat": 0
+            },
+            {
+              "name": "Poslouchat hudbu",
+              "cat": 1
+            },
+            {
+              "name": "Jít na hřiště",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Časová preference",
+          "intro": "Vybíráš TEĎ nebo POZDĚJI?",
+          "questions": [
+            {
+              "q": "V pohádce O třech prasátkách: který dům zůstal stát?",
+              "options": [
+                "🌾 Slámový (postavený rychle)",
+                "🪵 Dřevěný (průměrně)",
+                "🧱 Cihlový (trval nejdéle)"
+              ],
+              "correct": 2,
+              "explanation": "Cihlový dům trval nejdéle a dal nejvíce práce, ale byl jediný, který zůstal stát. Trpělivost se vyplácí!"
+            },
+            {
+              "q": "Co znamená 'nízká časová preference'?",
+              "options": [
+                "Chceš všechno TEĎ",
+                "Jsi ochotný počkat na něco lepšího",
+                "Nemáš hodinky",
+                "Hodně spíš"
+              ],
+              "correct": 1,
+              "explanation": "Nízká časová preference = ochota počkat na lepší výsledek. Jako prasátko, které postavilo kamenný dům!"
+            },
+            {
+              "q": "Dostaneš 1 bonbon teď, nebo 3 bonbony, když počkáš 10 minut. Co je chytřejší volba?",
+              "options": [
+                "1 bonbon TEĎ!",
+                "Počkat: 3 bonbony > 1 bonbon",
+                "Bonbony jsou nezdravé",
+                "Utéct"
+              ],
+              "correct": 1,
+              "explanation": "To je slavný marshmallow test! Děti, které dokázaly počkat, měly později ve škole často lepší výsledky."
+            },
+            {
+              "q": "Zítra máš důležitý test. Co je nízká časová preference?",
+              "options": [
+                "Teď hrát hry a učit se zítra",
+                "Učit se dnes, aby ses zítra dobře zapsal",
+                "Vynechat test",
+                "Doufat ve štěstí"
+              ],
+              "correct": 1,
+              "explanation": "Udělat teď něco těžkého (učit se), abys později dostal něco dobrého (dobrou známku) — to je nízká časová preference."
+            },
+            {
+              "q": "Co se stane, když spotřebuješ veškerou energii ráno?",
+              "options": [
+                "Zesílíš",
+                "Na zbytek dne ti nic nezbyde",
+                "Získáš superschopnosti",
+                "Nic zvláštního"
+              ],
+              "correct": 1,
+              "explanation": "Energie je omezená! Chytré rozdělení je důležité — stejně jako u peněz."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analogové versus Digitální",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Technologie se neustále mění. Každý vynález řeší nějaký problém. Ne vše nové je automaticky lepší.",
+      "description": "Od poštovního holuba po internet — jak technologie mění svět!",
+      "badge": "🚀 Technologický průkopník",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Staré ↔ Nové",
+          "intro": "Spoj každou starou technologii s její moderní verzí!",
+          "pairs": [
+            {
+              "old": "✉️ Dopis",
+              "new": "📧 E-mail"
+            },
+            {
+              "old": "📞 Točitý telefon",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Papírová mapa",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Kinofilm",
+              "new": "📸 Digitální fotoaparát"
+            },
+            {
+              "old": "📰 Noviny",
+              "new": "🌐 Zpravodajský web"
+            },
+            {
+              "old": "💰 Mince",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Vymysli budoucnost",
+          "intro": "Jak by mohla technologie vypadat za 20 let?",
+          "questions": [
+            {
+              "q": "Proč se technologie v průběhu času mění?",
+              "options": [
+                "Protože se staré věci rozbíjejí",
+                "Protože lidé řeší problémy novými vynálezy",
+                "Protože to chce vláda",
+                "Bez důvodu"
+              ],
+              "correct": 1,
+              "explanation": "Každý vynález řeší nějaký problém. Auto vyřešilo problém, že koně jsou pomalí a unavení!"
+            },
+            {
+              "q": "Je nová technologie VŽDY lepší než stará?",
+              "options": [
+                "Ano, vždy",
+                "Ne, někdy je to staré lepší nebo spolehlivější",
+                "Nová technika neexistuje",
+                "Pouze pokud je dražší"
+              ],
+              "correct": 1,
+              "explanation": "Papírová kniha nepotřebuje baterii! Někdy jsou stará řešení stále chytrá."
+            },
+            {
+              "q": "Bitcoin je digitální peníze. Co má společného se starými mušlemi?",
+              "options": [
+                "Obě pocházejí z moře",
+                "Obě jsou vzácné a používají se jako platidlo",
+                "Nic",
+                "Obě jsou zdarma"
+              ],
+              "correct": 1,
+              "explanation": "Mušle i Bitcoin jsou vzácné (existuje omezené množství) a používají se jako platidlo."
+            },
+            {
+              "q": "Co je inovace?",
+              "options": [
+                "Koupit něco nového",
+                "Chytré vylepšení nebo vynález, který řeší problém",
+                "Složité slovo pro nic",
+                "Jen pro vědce"
+              ],
+              "correct": 1,
+              "explanation": "Inovace = nové nebo lepší řešení existujícího problému. Inovovat může každý!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Bezpečnost a Soukromí",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Ty rozhoduješ, jaké informace sdílíš. Kódy chrání zprávy. Důvěra není vždy nutná, pokud máš šifrování.",
+      "description": "Tajné kódy, soukromí a jak se chránit online!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Veřejné nebo Soukromé?",
+          "intro": "Je tato informace veřejná nebo soukromá? Rozhoduj rychle!",
+          "statements": [
+            {
+              "text": "Tvoje heslo",
+              "answer": false,
+              "label": "Soukromé!",
+              "explanation": "Heslo je vždy soukromé. Nikdy ho nesdílej!"
+            },
+            {
+              "text": "Tvoje jméno ve škole",
+              "answer": true,
+              "label": "Veřejné",
+              "explanation": "Ve škole všichni vědí, jak se jmenuješ — to je veřejná informace."
+            },
+            {
+              "text": "Tvůj PIN",
+              "answer": false,
+              "label": "Soukromé!",
+              "explanation": "Tvůj PIN je tajný — chrání tvůj bankovní účet."
+            },
+            {
+              "text": "Park ve městě",
+              "answer": true,
+              "label": "Veřejné",
+              "explanation": "Park je veřejné místo — může tam přijít každý."
+            },
+            {
+              "text": "Tvůj deník",
+              "answer": false,
+              "label": "Soukromé!",
+              "explanation": "Tvůj deník je soukromý — jen ty rozhoduješ, kdo ho smí číst."
+            },
+            {
+              "text": "Barva tvého kola",
+              "answer": true,
+              "label": "Veřejné",
+              "explanation": "Každý může vidět, jakou barvu má tvoje kolo."
+            },
+            {
+              "text": "Tvoje domácí adresa",
+              "answer": false,
+              "label": "Soukromé!",
+              "explanation": "Adresu nesdílej s cizími lidmi — to je soukromá informace."
+            },
+            {
+              "text": "Dnešní počasí",
+              "answer": true,
+              "label": "Veřejné",
+              "explanation": "Počasí je pro každého stejné — zcela veřejné!"
+            },
+            {
+              "text": "Tvůj Bitcoin klíč",
+              "answer": false,
+              "label": "Soukromé!",
+              "explanation": "Tvůj soukromý klíč je nejdůležitější tajemství. Kdo ho má, má tvoje bitcoiny!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Tajný kód",
+          "intro": "Rozluštěte tajná bitcoinová slova pomocí šifrovacího kolečka!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Finanční záležitosti",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Peníze můžeš vydělávat, spořit, investovat a utrácet. Sestavení rozpočtu je volba. Spravedlivá pravidla jsou důležitá.",
+      "description": "Vydělávat, spořit, investovat — staň se expertem na peníze!",
+      "badge": "💎 Finanční moudrý",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Chytře s penězi",
+          "intro": "Otestuj, jak chytře zacházíš s penězi!",
+          "questions": [
+            {
+              "q": "Co je spoření?",
+              "options": [
+                "Hned utratit peníze",
+                "Odkládat peníze na později",
+                "Vyhazovat peníze",
+                "Půjčovat si peníze od kamaráda"
+              ],
+              "correct": 1,
+              "explanation": "Spořit = odkládat peníze, abys si mohl(a) později koupit něco většího nebo důležitějšího."
+            },
+            {
+              "q": "Co je investování?",
+              "options": [
+                "Schovávat peníze",
+                "Vložit peníze nebo čas někam, aby měly později větší hodnotu",
+                "Vše utratit dnes",
+                "Pálit peníze"
+              ],
+              "correct": 1,
+              "explanation": "Investovat znamená vložit peníze nebo čas do něčeho s nadějí, že to bude mít větší hodnotu."
+            },
+            {
+              "q": "Máš 12 mušlí. Stan stojí 8 a rybářský prut stojí 6. Můžeš koupit obojí?",
+              "options": [
+                "Ano!",
+                "Ne, 8 + 6 = 14, ale máš jen 12",
+                "Jen se slevou",
+                "Mušle nejsou peníze"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, ale máš jen 12 mušlí. Musíš si vybrat! To je sestavování rozpočtu."
+            },
+            {
+              "q": "Na aukci cena vzácného předmětu stále stoupá. Proč?",
+              "options": [
+                "Prodávající je zlý",
+                "Více lidí ho chce, ale je jen jeden (nedostatek + poptávka)",
+                "Předmět se pořád zvětšuje",
+                "Protože někdo podvádí"
+              ],
+              "correct": 1,
+              "explanation": "Když hodně lidí chce něco, čeho je málo, cena roste. Tak funguje nabídka a poptávka!"
+            },
+            {
+              "q": "Proč jsou spravedlivá pravidla u peněz důležitá?",
+              "options": [
+                "Nejsou",
+                "Aby každý měl stejnou šanci",
+                "Jen pro děti",
+                "Aby to bylo těžší"
+              ],
+              "correct": 1,
+              "explanation": "Spravedlivá pravidla zajišťují, že nikdo nemůže podvádět a každý má stejnou šanci."
+            },
+            {
+              "q": "Co je půjčka?",
+              "options": [
+                "Krást peníze",
+                "Dostat peníze od někoho jiného, které musíš vrátit",
+                "Spořit peníze",
+                "Ztratit peníze"
+              ],
+              "correct": 1,
+              "explanation": "Půjčit si znamená dostat peníze od někoho jiného, ale musíš je vrátit — často i s navíc (úrokem)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Základy Bitcoinu",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin je vzácné digitální peníze bez prostředníka. Těžba potvrzuje transakce. Satoshi zůstal anonymní.",
+      "description": "Velké bitcoinové dobrodružství: od Satoshiho po těžbu!",
+      "badge": "⛏️ Bitcoinový těžař",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Kdo je Satoshi?",
+          "intro": "Objev příběh za Bitcoinem!",
+          "questions": [
+            {
+              "q": "Kdo vymyslel Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Banka",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto zveřejnil v roce 2008 'white paper' s nápadem pro Bitcoin. Nikdo neví, kdo Satoshi skutečně je!"
+            },
+            {
+              "q": "Co je 'white paper'?",
+              "options": [
+                "Prázdný list papíru",
+                "Dokument, ve kterém vysvětluješ nový nápad",
+                "Tajný dopis",
+                "Školní úkol"
+              ],
+              "correct": 1,
+              "explanation": "White paper je dokument, ve kterém představuješ světu nový nápad nebo řešení."
+            },
+            {
+              "q": "Co je Genesis Block?",
+              "options": [
+                "Počítačová hra",
+                "Úplně první blok Bitcoinu",
+                "Druh kamene",
+                "Tajné heslo"
+              ],
+              "correct": 1,
+              "explanation": "3. ledna 2009 byl vytvořen Genesis Block — úplně první blok v bitcoinovém blockchainu."
+            },
+            {
+              "q": "Kolik bitcoinů kdy bude existovat?",
+              "options": [
+                "Nekonečně mnoho",
+                "Maximálně 21 milionů",
+                "Přesně 1 miliarda",
+                "To nikdo neví"
+              ],
+              "correct": 1,
+              "explanation": "Nikdy nebude existovat více než 21 milionů bitcoinů. Tato vzácnost je zabudována do pravidel!"
+            },
+            {
+              "q": "Co je 'těžba' u Bitcoinu?",
+              "options": [
+                "Kopat v zemi",
+                "Řešit počítačem hádanky pro potvrzení transakcí",
+                "Tisknout bitcoiny",
+                "Kreslit bitcoiny"
+              ],
+              "correct": 1,
+              "explanation": "Těžaři používají počítače k řešení matematických hádanek. Jako důkaz vykonané práce smějí potvrzovat transakce."
+            },
+            {
+              "q": "Co je Proof of Work?",
+              "options": [
+                "Školní zpráva",
+                "Důkaz, že někdo skutečně vynaložil úsilí, aby něco získal",
+                "Heslo",
+                "Druh diplomu"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = důkaz práce. Stejně jako v kostkovací hře: každý dodržuje stejná pravidla a má stejnou šanci."
+            },
+            {
+              "q": "Proč Satoshi zmizel?",
+              "options": [
+                "Šel na dovolenou",
+                "Pravděpodobně proto, aby Bitcoin skutečně patřil všem, bez vůdce",
+                "Rozčílil se",
+                "Neexistuje"
+              ],
+              "correct": 1,
+              "explanation": "Zmizením Satoshi zajistil, že Bitcoin nepatří jedné osobě. Síť funguje na základě pravidel, ne na vůdci."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Těžba Bitcoinu!",
+          "intro": "Najdi stejné dvojice a těž bloky — stejně jako skuteční těžaři!"
+        },
+        {
+          "type": "scramble",
+          "title": "Bitcoinový hádat slovo",
+          "intro": "Rozluštěte přesmyčky bitcoinových slov!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Digitální peníze"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "Tajemný vynálezce"
+            },
+            {
+              "scrambled": "KOBLO",
+              "answer": "BLOK",
+              "hint": "Transakce jsou uvnitř"
+            },
+            {
+              "scrambled": "CZVÁKNS",
+              "answer": "VZÁCNÝ",
+              "hint": "Není toho mnoho"
+            },
+            {
+              "scrambled": "BATŽE",
+              "answer": "TĚŽBA",
+              "hint": "Řešit hádanky počítačem"
+            },
+            {
+              "scrambled": "EENŽPKA",
+              "answer": "PENĚŽENKA",
+              "hint": "Zde uchováváš bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin pentru Juniori",
+    "subtitle": "Descoperă lumea banilor, valorii și Bitcoin!",
+    "progress": "Progres",
+    "newPlayer": "Începe jucător nou",
+    "newPlayerConfirm": "Începi cu un jucător nou? Progresul curent va fi șters.",
+    "footer": "Bazat pe Bitcoin pentru Juniori de My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, aventurierule!",
+      "subtitle": "Cum te cheamă?",
+      "placeholder": "Numele tău...",
+      "button": "Începe aventura! 🚀"
+    },
+    "activity": {
+      "back": "← Înapoi",
+      "next": "Următor →",
+      "finish": "Gata! 🎉",
+      "correct": "Corect!",
+      "wrong": "Greșit",
+      "score": "Scor",
+      "tryAgain": "Încearcă din nou",
+      "completed": "Finalizat!",
+      "badgeEarned": "Insignă câștigată!"
+    },
+    "sort": {
+      "instruction": "Trage de la ieftin la scump",
+      "check": "Verifică ordinea"
+    },
+    "categorize": {
+      "instruction": "Trage în categoria corectă"
+    },
+    "match": {
+      "instruction": "Asociază perechile"
+    },
+    "truefalse": {
+      "public": "Public",
+      "private": "Privat"
+    },
+    "cipher": {
+      "instruction": "Sparge codul cu roata cifrului"
+    },
+    "mining": {
+      "instruction": "G��sește perechile identice"
+    },
+    "scramble": {
+      "instruction": "Descurcă cuvântul",
+      "hint": "Indiciu"
+    },
+    "moduleView": {
+      "back": "← Înapoi",
+      "map": "← Harta comorii",
+      "coreIdea": "💡 Idee principală",
+      "activities": "Activități",
+      "module": "Modul"
+    },
+    "activityTypes": {
+      "quiz": "Quiz",
+      "sort": "Sortare",
+      "match": "Asociere",
+      "cipher": "Spargere de coduri",
+      "mining": "Memory",
+      "truefalse": "Public/Privat",
+      "categorize": "Categorizare",
+      "scramble": "Descurcă cuvântul"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Schimb, Valoare & Preț",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Valoarea depinde de ce ai nevoie. Prețul este cât costă ceva. Banii rezolvă problema schimbului.",
+      "description": "Descoperă de ce folosim bani și ce valorează lucrurile cu adevărat!",
+      "badge": "🏝️ Negustor de Insulă",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Supraviețuire pe Insulă",
+          "intro": "Ești naufragiat pe o insulă pustie!",
+          "questions": [
+            {
+              "q": "Ajungi pe o insulă pustie. Ce este cel mai valoros?",
+              "options": [
+                "💎 Diamant",
+                "🔪 Un cuțit de buscraft",
+                "📱 Smartphone",
+                "💰 100 de euro"
+              ],
+              "correct": 1,
+              "explanation": "Pe o insulă, cu un cuțit poți tăia lemne, pregăti mâncare și construi un adăpost. Banii și diamantele nu îți folosesc la nimic acolo!"
+            },
+            {
+              "q": "Ai 5 undițe dar nu ai cort. Vecinul tău are 3 corturi dar nicio undiță. Ce faceți?",
+              "options": [
+                "Amândoi așteptați",
+                "Faceți schimb: o undiță pentru un cort!",
+                "Nimic, ghinionul vostru",
+                "Plângeți împreună"
+              ],
+              "correct": 1,
+              "explanation": "Schimbul este cel mai vechi mod de a face comerț! Dai ce îți prisosește pentru ce ai nevoie."
+            },
+            {
+              "q": "De ce este schimbul uneori foarte dificil?",
+              "options": [
+                "Pentru că este plictisitor",
+                "Pentru că trebuie să găsești pe cineva care vrea exact ce ai tu",
+                "Pentru că este interzis",
+                "Pentru că lucrurile sunt prea grele"
+              ],
+              "correct": 1,
+              "explanation": "Aceasta se numește 'coincidența nevoilor'. Banii rezolvă această problemă — toată lumea acceptă bani!"
+            },
+            {
+              "q": "Scoicile erau folosite ca bani în trecut. Ce face ceva să fie bani buni?",
+              "options": [
+                "Trebuie să fie frumos",
+                "Trebuie să fie rar, portabil și acceptat de toată lumea",
+                "Trebuie să fie comestibil",
+                "Trebuie să vină de la guvern"
+              ],
+              "correct": 1,
+              "explanation": "Banii buni sunt rari (nu se găsesc la infinit), ușor de transportat și acceptați de toată lumea ca mijloc de plată."
+            },
+            {
+              "q": "O sticlă de apă costă 1 leu la supermarket. În deșert, cineva îți oferă 100 de lei pentru aceeași sticlă. De ce?",
+              "options": [
+                "Magazinul era mai scump",
+                "Pentru că apa în deșert este mult mai rară și mai importantă",
+                "Este altă apă",
+                "Deșertul este departe"
+              ],
+              "correct": 1,
+              "explanation": "Raritatea schimbă valoarea! Cu cât există mai puțin din ceva și cu cât ai mai multă nevoie de el, cu atât devine mai valoros."
+            },
+            {
+              "q": "Care este diferența dintre preț și valoare?",
+              "options": [
+                "Nu există nicio diferență",
+                "Prețul este cât costă ceva, valoarea este cât de important este acel lucru pentru tine",
+                "Prețul este întotdeauna mai mare decât valoarea",
+                "Valoarea se referă doar la bani"
+              ],
+              "correct": 1,
+              "explanation": "Un desen făcut de copilul tău poate să nu aibă un preț, dar are o valoare imensă. Prețul și valoarea nu sunt același lucru!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Linia prețurilor",
+          "intro": "Aranjează obiectele în ordinea corectă de la ieftin la scump!",
+          "items": [
+            {
+              "name": "🍎 Măr",
+              "value": 1
+            },
+            {
+              "name": "📖 Carte",
+              "value": 2
+            },
+            {
+              "name": "⚽ Minge de fotbal",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Scuter",
+              "value": 5
+            },
+            {
+              "name": "🏠 Casă",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Timp, Energie & Recompensă",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Energia este limitată. Echilibrul între muncă, odihnă și joacă este important. Răbdarea duce la rezultate mai bune.",
+      "description": "Cum îți folosești timpul și energia? Și de ce uneori este mai inteligent să aștepți?",
+      "badge": "⏳ Maestrul Timpului",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Muncă, Odihnă sau Joacă?",
+          "intro": "Trage fiecare activitate în categoria corectă!",
+          "categories": [
+            "💼 Muncă",
+            "😴 Odihnă",
+            "🎮 Joacă"
+          ],
+          "items": [
+            {
+              "name": "Teme pentru acasă",
+              "cat": 0
+            },
+            {
+              "name": "Dormit",
+              "cat": 1
+            },
+            {
+              "name": "Fotbal",
+              "cat": 2
+            },
+            {
+              "name": "Strâns camera",
+              "cat": 0
+            },
+            {
+              "name": "Citit o carte",
+              "cat": 1
+            },
+            {
+              "name": "De-a prinselea",
+              "cat": 2
+            },
+            {
+              "name": "Pus masa",
+              "cat": 0
+            },
+            {
+              "name": "Pui de somn",
+              "cat": 1
+            },
+            {
+              "name": "Jocuri video",
+              "cat": 2
+            },
+            {
+              "name": "Cumpărături",
+              "cat": 0
+            },
+            {
+              "name": "Ascultat muzică",
+              "cat": 1
+            },
+            {
+              "name": "La locul de joacă",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Preferința în timp",
+          "intro": "Alegi ACUM sau MAI TÂRZIU?",
+          "questions": [
+            {
+              "q": "În povestea Cei trei purceluși: care casă a rezistat?",
+              "options": [
+                "🌾 Paie (construită repede)",
+                "🪵 Lemn (medie)",
+                "🧱 Cărămidă (a durat cel mai mult)"
+              ],
+              "correct": 2,
+              "explanation": "Casa din cărămidă a durat cel mai mult să fie construită, dar a fost singura care a rezistat. Răbdarea dă roade!"
+            },
+            {
+              "q": "Ce înseamnă 'preferință scăzută pentru timp'?",
+              "options": [
+                "Vrei totul ACUM",
+                "Ești dispus să aștepți pentru ceva mai bun",
+                "Nu ai ceas",
+                "Dormi mult"
+              ],
+              "correct": 1,
+              "explanation": "Preferință scăzută pentru timp = ești dispus să aștepți pentru un rezultat mai bun. Ca purcelușul care a construit casa din cărămidă!"
+            },
+            {
+              "q": "Primești 1 bomboană acum sau 3 bomboane dacă aștepți 10 minute. Care este alegerea mai înțeleaptă?",
+              "options": [
+                "1 bomboană ACUM!",
+                "Să aștept: 3 bomboane > 1 bomboană",
+                "Dulciurile sunt nesănătoase",
+                "Să fug"
+              ],
+              "correct": 1,
+              "explanation": "Acesta este celebrul test al bezelelei! Copiii care au putut să aștepte au obținut adesea rezultate mai bune la școală."
+            },
+            {
+              "q": "Ai un test important mâine. Ce înseamnă preferință scăzută pentru timp?",
+              "options": [
+                "Jocuri video acum și învăț mâine",
+                "Studiez azi ca să iau o notă bună mâine",
+                "Sar testul",
+                "Sper la noroc"
+              ],
+              "correct": 1,
+              "explanation": "A face ceva dificil acum (a studia) ca să obții ceva bun mai târziu (o notă bună) — asta înseamnă preferință scăzută pentru timp."
+            },
+            {
+              "q": "Ce se întâmplă dacă îți consumi toată energia dimineața?",
+              "options": [
+                "Devii mai puternic",
+                "Nu îți mai rămâne nimic pentru restul zilei",
+                "Primești superputeri",
+                "Nimic special"
+              ],
+              "correct": 1,
+              "explanation": "Energia este limitată! Distribuirea ei inteligentă este importantă — la fel ca banii."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analog versus Digital",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Tehnologia se schimbă mereu. Fiecare invenție rezolvă o problemă. Nu tot ce este nou este automat mai bun.",
+      "description": "De la porumbelul poștal la internet — cum schimbă tehnologia lumea!",
+      "badge": "🚀 Pionier Tehnologic",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Vechi ↔ Nou",
+          "intro": "Asociază fiecare tehnologie veche cu versiunea modernă!",
+          "pairs": [
+            {
+              "old": "✉️ Scrisoare",
+              "new": "📧 E-mail"
+            },
+            {
+              "old": "📞 Telefon cu disc",
+              "new": "📱 Smartphone"
+            },
+            {
+              "old": "🗺️ Hartă de hârtie",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Film foto",
+              "new": "📸 Cameră digitală"
+            },
+            {
+              "old": "📰 Ziar",
+              "new": "🌐 Site de știri"
+            },
+            {
+              "old": "💰 Monede",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Imaginează-ți Viitorul",
+          "intro": "Cum ar arăta tehnologia peste 20 de ani?",
+          "questions": [
+            {
+              "q": "De ce se schimbă tehnologiile în timp?",
+              "options": [
+                "Pentru că lucrurile vechi se strică",
+                "Pentru că oamenii rezolvă probleme cu noi invenții",
+                "Pentru că guvernul vrea asta",
+                "Fără niciun motiv"
+              ],
+              "correct": 1,
+              "explanation": "Fiecare invenție rezolvă o problemă. Mașina a rezolvat problema că caii obosesc și sunt lenti!"
+            },
+            {
+              "q": "Este tehnologia nouă ÎNTOTDEAUNA mai bună decât cea veche?",
+              "options": [
+                "Da, întotdeauna",
+                "Nu, uneori cea veche este mai bună sau mai fiabilă",
+                "Tehnologia nouă nu există",
+                "Doar dacă este mai scumpă"
+              ],
+              "correct": 1,
+              "explanation": "O carte tipărită nu are nevoie de baterie! Uneori soluțiile vechi sunt încă foarte bune."
+            },
+            {
+              "q": "Bitcoin este bani digitali. Ce are în comun cu scoicile de altădată?",
+              "options": [
+                "Ambele vin din mare",
+                "Ambele sunt rare și folosite ca mijloc de schimb",
+                "Nimic",
+                "Ambele sunt gratuite"
+              ],
+              "correct": 1,
+              "explanation": "Atât scoicile cât și Bitcoin sunt rare (există o cantitate limitată) și sunt folosite ca mijloc de schimb."
+            },
+            {
+              "q": "Ce este inovația?",
+              "options": [
+                "A cumpăra ceva nou",
+                "O îmbunătățire sau invenție inteligentă care rezolvă o problemă",
+                "Un cuvânt complicat pentru nimic",
+                "Doar pentru oamenii de știință"
+              ],
+              "correct": 1,
+              "explanation": "Inovație = o soluție nouă sau mai bună pentru o problemă existentă. Oricine poate inova!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Siguranță & Confidențialitate",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Tu decizi ce informații împărtășești. Codurile protejează mesajele. Nu ai nevoie de încredere când ai criptare.",
+      "description": "Coduri secrete, confidențialitate și cum te protejezi online!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Public sau Privat?",
+          "intro": "Această informație este publică sau privată? Decide repede!",
+          "statements": [
+            {
+              "text": "Parola ta",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "O parolă este întotdeauna privată. Nu o spune nimănui!"
+            },
+            {
+              "text": "Numele tău la școală",
+              "answer": true,
+              "label": "Public",
+              "explanation": "La școală toată lumea știe cum te cheamă — aceasta este informație publică."
+            },
+            {
+              "text": "Codul tău PIN",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Codul PIN este secret — îți protejează contul bancar."
+            },
+            {
+              "text": "Un parc din oraș",
+              "answer": true,
+              "label": "Public",
+              "explanation": "Un parc este un loc public — oricine poate veni acolo."
+            },
+            {
+              "text": "Jurnalul tău",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Jurnalul tău este privat — doar tu decizi cine îl poate citi."
+            },
+            {
+              "text": "Culoarea bicicletei tale",
+              "answer": true,
+              "label": "Public",
+              "explanation": "Oricine poate vedea ce culoare are bicicleta ta."
+            },
+            {
+              "text": "Adresa ta de acasă",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Adresa ta nu o dai străinilor — aceasta este informație privată."
+            },
+            {
+              "text": "Vremea de azi",
+              "answer": true,
+              "label": "Public",
+              "explanation": "Vremea este aceeași pentru toată lumea — complet publică!"
+            },
+            {
+              "text": "Cheia ta Bitcoin",
+              "answer": false,
+              "label": "Privat!",
+              "explanation": "Cheia ta privată este cel mai important secret. Cine o are, are bitcoin-ul tău!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Cod Secret",
+          "intro": "Sparge cuvintele secrete Bitcoin cu roata cifrului!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Finanțe personale",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Banii pot fi câștigați, economisiți, investiți și cheltuiți. A face un buget înseamnă a alege. Regulile corecte sunt importante.",
+      "description": "Câștigă, economisește, investește — devino un expert în bani!",
+      "badge": "💎 Înțelept cu Banii",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Inteligent cu Banii",
+          "intro": "Testează cât de priceput ești cu finanțele!",
+          "questions": [
+            {
+              "q": "Ce înseamnă a economisi?",
+              "options": [
+                "A cheltui banii imediat",
+                "A pune bani deoparte pentru mai târziu",
+                "A arunca banii",
+                "A împrumuta bani de la un prieten"
+              ],
+              "correct": 1,
+              "explanation": "A economisi = a păstra banii ca să poți cumpăra ceva mai mare sau mai important mai târziu."
+            },
+            {
+              "q": "Ce înseamnă a investi?",
+              "options": [
+                "A ascunde banii",
+                "A-ți folosi banii sau timpul pentru ceva care va valora mai mult mai târziu",
+                "A cheltui totul azi",
+                "A arde banii"
+              ],
+              "correct": 1,
+              "explanation": "A investi înseamnă să îți pui banii sau timpul în ceva cu speranța că va valora mai mult mai târziu."
+            },
+            {
+              "q": "Ai 12 scoici. Un cort costă 8 și o undiță costă 6. Poți să le cumperi pe amândouă?",
+              "options": [
+                "Da!",
+                "Nu, 8 + 6 = 14, și tu ai doar 12",
+                "Doar cu reducere",
+                "Scoicile nu sunt bani"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, dar tu ai doar 12 scoici. Trebuie să alegi! Acesta este bugetul."
+            },
+            {
+              "q": "La o licitație, prețul unui obiect rar crește mereu. De ce?",
+              "options": [
+                "Vânzătorul este rău",
+                "Mai mulți oameni îl vor, dar există doar unul (raritate + cerere)",
+                "Obiectul devine tot mai mare",
+                "Pentru că cineva trișează"
+              ],
+              "correct": 1,
+              "explanation": "Când mulți oameni vor ceva dar există puțin din acel lucru, prețul crește. Așa funcționează cererea și oferta!"
+            },
+            {
+              "q": "De ce sunt importante regulile corecte în privința banilor?",
+              "options": [
+                "Nu sunt importante",
+                "Ca toată lumea să aibă aceleași șanse",
+                "Doar pentru copii",
+                "Ca să fie mai dificil"
+              ],
+              "correct": 1,
+              "explanation": "Regulile corecte asigură că nimeni nu poate trișa și că toată lumea are aceleași șanse."
+            },
+            {
+              "q": "Ce înseamnă a împrumuta?",
+              "options": [
+                "A fura bani",
+                "A primi bani de la altcineva pe care trebuie să îi returnezi mai târziu",
+                "A economisi bani",
+                "A pierde bani"
+              ],
+              "correct": 1,
+              "explanation": "A împrumuta înseamnă că primești bani de la altcineva, dar trebuie să îi returnezi mai târziu — de obicei cu ceva în plus (dobândă)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Principiile de bază ale Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin este bani digitali rari, fără intermediar. Minarea confirmă tranzacțiile. Satoshi a rămas anonim.",
+      "description": "Marea aventură Bitcoin: de la Satoshi la minare!",
+      "badge": "⛏️ Miner Bitcoin",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Cine este Satoshi?",
+          "intro": "Descoperă povestea din spatele Bitcoin!",
+          "questions": [
+            {
+              "q": "Cine a inventat Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Banca",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto a publicat în 2008 un 'white paper' cu ideea pentru Bitcoin. Nimeni nu știe cine este cu adevărat Satoshi!"
+            },
+            {
+              "q": "Ce este un 'white paper'?",
+              "options": [
+                "O foaie albă goală",
+                "Un document în care explici o idee nouă",
+                "O scrisoare secretă",
+                "O temă de școală"
+              ],
+              "correct": 1,
+              "explanation": "Un white paper este un document în care prezinți lumii o idee sau soluție nouă."
+            },
+            {
+              "q": "Ce este Blocul Geneză?",
+              "options": [
+                "Un joc pe calculator",
+                "Primul bloc din Bitcoin",
+                "Un tip de piatră",
+                "O parolă secretă"
+              ],
+              "correct": 1,
+              "explanation": "Pe 3 ianuarie 2009 a fost creat Blocul Geneză — primul bloc din blockchain-ul Bitcoin."
+            },
+            {
+              "q": "Câți bitcoin vor exista vreodată?",
+              "options": [
+                "Infinit de mulți",
+                "Maximum 21 de milioane",
+                "Exact 1 miliard",
+                "Nimeni nu știe"
+              ],
+              "correct": 1,
+              "explanation": "Nu vor exista niciodată mai mult de 21 de milioane de bitcoin. Această raritate este integrată în reguli!"
+            },
+            {
+              "q": "Ce înseamnă 'minarea' la Bitcoin?",
+              "options": [
+                "A săpa în pământ",
+                "A folosi computere pentru a rezolva puzzle-uri și a confirma tranzacții",
+                "A tipări bitcoin",
+                "A desena bitcoin"
+              ],
+              "correct": 1,
+              "explanation": "Minerii folosesc computere pentru a rezolva puzzle-uri matematice. Ca dovadă că au depus efort, pot confirma tranzacții."
+            },
+            {
+              "q": "Ce este Dovada Muncii?",
+              "options": [
+                "Un raport de la școală",
+                "Dovada că cineva a depus cu adevărat efort pentru a câștiga ceva",
+                "O parolă",
+                "Un fel de diplomă"
+              ],
+              "correct": 1,
+              "explanation": "Dovada Muncii = dovada efortului depus. Ca în jocul cu zaruri: toată lumea urmează aceleași reguli și are aceleași șanse."
+            },
+            {
+              "q": "De ce a dispărut Satoshi?",
+              "options": [
+                "A plecat în vacanță",
+                "Probabil ca Bitcoin să aparțină cu adevărat tuturor, fără un lider",
+                "S-a supărat",
+                "Nu există"
+              ],
+              "correct": 1,
+              "explanation": "Dispărând, Satoshi s-a asigurat că Bitcoin nu aparține unei singure persoane. Rețeaua funcționează după reguli, nu după un lider."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Minează Bitcoin!",
+          "intro": "Găsește perechile identice pentru a mina blocuri — la fel ca minerii adevărați!"
+        },
+        {
+          "type": "scramble",
+          "title": "Descurcă cuvintele Bitcoin",
+          "intro": "Descurcă cuvintele Bitcoin amestecate!",
+          "words": [
+            {
+              "scrambled": "COINBIT",
+              "answer": "BITCOIN",
+              "hint": "Bani digitali"
+            },
+            {
+              "scrambled": "SHATISO",
+              "answer": "SATOSHI",
+              "hint": "Misteriosul inventator"
+            },
+            {
+              "scrambled": "COLB",
+              "answer": "BLOC",
+              "hint": "Tranzacțiile se află în el"
+            },
+            {
+              "scrambled": "RAR",
+              "answer": "RAR",
+              "hint": "Nu există mult din el"
+            },
+            {
+              "scrambled": "NAREM",
+              "answer": "MANER",
+              "hint": "Rezolvarea puzzle-urilor cu computere"
+            },
+            {
+              "scrambled": "TOREFPEL",
+              "answer": "PORTOFEL",
+              "hint": "Aici îți păstrezi bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

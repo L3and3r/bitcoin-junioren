@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoi, {name}! 🏴‍☠️",
+    "title": "Bitcoin untuk Junior",
+    "subtitle": "Terokai dunia wang, nilai dan Bitcoin!",
+    "progress": "Kemajuan",
+    "newPlayer": "Mulakan pemain baru",
+    "newPlayerConfirm": "Mulakan pemain baru? Kemajuan semasa akan dipadamkan.",
+    "footer": "Berdasarkan Bitcoin untuk Junior oleh My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoi, petualang!",
+      "subtitle": "Siapa nama kamu?",
+      "placeholder": "Nama kamu...",
+      "button": "Mulakan pengembaraan! 🚀"
+    },
+    "activity": {
+      "back": "← Kembali",
+      "next": "Seterusnya →",
+      "finish": "Selesai! 🎉",
+      "correct": "Betul!",
+      "wrong": "Salah",
+      "score": "Markah",
+      "tryAgain": "Cuba lagi",
+      "completed": "Tamat!",
+      "badgeEarned": "Lencana diperoleh!"
+    },
+    "sort": {
+      "instruction": "Seret dari murah ke mahal",
+      "check": "Semak urutan"
+    },
+    "categorize": {
+      "instruction": "Seret ke kategori yang betul"
+    },
+    "match": {
+      "instruction": "Padankan pasangan"
+    },
+    "truefalse": {
+      "public": "Awam",
+      "private": "Peribadi"
+    },
+    "cipher": {
+      "instruction": "Pecahkan kod dengan roda cipher"
+    },
+    "mining": {
+      "instruction": "Cari pasangan yang sama"
+    },
+    "scramble": {
+      "instruction": "Susun semula perkataan",
+      "hint": "Petunjuk"
+    },
+    "moduleView": {
+      "back": "← Kembali",
+      "map": "← Peta Harta",
+      "coreIdea": "💡 Idea Utama",
+      "activities": "Aktiviti",
+      "module": "Modul"
+    },
+    "activityTypes": {
+      "quiz": "Kuiz",
+      "sort": "Susun",
+      "match": "Padankan",
+      "cipher": "Pecah Kod",
+      "mining": "Memori",
+      "truefalse": "Awam/Peribadi",
+      "categorize": "Kategorikan",
+      "scramble": "Penggali Kata"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Pertukaran, Nilai & Harga",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Nilai bergantung pada apa yang kamu perlukan. Harga adalah berapa sesuatu itu kos. Wang menyelesaikan masalah pertukaran.",
+      "description": "Terokai mengapa kita guna wang dan apa yang benar-benar berharga!",
+      "badge": "🏝️ Pedagang Pulau",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Selamat Hidup di Pulau",
+          "intro": "Kamu seorang mangsa kapal karam di pulau yang sunyi!",
+          "questions": [
+            {
+              "q": "Kamu terdampar di sebuah pulau terpencil. Apa yang paling berharga?",
+              "options": [
+                "💎 Berlian",
+                "🔪 Parang",
+                "📱 Telefon pintar",
+                "💰 100 euro"
+              ],
+              "correct": 1,
+              "explanation": "Di sebuah pulau, parang boleh digunakan untuk menebang kayu, memotong makanan dan membina tempat berlindung. Wang dan berlian tiada guna di sana!"
+            },
+            {
+              "q": "Kamu ada 5 batang pancing tapi tiada khemah. Jiran kamu ada 3 khemah tapi tiada pancing. Apa yang kamu berdua lakukan?",
+              "options": [
+                "Kedua-duanya menunggu",
+                "Tukar: sebatang pancing dengan sebuah khemah!",
+                "Tak buat apa, nasib baik",
+                "Menangis bersama"
+              ],
+              "correct": 1,
+              "explanation": "Barter adalah cara tertua untuk berniaga! Kamu memberi apa yang ada lebih untuk mendapat apa yang kamu perlukan."
+            },
+            {
+              "q": "Mengapa barter kadang-kadang sangat susah?",
+              "options": [
+                "Kerana ia membosankan",
+                "Kerana kamu perlu mencari orang yang mahukan tepat apa yang kamu ada",
+                "Kerana ia dilarang",
+                "Kerana barang terlalu berat"
+              ],
+              "correct": 1,
+              "explanation": "Ini dipanggil 'kehendak yang bertepatan'. Wang menyelesaikan masalah ini — semua orang menerima wang!"
+            },
+            {
+              "q": "Cengkerang pernah digunakan sebagai wang. Apa yang menjadikan sesuatu itu wang yang baik?",
+              "options": [
+                "Ia mesti cantik",
+                "Ia mesti langka, mudah dibawa dan diterima oleh semua orang",
+                "Ia mesti boleh dimakan",
+                "Ia mesti datang dari kerajaan"
+              ],
+              "correct": 1,
+              "explanation": "Wang yang baik adalah langka (tidak boleh dijumpai tanpa had), mudah dibawa, dan semua orang mesti menerimanya sebagai bayaran."
+            },
+            {
+              "q": "Sebotol air berharga €1 di pasaraya. Di padang pasir, seseorang menawarkan €100 untuk botol yang sama. Mengapa?",
+              "options": [
+                "Kedai itu lebih mahal",
+                "Kerana air di padang pasir jauh lebih langka dan penting",
+                "Ia adalah air yang berbeza",
+                "Padang pasir itu jauh"
+              ],
+              "correct": 1,
+              "explanation": "Kelangkaan mengubah nilai! Semakin sedikit sesuatu dan semakin kamu memerlukannya, semakin tinggi nilainya."
+            },
+            {
+              "q": "Apa perbezaan antara harga dan nilai?",
+              "options": [
+                "Tiada perbezaan",
+                "Harga adalah berapa sesuatu itu kos, nilai adalah betapa pentingnya sesuatu bagi kamu",
+                "Harga sentiasa lebih tinggi daripada nilai",
+                "Nilai hanya berkaitan dengan wang"
+              ],
+              "correct": 1,
+              "explanation": "Lukisan daripada anak kamu mungkin tiada harga tetapi sangat bernilai. Harga dan nilai bukanlah perkara yang sama!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Garisan Harga",
+          "intro": "Susun benda-benda ini dari murah ke mahal!",
+          "items": [
+            {
+              "name": "🍎 Epal",
+              "value": 1
+            },
+            {
+              "name": "📖 Buku",
+              "value": 2
+            },
+            {
+              "name": "⚽ Bola Sepak",
+              "value": 3
+            },
+            {
+              "name": "📱 Telefon",
+              "value": 4
+            },
+            {
+              "name": "🛵 Skuter",
+              "value": 5
+            },
+            {
+              "name": "🏠 Rumah",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Masa, Tenaga & Ganjaran",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Tenaga adalah terhad. Keseimbangan antara kerja, rehat dan bermain adalah penting. Kesabaran membawa hasil yang lebih baik.",
+      "description": "Bagaimana kamu menggunakan masa dan tenagamu? Dan mengapa menunggu kadang-kadang lebih bijak?",
+      "badge": "⏳ Pakar Masa",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Kerja, Rehat atau Main?",
+          "intro": "Seret setiap aktiviti ke kategori yang betul!",
+          "categories": [
+            "💼 Kerja",
+            "😴 Rehat",
+            "🎮 Main"
+          ],
+          "items": [
+            {
+              "name": "Buat kerja rumah",
+              "cat": 0
+            },
+            {
+              "name": "Tidur",
+              "cat": 1
+            },
+            {
+              "name": "Main bola sepak",
+              "cat": 2
+            },
+            {
+              "name": "Kemas bilik",
+              "cat": 0
+            },
+            {
+              "name": "Membaca buku",
+              "cat": 1
+            },
+            {
+              "name": "Main kejar-kejar",
+              "cat": 2
+            },
+            {
+              "name": "Susun meja makan",
+              "cat": 0
+            },
+            {
+              "name": "Tidur sebentar",
+              "cat": 1
+            },
+            {
+              "name": "Bermain video game",
+              "cat": 2
+            },
+            {
+              "name": "Pergi membeli-belah",
+              "cat": 0
+            },
+            {
+              "name": "Dengar muzik",
+              "cat": 1
+            },
+            {
+              "name": "Pergi ke taman permainan",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Pilihan Masa",
+          "intro": "Adakah kamu pilih SEKARANG atau KEMUDIAN?",
+          "questions": [
+            {
+              "q": "Dalam cerita Tiga Anak Babi: rumah mana yang kekal berdiri?",
+              "options": [
+                "🌾 Jerami (dibina cepat)",
+                "🪵 Kayu (sederhana)",
+                "🧱 Bata (mengambil masa paling lama)"
+              ],
+              "correct": 2,
+              "explanation": "Rumah bata mengambil masa dan usaha yang paling banyak, tetapi ia satu-satunya yang kekal berdiri. Kesabaran membuahkan hasil!"
+            },
+            {
+              "q": "Apa maksud 'keutamaan masa yang rendah'?",
+              "options": [
+                "Kamu mahukan semua SEKARANG",
+                "Kamu sanggup menunggu untuk sesuatu yang lebih baik",
+                "Kamu tidak ada jam",
+                "Kamu banyak tidur"
+              ],
+              "correct": 1,
+              "explanation": "Keutamaan masa yang rendah = sanggup menunggu untuk hasil yang lebih baik. Seperti anak babi yang membina rumah bata!"
+            },
+            {
+              "q": "Kamu dapat 1 gula-gula sekarang, atau 3 gula-gula jika kamu tunggu 10 minit. Apa pilihan paling bijak?",
+              "options": [
+                "1 gula-gula SEKARANG!",
+                "Tunggu: 3 gula-gula > 1 gula-gula",
+                "Gula-gula tak sihat",
+                "Lari pergi"
+              ],
+              "correct": 1,
+              "explanation": "Ini adalah ujian marshmallow yang terkenal! Kanak-kanak yang boleh menunggu sering mendapat keputusan yang lebih baik di sekolah."
+            },
+            {
+              "q": "Kamu ada ujian penting esok. Apa itu keutamaan masa yang rendah?",
+              "options": [
+                "Main game sekarang dan belajar esok",
+                "Belajar hari ini supaya kamu buat dengan baik esok",
+                "Ponteng ujian",
+                "Berharap nasib baik"
+              ],
+              "correct": 1,
+              "explanation": "Melakukan sesuatu yang susah sekarang (belajar) supaya kamu mendapat sesuatu yang baik kemudian (markah bagus) — itulah keutamaan masa yang rendah."
+            },
+            {
+              "q": "Apa yang berlaku jika kamu habiskan semua tenaga kamu pada waktu pagi?",
+              "options": [
+                "Kamu menjadi lebih kuat",
+                "Kamu tidak ada apa-apa lagi untuk baki hari",
+                "Kamu dapat kuasa super",
+                "Tiada apa yang berlaku"
+              ],
+              "correct": 1,
+              "explanation": "Tenaga adalah terhad! Pembahagian yang bijak adalah penting — sama seperti wang."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Analog berbanding Digital",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Teknologi sentiasa berubah. Setiap ciptaan menyelesaikan masalah. Tidak semua yang baru adalah lebih baik secara automatik.",
+      "description": "Dari merpati pos hingga internet — bagaimana teknologi mengubah dunia!",
+      "badge": "🚀 Pelopor Teknologi",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Lama ↔ Baru",
+          "intro": "Padankan setiap teknologi lama dengan versi moden!",
+          "pairs": [
+            {
+              "old": "✉️ Surat",
+              "new": "📧 E-mel"
+            },
+            {
+              "old": "📞 Telefon Putar",
+              "new": "📱 Telefon Pintar"
+            },
+            {
+              "old": "🗺️ Peta Kertas",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Filem Kamera",
+              "new": "📸 Kamera Digital"
+            },
+            {
+              "old": "📰 Akhbar",
+              "new": "🌐 Laman Web Berita"
+            },
+            {
+              "old": "💰 Wang Syiling",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Bayangkan Masa Depan",
+          "intro": "Bagaimana rupa teknologi dalam 20 tahun lagi?",
+          "questions": [
+            {
+              "q": "Mengapa teknologi berubah dari masa ke masa?",
+              "options": [
+                "Kerana benda lama rosak",
+                "Kerana manusia menyelesaikan masalah dengan ciptaan baru",
+                "Kerana kerajaan mahukan ia",
+                "Tanpa sebab"
+              ],
+              "correct": 1,
+              "explanation": "Setiap ciptaan menyelesaikan masalah. Kereta menyelesaikan masalah kuda yang lambat dan mudah penat!"
+            },
+            {
+              "q": "Adakah teknologi baru SENTIASA lebih baik daripada yang lama?",
+              "options": [
+                "Ya, sentiasa",
+                "Tidak, kadang-kadang yang lama lebih baik atau lebih dipercayai",
+                "Teknologi baru tidak wujud",
+                "Hanya jika ia lebih mahal"
+              ],
+              "correct": 1,
+              "explanation": "Buku kertas tidak perlukan bateri! Kadang-kadang penyelesaian lama masih bijak."
+            },
+            {
+              "q": "Bitcoin adalah wang digital. Apa persamaannya dengan cengkerang zaman dahulu?",
+              "options": [
+                "Kedua-duanya datang dari laut",
+                "Kedua-duanya langka dan digunakan sebagai alat pertukaran",
+                "Tiada persamaan",
+                "Kedua-duanya percuma"
+              ],
+              "correct": 1,
+              "explanation": "Kedua-dua cengkerang dan Bitcoin adalah langka (terdapat jumlah yang terhad) dan digunakan sebagai alat pertukaran."
+            },
+            {
+              "q": "Apa itu inovasi?",
+              "options": [
+                "Membeli sesuatu yang baru",
+                "Penambahbaikan atau ciptaan bijak yang menyelesaikan masalah",
+                "Perkataan susah yang tidak bermakna apa-apa",
+                "Hanya untuk saintis"
+              ],
+              "correct": 1,
+              "explanation": "Inovasi = penyelesaian baru atau lebih baik untuk masalah yang sedia ada. Semua orang boleh berinovasi!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Keselamatan & Privasi",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Kamu yang menentukan maklumat apa yang kamu kongsikan. Kod melindungi mesej. Kepercayaan tidak selalu diperlukan jika kamu ada enkripsi.",
+      "description": "Kod rahsia, privasi dan cara melindungi diri kamu dalam talian!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Awam atau Peribadi?",
+          "intro": "Adakah maklumat ini awam atau peribadi? Buat keputusan cepat!",
+          "statements": [
+            {
+              "text": "Kata laluan kamu",
+              "answer": false,
+              "label": "Peribadi!",
+              "explanation": "Kata laluan sentiasa peribadi. Jangan sekali-kali kongsi!"
+            },
+            {
+              "text": "Nama kamu di sekolah",
+              "answer": true,
+              "label": "Awam",
+              "explanation": "Di sekolah semua orang tahu nama kamu — itulah maklumat awam."
+            },
+            {
+              "text": "Nombor PIN kamu",
+              "answer": false,
+              "label": "Peribadi!",
+              "explanation": "Nombor PIN kamu adalah rahsia — ia melindungi akaun bank kamu."
+            },
+            {
+              "text": "Sebuah taman di bandar",
+              "answer": true,
+              "label": "Awam",
+              "explanation": "Taman adalah tempat awam — semua orang boleh pergi ke sana."
+            },
+            {
+              "text": "Diari kamu",
+              "answer": false,
+              "label": "Peribadi!",
+              "explanation": "Diari kamu adalah peribadi — hanya kamu yang tentukan siapa boleh membacanya."
+            },
+            {
+              "text": "Warna basikal kamu",
+              "answer": true,
+              "label": "Awam",
+              "explanation": "Semua orang boleh nampak warna basikal kamu."
+            },
+            {
+              "text": "Alamat rumah kamu",
+              "answer": false,
+              "label": "Peribadi!",
+              "explanation": "Kamu tidak kongsikan alamat kamu dengan orang asing — itu maklumat peribadi."
+            },
+            {
+              "text": "Cuaca hari ini",
+              "answer": true,
+              "label": "Awam",
+              "explanation": "Cuaca adalah sama untuk semua orang — sepenuhnya awam!"
+            },
+            {
+              "text": "Kunci Bitcoin kamu",
+              "answer": false,
+              "label": "Peribadi!",
+              "explanation": "Kunci peribadi kamu adalah rahsia yang paling penting. Sesiapa yang ada kunci itu, ada bitcoin kamu!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Kod Rahsia",
+          "intro": "Pecahkan perkataan Bitcoin rahsia dengan roda cipher!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Hal Kewangan",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Wang boleh diperoleh, ditabung, dilaburkan dan dibelanjakan. Membuat belanjawan adalah membuat pilihan. Peraturan yang adil adalah penting.",
+      "description": "Menjana, menabung, melabur — jadilah pakar kewangan!",
+      "badge": "💎 Bijak Wang",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Bijak Berbelanja",
+          "intro": "Uji betapa bijak kamu dalam hal kewangan!",
+          "questions": [
+            {
+              "q": "Apa itu menabung?",
+              "options": [
+                "Terus membelanjakan wang",
+                "Menyimpan wang untuk digunakan kemudian",
+                "Membuang wang",
+                "Meminjam wang dari kawan"
+              ],
+              "correct": 1,
+              "explanation": "Menabung = menyimpan wang supaya kamu boleh membeli sesuatu yang lebih besar atau lebih penting kemudian."
+            },
+            {
+              "q": "Apa itu melabur?",
+              "options": [
+                "Menyorok wang",
+                "Meletakkan wang atau masa kamu dalam sesuatu supaya ia lebih bernilai kemudian",
+                "Membelanjakan semua hari ini",
+                "Membakar wang"
+              ],
+              "correct": 1,
+              "explanation": "Melabur adalah meletakkan wang atau masa kamu dalam sesuatu dengan harapan ia akan lebih bernilai kemudian."
+            },
+            {
+              "q": "Kamu ada 12 cengkerang. Sebuah khemah berharga 8 dan sebatang pancing berharga 6. Bolehkah kamu beli kedua-duanya?",
+              "options": [
+                "Ya!",
+                "Tidak, 8 + 6 = 14, dan kamu hanya ada 12",
+                "Hanya dengan diskaun",
+                "Cengkerang bukan wang"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, tetapi kamu hanya ada 12 cengkerang. Kamu perlu membuat pilihan! Itulah membuat belanjawan."
+            },
+            {
+              "q": "Dalam lelongan, harga barang yang langka terus naik. Mengapa?",
+              "options": [
+                "Penjual itu jahat",
+                "Ramai orang mahukan ia, tetapi hanya ada satu (kelangkaan + permintaan)",
+                "Barang itu semakin besar",
+                "Kerana seseorang berlaku curang"
+              ],
+              "correct": 1,
+              "explanation": "Apabila ramai orang mahukan sesuatu tetapi hanya sedikit yang ada, harga akan naik. Itulah cara penawaran dan permintaan berfungsi!"
+            },
+            {
+              "q": "Mengapa peraturan yang adil dalam hal kewangan adalah penting?",
+              "options": [
+                "Ia tidak penting",
+                "Supaya semua orang mendapat peluang yang sama",
+                "Hanya untuk kanak-kanak",
+                "Supaya ia menjadi lebih susah"
+              ],
+              "correct": 1,
+              "explanation": "Peraturan yang adil memastikan tiada siapa yang boleh berlaku curang dan semua orang mendapat peluang yang sama."
+            },
+            {
+              "q": "Apa itu meminjam?",
+              "options": [
+                "Mencuri wang",
+                "Mendapat wang dari orang lain yang perlu dikembalikan kemudian",
+                "Menabung wang",
+                "Kehilangan wang"
+              ],
+              "correct": 1,
+              "explanation": "Meminjam bermakna kamu mendapat wang dari orang lain, tetapi perlu dikembalikan kemudian — selalunya dengan tambahan (faedah)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Asas-asas Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin adalah wang digital yang langka tanpa perantara. Perlombongan mengesahkan transaksi. Satoshi kekal tanpa nama.",
+      "description": "Pengembaraan Bitcoin yang hebat: dari Satoshi hingga perlombongan!",
+      "badge": "⛏️ Pelombong Bitcoin",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Siapa Satoshi?",
+          "intro": "Terokai kisah di sebalik Bitcoin!",
+          "questions": [
+            {
+              "q": "Siapa yang mencipta Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Bank",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto menerbitkan sebuah 'kertas putih' pada tahun 2008 dengan idea untuk Bitcoin. Tiada siapa yang tahu siapa sebenarnya Satoshi!"
+            },
+            {
+              "q": "Apa itu 'kertas putih'?",
+              "options": [
+                "Sehelai kertas kosong",
+                "Dokumen yang menerangkan idea baru",
+                "Surat rahsia",
+                "Tugasan sekolah"
+              ],
+              "correct": 1,
+              "explanation": "Kertas putih adalah dokumen di mana kamu membentangkan idea atau penyelesaian baru kepada dunia."
+            },
+            {
+              "q": "Apa itu Blok Genesis?",
+              "options": [
+                "Permainan komputer",
+                "Blok pertama dalam Bitcoin",
+                "Sejenis batu",
+                "Kata laluan rahsia"
+              ],
+              "correct": 1,
+              "explanation": "Pada 3 Januari 2009, Blok Genesis dicipta — blok pertama dalam rantaian blok Bitcoin."
+            },
+            {
+              "q": "Berapa banyak bitcoin yang akan pernah wujud?",
+              "options": [
+                "Tanpa had",
+                "Maksimum 21 juta",
+                "Tepat 1 bilion",
+                "Tiada siapa yang tahu"
+              ],
+              "correct": 1,
+              "explanation": "Tidak akan ada lebih daripada 21 juta bitcoin. Kelangkaan itu sudah tertanam dalam peraturan!"
+            },
+            {
+              "q": "Apa itu 'perlombongan' dalam Bitcoin?",
+              "options": [
+                "Menggali tanah",
+                "Menggunakan komputer untuk menyelesaikan teka-teki bagi mengesahkan transaksi",
+                "Mencetak bitcoin",
+                "Melukis bitcoin"
+              ],
+              "correct": 1,
+              "explanation": "Pelombong menggunakan komputer untuk menyelesaikan teka-teki matematik. Sebagai bukti kerja mereka, mereka dibenarkan mengesahkan transaksi."
+            },
+            {
+              "q": "Apa itu Bukti Kerja?",
+              "options": [
+                "Laporan dari sekolah",
+                "Bukti bahawa seseorang benar-benar berusaha untuk mendapatkan sesuatu",
+                "Kata laluan",
+                "Sejenis sijil"
+              ],
+              "correct": 1,
+              "explanation": "Bukti Kerja = bukti usaha. Sama seperti permainan dadu: semua orang mengikut peraturan yang sama dan mempunyai peluang yang sama."
+            },
+            {
+              "q": "Mengapa Satoshi menghilang?",
+              "options": [
+                "Dia pergi bercuti",
+                "Mungkin supaya Bitcoin benar-benar milik semua orang, tanpa pemimpin",
+                "Dia marah",
+                "Dia tidak wujud"
+              ],
+              "correct": 1,
+              "explanation": "Dengan menghilang, Satoshi memastikan Bitcoin bukan milik satu orang. Rangkaian berjalan atas peraturan, bukan atas seorang pemimpin."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Lombong Bitcoin!",
+          "intro": "Cari pasangan yang sama untuk melombong blok — sama seperti pelombong sebenar!"
+        },
+        {
+          "type": "scramble",
+          "title": "Penggali Kata Bitcoin",
+          "intro": "Susun semula perkataan-perkataan Bitcoin yang bercampur-aduk ini!",
+          "words": [
+            {
+              "scrambled": "OCNIBIT",
+              "answer": "BITCOIN",
+              "hint": "Wang digital"
+            },
+            {
+              "scrambled": "IHSATOS",
+              "answer": "SATOSHI",
+              "hint": "Pencipta yang misterius"
+            },
+            {
+              "scrambled": "KOLB",
+              "answer": "BLOK",
+              "hint": "Transaksi disimpan di dalamnya"
+            },
+            {
+              "scrambled": "AKNARL",
+              "answer": "LANGKA",
+              "hint": "Tidak banyak yang ada"
+            },
+            {
+              "scrambled": "BAGOLNOM",
+              "answer": "LOMBONG",
+              "hint": "Selesaikan teka-teki dengan komputer"
+            },
+            {
+              "scrambled": "FLTAEW",
+              "answer": "WALLET",
+              "hint": "Tempat menyimpan bitcoin kamu"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

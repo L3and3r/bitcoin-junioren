@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 import Confetti from "../components/Confetti";
 import { S } from "../styles/shared";
 
 const ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const CHALLENGES = [
-  { word: "BITCOIN", hint: "Digitaal geld" },
-  { word: "SATOSHI", hint: "De mysterieuze bedenker" },
-  { word: "SCHAARS", hint: "Er is niet veel van" },
-  { word: "WALLET", hint: "Hierin bewaar je bitcoin" },
-  { word: "BLOK", hint: "Transacties zitten hierin" },
+
+const DEFAULT_CHALLENGES = [
+  { word: "BITCOIN", hint: "Digital money" },
+  { word: "SATOSHI", hint: "The mysterious inventor" },
+  { word: "SCARCE", hint: "There is not much of it" },
+  { word: "WALLET", hint: "Store your bitcoin here" },
+  { word: "BLOCK", hint: "Transactions are stored here" },
 ];
 
 function encode(text, shift) {
@@ -19,17 +21,21 @@ function encode(text, shift) {
 }
 
 export default function CipherActivity({ activity, color, onComplete }) {
+  const { t } = useLanguage();
+  const ui = t?.ui?.cipher || {};
+  const challenges = activity.challenges || DEFAULT_CHALLENGES;
+
   const [shift, setShift] = useState(3);
   const [ci, setCi] = useState(0);
   const [guess, setGuess] = useState("");
   const [solved, setSolved] = useState([]);
-  const ch = CHALLENGES[ci];
-  const allDone = solved.length === CHALLENGES.length;
+  const ch = challenges[ci];
+  const allDone = solved.length === challenges.length;
 
   const check = () => {
     if (guess.toUpperCase().trim() === ch.word) {
       const ns = [...solved, ci]; setSolved(ns);
-      if (ci < CHALLENGES.length - 1) { setCi(i => i + 1); setGuess(""); }
+      if (ci < challenges.length - 1) { setCi(i => i + 1); setGuess(""); }
     }
   };
 
@@ -37,7 +43,7 @@ export default function CipherActivity({ activity, color, onComplete }) {
     <div>
       <div style={{ ...S.card(), marginBottom: 14, textAlign: "center" }}>
         <p style={{ ...S.heading, fontSize: 15, color: "#888", marginBottom: 6 }}>
-          🔄 Cijferwiel — verschuiving: <strong>{shift}</strong>
+          🔄 {ui.wheel || "Cipher wheel"} — {shift}
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap", marginBottom: 8 }}>
           {ALPHA.split("").map((c, i) => (
@@ -56,7 +62,7 @@ export default function CipherActivity({ activity, color, onComplete }) {
       {!allDone ? (
         <div style={S.card()}>
           <p style={{ ...S.body, fontSize: 13, color: "#888", marginBottom: 2 }}>
-            Opdracht {ci + 1}/{CHALLENGES.length} — Hint: {ch.hint}
+            {ui.challenge || "Challenge"} {ci + 1}/{challenges.length} — {ui.hint || "Hint"}: {ch.hint}
           </p>
           <p style={{ fontFamily: "monospace", fontSize: 26, fontWeight: 700, letterSpacing: 5, textAlign: "center", margin: "10px 0", color: "#DC2626" }}>
             {encode(ch.word, shift)}
@@ -64,18 +70,18 @@ export default function CipherActivity({ activity, color, onComplete }) {
           <div style={{ display: "flex", gap: 6 }}>
             <input value={guess} onChange={e => setGuess(e.target.value)}
               onKeyDown={e => e.key === "Enter" && check()}
-              placeholder="Typ het woord..."
+              placeholder={ui.placeholder || "Type the word..."}
               style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "2px solid rgba(0,0,0,0.08)", fontSize: 17, fontFamily: "monospace", textTransform: "uppercase", letterSpacing: 3 }}
             />
-            <button onClick={check} style={S.btn(color, 15)}>Check</button>
+            <button onClick={check} style={S.btn(color, 15)}>{ui.check || "Check"}</button>
           </div>
         </div>
       ) : (
         <div style={{ textAlign: "center", padding: 16 }}>
           <Confetti active={true} />
           <p style={{ fontSize: 48 }}>🔓</p>
-          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>Alle codes gekraakt!</p>
-          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 12 }}>Verder →</button>
+          <p style={{ ...S.heading, fontSize: 22, color: "#22C55E" }}>{ui.allDone || "All codes cracked!"}</p>
+          <button onClick={onComplete} style={{ ...S.btn("#F7931A"), marginTop: 12 }}>{ui.next || "Continue →"}</button>
         </div>
       )}
     </div>

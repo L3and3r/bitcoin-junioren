@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin don Yara",
+    "subtitle": "Gano duniyar kudi, daraja, da Bitcoin!",
+    "progress": "Ci gaba",
+    "newPlayer": "Fara dan wasa sabo",
+    "newPlayerConfirm": "Fara dan wasa sabo? Ci gaban yanzu zai gushe.",
+    "footer": "An gina shi bisa Bitcoin don Yara na My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, mai cesanta!",
+      "subtitle": "Menene sunanka?",
+      "placeholder": "Sunanka...",
+      "button": "Fara cesanta! 🚀"
+    },
+    "activity": {
+      "back": "← Koma baya",
+      "next": "Na gaba →",
+      "finish": "Kammala! 🎉",
+      "correct": "Daidai!",
+      "wrong": "Kuskure",
+      "score": "Maki",
+      "tryAgain": "Sake gwadawa",
+      "completed": "An gama!",
+      "badgeEarned": "Ka sami alama!"
+    },
+    "sort": {
+      "instruction": "Ja daga mai araha zuwa mai tsada",
+      "check": "Duba tsari"
+    },
+    "categorize": {
+      "instruction": "Ja zuwa nau'i da ya dace"
+    },
+    "match": {
+      "instruction": "Haɗa nau'i-nau'i"
+    },
+    "truefalse": {
+      "public": "Bayyane",
+      "private": "Sirri"
+    },
+    "cipher": {
+      "instruction": "Karya lambar sirri da farantin lambobi"
+    },
+    "mining": {
+      "instruction": "Nemo nau'i-nau'i masu kama da juna"
+    },
+    "scramble": {
+      "instruction": "Warware kalmar da aka gurbata",
+      "hint": "Taimako"
+    },
+    "moduleView": {
+      "back": "← Koma baya",
+      "map": "← Taswirar Dukiya",
+      "coreIdea": "💡 Babban Ra'ayi",
+      "activities": "Ayyuka",
+      "module": "Sashe"
+    },
+    "activityTypes": {
+      "quiz": "Tambayoyi",
+      "sort": "Tsarawa",
+      "match": "Haɗawa",
+      "cipher": "Karya Lambobi",
+      "mining": "Tunawa",
+      "truefalse": "Bayyane/Sirri",
+      "categorize": "Rarraba",
+      "scramble": "Warware Kalma"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Musanya, Daraja & Farashi",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Daraja ya dogara da abin da kake bukata. Farashi shine nawa abu ya kai. Kudi yana warware matsalar musanya.",
+      "description": "Gano dalilin da yasa muke amfani da kudi da kuma ainihin darajar abubuwa!",
+      "badge": "🏝️ Dan Kasuwar Tsibiri",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Rayuwa a Tsibiri",
+          "intro": "Jirgin ruwan ka ya nutse kuma ka zo wani tsibiri maras zama!",
+          "questions": [
+            {
+              "q": "Ka isa wani tsibiri marar zama. Mene ne mafi daraja?",
+              "options": [
+                "💎 Lu'u-lu'u",
+                "🔪 Wuka mai kaifi",
+                "📱 Wayar hannu",
+                "💰 Naira 100"
+              ],
+              "correct": 1,
+              "explanation": "A tsibiri, da wuka za ka iya yanke itace, yanke abinci, kuma gina mafaka. Kudi da lu'u-lu'u ba su da amfani a can!"
+            },
+            {
+              "q": "Kana da sanduna 5 na kamun kifi amma ba ka da tanti. Maƙwabcinka yana da tanti 3 amma ba shi da sanda. Me za ku yi?",
+              "options": [
+                "Dukkanku ku jira",
+                "Musanya: sanda ɗaya don tanti ɗaya!",
+                "Babu komai, rashin sa'a",
+                "Ku kuka tare"
+              ],
+              "correct": 1,
+              "explanation": "Musanya ita ce tsohuwar hanyar ciniki! Ka ba da abin da ka wuce bukatarka don abin da kake bukata."
+            },
+            {
+              "q": "Me yasa musanya wani lokaci yana da wahala?",
+              "options": [
+                "Domin yana da ban gajiya",
+                "Domin dole ka sami mutumin da yake son daidai abin da kake da shi",
+                "Domin an haramta shi",
+                "Domin kaya suna da nauyi"
+              ],
+              "correct": 1,
+              "explanation": "Ana kiransa 'saduwar bukata'. Kudi yana warware wannan matsala — kowa yana karɓar kudi!"
+            },
+            {
+              "q": "A da ana amfani da harsashi a matsayin kudi. Menene abin da ke sa wani abu zama kudi mai kyau?",
+              "options": [
+                "Dole ya kasance mai kyau",
+                "Dole ya zama da ƙaranci, mai ɗaukarwa, kuma kowa ya yarda da shi",
+                "Dole ya zama abinci",
+                "Dole ya fito daga gwamnati"
+              ],
+              "correct": 1,
+              "explanation": "Kudi mai kyau yana da ƙaranci (ba a samu shi yadda ake so), ana iya ɗauke shi cikin sauƙi, kuma kowa yana karɓa shi a matsayin biyan kuɗi."
+            },
+            {
+              "q": "Kwalbar ruwa tana farashi ₦200 a kantin sayarwa. A hamada, wani yana ba ka ₦10,000 don wannan kwalbar. Me yasa?",
+              "options": [
+                "Kantin ya fi tsada",
+                "Domin ruwa a hamada yana da ƙaranci ƙwarai kuma yana da muhimmanci sosai",
+                "Ruwa ne daban",
+                "Hamada na nesa"
+              ],
+              "correct": 1,
+              "explanation": "Ƙaranci yana canza daraja! Ƙarancin abu da kuma yadda kake bukata shi, haka darajansa take ƙaruwa."
+            },
+            {
+              "q": "Menene bambanci tsakanin farashi da daraja?",
+              "options": [
+                "Babu bambanci",
+                "Farashi shine nawa abu ya kai, daraja shine muhimmancin abu gare ka",
+                "Farashi koyaushe ya fi daraja",
+                "Daraja na game da kudi kawai"
+              ],
+              "correct": 1,
+              "explanation": "Zanen ɗanko ɗanka mai yiwuwa ba shi da farashi amma yana da daraja matuƙa. Farashi da daraja ba ɗaya ba ne!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Layin Farashi",
+          "intro": "Ka shirya kayayyaki daidai daga mafi araha zuwa mafi tsada!",
+          "items": [
+            {
+              "name": "🍎 Tuffa",
+              "value": 1
+            },
+            {
+              "name": "📖 Littafi",
+              "value": 2
+            },
+            {
+              "name": "⚽ Ƙwallon ƙafa",
+              "value": 3
+            },
+            {
+              "name": "📱 Wayar hannu",
+              "value": 4
+            },
+            {
+              "name": "🛵 Motar scoota",
+              "value": 5
+            },
+            {
+              "name": "🏠 Gida",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lokaci, Makamashi & Lada",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Makamashi yana da iyaka. Daidaituwa tsakanin aiki, hutawa, da wasa yana da muhimmanci. Haƙuri yana kawo sakamako mafi kyau.",
+      "description": "Ta yaya kake amfani da lokacinmu da makamashinku? Kuma me yasa jira wani lokaci yana da hankali?",
+      "badge": "⏳ Maigadin Lokaci",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Aiki, Hutawa ko Wasa?",
+          "intro": "Ja kowane aiki zuwa nau'i da ya dace!",
+          "categories": [
+            "💼 Aiki",
+            "😴 Hutawa",
+            "🎮 Wasa"
+          ],
+          "items": [
+            {
+              "name": "Yin homework",
+              "cat": 0
+            },
+            {
+              "name": "Barci",
+              "cat": 1
+            },
+            {
+              "name": "Wasan ƙwallon ƙafa",
+              "cat": 2
+            },
+            {
+              "name": "Tsabtace ɗaki",
+              "cat": 0
+            },
+            {
+              "name": "Karanta littafi",
+              "cat": 1
+            },
+            {
+              "name": "Wasan kama-kama",
+              "cat": 2
+            },
+            {
+              "name": "Shimfiɗa tebur",
+              "cat": 0
+            },
+            {
+              "name": "Ɗan barci",
+              "cat": 1
+            },
+            {
+              "name": "Wasan video",
+              "cat": 2
+            },
+            {
+              "name": "Sayan kaya kasuwa",
+              "cat": 0
+            },
+            {
+              "name": "Sauraron kiɗa",
+              "cat": 1
+            },
+            {
+              "name": "Wasan hawa bishiya",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Zaɓin Lokaci",
+          "intro": "Ka zaɓi YANZU ko DAGA BAYA?",
+          "questions": [
+            {
+              "q": "A labarin Ƴaƴan aladu uku: wane gida ya tsaya tsayin daka?",
+              "options": [
+                "🌾 Na ciyawa (an gina da sauri)",
+                "🪵 Na itace (na tsakiya)",
+                "🧱 Na tubali (ya ɗauki mafi yawan lokaci)"
+              ],
+              "correct": 2,
+              "explanation": "Gidan tubali ya ɗauki mafi yawan lokaci da ƙoƙari, amma shi kaɗai ya tsaya tsayin daka. Haƙuri yana lada!"
+            },
+            {
+              "q": "Menene ma'anar 'ƙarancin son lokaci yanzu'?",
+              "options": [
+                "Kana son duk komai YANZU",
+                "Kana shirye ka jira don wani abu mafi kyau",
+                "Ba ka da agogon hannu",
+                "Kana barci da yawa"
+              ],
+              "correct": 1,
+              "explanation": "Ƙarancin son lokaci yanzu = shirye ka jira don sakamako mafi kyau. Kamar ɗan alade da ya gina gidan tubali!"
+            },
+            {
+              "q": "Za a ba ka alewa 1 yanzu, ko alewa 3 idan ka jira mintuna 10. Mene ne zaɓin mafi hankali?",
+              "options": [
+                "Alewa 1 YANZU!",
+                "Jira: alewa 3 > alewa 1",
+                "Alewa ba shi da kyau ga lafiya",
+                "Gudu"
+              ],
+              "correct": 1,
+              "explanation": "Wannan shi ne gwajin alewa na shahara! Yara da suka iya jira sun samu sakamako mafi kyau a makaranta daga baya."
+            },
+            {
+              "q": "Kana da muhimman jarrabawa gobe. Menene ƙarancin son lokaci yanzu?",
+              "options": [
+                "Yin wasa yanzu ka karanta gobe",
+                "Karanta yau domin ka yi kyau gobe",
+                "Tsallake jarrabawar",
+                "Fata sa'a"
+              ],
+              "correct": 1,
+              "explanation": "Yin wani abu mai wahala yanzu (karatu) domin samun wani abu mai kyau daga baya (maki mai kyau) — wannan ƙarancin son lokaci yanzu ne."
+            },
+            {
+              "q": "Me zai faru idan ka kashe duk makamashinku da safe?",
+              "options": [
+                "Za ka zama mai ƙarfi",
+                "Ba ka da komai don sauran rana",
+                "Za ka samu ikon allahntaka",
+                "Babu wani abu na musamman"
+              ],
+              "correct": 1,
+              "explanation": "Makamashi yana da iyaka! Raba shi da hankali yana da muhimmanci — kamar kudi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Na Gargajiya da na Zamani",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Fasaha tana canzawa koyaushe. Kowane ƙirƙiro yana warware matsala. Ba duk sabon abu ne mafi kyau ba ta atomatik.",
+      "description": "Daga tattabarar wasiƙa zuwa intanet — yadda fasaha take canza duniya!",
+      "badge": "🚀 Majagaba na Fasaha",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Tsoho ↔ Sabo",
+          "intro": "Haɗa kowane tsohon fasaha da sigar zamani!",
+          "pairs": [
+            {
+              "old": "✉️ Wasiƙa",
+              "new": "📧 Imel"
+            },
+            {
+              "old": "📞 Tarho na zawo",
+              "new": "📱 Wayar hannu"
+            },
+            {
+              "old": "🗺️ Taswira ta takarda",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Firam ɗin fim",
+              "new": "📸 Kyamara ta dijital"
+            },
+            {
+              "old": "📰 Jarida",
+              "new": "🌐 Shafin labarai na yanar gizo"
+            },
+            {
+              "old": "💰 Tsabar kudi",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Yi Tunani game da Gaba",
+          "intro": "Yaya fasaha za ta kasance bayan shekaru 20?",
+          "questions": [
+            {
+              "q": "Me yasa fasaha take canzawa a tsawon lokaci?",
+              "options": [
+                "Domin tsohuwar fasaha tana ɓarna",
+                "Domin mutane suna warware matsaloli da sabbin ƙirƙirori",
+                "Domin gwamnati tana so",
+                "Ba tare da wata dalilin ba"
+              ],
+              "correct": 1,
+              "explanation": "Kowane ƙirƙiro yana warware matsala. Mota ta warware matsalar cewa dawakai suna jin gajiya kuma suna tafiya a hankali!"
+            },
+            {
+              "q": "Shin sabbin fasahohi KOYAUSHE suna mafi kyau fiye da na tsofaffi?",
+              "options": [
+                "Eh, koyaushe",
+                "A'a, wani lokaci tsohon abu ya fi kyau ko amincewa",
+                "Sabbin fasahohi ba su wanzu ba",
+                "Kawai idan sun fi tsada"
+              ],
+              "correct": 1,
+              "explanation": "Littafi na takarda ba ya buƙatar batir! Wani lokaci tsofaffin hanyoyin warware matsala har yanzu suna da hankali."
+            },
+            {
+              "q": "Bitcoin kuɗi ne na dijital. Menene ya haɗa shi da tsohuwar harsashi?",
+              "options": [
+                "Dukkansu suna fitowa daga teku",
+                "Dukkansu suna da ƙaranci ana amfani da su a matsayin hanyar musanya",
+                "Babu komai",
+                "Dukkansu kyauta ne"
+              ],
+              "correct": 1,
+              "explanation": "Harsashi da Bitcoin dukkansu suna da ƙaranci (akwai adadi iyakacin) kuma ana amfani da su a matsayin hanyar musanya."
+            },
+            {
+              "q": "Menene ƙirƙiro?",
+              "options": [
+                "Sayen wani sabon abu",
+                "Wani ingantaccen ci gaba ko ƙirƙiro da ke warware matsala",
+                "Wani kalma mai wahala da ba ta da ma'ana",
+                "Don masana kimiyya kaɗai"
+              ],
+              "correct": 1,
+              "explanation": "Ƙirƙiro = sabuwar hanya ko mafi kyawun hanya don warware matsalar da ke wanzu. Kowa zai iya ƙirƙiro!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Aminci & Sirri",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Kai ne ke yanke shawarar bayanan da kake raba. Lambobi na sirri suna kare saƙonni. Ba a buƙatar amana idan kana da ɓoyayyen rubutu.",
+      "description": "Lambobin sirri, sirri, da yadda ake kare kanka akan layi!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Bayyane ko Sirri?",
+          "intro": "Shin wannan bayanin bayyane ne ko sirri? Yanke shawarar da sauri!",
+          "statements": [
+            {
+              "text": "Kalmar shigar ka",
+              "answer": false,
+              "label": "Sirri!",
+              "explanation": "Kalmar shigar koyaushe sirri ce. Kada ka raba ta da kowa!"
+            },
+            {
+              "text": "Sunanka a makaranta",
+              "answer": true,
+              "label": "Bayyane",
+              "explanation": "A makaranta kowa yana san sunanka — wannan bayanin bayyane ne."
+            },
+            {
+              "text": "Lambar PIN ɗinka",
+              "answer": false,
+              "label": "Sirri!",
+              "explanation": "Lambar PIN ɗinka asiri ne — tana kare asusun bankin ka."
+            },
+            {
+              "text": "Wurin shakatawa a gari",
+              "answer": true,
+              "label": "Bayyane",
+              "explanation": "Wurin shakatawa wuri ne na jama'a — kowa na iya zuwa."
+            },
+            {
+              "text": "Diyanrinka",
+              "answer": false,
+              "label": "Sirri!",
+              "explanation": "Diyanrinka sirri ne — kai kaɗai ke yanke shawarar wanda zai iya karantawa."
+            },
+            {
+              "text": "Launi na kekanka",
+              "answer": true,
+              "label": "Bayyane",
+              "explanation": "Kowa zai iya ganin launin kekanka."
+            },
+            {
+              "text": "Adireshin gidanka",
+              "answer": false,
+              "label": "Sirri!",
+              "explanation": "Ba ka raba adireshi da baƙi — wannan bayanin sirri ne."
+            },
+            {
+              "text": "Yanayin yau",
+              "answer": true,
+              "label": "Bayyane",
+              "explanation": "Yanayi iri ɗaya ne ga kowa — bayyane gaba ɗaya!"
+            },
+            {
+              "text": "Makullin Bitcoin ɗinka",
+              "answer": false,
+              "label": "Sirri!",
+              "explanation": "Makullin sirri ɗinka shine mafi muhimmancin asiri. Wanda ya samu shi yana da bitcoin ɗinka!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Lambar Sirri",
+          "intro": "Karya kalmomin Bitcoin na asiri da farantin lambobi!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Al'amuran Kudi",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Kuna iya samun kudi, ajiye shi, zuba jari, da kashe shi. Kasafin kudi zaɓi ne. Dokokin gaskiya suna da muhimmanci.",
+      "description": "Samun kudi, ajiyewa, zuba jari — zama masanin kudi!",
+      "badge": "💎 Mai Hikimar Kudi",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Hankali da Kudi",
+          "intro": "Gwada yadda kake da hankali game da al'amuran kudi!",
+          "questions": [
+            {
+              "q": "Menene ajiyar kudi?",
+              "options": [
+                "Kashe kudi nan take",
+                "Ajiye kudi don amfani daga baya",
+                "Jefar da kudi",
+                "Aron kudi daga aboki"
+              ],
+              "correct": 1,
+              "explanation": "Ajiyar kudi = adana kudi domin ka iya sayen wani abu mafi girma ko muhimmanci daga baya."
+            },
+            {
+              "q": "Menene zuba jari?",
+              "options": [
+                "Ɓoye kudi",
+                "Saka kuɗinka ko lokacinku a wani wuri domin ya fi daraja daga baya",
+                "Kashe duk yau",
+                "Ƙone kudi"
+              ],
+              "correct": 1,
+              "explanation": "Zuba jari shine saka kuɗinka ko lokacinku a wani wuri da fatan zai fi daraja daga baya."
+            },
+            {
+              "q": "Kana da harsashi 12. Tanti yana farashi 8 kuma sanda yana farashi 6. Shin zaka iya sayen dukkansu?",
+              "options": [
+                "Eh!",
+                "A'a, 8 + 6 = 14, amma kana da 12 kawai",
+                "Kawai da ragi",
+                "Harsashi ba kudi ba ne"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, amma kana da harsashi 12 kawai. Dole ka zaɓa! Wannan yin kasafin kudi ne."
+            },
+            {
+              "q": "A gwanjon sayarwa, farashi na wani kayan da ba kasafai ba yana ƙaruwa koyaushe. Me yasa?",
+              "options": [
+                "Mai siyarwa yana da mugunta",
+                "Mutane da yawa suna so amma akwai ɗaya kawai (ƙaranci + buƙata)",
+                "Abu yana ƙaruwa girma",
+                "Domin wani yana yaudara"
+              ],
+              "correct": 1,
+              "explanation": "Idan mutane da yawa suna so amma kaɗan ne akwai, farashin yana ƙaruwa. Haka buƙata da samar da kayayyaki ke aiki!"
+            },
+            {
+              "q": "Me yasa dokokin gaskiya suna da muhimmanci game da kudi?",
+              "options": [
+                "Ba su da muhimmanci",
+                "Domin kowa ya samu daidaitaccen dama",
+                "Ga yara kawai",
+                "Domin ya zama mafi wahala"
+              ],
+              "correct": 1,
+              "explanation": "Dokokin gaskiya suna tabbatar da cewa ba wanda zai iya yaudara kuma kowa yana da daidaitaccen dama."
+            },
+            {
+              "q": "Menene aro?",
+              "options": [
+                "Sata kudi",
+                "Karɓar kuɗin wani da za ka biya daga baya",
+                "Ajiye kudi",
+                "Rasa kudi"
+              ],
+              "correct": 1,
+              "explanation": "Aro yana nufin karɓar kuɗin wani, amma dole ka biya shi daga baya — yawanci tare da ƙarin (riba)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Asasin Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin kuɗi ne na dijital mai ƙaranci ba tare da mai tsaka-tsaki ba. Mining yana tabbatar da ma'amaloli. Satoshi ya kasance ɓoye.",
+      "description": "Babban cesantar Bitcoin: daga Satoshi zuwa mining!",
+      "badge": "⛏️ Mai hakar Bitcoin",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Wane ne Satoshi?",
+          "intro": "Gano tarihin da ke bayan Bitcoin!",
+          "questions": [
+            {
+              "q": "Wane ne ya ƙirƙiri Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Banki",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto ya buga 'white paper' a 2008 tare da ra'ayin Bitcoin. Ba wanda ya san wane ne Satoshi a zahiri!"
+            },
+            {
+              "q": "Menene 'white paper'?",
+              "options": [
+                "Takarda fanko",
+                "Takarda da kake bayyana sabon ra'ayi a ciki",
+                "Wasiƙar sirri",
+                "Aikin makaranta"
+              ],
+              "correct": 1,
+              "explanation": "White paper takarda ce da kake gabatar da sabon ra'ayi ko warware matsala ga duniya."
+            },
+            {
+              "q": "Menene Genesis Block?",
+              "options": [
+                "Wasan kwamfuta",
+                "Farkon farkon katafaren Bitcoin",
+                "Wani nau'in dutse",
+                "Wata kalmar sirri"
+              ],
+              "correct": 1,
+              "explanation": "A ranar 3 ga Janairun 2009 aka ƙirƙiri Genesis Block — farkon farkon katafaren a cikin blockchain na Bitcoin."
+            },
+            {
+              "q": "Nawa na bitcoin za a taɓa samu?",
+              "options": [
+                "Maras iyaka",
+                "Miliyan 21 kawai",
+                "Daidai biliyan 1",
+                "Ba wanda ya sani"
+              ],
+              "correct": 1,
+              "explanation": "Ba za a taɓa samun bitcoin fiye da miliyan 21 ba. Wannan ƙarancin an gina shi cikin dokokin!"
+            },
+            {
+              "q": "Menene 'tona' a Bitcoin?",
+              "options": [
+                "Tona ƙasa",
+                "Amfani da kwamfutoci warware damtse don tabbatar da ma'amaloli",
+                "Buga bitcoin",
+                "Zanen bitcoin"
+              ],
+              "correct": 1,
+              "explanation": "Masu tona suna amfani da kwamfutoci don warware damtsolin lissafi. A matsayin hujjar aiki da suka yi, ana ba su damar tabbatar da ma'amaloli."
+            },
+            {
+              "q": "Menene Proof of Work?",
+              "options": [
+                "Rahoto daga makaranta",
+                "Hujja cewa wani ya yi ƙoƙari na gaske don samun wani abu",
+                "Kalmar sirri",
+                "Wani nau'in takardar sheda"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = hujjar aiki. Kamar wasan kwallon: kowa yana bin dokokin iri ɗaya kuma yana da daidaitaccen dama."
+            },
+            {
+              "q": "Me yasa Satoshi ya ɓace?",
+              "options": [
+                "Ya tafi hutu",
+                "Yiwuwa don ya sa Bitcoin ya zama na kowa, ba tare da shugaba ba",
+                "Ya yi fushi",
+                "Ba ya wanzu"
+              ],
+              "correct": 1,
+              "explanation": "Ta wurin ɓacewa, Satoshi ya tabbatar da cewa Bitcoin ba na mutum ɗaya ba ne. Cibiyar sadarwa tana gudana bisa dokoki, ba bisa shugaba ba."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Tona Bitcoin!",
+          "intro": "Nemo nau'i-nau'i masu kama da juna don tona katafaren — kamar masu tona na gaske!"
+        },
+        {
+          "type": "scramble",
+          "title": "Warware Kalmar Bitcoin",
+          "intro": "Warware kalmomin Bitcoin da aka gurbata!",
+          "words": [
+            {
+              "scrambled": "IDUKNA",
+              "answer": "KUDINA",
+              "hint": "Kuɗi na dijital"
+            },
+            {
+              "scrambled": "ROAKI",
+              "answer": "KARIKO",
+              "hint": "Mai ƙirƙiro na asiri"
+            },
+            {
+              "scrambled": "FRAKATA",
+              "answer": "KATAFAR",
+              "hint": "Ma'amaloli suna ciki"
+            },
+            {
+              "scrambled": "RANCIKA",
+              "answer": "KARANCI",
+              "hint": "Ba a samu yawa ba"
+            },
+            {
+              "scrambled": "ANATONA",
+              "answer": "TONAANA",
+              "hint": "Warware damtse da kwamfuta"
+            },
+            {
+              "scrambled": "JKUABUN",
+              "answer": "JAKUBUN",
+              "hint": "Inda kake adana bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

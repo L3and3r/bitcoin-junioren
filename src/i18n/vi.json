@@ -1,0 +1,715 @@
+{
+  "ui": {
+    "greeting": "Ahoy, {name}! 🏴‍☠️",
+    "title": "Bitcoin cho Thiếu Nhi",
+    "subtitle": "Khám phá thế giới tiền bạc, giá trị và Bitcoin!",
+    "progress": "Tiến độ",
+    "newPlayer": "Bắt đầu người chơi mới",
+    "newPlayerConfirm": "Bắt đầu người chơi mới? Tiến độ hiện tại sẽ bị xóa.",
+    "footer": "Dựa trên Bitcoin cho Thiếu Nhi của My First Bitcoin · CC BY-SA 4.0",
+    "nameScreen": {
+      "title": "Ahoy, nhà phiêu lưu!",
+      "subtitle": "Bạn tên là gì?",
+      "placeholder": "Tên của bạn...",
+      "button": "Bắt đầu cuộc phiêu lưu! 🚀"
+    },
+    "activity": {
+      "back": "← Quay lại",
+      "next": "Tiếp theo →",
+      "finish": "Xong! 🎉",
+      "correct": "Đúng rồi!",
+      "wrong": "Sai rồi",
+      "score": "Điểm số",
+      "tryAgain": "Thử lại",
+      "completed": "Hoàn thành!",
+      "badgeEarned": "Nhận được huy hiệu!"
+    },
+    "sort": {
+      "instruction": "Kéo từ rẻ nhất đến đắt nhất",
+      "check": "Kiểm tra thứ tự"
+    },
+    "categorize": {
+      "instruction": "Kéo vào đúng danh mục"
+    },
+    "match": {
+      "instruction": "Ghép các cặp với nhau"
+    },
+    "truefalse": {
+      "public": "Công khai",
+      "private": "Riêng tư"
+    },
+    "cipher": {
+      "instruction": "Giải mã bằng vòng quay mật mã"
+    },
+    "mining": {
+      "instruction": "Tìm các cặp giống nhau"
+    },
+    "scramble": {
+      "instruction": "Sắp xếp lại chữ cái",
+      "hint": "Gợi ý"
+    },
+    "moduleView": {
+      "back": "← Quay lại",
+      "map": "← Bản đồ kho báu",
+      "coreIdea": "💡 Ý tưởng chính",
+      "activities": "Hoạt động",
+      "module": "Chủ đề"
+    },
+    "activityTypes": {
+      "quiz": "Trắc nghiệm",
+      "sort": "Sắp xếp",
+      "match": "Ghép đôi",
+      "cipher": "Giải mã",
+      "mining": "Trò chơi trí nhớ",
+      "truefalse": "Công khai/Riêng tư",
+      "categorize": "Phân loại",
+      "scramble": "Đố chữ"
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Trao Đổi, Giá Trị & Giá Cả",
+      "icon": "⚓",
+      "color": "#D97706",
+      "bg": "#FEF3C7",
+      "summary": "Giá trị phụ thuộc vào nhu cầu của bạn. Giá cả là chi phí của thứ đó. Tiền giải quyết vấn đề trao đổi.",
+      "description": "Khám phá tại sao chúng ta dùng tiền và mọi thứ thực sự đáng giá bao nhiêu!",
+      "badge": "🏝️ Thương Nhân Đảo",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Sinh Tồn Trên Đảo",
+          "intro": "Bạn là người bị đắm thuyền trên một hòn đảo hoang!",
+          "questions": [
+            {
+              "q": "Bạn dạt vào một hòn đảo hoang. Thứ nào có giá trị nhất?",
+              "options": [
+                "💎 Kim cương",
+                "🔪 Một con dao rựa",
+                "📱 Điện thoại thông minh",
+                "💰 100 euro"
+              ],
+              "correct": 1,
+              "explanation": "Trên đảo, bạn có thể dùng dao rựa để chặt gỗ, cắt thức ăn và xây nơi trú ẩn. Tiền và kim cương hoàn toàn vô dụng ở đó!"
+            },
+            {
+              "q": "Bạn có 5 cần câu nhưng không có lều. Người hàng xóm có 3 cái lều nhưng không có cần câu. Các bạn sẽ làm gì?",
+              "options": [
+                "Cả hai cùng chờ đợi",
+                "Trao đổi: một cần câu lấy một cái lều!",
+                "Không làm gì, xui thôi",
+                "Cùng nhau khóc"
+              ],
+              "correct": 1,
+              "explanation": "Trao đổi hàng hóa là cách buôn bán lâu đời nhất! Bạn cho đi thứ mình thừa để lấy thứ mình cần."
+            },
+            {
+              "q": "Tại sao trao đổi hàng hóa đôi khi rất khó khăn?",
+              "options": [
+                "Vì nó thật nhàm chán",
+                "Vì bạn phải tìm người muốn đúng thứ bạn có",
+                "Vì nó bị cấm",
+                "Vì đồ vật quá nặng"
+              ],
+              "correct": 1,
+              "explanation": "Đây được gọi là 'sự trùng hợp nhu cầu'. Tiền giải quyết vấn đề này — vì ai cũng chấp nhận tiền!"
+            },
+            {
+              "q": "Ngày xưa vỏ sò được dùng làm tiền. Điều gì làm cho một thứ trở thành tiền tốt?",
+              "options": [
+                "Nó phải đẹp",
+                "Nó phải khan hiếm, dễ mang theo và được mọi người chấp nhận",
+                "Nó phải ăn được",
+                "Nó phải do chính phủ phát hành"
+              ],
+              "correct": 1,
+              "explanation": "Tiền tốt phải khan hiếm (không tìm thấy vô hạn), dễ mang theo, và mọi người phải chấp nhận nó làm phương tiện thanh toán."
+            },
+            {
+              "q": "Một chai nước giá 1 euro ở siêu thị. Trong sa mạc, có người trả 100 euro cho cùng chai đó. Tại sao?",
+              "options": [
+                "Cửa hàng đó đắt hơn",
+                "Vì nước trong sa mạc khan hiếm hơn và quan trọng hơn nhiều",
+                "Đó là loại nước khác",
+                "Sa mạc ở xa"
+              ],
+              "correct": 1,
+              "explanation": "Sự khan hiếm thay đổi giá trị! Thứ gì càng ít và bạn càng cần thì nó càng có giá trị."
+            },
+            {
+              "q": "Sự khác biệt giữa giá cả và giá trị là gì?",
+              "options": [
+                "Không có sự khác biệt",
+                "Giá cả là chi phí của thứ đó, giá trị là mức độ quan trọng của nó với bạn",
+                "Giá cả luôn cao hơn giá trị",
+                "Giá trị chỉ liên quan đến tiền"
+              ],
+              "correct": 1,
+              "explanation": "Một bức tranh của con bạn có thể không có giá nhưng lại có giá trị vô cùng lớn. Giá cả và giá trị không giống nhau!"
+            }
+          ]
+        },
+        {
+          "type": "sort",
+          "title": "Thang Giá Cả",
+          "intro": "Sắp xếp các đồ vật theo thứ tự từ rẻ nhất đến đắt nhất!",
+          "items": [
+            {
+              "name": "🍎 Quả táo",
+              "value": 1
+            },
+            {
+              "name": "📖 Quyển sách",
+              "value": 2
+            },
+            {
+              "name": "⚽ Quả bóng đá",
+              "value": 3
+            },
+            {
+              "name": "📱 Điện thoại",
+              "value": 4
+            },
+            {
+              "name": "🛵 Xe tay ga",
+              "value": 5
+            },
+            {
+              "name": "🏠 Ngôi nhà",
+              "value": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Thời Gian, Năng Lượng & Phần Thưởng",
+      "icon": "⚡",
+      "color": "#0D9488",
+      "bg": "#CCFBF1",
+      "summary": "Năng lượng có giới hạn. Cân bằng giữa làm việc, nghỉ ngơi và vui chơi rất quan trọng. Kiên nhẫn dẫn đến kết quả tốt hơn.",
+      "description": "Bạn sử dụng thời gian và năng lượng của mình như thế nào? Và tại sao đôi khi chờ đợi lại thông minh hơn?",
+      "badge": "⏳ Bậc Thầy Thời Gian",
+      "activities": [
+        {
+          "type": "categorize",
+          "title": "Làm Việc, Nghỉ Ngơi hay Vui Chơi?",
+          "intro": "Kéo mỗi hoạt động vào đúng danh mục!",
+          "categories": [
+            "💼 Làm việc",
+            "😴 Nghỉ ngơi",
+            "🎮 Vui chơi"
+          ],
+          "items": [
+            {
+              "name": "Làm bài tập về nhà",
+              "cat": 0
+            },
+            {
+              "name": "Ngủ",
+              "cat": 1
+            },
+            {
+              "name": "Đá bóng",
+              "cat": 2
+            },
+            {
+              "name": "Dọn dẹp phòng",
+              "cat": 0
+            },
+            {
+              "name": "Đọc sách",
+              "cat": 1
+            },
+            {
+              "name": "Chơi trò đuổi bắt",
+              "cat": 2
+            },
+            {
+              "name": "Dọn bàn ăn",
+              "cat": 0
+            },
+            {
+              "name": "Chợp mắt",
+              "cat": 1
+            },
+            {
+              "name": "Chơi game",
+              "cat": 2
+            },
+            {
+              "name": "Đi mua sắm",
+              "cat": 0
+            },
+            {
+              "name": "Nghe nhạc",
+              "cat": 1
+            },
+            {
+              "name": "Đi công viên leo trèo",
+              "cat": 2
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Chọn Ngay Hay Chờ Đợi?",
+          "intro": "Bạn chọn NGAY BÂY GIỜ hay SAU NÀY?",
+          "questions": [
+            {
+              "q": "Trong câu chuyện Ba chú lợn con: ngôi nhà nào vẫn đứng vững?",
+              "options": [
+                "🌾 Nhà rơm (xây nhanh nhất)",
+                "🪵 Nhà gỗ (trung bình)",
+                "🧱 Nhà gạch (mất nhiều thời gian nhất)"
+              ],
+              "correct": 2,
+              "explanation": "Nhà gạch mất nhiều thời gian và công sức nhất, nhưng là ngôi nhà duy nhất còn đứng. Kiên nhẫn luôn được đền đáp!"
+            },
+            {
+              "q": "'Ưu tiên thời gian thấp' nghĩa là gì?",
+              "options": [
+                "Bạn muốn mọi thứ NGAY BÂY GIỜ",
+                "Bạn sẵn sàng chờ đợi để có thứ tốt hơn",
+                "Bạn không có đồng hồ",
+                "Bạn ngủ nhiều"
+              ],
+              "correct": 1,
+              "explanation": "Ưu tiên thời gian thấp = sẵn sàng chờ đợi để có kết quả tốt hơn. Giống như chú lợn xây nhà gạch vậy!"
+            },
+            {
+              "q": "Bạn nhận được 1 cái kẹo ngay bây giờ, hoặc 3 cái kẹo nếu chờ 10 phút. Lựa chọn thông minh nhất là gì?",
+              "options": [
+                "1 cái kẹo NGAY!",
+                "Chờ đợi: 3 cái kẹo > 1 cái kẹo",
+                "Kẹo không tốt cho sức khỏe",
+                "Bỏ chạy"
+              ],
+              "correct": 1,
+              "explanation": "Đây là bài kiểm tra kẹo dẻo nổi tiếng! Những đứa trẻ biết chờ đợi thường có kết quả học tập tốt hơn sau này."
+            },
+            {
+              "q": "Ngày mai bạn có bài kiểm tra quan trọng. Ưu tiên thời gian thấp là gì?",
+              "options": [
+                "Chơi game bây giờ rồi học sau",
+                "Học hôm nay để ngày mai đạt điểm cao",
+                "Bỏ qua bài kiểm tra",
+                "Hy vọng may mắn"
+              ],
+              "correct": 1,
+              "explanation": "Làm việc khó ngay bây giờ (học bài) để sau đó nhận được điều tốt (điểm cao) — đó là ưu tiên thời gian thấp."
+            },
+            {
+              "q": "Điều gì xảy ra nếu bạn dùng hết năng lượng vào buổi sáng?",
+              "options": [
+                "Bạn trở nên mạnh hơn",
+                "Bạn không còn gì cho phần còn lại của ngày",
+                "Bạn có siêu năng lực",
+                "Không có gì đặc biệt"
+              ],
+              "correct": 1,
+              "explanation": "Năng lượng có giới hạn! Phân bổ thông minh rất quan trọng — giống như tiền bạc vậy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Tương Tự và Kỹ Thuật Số",
+      "icon": "🔄",
+      "color": "#7C3AED",
+      "bg": "#EDE9FE",
+      "summary": "Công nghệ không ngừng thay đổi. Mỗi phát minh giải quyết một vấn đề. Không phải mọi thứ mới đều tốt hơn.",
+      "description": "Từ chim bồ câu đưa thư đến internet — công nghệ thay đổi thế giới như thế nào!",
+      "badge": "🚀 Tiên Phong Công Nghệ",
+      "activities": [
+        {
+          "type": "match",
+          "title": "Cũ ↔ Mới",
+          "intro": "Ghép mỗi công nghệ cũ với phiên bản hiện đại của nó!",
+          "pairs": [
+            {
+              "old": "✉️ Thư tay",
+              "new": "📧 Email"
+            },
+            {
+              "old": "📞 Điện thoại quay số",
+              "new": "📱 Điện thoại thông minh"
+            },
+            {
+              "old": "🗺️ Bản đồ giấy",
+              "new": "📍 GPS"
+            },
+            {
+              "old": "📷 Máy ảnh phim",
+              "new": "📸 Máy ảnh kỹ thuật số"
+            },
+            {
+              "old": "📰 Báo giấy",
+              "new": "🌐 Trang tin tức trực tuyến"
+            },
+            {
+              "old": "💰 Tiền xu",
+              "new": "₿ Bitcoin"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "title": "Hãy Tưởng Tượng Tương Lai",
+          "intro": "Công nghệ sẽ trông như thế nào sau 20 năm nữa?",
+          "questions": [
+            {
+              "q": "Tại sao công nghệ thay đổi theo thời gian?",
+              "options": [
+                "Vì đồ cũ bị hỏng",
+                "Vì con người giải quyết vấn đề bằng những phát minh mới",
+                "Vì chính phủ muốn vậy",
+                "Không có lý do"
+              ],
+              "correct": 1,
+              "explanation": "Mỗi phát minh giải quyết một vấn đề. Xe ô tô giải quyết vấn đề ngựa chậm và mệt mỏi!"
+            },
+            {
+              "q": "Công nghệ mới có LUÔN LUÔN tốt hơn công nghệ cũ không?",
+              "options": [
+                "Có, luôn luôn",
+                "Không, đôi khi thứ cũ tốt hơn hoặc đáng tin cậy hơn",
+                "Công nghệ mới không tồn tại",
+                "Chỉ khi nó đ��t hơn"
+              ],
+              "correct": 1,
+              "explanation": "Sách giấy không cần pin! Đôi khi những giải pháp cũ vẫn còn rất thông minh."
+            },
+            {
+              "q": "Bitcoin là tiền kỹ thuật số. Nó có điểm gì chung với vỏ sò ngày xưa?",
+              "options": [
+                "Cả hai đều từ biển",
+                "Cả hai đều khan hiếm và được dùng làm phương tiện trao đổi",
+                "Không có gì",
+                "Cả hai đều miễn phí"
+              ],
+              "correct": 1,
+              "explanation": "Cả vỏ sò lẫn Bitcoin đều khan hiếm (số lượng có hạn) và được dùng làm phương tiện trao đổi."
+            },
+            {
+              "q": "Đổi mới là gì?",
+              "options": [
+                "Mua thứ gì đó mới",
+                "Một cải tiến hoặc phát minh thông minh giải quyết một vấn đề",
+                "Một từ khó không có nghĩa gì",
+                "Chỉ dành cho các nhà khoa học"
+              ],
+              "correct": 1,
+              "explanation": "Đổi mới = một giải pháp mới hoặc tốt hơn cho một vấn đề hiện có. Ai cũng có thể đổi mới!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Bảo Mật & Quyền Riêng Tư",
+      "icon": "🛡️",
+      "color": "#DC2626",
+      "bg": "#FEE2E2",
+      "summary": "Bạn quyết định thông tin nào bạn chia sẻ. Mã hóa bảo vệ tin nhắn. Bạn không cần sự tin tưởng khi có mã hóa.",
+      "description": "Mã bí mật, quyền riêng tư và cách bảo vệ bản thân trực tuyến!",
+      "badge": "🔐 Cypherpunk",
+      "activities": [
+        {
+          "type": "truefalse",
+          "title": "Công Khai hay Riêng Tư?",
+          "intro": "Thông tin này là công khai hay riêng tư? Quyết định nhanh thôi!",
+          "statements": [
+            {
+              "text": "Mật khẩu của bạn",
+              "answer": false,
+              "label": "Riêng tư!",
+              "explanation": "Mật khẩu luôn luôn là riêng tư. Đừng bao giờ chia sẻ với ai!"
+            },
+            {
+              "text": "Tên của bạn ở trường",
+              "answer": true,
+              "label": "Công khai",
+              "explanation": "Ở trường mọi người đều biết tên bạn — đó l�� thông tin công khai."
+            },
+            {
+              "text": "Mã PIN của bạn",
+              "answer": false,
+              "label": "Riêng tư!",
+              "explanation": "Mã PIN của bạn là bí mật — nó bảo vệ tài khoản ngân hàng của bạn."
+            },
+            {
+              "text": "Một công viên trong thành phố",
+              "answer": true,
+              "label": "Công khai",
+              "explanation": "Công viên là nơi công cộng — ai cũng có thể đến đó."
+            },
+            {
+              "text": "Nhật ký của bạn",
+              "answer": false,
+              "label": "Riêng tư!",
+              "explanation": "Nhật ký của bạn là riêng tư — chỉ bạn mới quyết định ai được đọc nó."
+            },
+            {
+              "text": "Màu xe đạp của bạn",
+              "answer": true,
+              "label": "Công khai",
+              "explanation": "Ai cũng có thể nhìn thấy màu xe đạp của bạn."
+            },
+            {
+              "text": "Địa chỉ nhà bạn",
+              "answer": false,
+              "label": "Riêng tư!",
+              "explanation": "Đừng cho người lạ biết địa chỉ của bạn — đó là thông tin riêng tư."
+            },
+            {
+              "text": "Thời tiết hôm nay",
+              "answer": true,
+              "label": "Công khai",
+              "explanation": "Thời tiết giống nhau với mọi người — hoàn toàn công khai!"
+            },
+            {
+              "text": "Khóa Bitcoin của bạn",
+              "answer": false,
+              "label": "Riêng tư!",
+              "explanation": "Khóa riêng tư của bạn là bí mật quan trọng nhất. Ai có nó thì có bitcoin của bạn!"
+            }
+          ]
+        },
+        {
+          "type": "cipher",
+          "title": "Mã Bí Mật",
+          "intro": "Giải mã các từ Bitcoin bí ẩn bằng vòng quay mật mã!"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Chuyện Tiền Bạc",
+      "icon": "🏦",
+      "color": "#B45309",
+      "bg": "#FEF3C7",
+      "summary": "Bạn có thể kiếm, tiết kiệm, đầu tư và tiêu tiền. Lập ngân sách là lựa chọn. Quy tắc công bằng rất quan trọng.",
+      "description": "Kiếm tiền, tiết kiệm, đầu tư — trở thành chuyên gia tài chính!",
+      "badge": "💎 Người Kh��n Ngoan Về Tiền",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Thông Minh Về Tiền",
+          "intro": "Kiểm tra xem bạn thông minh về tiền bạc đến đâu!",
+          "questions": [
+            {
+              "q": "Tiết kiệm là gì?",
+              "options": [
+                "Tiêu tiền ngay lập tức",
+                "Để dành tiền cho sau này",
+                "Vứt tiền đi",
+                "Mượn tiền của bạn"
+              ],
+              "correct": 1,
+              "explanation": "Tiết kiệm = giữ tiền lại để sau này bạn có thể mua thứ gì đó lớn hơn hoặc quan trọng hơn."
+            },
+            {
+              "q": "Đầu tư là gì?",
+              "options": [
+                "Giấu tiền đi",
+                "Bỏ tiền hoặc thời gian vào đâu đó để nó có giá trị hơn sau này",
+                "Tiêu hết tiền hôm nay",
+                "Đốt tiền"
+              ],
+              "correct": 1,
+              "explanation": "Đầu tư là bỏ tiền hoặc thời gian vào đâu đó với hy vọng nó sẽ có giá trị hơn sau này."
+            },
+            {
+              "q": "Bạn có 12 vỏ sò. Một cái lều giá 8 và một cần câu giá 6. Bạn có thể mua cả hai không?",
+              "options": [
+                "Có!",
+                "Không, 8 + 6 = 14, mà bạn chỉ có 12",
+                "Chỉ khi được giảm giá",
+                "Vỏ sò không phải tiền"
+              ],
+              "correct": 1,
+              "explanation": "8 + 6 = 14, nhưng bạn chỉ có 12 vỏ sò. Bạn phải chọn! Đó chính là lập ngân sách."
+            },
+            {
+              "q": "Tại một cuộc đấu giá, giá của một đồ vật hiếm cứ tăng dần. Tại sao?",
+              "options": [
+                "Người bán tham lam",
+                "Nhiều người muốn nó nhưng chỉ có một cái (khan hiếm + nhu cầu)",
+                "Đồ vật ngày càng to hơn",
+                "Vì có người gian lận"
+              ],
+              "correct": 1,
+              "explanation": "Khi nhiều người muốn thứ gì đó mà chỉ có ít, giá tăng lên. Đó là cách cung và cầu hoạt động!"
+            },
+            {
+              "q": "Tại sao quy tắc công bằng về tiền bạc lại quan trọng?",
+              "options": [
+                "Chúng không quan trọng",
+                "Để mọi người đều có cơ hội như nhau",
+                "Chỉ dành cho trẻ em",
+                "Để mọi thứ trở nên khó hơn"
+              ],
+              "correct": 1,
+              "explanation": "Quy tắc công bằng đảm bảo không ai có thể gian lận và mọi người đều có cơ hội như nhau."
+            },
+            {
+              "q": "Vay mượn là gì?",
+              "options": [
+                "Ăn cắp tiền",
+                "Nhận tiền của người khác mà bạn phải trả lại sau",
+                "Tiết kiệm tiền",
+                "Mất tiền"
+              ],
+              "correct": 1,
+              "explanation": "Vay mượn có nghĩa là bạn nhận tiền của người khác nhưng phải trả lại sau — thường kèm thêm tiền lãi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Nguyên Tắc Cơ Bản Của Bitcoin",
+      "icon": "₿",
+      "color": "#EA580C",
+      "bg": "#FFF7ED",
+      "summary": "Bitcoin là tiền kỹ thuật số khan hiếm không có trung gian. Đào coin xác nhận giao dịch. Satoshi vẫn ẩn danh.",
+      "description": "Cuộc phiêu lưu Bitcoin vĩ đ��i: từ Satoshi đến đào coin!",
+      "badge": "⛏️ Thợ Đào Bitcoin",
+      "activities": [
+        {
+          "type": "quiz",
+          "title": "Satoshi Là Ai?",
+          "intro": "Khám phá câu chuyện đằng sau Bitcoin!",
+          "questions": [
+            {
+              "q": "Ai đã phát minh ra Bitcoin?",
+              "options": [
+                "Elon Musk",
+                "Satoshi Nakamoto",
+                "Ngân hàng",
+                "Google"
+              ],
+              "correct": 1,
+              "explanation": "Satoshi Nakamoto đã công bố một 'white paper' vào năm 2008 với ý tưởng về Bitcoin. Không ai biết Satoshi thực sự là ai!"
+            },
+            {
+              "q": "'White paper' là gì?",
+              "options": [
+                "Một tờ giấy trắng",
+                "Một tài liệu giải thích một ý tưởng mới",
+                "Một lá thư bí mật",
+                "Một bài tập ở trường"
+              ],
+              "correct": 1,
+              "explanation": "White paper là một tài liệu trong đó bạn trình bày một ý tưởng hoặc giải pháp mới với thế giới."
+            },
+            {
+              "q": "Khối Genesis là gì?",
+              "options": [
+                "Một trò chơi máy tính",
+                "Khối đầu tiên của Bitcoin",
+                "Một loại đá",
+                "Một mật khẩu bí mật"
+              ],
+              "correct": 1,
+              "explanation": "Ngày 3 tháng 1 năm 2009, Khối Genesis được tạo ra — khối đầu tiên trong chuỗi khối Bitcoin."
+            },
+            {
+              "q": "Sẽ có bao nhiêu Bitcoin tồn tại?",
+              "options": [
+                "Vô hạn",
+                "Tối đa 21 triệu",
+                "Chính xác 1 tỷ",
+                "Không ai biết"
+              ],
+              "correct": 1,
+              "explanation": "Sẽ không bao giờ có hơn 21 triệu Bitcoin. Sự khan hiếm đó được tích hợp sẵn trong các quy tắc!"
+            },
+            {
+              "q": "'Đào' Bitcoin là gì?",
+              "options": [
+                "Đào đất",
+                "Dùng máy tính giải câu đố để xác nhận giao dịch",
+                "In Bitcoin",
+                "Vẽ Bitcoin"
+              ],
+              "correct": 1,
+              "explanation": "Thợ đào dùng máy tính để giải các câu đố toán học. Như bằng chứng họ đã làm việc, họ được phép xác nhận các giao dịch."
+            },
+            {
+              "q": "Bằng Chứng Công Việc (Proof of Work) là gì?",
+              "options": [
+                "Bảng điểm từ trường",
+                "Bằng chứng rằng ai đó đã thực sự nỗ lực để kiếm thứ gì đó",
+                "Một mật khẩu",
+                "Một loại bằng cấp"
+              ],
+              "correct": 1,
+              "explanation": "Proof of Work = bằng chứng công việc. Giống như trò chơi xúc xắc: mọi người đều tuân theo cùng một quy tắc và có cơ hội như nhau."
+            },
+            {
+              "q": "Tại sao Satoshi biến mất?",
+              "options": [
+                "Ông ấy đi nghỉ mát",
+                "Có lẽ để Bitcoin thực sự thuộc về tất cả mọi người, không có người lãnh đạo",
+                "Ông ấy tức giận",
+                "Ông ấy không tồn tại"
+              ],
+              "correct": 1,
+              "explanation": "Bằng cách biến mất, Satoshi đảm bảo Bitcoin không thuộc về một người nào. Mạng lưới hoạt động theo quy tắc, không phải người lãnh đạo."
+            }
+          ]
+        },
+        {
+          "type": "mining",
+          "title": "Đào Bitcoin!",
+          "intro": "Tìm các cặp giống nhau để đào các khối — giống như thợ đào thật sự!"
+        },
+        {
+          "type": "scramble",
+          "title": "Đố Chữ Bitcoin",
+          "intro": "Sắp xếp lại các chữ cái xáo trộn để tìm ra từ Bitcoin đúng!",
+          "words": [
+            {
+              "scrambled": "IBTCONI",
+              "answer": "BITCOIN",
+              "hint": "Tiền kỹ thuật số"
+            },
+            {
+              "scrambled": "HTOASIS",
+              "answer": "SATOSHI",
+              "hint": "Nhà phát minh bí ẩn"
+            },
+            {
+              "scrambled": "HỐIKBL",
+              "answer": "KHỐI",
+              "hint": "Giao dịch được lưu trong đây"
+            },
+            {
+              "scrambled": "HIẾAMK",
+              "answer": "KHAN HIẾM",
+              "hint": "Không có nhiều"
+            },
+            {
+              "scrambled": "ÀOĐO",
+              "answer": "ĐÀO",
+              "hint": "Giải câu đố bằng máy tính"
+            },
+            {
+              "scrambled": "ÍVTÁN",
+              "answer": "VÍ TIỀN",
+              "hint": "Nơi bạn lưu giữ bitcoin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
