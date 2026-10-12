@@ -1,69 +1,72 @@
-# Bitcoin voor Junioren ₿
+# Bitcoin for Juniors ₿
 
-Een interactieve web-app waarmee kinderen van 8 tot 14 jaar spelenderwijs leren over geld, waarde en Bitcoin. Beschikbaar in **42 talen**.
+[Nederlandse versie](README.nl.md)
+
+An interactive web app that teaches kids aged 8 to 14 about money, value, and Bitcoin through play. Available in **42 languages**.
 
 **🌐 Live:** https://L3and3r.github.io/bitcoin-junioren
+**📦 Gittr:** https://gittr.space/npub152rm3l97pzc3pjmg8l33v6vcuf027s540tprzymtcv4rnxlqrecqkn6k8c/bitcoin-junioren
 
 ---
 
-## Voor ouders, leraren en begeleiders
+## For parents, teachers, and mentors
 
-De app is ontworpen voor kinderen die voor het eerst kennismaken met economische basisconcepten en Bitcoin. Je hebt geen technische kennis nodig om hem te gebruiken.
+The app is designed for kids encountering basic economic concepts and Bitcoin for the first time. No technical knowledge is needed to use it.
 
-### Hoe werkt het?
+### How does it work?
 
-1. Open de app op je telefoon, tablet of computer
-2. Kies de gewenste taal rechtsboven
-3. Voer een naam in — de voortgang wordt automatisch opgeslagen
-4. Kies een module en start een activiteit
+1. Open the app on your phone, tablet, or computer
+2. Pick the desired language in the top right
+3. Enter a name — progress is saved automatically
+4. Choose a module and start an activity
 
-Elke module heeft een duidelijk thema en bestaat uit korte activiteiten van 5–10 minuten. Na het afronden van alle activiteiten in een module verdient de speler een badge.
+Each module has a clear theme and consists of short 5–10 minute activities. After completing all the activities in a module, the player earns a badge.
 
-Met de knop **"Nieuwe speler starten"** onderin wordt alles gewist, zodat het volgende kind meteen kan beginnen.
+The **"Start new player"** button at the bottom clears everything, so the next kid can start right away.
 
 ### Modules
 
-| # | Onderwerp | Wat leer je? |
-|---|-----------|--------------|
-| 1 | Uitwisseling, Waarde & Prijs | Waarom ruilen lastig is, wat iets waard maakt, en hoe geld dat oplost |
-| 2 | Tijd, Energie & Beloning | Het verschil tussen werk, rust en spel; geduld en tijdvoorkeur |
-| 3 | Analoog versus Digitaal | Hoe technologie evolueert en wat Bitcoin gemeen heeft met oude ruilmiddelen |
-| 4 | Veiligheid & Privacy | Wat privé is, hoe encryptie werkt, geheime codes kraken |
-| 5 | Geldzaken | Sparen, investeren, budgetteren en eerlijke regels |
-| 6 | Basisprincipes van Bitcoin | Satoshi Nakamoto, mining, blockchain en schaarste |
+| # | Topic | What you learn |
+|---|-------|-----------------|
+| 1 | Exchange, Value & Price | Why bartering is hard, what makes something valuable, and how money solves that |
+| 2 | Time, Energy & Reward | The difference between work, rest, and play; patience and time preference |
+| 3 | Analog versus Digital | How technology evolves and what Bitcoin has in common with old means of exchange |
+| 4 | Security & Privacy | What's private, how encryption works, cracking secret codes |
+| 5 | Money Matters | Saving, investing, budgeting, and fair rules |
+| 6 | Bitcoin Basics | Satoshi Nakamoto, mining, blockchain, and scarcity |
 
-### Activiteittypen
+### Activity types
 
-De app bevat acht soorten activiteiten zodat het afwisselend blijft:
+The app includes eight kinds of activities to keep things varied:
 
-- **Quiz** — meerkeuzevragen met uitleg bij elk antwoord
-- **Sorteren** — voorwerpen op volgorde zetten
-- **Koppelen** — oud ↔ nieuw matchen
-- **Waar of niet waar** — snel beslissen
-- **Categoriseren** — items slepen naar de juiste groep
-- **Cijfercode kraken** — geheime woorden ontcijferen met een schuifwiel
-- **Mining-spel** — Bitcoin-memory
-- **Woordkraker** — door-elkaar-gehusselde woorden ontwarren
+- **Quiz** — multiple-choice questions with an explanation for each answer
+- **Sort** — put items in order
+- **Match** — match old ↔ new
+- **True or false** — decide quickly
+- **Categorize** — drag items into the right group
+- **Crack the cipher** — decode secret words with a cipher wheel
+- **Mining game** — Bitcoin memory
+- **Word scramble** — unscramble jumbled words
 
-### Taalondersteuning
+### Language support
 
-De app is beschikbaar in 42 talen, waaronder Arabic, Bahasa Indonesia, Bengali, Bulgarian, Chinese, Czech, Deutsch, English, Español, Français, Gujarati, Hausa, Hebrew, Hindi, Hungarian, isiXhosa, Italiano, Japanese, Korean, Malay, Marathi, Nederlands, Punjabi, Polish, Português, Romanian, Russian, Serbian, Swahili, Swedish, Tagalog, Tamil, Telugu, Tajik, Thai, Turkish, Ukrainian, Urdu en Vietnamese.
+The app is available in 42 languages, including Arabic, Bahasa Indonesia, Bengali, Bulgarian, Chinese, Czech, Deutsch, English, Español, Français, Gujarati, Hausa, Hebrew, Hindi, Hungarian, isiXhosa, Italiano, Japanese, Korean, Malay, Marathi, Nederlands, Punjabi, Polish, Português, Romanian, Russian, Serbian, Swahili, Swedish, Tagalog, Tamil, Telugu, Tajik, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
 
-Rechts-naar-links talen (Arabic, Farsi, Hebrew, Urdu) worden automatisch gespiegeld.
+Right-to-left languages (Arabic, Farsi, Hebrew, Urdu) are mirrored automatically.
 
 ---
 
-## Voor developers
+## For developers
 
-### Technische stack
+### Tech stack
 
 - **React 19** (Create React App)
-- **i18n** via dynamische imports — elke taal laadt als apart chunk (~8 kB gzip)
-- **localStorage** voor voortgang en naam
-- **GitHub Pages** voor hosting (`gh-pages` branch)
-- Geen backend, geen database, geen dependencies buiten React
+- **i18n** via dynamic imports — each language loads as a separate chunk (~8 kB gzip)
+- **localStorage** for progress and name
+- **GitHub Pages** for hosting (`gh-pages` branch)
+- No backend, no database, no dependencies outside React
 
-### Lokaal draaien
+### Running locally
 
 ```bash
 git clone https://github.com/L3and3r/bitcoin-junioren.git
@@ -74,11 +77,11 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000).
 
-### Projectstructuur
+### Project structure
 
 ```
 src/
-  activities/          # Een component per activiteitstype
+  activities/          # One component per activity type
     QuizActivity.jsx
     SortActivity.jsx
     MatchActivity.jsx
@@ -87,80 +90,80 @@ src/
     TrueFalseActivity.jsx
     CategorizeActivity.jsx
     ScrambleActivity.jsx
-    ActivityView.jsx   # Router die het juiste type laadt
+    ActivityView.jsx   # Router that loads the right type
   components/
-    BadgeUnlock.jsx    # Animatie bij badge
+    BadgeUnlock.jsx    # Badge-earned animation
     Confetti.jsx
-    DonateButton.jsx   # Lightning LNURL donatie + QR
+    DonateButton.jsx   # Lightning LNURL donation + QR
     LanguageSelector.jsx
     ProgressDots.jsx
   contexts/
-    LanguageContext.jsx  # Taalstatus, RTL, document.title
+    LanguageContext.jsx  # Language state, RTL, document.title
   i18n/
-    nl.json            # Bronbestand (Nederlands)
-    en.json            # Engels
+    nl.json            # Source file (Dutch)
+    en.json            # English
     ar.json            # Arabic
-    ...                # 42 bestanden totaal
+    ...                # 42 files total
   views/
-    ModuleView.jsx     # Module-overzicht en activiteiten-flow
-  styles/shared.js     # Gedeelde stijlobjecten
+    ModuleView.jsx     # Module overview and activity flow
+  styles/shared.js     # Shared style objects
   utils/storage.js     # localStorage helpers
   BitcoinVoorJunioren.jsx  # Root component
 scripts/
-  translate.js         # Genereert taalbestanden via Claude API
-  patch-translations.js  # Voegt ontbrekende sleutels toe aan bestaande bestanden
+  translate.js         # Generates language files via the Claude API
+  patch-translations.js  # Adds missing keys to existing files
 ```
 
-### Taalbestanden aanpassen of toevoegen
+### Adding or changing language files
 
-`src/i18n/nl.json` is het bronbestand. Alle andere talen zijn daarvan afgeleid.
+`src/i18n/nl.json` is the source file. All other languages are derived from it.
 
-**Nieuwe taal toevoegen:**
+**Adding a new language:**
 
 ```bash
-ANTHROPIC_API_KEY=sk-ant-... node scripts/translate.js [taalcode]
+ANTHROPIC_API_KEY=sk-ant-... node scripts/translate.js [language-code]
 ```
 
-Zonder taalcode worden alle 42 talen (opnieuw) gegenereerd. Al bestaande bestanden worden overgeslagen.
+Without a language code, all 42 languages are (re)generated. Existing files are skipped.
 
-**Ontbrekende sleutels patchen** (bijv. na uitbreiding van nl.json):
+**Patching missing keys** (e.g. after expanding nl.json):
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-... node scripts/patch-translations.js
 ```
 
-Dit vergelijkt elk taalbestand met nl.json en vertaalt alleen de ontbrekende sleutels.
+This compares each language file against nl.json and translates only the missing keys.
 
-**Taalcodes** komen overeen met de mappen in het [My First Bitcoin curriculum](https://github.com/MyFirstBitcoin/mfb-curriculum/tree/main/programs/bitcoin-for-juniors).
+**Language codes** match the folders in the [My First Bitcoin curriculum](https://github.com/MyFirstBitcoin/mfb-curriculum/tree/main/programs/bitcoin-for-juniors).
 
-### Content aanpassen
+### Editing content
 
-Alle quizvragen, module-titels, badges en activiteiten staan in de vertaalbestanden (`src/i18n/*.json`). Pas `nl.json` aan en run daarna `patch-translations.js` om de wijziging door te zetten naar alle talen.
+All quiz questions, module titles, badges, and activities live in the translation files (`src/i18n/*.json`). Edit `nl.json`, then run `patch-translations.js` to propagate the change to all languages.
 
-### Deployen
+### Deploying
 
 ```bash
 npm run deploy
 ```
 
-Bouwt de app en pusht naar de `gh-pages` branch. De live URL staat ingesteld in `package.json` via de `homepage` sleutel.
+Builds the app and pushes it to the `gh-pages` branch. The live URL is set in `package.json` via the `homepage` key.
 
 ### PWA
 
-De app is installeerbaar als Progressive Web App. Op Android/iOS: open de app in de browser → "Voeg toe aan beginscherm". Het app-icoon en de laadschermkleur zijn ingesteld in `public/manifest.json`.
+The app is installable as a Progressive Web App. On Android/iOS: open the app in the browser → "Add to home screen". The app icon and splash screen color are set in `public/manifest.json`.
 
 ---
 
-## Doneren
+## Donate
 
-Vind je de app waardevol? Doneer via Lightning:
+Find the app valuable? Donate via Lightning:
 
 **LNURL:** `LNURL1DP68GURN8GHJ7MR9V9HXGETJ9ESH57NPD4HJUMN9WSHKCMN4WFK8QT6VTFD8GNZG88AEN3`
 
-Of klik op "⚡ Doneer sats" onderin de app.
+Or tap "⚡ Donate sats" at the bottom of the app.
 
 ---
 
-## Licentie
+## License
 
-Gebaseerd op het lesmateriaal van [My First Bitcoin](https://myfirstbitcoin.io/) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+Based on learning materials from [My First Bitcoin](https://myfirstbitcoin.io/) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
