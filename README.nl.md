@@ -60,7 +60,7 @@ Rechts-naar-links talen (Arabic, Farsi, Hebrew, Urdu) worden automatisch gespieg
 
 ### Technische stack
 
-- **React 19** (Create React App)
+- **React 19** (Vite, tests met Vitest)
 - **i18n** via dynamische imports — elke taal laadt als apart chunk (~8 kB gzip)
 - **localStorage** voor voortgang en naam
 - **GitHub Pages** voor hosting (`gh-pages` branch)
@@ -75,7 +75,7 @@ npm install
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000/bitcoin-junioren/](http://localhost:3000/bitcoin-junioren/).
 
 ### Projectstructuur
 
@@ -146,7 +146,7 @@ Alle quizvragen, module-titels, badges en activiteiten staan in de vertaalbestan
 npm run deploy
 ```
 
-Bouwt de app en pusht naar de `gh-pages` branch. De live URL staat ingesteld in `package.json` via de `homepage` sleutel.
+Bouwt de app en pusht naar de `gh-pages` branch. Het pad waarop de app draait staat ingesteld in `vite.config.mjs` via de `base` optie.
 
 ### PWA
 
